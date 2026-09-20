@@ -9,12 +9,13 @@
 <body>
 
 <header class="app-header">
-  <h1 id="page-title">Karteikarten</h1>
+  <h1 id="page-title">Latein lernen</h1>
   <button class="icon-btn" id="settings-btn" aria-label="Einstellungen">⚙️</button>
 </header>
 
 <main>
-  <section id="view-flashcards" class="view active"></section>
+  <section id="view-home" class="view active"></section>
+  <section id="view-flashcards" class="view"></section>
   <section id="view-search" class="view"></section>
   <section id="view-forms" class="view"></section>
   <section id="view-streak" class="view"></section>
@@ -22,7 +23,8 @@
 </main>
 
 <nav class="tabbar">
-  <button class="tab-btn active" data-view="flashcards"><span class="tab-icon">🗂️</span>Karten</button>
+  <button class="tab-btn active" data-view="home"><span class="tab-icon">🏠</span>Start</button>
+  <button class="tab-btn" data-view="flashcards"><span class="tab-icon">🗂️</span>Karten</button>
   <button class="tab-btn" data-view="search"><span class="tab-icon">🔍</span>Suche</button>
   <button class="tab-btn" data-view="forms"><span class="tab-icon">✏️</span>Formen</button>
   <button class="tab-btn" data-view="streak"><span class="tab-icon">🔥</span>Streak</button>

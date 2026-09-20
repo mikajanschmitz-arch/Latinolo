@@ -368,4 +368,30 @@ input[type="checkbox"] { accent-color: var(--accent); }
 .field-row { margin-bottom: 14px; }
 .field-row label { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; }
 
+/* ---------------- Start-Menü ---------------- */
+.menu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-family: var(--font-ui);
+  color: var(--text);
+}
+.menu-card:active { background: var(--accent-soft); }
+.menu-card-icon { font-size: 1.8rem; flex-shrink: 0; }
+.menu-card-text { display: flex; flex-direction: column; gap: 2px; }
+.menu-card-title { font-weight: 700; font-size: 1.02rem; }
+.menu-card-desc { color: var(--text-muted); font-size: 0.85rem; }
+
 footer.legal { text-align: center; color: var(--text-muted); font-size: 0.75rem; padding: 20px; }

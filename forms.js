@@ -372,7 +372,7 @@ var Forms = (function () {
   function renderQuestionMode2() {
     var c = state.current;
     var label = c.target.dims ? dimsLabel(c.target.dims) : c.target.label;
-    var lemmaDisplay = c.entry.pos === "Verb" ? LexUtil.firstForm(c.entry) : LexUtil.shortForm(c.entry);
+    var lemmaDisplay = LexUtil.firstForm(c.entry);
 
     el.innerHTML =
       '<div class="flash-progress"><span>✓ ' + state.stats.correct + " · ✗ " + state.stats.wrong + "</span></div>" +
