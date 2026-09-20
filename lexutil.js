@@ -10,6 +10,11 @@ var LexUtil = (function () {
   }
 
   function abbreviateGen(nom, gen, declension) {
+    // 3. Deklination (Stammveränderung wie ōrdō/ōrdinis, rēx/rēgis, corpus/
+    // corporis): immer die volle Form zeigen, keine Kürzung mit "-...".
+    if (declension === 3) {
+      return nom + ", " + gen;
+    }
     // 1. Deklination (nom endet auf "a", Genitiv ist nom+"e"): konventionell
     // wird "-ae" gezeigt (das auslautende "a" ersetzt), nicht nur "-e".
     if (declension === 1 && nom.endsWith("a") && gen === nom + "e") {
@@ -25,20 +30,19 @@ var LexUtil = (function () {
 
   // Baut die "gekürzte Form" wie sie auf der Rückseite der Karteikarte und in
   // der Suche oben angezeigt wird, z.B. "servus, -ī m." / "bonus, a, um" /
-  // "dīcere, dīcō, dīxī, dictum".
+  // "dīcere, dīcō, dīxī, dictum". Bei der 3. Deklination (z.B. "ōrdō, ōrdinis")
+  // wird bewusst nicht gekürzt, weil sich der Stamm dort oft stark verändert.
   function shortForm(entry) {
     if (entry.pos === "Substantiv") {
       var parts = entry.lemma.split(",").map(function (s) { return s.trim(); });
       var nom = parts[0];
       var gen = parts[1] || null;
       var declension = null;
-      if (!gen && typeof Morph !== "undefined") {
+      if (typeof Morph !== "undefined") {
         var info = Morph.analyzeNoun(entry);
-        if (info.pluraleTantum) {
-          gen = null;
-        } else {
-          gen = info.gen;
+        if (!info.irregular && !info.pluraleTantum) {
           declension = info.declension;
+          if (!gen) gen = info.gen;
         }
       }
       var base = gen ? abbreviateGen(nom, gen, declension) : nom;
