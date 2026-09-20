@@ -1,6 +1,6 @@
-/* ==========================================================================
-   app.js — Navigation, Streak-Ansicht, Einstellungen, Start
-   ========================================================================== */
+ /* ==========================================================================
+    app.js — Navigation, Streak-Ansicht, Einstellungen, Start
+    ========================================================================== */
 
 (function () {
   "use strict";
@@ -143,10 +143,10 @@
     var s0 = Store.getSettings();
     if (s0.fontScale) document.documentElement.style.fontSize = (s0.fontScale * 100) + "%";
 
-    Data.load("data/vocab.json").catch(function (err) {
+    Data.load("vocab.json").catch(function (err) {
       console.error("Konnte vocab.json nicht laden:", err);
       document.getElementById("view-flashcards").innerHTML =
-        '<div class="empty-state">Die Vokabeldatei (data/vocab.json) konnte nicht geladen werden.<br>Falls du die Seite lokal per Doppelklick geöffnet hast, starte stattdessen einen kleinen lokalen Server (z. B. <code>python3 -m http.server</code>) oder nutze GitHub Pages.</div>';
+        '<div class="empty-state">Die Vokabeldatei (vocab.json) konnte nicht geladen werden.<br>Bitte prüfe, ob sie im selben Ordner wie index.html liegt.</div>';
     });
 
     Flashcards.init(document.getElementById("view-flashcards"));
