@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Latein lernen</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <h1 id="page-title">Karteikarten</h1>
+  <button class="icon-btn" id="settings-btn" aria-label="Einstellungen">⚙️</button>
+</header>
+
+<main>
+  <section id="view-flashcards" class="view active"></section>
+  <section id="view-search" class="view"></section>
+  <section id="view-forms" class="view"></section>
+  <section id="view-streak" class="view"></section>
+  <section id="view-settings" class="view"></section>
+</main>
+
+<nav class="tabbar">
+  <button class="tab-btn active" data-view="flashcards"><span class="tab-icon">🗂️</span>Karten</button>
+  <button class="tab-btn" data-view="search"><span class="tab-icon">🔍</span>Suche</button>
+  <button class="tab-btn" data-view="forms"><span class="tab-icon">✏️</span>Formen</button>
+  <button class="tab-btn" data-view="streak"><span class="tab-icon">🔥</span>Streak</button>
+</nav>
+
+<script src="js/morphology.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/data.js"></script>
+<script src="js/lexutil.js"></script>
+<script src="js/streak.js"></script>
+<script src="js/flashcards.js"></script>
+<script src="js/search.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
