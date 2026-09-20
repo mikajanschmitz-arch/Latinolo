@@ -5,8 +5,8 @@
 (function () {
   "use strict";
 
-  var TITLES = { flashcards: "Karteikarten", search: "Suche", forms: "Formentrainer", streak: "Streak", settings: "Einstellungen" };
-  var lastMainTab = "flashcards";
+  var TITLES = { home: "Latein lernen", flashcards: "Karteikarten", search: "Suche", forms: "Formentrainer", streak: "Streak", settings: "Einstellungen" };
+  var lastMainTab = "home";
 
   function applyTheme() {
     var s = Store.getSettings();
@@ -19,8 +19,44 @@
     document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.toggle("active", b.dataset.view === name); });
     document.getElementById("page-title").textContent = TITLES[name];
     if (name !== "settings") lastMainTab = name;
+    if (name === "home") renderHomeView();
     if (name === "streak") renderStreakView();
     if (name === "settings") renderSettingsView();
+  }
+
+  // ---------------- Start-Menü ----------------
+
+  var MENU_ITEMS = [
+    { view: "flashcards", icon: "🗂️", title: "Karteikarten", desc: "Vokabeln nach Lektion lernen" },
+    { view: "search", icon: "🔍", title: "Suche", desc: "Formen einer Vokabel nachschlagen" },
+    { view: "forms", icon: "✏️", title: "Formentrainer", desc: "Deklination & Konjugation üben" },
+    { view: "streak", icon: "🔥", title: "Streak", desc: "Tagesziel & Lernserie ansehen" },
+    { view: "settings", icon: "⚙️", title: "Einstellungen", desc: "Dark Mode, Schriftgröße, Fortschritt" },
+  ];
+
+  function renderHomeView() {
+    var root = document.getElementById("view-home");
+    var s = Store.getStreak();
+    var streakCount = Streak.currentStreak(s);
+    var cards = MENU_ITEMS.map(function (item) {
+      return (
+        '<button class="menu-card" data-goto="' + item.view + '">' +
+        '<span class="menu-card-icon">' + item.icon + "</span>" +
+        '<span class="menu-card-text"><span class="menu-card-title">' + item.title + '</span><span class="menu-card-desc">' + item.desc + "</span></span>" +
+        "</button>"
+      );
+    }).join("");
+
+    root.innerHTML =
+      '<div style="text-align:center;margin:8px 0 22px;">' +
+      '<div style="font-size:2rem;">🏛️</div>' +
+      '<p style="color:var(--text-muted);margin-top:4px;">' + (streakCount > 0 ? "🔥 " + streakCount + "-Tage-Streak — weiter so!" : "Was möchtest du heute lernen?") + "</p>" +
+      "</div>" +
+      '<div class="menu-grid">' + cards + "</div>";
+
+    root.querySelectorAll("[data-goto]").forEach(function (btn) {
+      btn.addEventListener("click", function () { showView(btn.dataset.goto); });
+    });
   }
 
   // ---------------- Streak-Ansicht ----------------
@@ -152,6 +188,7 @@
     Flashcards.init(document.getElementById("view-flashcards"));
     Search.init(document.getElementById("view-search"));
     Forms.init(document.getElementById("view-forms"));
+    renderHomeView();
 
     document.querySelectorAll(".tab-btn").forEach(function (btn) {
       btn.addEventListener("click", function () { showView(btn.dataset.view); });
