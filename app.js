@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var TITLES = { home: "Latein lernen", flashcards: "Karteikarten", search: "Suche", forms: "Formentrainer", streak: "Streak", settings: "Einstellungen" };
+  var TITLES = { home: "Latinolo - Campus A", flashcards: "Karteikarten", search: "Suche", forms: "Formentrainer", streak: "Streak", settings: "Einstellungen" };
   var lastMainTab = "home";
 
   function applyTheme() {
@@ -150,7 +150,7 @@
       '<p style="color:var(--text-muted);font-size:0.85rem;">Setzt deinen gesamten Lernfortschritt, Streak und alle Einstellungen auf diesem Gerät zurück.</p>' +
       '<button class="btn btn-danger btn-block" id="set-reset">Fortschritt zurücksetzen</button>' +
       "</div>" +
-      '<footer class="legal">Latein-Vokabeltrainer · lokal auf diesem Gerät gespeichert</footer>';
+      '<footer class="legal">Latinolo · lokal auf diesem Gerät gespeichert</footer>';
 
     root.querySelector("#set-dark").addEventListener("change", function (ev) {
       var cur = Store.getSettings();
