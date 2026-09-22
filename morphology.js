@@ -214,11 +214,14 @@
       out.pl.n = { nom: stemM.stem + "a", gen: stemM.stem + "ōrum", dat: stemM.stem + "īs", akk: stemM.stem + "a", abl: stemM.stem + "īs", vok: stemM.stem + "a" };
     }
 
-    if (type === "a_um") {
-      // "bonus, a, um" -> Stamm = lemma ohne "us"
-      var stem = parts[0].endsWith("us") ? parts[0].slice(0, -2) : parts[0].slice(0, -1);
+    if (type === "a_um" || type === "i_ae_a_pl") {
+      // "bonus, a, um" -> Stamm = lemma ohne "us"; "multī, ae, a" (nur Plural
+      // gegeben) -> Stamm = lemma ohne "ī"
+      var stem = type === "i_ae_a_pl" ? parts[0].slice(0, -1) :
+        (parts[0].endsWith("us") ? parts[0].slice(0, -2) : parts[0].slice(0, -1));
+      var nomM = type === "i_ae_a_pl" ? stem + "us" : parts[0];
       fill1_2(
-        { stem: stem, nomForm: parts[0], vok: stem + "e" },
+        { stem: stem, nomForm: nomM, vok: stem + "e" },
         { stem: stem, nomForm: stem + "a" },
         { stem: stem, nomForm: stem + "um" }
       );
@@ -760,7 +763,17 @@
       result.infPresPass = stem + "īrī";
     }
 
-    if (perfect) {
+    if (isDeponent && deponentPastPart) {
+      // Semideponens (audeo/gaudeo/soleo): aktives Praesenssystem (oben schon
+      // gebaut), aber deponentisches Perfektsystem (PPP + esse) - keine
+      // eigene Passivbedeutung, daher die generierten Passivformen verwerfen.
+      delete result.presPass; delete result.impfPass; delete result.futPass;
+      delete result.presSubjPass; delete result.impfSubjPass; delete result.infPresPass;
+      result.pppStem = deponentPastPart.replace(/us$/, "");
+      result.perfPeriphrastic = true;
+      result.hasPerfectData = true;
+      result.hasSupineData = false;
+    } else if (perfect) {
       var perfStem2 = perfect.endsWith("ī") ? perfect.slice(0, -1) : perfect;
       result.perf = PERF_ACT_ENDINGS.map(function (e) { return perfStem2 + e; });
       result.pluperf = PLUPERF_ACT_ENDINGS.map(function (e) { return perfStem2 + e; });
@@ -768,13 +781,13 @@
       result.perfSubj = PERF_SUBJ_ACT_ENDINGS.map(function (e) { return perfStem2 + e; });
       result.pluperfSubj = PLUPERF_SUBJ_ACT_ENDINGS.map(function (e) { return perfStem2 + e; });
       result.infPerf = perfStem2 + "isse";
+      result.hasPerfectData = true;
+      if (supine) {
+        result.pppStem = supine.slice(0, -2);
+        result.supine = supine;
+        result.hasSupineData = true;
+      }
     }
-    if (supine) {
-      result.pppStem = supine.slice(0, -2);
-      result.supine = supine;
-    }
-    result.hasPerfectData = !!perfect;
-    result.hasSupineData = !!supine;
     return result;
   }
 

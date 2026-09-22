@@ -21,7 +21,7 @@ var Flashcards = (function () {
     Data.ready.then(renderSetup);
   }
 
-  function weightedShuffle(entries) {
+  function buildQueue(entries) {
     var progress = Store.getProgress();
     var lessonStats = {};
     entries.forEach(function (e) {
@@ -32,27 +32,61 @@ var Flashcards = (function () {
         if (p) { lessonStats[m].seen += p.seen; lessonStats[m].wrong += p.wrong; }
       });
     });
-    function lessonErrorRate(m) {
-      var s = lessonStats[m];
-      if (!s || s.seen === 0) return 0;
-      return s.wrong / s.seen;
+    function lessonErrorRate(e) {
+      var worst = 0;
+      (e.lessons || []).forEach(function (l) {
+        var s = lessonStats[Data.lessonMain(l)];
+        if (s && s.seen > 0) {
+          // Bei wenig Datenpunkten (z.B. nur 1 markiertes Wort) die Quote
+          // gedaempft gewichten, damit nicht sofort die halbe Lektion mitzieht.
+          var confidence = Math.min(1, s.seen / 8);
+          worst = Math.max(worst, (s.wrong / s.seen) * confidence);
+        }
+      });
+      return worst;
     }
-    function weight(e) {
+    // Wie oft taucht dieses Wort in dieser Runde auf? 1x im Normalfall, mehr
+    // wenn das Wort selbst zuletzt falsch war/als "nicht gewusst" markiert
+    // wurde, oder wenn es aus einer Lektion mit hoher Fehlerquote stammt.
+    function repeatCount(e) {
       var p = progress[e.id];
-      var w = 1;
-      (e.lessons || []).forEach(function (l) { w += 2.5 * lessonErrorRate(Data.lessonMain(l)); });
+      var extra = 0;
+      var errRate = lessonErrorRate(e);
+      if (errRate >= 0.6) extra += 2;
+      else if (errRate >= 0.3) extra += 1;
       if (p) {
-        w += p.wrong * 0.8;
-        w *= Math.max(0.15, 1 - p.box * 0.15);
-      } else {
-        w *= 1.3;
+        if (p.box === 0 && p.wrong > 0) extra += 2; // frisch falsch / "nicht gewusst" markiert
+        else if (p.box === 1) extra += 1;
       }
-      return Math.max(0.05, w);
+      return 1 + Math.min(3, extra); // max. 4x pro Runde, damit es nicht ausufert
     }
-    return entries
-      .map(function (e) { return { e: e, key: -Math.log(Math.random()) / weight(e) }; })
-      .sort(function (a, b) { return a.key - b.key; })
-      .map(function (x) { return x.e; });
+
+    var pool = [];
+    entries.forEach(function (e) {
+      var n = repeatCount(e);
+      for (var i = 0; i < n; i++) pool.push(e);
+    });
+
+    // Fisher-Yates-Shuffle
+    for (var i = pool.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+    }
+    // Duplikate auseinanderziehen, damit dasselbe Wort nicht kurz hintereinander kommt
+    var minGap = Math.min(6, Math.max(2, Math.floor(pool.length / 6)));
+    for (var idx = 1; idx < pool.length; idx++) {
+      for (var back = 1; back <= minGap && idx - back >= 0; back++) {
+        if (pool[idx].id === pool[idx - back].id) {
+          var swapWith = idx + 1;
+          while (swapWith < pool.length && pool[swapWith].id === pool[idx].id) swapWith++;
+          if (swapWith < pool.length) {
+            var t = pool[idx]; pool[idx] = pool[swapWith]; pool[swapWith] = t;
+          }
+          break;
+        }
+      }
+    }
+    return pool;
   }
 
   // ---------------- Setup-Ansicht ----------------
@@ -117,7 +151,7 @@ var Flashcards = (function () {
     }
     var entries = Data.entriesForMainLessons(Array.from(state.selected));
     if (!entries.length) { alert("Keine Vokabeln in dieser Auswahl gefunden."); return; }
-    state.queue = weightedShuffle(entries);
+    state.queue = buildQueue(entries);
     state.idx = 0;
     state.flipped = false;
     state.stats = { correct: 0, wrong: 0 };

@@ -36,16 +36,17 @@
   "search_key": "abire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "abīre, abeō, abiī",
+  "grammar_note": "abīre, abeō, abiī, abitum",
   "translation": "weggehen",
   "lessons": [
    "14"
   ],
-  "raw_line": "abīre, abeō, abiī weggehen - 14",
+  "raw_line": "abīre, abeō, abiī, abitum weggehen - 14",
   "verb_forms": [
    "abīre",
    "abeō",
-   "abiī"
+   "abiī",
+   "abitum"
   ]
  },
  {
@@ -125,15 +126,17 @@
   "search_key": "accusare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "accūsāre, accūsō",
+  "grammar_note": "accūsāre, accūsō, accūsāvī, accūsātum",
   "translation": "anklagen, beschuldigen",
   "lessons": [
    "11"
   ],
-  "raw_line": "accūsāre, accūsō anklagen, beschuldigen - 11",
+  "raw_line": "accūsāre, accūsō, accūsāvī, accūsātum anklagen, beschuldigen - 11",
   "verb_forms": [
    "accūsāre",
-   "accūsō"
+   "accūsō",
+   "accūsāvī",
+   "accūsātum"
   ]
  },
  {
@@ -261,15 +264,16 @@
   "search_key": "adesse",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "adesse, adsum",
+  "grammar_note": "adesse, adsum, adfuī",
   "translation": "da sein, helfen",
   "lessons": [
    "6"
   ],
-  "raw_line": "adesse, adsum da sein, helfen - 6",
+  "raw_line": "adesse, adsum, adfuī da sein, helfen - 6",
   "verb_forms": [
    "adesse",
-   "adsum"
+   "adsum",
+   "adfuī"
   ]
  },
  {
@@ -310,16 +314,17 @@
   "search_key": "adire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "adīre, adeō, adiī (m. Akk.)",
+  "grammar_note": "adīre, adeō, adiī, aditum (m. Akk.)",
   "translation": "herantreten (an), bitten, aufsuchen",
   "lessons": [
    "14"
   ],
-  "raw_line": "adīre, adeō, adiī (m. Akk.) herantreten (an), bitten, aufsuchen - 14",
+  "raw_line": "adīre, adeō, adiī, aditum (m. Akk.) herantreten (an), bitten, aufsuchen - 14",
   "verb_forms": [
    "adīre",
    "adeō",
-   "adiī"
+   "adiī",
+   "aditum"
   ]
  },
  {
@@ -381,15 +386,17 @@
   "search_key": "aedificare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "aedificāre, aedificō",
+  "grammar_note": "aedificāre, aedificō, aedificāvī, aedificātum",
   "translation": "bauen",
   "lessons": [
    "4"
   ],
-  "raw_line": "aedificāre, aedificō bauen - 4",
+  "raw_line": "aedificāre, aedificō, aedificāvī, aedificātum bauen - 4",
   "verb_forms": [
    "aedificāre",
-   "aedificō"
+   "aedificō",
+   "aedificāvī",
+   "aedificātum"
   ]
  },
  {
@@ -480,15 +487,17 @@
   "search_key": "aestimare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "aestimāre, aestimō",
+  "grammar_note": "aestimāre, aestimō, aestimāvī, aestimātum",
   "translation": "einschätzen, beurteilen",
   "lessons": [
    "19"
   ],
-  "raw_line": "aestimāre, aestimō einschätzen, beurteilen - 19",
+  "raw_line": "aestimāre, aestimō, aestimāvī, aestimātum einschätzen, beurteilen - 19",
   "verb_forms": [
    "aestimāre",
-   "aestimō"
+   "aestimō",
+   "aestimāvī",
+   "aestimātum"
   ]
  },
  {
@@ -625,15 +634,17 @@
   "search_key": "agitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "agitāre, agitō",
+  "grammar_note": "agitāre, agitō, agitāvī, agitātum",
   "translation": "betreiben; überlegen",
   "lessons": [
    "30"
   ],
-  "raw_line": "agitāre, agitō betreiben; überlegen - 30",
+  "raw_line": "agitāre, agitō, agitāvī, agitātum betreiben; überlegen - 30",
   "verb_forms": [
    "agitāre",
-   "agitō"
+   "agitō",
+   "agitāvī",
+   "agitātum"
   ]
  },
  {
@@ -824,15 +835,17 @@
   "search_key": "amare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "amāre, amō",
+  "grammar_note": "amāre, amō, amāvī, amātum",
   "translation": "lieben",
   "lessons": [
    "3"
   ],
-  "raw_line": "amāre, amō lieben - 3",
+  "raw_line": "amāre, amō, amāvī, amātum lieben - 3",
   "verb_forms": [
    "amāre",
-   "amō"
+   "amō",
+   "amāvī",
+   "amātum"
   ]
  },
  {
@@ -896,17 +909,18 @@
   "search_key": "amittere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "āmittere, āmittō, āmīsī",
+  "grammar_note": "āmittere, āmittō, āmīsī, āmissum",
   "translation": "aufgeben, verlieren",
   "lessons": [
    "8",
    "9"
   ],
-  "raw_line": "āmittere, āmittō, āmīsī aufgeben, verlieren - 8, 9",
+  "raw_line": "āmittere, āmittō, āmīsī, āmissum aufgeben, verlieren - 8, 9",
   "verb_forms": [
    "āmittere",
    "āmittō",
-   "āmīsī"
+   "āmīsī",
+   "āmissum"
   ]
  },
  {
@@ -1103,16 +1117,17 @@
   "search_key": "aperire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "aperīre, aperiō, aperuī",
+  "grammar_note": "aperīre, aperiō, aperuī, apertum",
   "translation": "aufdecken, öffnen",
   "lessons": [
    "12"
   ],
-  "raw_line": "aperīre, aperiō, aperuī aufdecken, öffnen - 12",
+  "raw_line": "aperīre, aperiō, aperuī, apertum aufdecken, öffnen - 12",
   "verb_forms": [
    "aperīre",
    "aperiō",
-   "aperuī"
+   "aperuī",
+   "apertum"
   ]
  },
  {
@@ -1148,15 +1163,17 @@
   "search_key": "appellare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "appellāre, appellō",
+  "grammar_note": "appellāre, appellō, appellāvī, appellātum",
   "translation": "anrufen; m. dopp. Akk. nennen",
   "lessons": [
    "19"
   ],
-  "raw_line": "appellāre, appellō anrufen; m. dopp. Akk. nennen - 19",
+  "raw_line": "appellāre, appellō, appellāvī, appellātum anrufen; m. dopp. Akk. nennen - 19",
   "verb_forms": [
    "appellāre",
-   "appellō"
+   "appellō",
+   "appellāvī",
+   "appellātum"
   ]
  },
  {
@@ -1165,16 +1182,17 @@
   "search_key": "appetere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "appetere, appetō, appetīvī",
+  "grammar_note": "appetere, appetō, appetīvī, appetītum",
   "translation": "erstreben, haben wollen; angreifen",
   "lessons": [
    "12"
   ],
-  "raw_line": "appetere, appetō, appetīvī erstreben, haben wollen; angreifen - 12",
+  "raw_line": "appetere, appetō, appetīvī, appetītum erstreben, haben wollen; angreifen - 12",
   "verb_forms": [
    "appetere",
    "appetō",
-   "appetīvī"
+   "appetīvī",
+   "appetītum"
   ]
  },
  {
@@ -1480,15 +1498,16 @@
   "search_key": "audere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "audēre, audeō",
+  "grammar_note": "audēre, audeō, ausus sum",
   "translation": "wagen",
   "lessons": [
    "30"
   ],
-  "raw_line": "audēre, audeō wagen - 30",
+  "raw_line": "audēre, audeō, ausus sum wagen - 30",
   "verb_forms": [
    "audēre",
-   "audeō"
+   "audeō",
+   "ausus sum"
   ]
  },
  {
@@ -1497,15 +1516,17 @@
   "search_key": "audire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "audīre, audiō",
+  "grammar_note": "audīre, audiō, audīvī, audītum",
   "translation": "hören",
   "lessons": [
    "4"
   ],
-  "raw_line": "audīre, audiō hören - 4",
+  "raw_line": "audīre, audiō, audīvī, audītum hören - 4",
   "verb_forms": [
    "audīre",
-   "audiō"
+   "audiō",
+   "audīvī",
+   "audītum"
   ]
  },
  {
@@ -1882,17 +1903,18 @@
   "search_key": "cadere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cadere, cadō, cecidī",
+  "grammar_note": "cadere, cadō, cecidī, cāsum",
   "translation": "fallen",
   "lessons": [
    "8",
    "9"
   ],
-  "raw_line": "cadere, cadō, cecidī fallen - 8, 9",
+  "raw_line": "cadere, cadō, cecidī, cāsum fallen - 8, 9",
   "verb_forms": [
    "cadere",
    "cadō",
-   "cecidī"
+   "cecidī",
+   "cāsum"
   ]
  },
  {
@@ -1901,16 +1923,17 @@
   "search_key": "caedere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "caedere, caedō, cecīdi",
+  "grammar_note": "caedere, caedō, cecīdī, caesum",
   "translation": "fällen, töten",
   "lessons": [
    "10"
   ],
-  "raw_line": "caedere, caedō, cecīdi fällen, töten - 10",
+  "raw_line": "caedere, caedō, cecīdī, caesum fällen, töten - 10",
   "verb_forms": [
    "caedere",
    "caedō",
-   "cecīdi"
+   "cecīdī",
+   "caesum"
   ]
  },
  {
@@ -2016,15 +2039,17 @@
   "search_key": "cantare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cantāre, cantō",
+  "grammar_note": "cantāre, cantō, cantāvī, cantātum",
   "translation": "singen",
   "lessons": [
    "16"
   ],
-  "raw_line": "cantāre, cantō singen - 16",
+  "raw_line": "cantāre, cantō, cantāvī, cantātum singen - 16",
   "verb_forms": [
    "cantāre",
-   "cantō"
+   "cantō",
+   "cantāvī",
+   "cantātum"
   ]
  },
  {
@@ -2096,15 +2121,16 @@
   "search_key": "carere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "carēre, careō m. Abl.",
+  "grammar_note": "carēre, careō, caruī m. Abl.",
   "translation": "frei sein von, ohne (etw.) sein, nicht haben",
   "lessons": [
    "9"
   ],
-  "raw_line": "carēre, careō m. Abl. frei sein von, ohne (etw.) sein, nicht haben - 9",
+  "raw_line": "carēre, careō, caruī m. Abl. frei sein von, ohne (etw.) sein, nicht haben - 9",
   "verb_forms": [
    "carēre",
-   "careō"
+   "careō",
+   "caruī"
   ]
  },
  {
@@ -2287,16 +2313,17 @@
   "search_key": "cedere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cēdere, cēdō, cessī",
+  "grammar_note": "cēdere, cēdō, cessī, cessum",
   "translation": "gehen, nachgeben, weichen",
   "lessons": [
    "10"
   ],
-  "raw_line": "cēdere, cēdō, cessī gehen, nachgeben, weichen - 10",
+  "raw_line": "cēdere, cēdō, cessī, cessum gehen, nachgeben, weichen - 10",
   "verb_forms": [
    "cēdere",
    "cēdō",
-   "cessī"
+   "cessī",
+   "cessum"
   ]
  },
  {
@@ -2333,15 +2360,17 @@
   "search_key": "cenare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cēnāre, cēnō",
+  "grammar_note": "cēnāre, cēnō, cēnāvī, cēnātum",
   "translation": "essen",
   "lessons": [
    "3"
   ],
-  "raw_line": "cēnāre, cēnō essen - 3",
+  "raw_line": "cēnāre, cēnō, cēnāvī, cēnātum essen - 3",
   "verb_forms": [
    "cēnāre",
-   "cēnō"
+   "cēnō",
+   "cēnāvī",
+   "cēnātum"
   ]
  },
  {
@@ -2397,15 +2426,17 @@
   "search_key": "cernere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cernere, cernō",
+  "grammar_note": "cernere, cernō, crēvī, crētum",
   "translation": "sehen, bemerken",
   "lessons": [
    "26"
   ],
-  "raw_line": "cernere, cernō sehen, bemerken - 26",
+  "raw_line": "cernere, cernō, crēvī, crētum sehen, bemerken - 26",
   "verb_forms": [
    "cernere",
-   "cernō"
+   "cernō",
+   "crēvī",
+   "crētum"
   ]
  },
  {
@@ -2441,34 +2472,32 @@
   "search_key": "cessare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cessāre, cessō",
+  "grammar_note": "cessāre, cessō, cessāvī, cessātum",
   "translation": "zögern, rasten",
   "lessons": [
    "15"
   ],
-  "raw_line": "cessāre, cessō zögern, rasten - 15",
+  "raw_line": "cessāre, cessō, cessāvī, cessātum zögern, rasten - 15",
   "verb_forms": [
    "cessāre",
-   "cessō"
+   "cessō",
+   "cessāvī",
+   "cessātum"
   ]
  },
  {
   "id": "v0164",
-  "lemma": "cēterī",
+  "lemma": "cēterī, ae, a",
   "search_key": "ceteri",
-  "pos": "Verb",
+  "pos": "Adjektiv",
   "gender": null,
-  "grammar_note": "cēterī, ae, a",
+  "grammar_note": "",
   "translation": "die übrigen",
   "lessons": [
    "7"
   ],
   "raw_line": "cēterī, ae, a die übrigen - 7",
-  "verb_forms": [
-   "cēterī",
-   "ae",
-   "a"
-  ]
+  "adj_type": "i_ae_a_pl"
  },
  {
   "id": "v0165",
@@ -2633,15 +2662,17 @@
   "search_key": "clamare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "clāmāre, clāmō",
+  "grammar_note": "clāmāre, clāmō, clāmāvī, clāmātum",
   "translation": "laut rufen, schreien",
   "lessons": [
    "5"
   ],
-  "raw_line": "clāmāre, clāmō laut rufen, schreien - 5",
+  "raw_line": "clāmāre, clāmō, clāmāvī, clāmātum laut rufen, schreien - 5",
   "verb_forms": [
    "clāmāre",
-   "clāmō"
+   "clāmō",
+   "clāmāvī",
+   "clāmātum"
   ]
  },
  {
@@ -2729,15 +2760,17 @@
   "search_key": "cogitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cōgitāre, cōgitō",
+  "grammar_note": "cōgitāre, cōgitō, cōgitāvī, cōgitātum",
   "translation": "denken, beabsichtigen",
   "lessons": [
    "10"
   ],
-  "raw_line": "cōgitāre, cōgitō denken, beabsichtigen - 10",
+  "raw_line": "cōgitāre, cōgitō, cōgitāvī, cōgitātum denken, beabsichtigen - 10",
   "verb_forms": [
    "cōgitāre",
-   "cōgitō"
+   "cōgitō",
+   "cōgitāvī",
+   "cōgitātum"
   ]
  },
  {
@@ -2803,15 +2836,17 @@
   "search_key": "collocare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "collocāre, collocō",
+  "grammar_note": "collocāre, collocō, collocāvī, collocātum",
   "translation": "aufstellen, unterbringen",
   "lessons": [
    "23"
   ],
-  "raw_line": "collocāre, collocō aufstellen, unterbringen - 23",
+  "raw_line": "collocāre, collocō, collocāvī, collocātum aufstellen, unterbringen - 23",
   "verb_forms": [
    "collocāre",
-   "collocō"
+   "collocō",
+   "collocāvī",
+   "collocātum"
   ]
  },
  {
@@ -2933,15 +2968,17 @@
   "search_key": "comparare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "comparāre, comparō",
+  "grammar_note": "comparāre, comparō, comparāvī, comparātum",
   "translation": "vergleichen",
   "lessons": [
    "26"
   ],
-  "raw_line": "comparāre, comparō vergleichen - 26",
+  "raw_line": "comparāre, comparō, comparāvī, comparātum vergleichen - 26",
   "verb_forms": [
    "comparāre",
-   "comparō"
+   "comparō",
+   "comparāvī",
+   "comparātum"
   ]
  },
  {
@@ -3041,16 +3078,17 @@
   "search_key": "concedere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "concēdere, concēdō, concessī",
+  "grammar_note": "concēdere, concēdō, concessī, concessum",
   "translation": "erlauben, nachgeben, zugestehen",
   "lessons": [
    "12"
   ],
-  "raw_line": "concēdere, concēdō, concessī erlauben, nachgeben, zugestehen - 12",
+  "raw_line": "concēdere, concēdō, concessī, concessum erlauben, nachgeben, zugestehen - 12",
   "verb_forms": [
    "concēdere",
    "concēdō",
-   "concessī"
+   "concessī",
+   "concessum"
   ]
  },
  {
@@ -3126,15 +3164,16 @@
   "search_key": "conficere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cōnficere, cōnficiō, cōnfectum",
+  "grammar_note": "cōnficere, cōnficiō, cōnfēcī, cōnfectum",
   "translation": "fertig machen, beenden",
   "lessons": [
    "21"
   ],
-  "raw_line": "cōnficere, cōnficiō, cōnfectum fertig machen, beenden - 21",
+  "raw_line": "cōnficere, cōnficiō, cōnfēcī, cōnfectum fertig machen, beenden - 21",
   "verb_forms": [
    "cōnficere",
    "cōnficiō",
+   "cōnfēcī",
    "cōnfectum"
   ]
  },
@@ -3144,15 +3183,17 @@
   "search_key": "confirmare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cōnfirmāre, cōnfirmō",
+  "grammar_note": "cōnfirmāre, cōnfirmō, cōnfirmāvī, cōnfirmātum",
   "translation": "bekräftigen, ermutigen, stärken",
   "lessons": [
    "12"
   ],
-  "raw_line": "cōnfirmāre, cōnfirmō bekräftigen, ermutigen, stärken - 12",
+  "raw_line": "cōnfirmāre, cōnfirmō, cōnfirmāvī, cōnfirmātum bekräftigen, ermutigen, stärken - 12",
   "verb_forms": [
    "cōnfirmāre",
-   "cōnfirmō"
+   "cōnfirmō",
+   "cōnfirmāvī",
+   "cōnfirmātum"
   ]
  },
  {
@@ -3261,15 +3302,17 @@
   "search_key": "conseruare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cōnservāre, cōnservō (ā m. Abl.)",
+  "grammar_note": "cōnservāre, cōnservō, cōnservāvī, cōnservātum (ā m. Abl.)",
   "translation": "retten (vor), bewahren",
   "lessons": [
    "28"
   ],
-  "raw_line": "cōnservāre, cōnservō (ā m. Abl.) retten (vor), bewahren - 28",
+  "raw_line": "cōnservāre, cōnservō, cōnservāvī, cōnservātum (ā m. Abl.) retten (vor), bewahren - 28",
   "verb_forms": [
    "cōnservāre",
-   "cōnservō"
+   "cōnservō",
+   "cōnservāvī",
+   "cōnservātum"
   ]
  },
  {
@@ -3491,16 +3534,17 @@
   "search_key": "contendere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "contendere, contendō, contendī",
+  "grammar_note": "contendere, contendō, contendī, contentum",
   "translation": "sich anstrengen, kämpfen; eilen; behaupten",
   "lessons": [
    "11"
   ],
-  "raw_line": "contendere, contendō, contendī sich anstrengen, kämpfen; eilen; behaupten - 11",
+  "raw_line": "contendere, contendō, contendī, contentum sich anstrengen, kämpfen; eilen; behaupten - 11",
   "verb_forms": [
    "contendere",
    "contendō",
-   "contendī"
+   "contendī",
+   "contentum"
   ]
  },
  {
@@ -3555,16 +3599,17 @@
   "search_key": "conuenire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "convenīre, conveniō, convēnī",
+  "grammar_note": "convenīre, conveniō, convēnī, conventum",
   "translation": "zusammenkommen, zusammenpassen, besuchen",
   "lessons": [
    "10"
   ],
-  "raw_line": "convenīre, conveniō, convēnī zusammenkommen, zusammenpassen, besuchen - 10",
+  "raw_line": "convenīre, conveniō, convēnī, conventum zusammenkommen, zusammenpassen, besuchen - 10",
   "verb_forms": [
    "convenīre",
    "conveniō",
-   "convēnī"
+   "convēnī",
+   "conventum"
   ]
  },
  {
@@ -3606,15 +3651,17 @@
   "search_key": "conuocare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "convocāre, convocō",
+  "grammar_note": "convocāre, convocō, convocāvī, convocātum",
   "translation": "zusammenrufen, versammeln",
   "lessons": [
    "23"
   ],
-  "raw_line": "convocāre, convocō zusammenrufen, versammeln - 23",
+  "raw_line": "convocāre, convocō, convocāvī, convocātum zusammenrufen, versammeln - 23",
   "verb_forms": [
    "convocāre",
-   "convocō"
+   "convocō",
+   "convocāvī",
+   "convocātum"
   ]
  },
  {
@@ -3717,15 +3764,17 @@
   "search_key": "creare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "creāre, creō",
+  "grammar_note": "creāre, creō, creāvī, creātum",
   "translation": "erschaffen, wählen",
   "lessons": [
    "7"
   ],
-  "raw_line": "creāre, creō erschaffen, wählen - 7",
+  "raw_line": "creāre, creō, creāvī, creātum erschaffen, wählen - 7",
   "verb_forms": [
    "creāre",
-   "creō"
+   "creō",
+   "creāvī",
+   "creātum"
   ]
  },
  {
@@ -3761,16 +3810,17 @@
   "search_key": "credere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "crēdere, crēdō, crēdidī",
+  "grammar_note": "crēdere, crēdō, crēdidī, creditum",
   "translation": "glauben, anvertrauen",
   "lessons": [
    "12"
   ],
-  "raw_line": "crēdere, crēdō, crēdidī glauben, anvertrauen - 12",
+  "raw_line": "crēdere, crēdō, crēdidī, creditum glauben, anvertrauen - 12",
   "verb_forms": [
    "crēdere",
    "crēdō",
-   "crēdidī"
+   "crēdidī",
+   "creditum"
   ]
  },
  {
@@ -3792,16 +3842,17 @@
   "search_key": "crescere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "crēscere, crēscō, crēvī",
+  "grammar_note": "crēscere, crēscō, crēvī, crētum",
   "translation": "wachsen",
   "lessons": [
    "25"
   ],
-  "raw_line": "crēscere, crēscō, crēvī wachsen - 25",
+  "raw_line": "crēscere, crēscō, crēvī, crētum wachsen - 25",
   "verb_forms": [
    "crēscere",
    "crēscō",
-   "crēvī"
+   "crēvī",
+   "crētum"
   ]
  },
  {
@@ -3955,21 +4006,17 @@
  },
  {
   "id": "v0258",
-  "lemma": "cūnctī",
+  "lemma": "cūnctī, ae, a",
   "search_key": "cuncti",
-  "pos": "Verb",
+  "pos": "Adjektiv",
   "gender": null,
-  "grammar_note": "cūnctī, ae, a",
+  "grammar_note": "",
   "translation": "alle (zusammen)",
   "lessons": [
    "5"
   ],
   "raw_line": "cūnctī, ae, a alle (zusammen) - 5",
-  "verb_forms": [
-   "cūnctī",
-   "ae",
-   "a"
-  ]
+  "adj_type": "i_ae_a_pl"
  },
  {
   "id": "v0259",
@@ -4052,15 +4099,17 @@
   "search_key": "curare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cūrāre, cūrō",
+  "grammar_note": "cūrāre, cūrō, cūrāvī, cūrātum",
   "translation": "pflegen, sorgen für",
   "lessons": [
    "8"
   ],
-  "raw_line": "cūrāre, cūrō pflegen, sorgen für - 8",
+  "raw_line": "cūrāre, cūrō, cūrāvī, cūrātum pflegen, sorgen für - 8",
   "verb_forms": [
    "cūrāre",
-   "cūrō"
+   "cūrō",
+   "cūrāvī",
+   "cūrātum"
   ]
  },
  {
@@ -4083,16 +4132,17 @@
   "search_key": "currere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "currere, currō, cucurrī",
+  "grammar_note": "currere, currō, cucurrī, cursum",
   "translation": "laufen, eilen",
   "lessons": [
    "15"
   ],
-  "raw_line": "currere, currō, cucurrī laufen, eilen - 15",
+  "raw_line": "currere, currō, cucurrī, cursum laufen, eilen - 15",
   "verb_forms": [
    "currere",
    "currō",
-   "cucurrī"
+   "cucurrī",
+   "cursum"
   ]
  },
  {
@@ -4156,15 +4206,17 @@
   "search_key": "damnare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "damnāre, damnō (m. Gen.)",
+  "grammar_note": "damnāre, damnō, damnāvī, damnātum (m. Gen.)",
   "translation": "verurteilen (wegen)",
   "lessons": [
    "17"
   ],
-  "raw_line": "damnāre, damnō (m. Gen.) verurteilen (wegen) - 17",
+  "raw_line": "damnāre, damnō, damnāvī, damnātum (m. Gen.) verurteilen (wegen) - 17",
   "verb_forms": [
    "damnāre",
-   "damnō"
+   "damnō",
+   "damnāvī",
+   "damnātum"
   ]
  },
  {
@@ -4307,15 +4359,16 @@
   "search_key": "deesse",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēesse, dēsum",
+  "grammar_note": "dēesse, dēsum, dēfuī",
   "translation": "abwesend sein, fehlen",
   "lessons": [
    "6"
   ],
-  "raw_line": "dēesse, dēsum abwesend sein, fehlen - 6",
+  "raw_line": "dēesse, dēsum, dēfuī abwesend sein, fehlen - 6",
   "verb_forms": [
    "dēesse",
-   "dēsum"
+   "dēsum",
+   "dēfuī"
   ]
  },
  {
@@ -4395,15 +4448,17 @@
   "search_key": "delectare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēlēctāre, dēlēctō",
+  "grammar_note": "dēlēctāre, dēlēctō, dēlēctāvī, dēlēctātum",
   "translation": "erfreuen, unterhalten",
   "lessons": [
    "3"
   ],
-  "raw_line": "dēlēctāre, dēlēctō erfreuen, unterhalten - 3",
+  "raw_line": "dēlēctāre, dēlēctō, dēlēctāvī, dēlēctātum erfreuen, unterhalten - 3",
   "verb_forms": [
    "dēlēctāre",
-   "dēlēctō"
+   "dēlēctō",
+   "dēlēctāvī",
+   "dēlēctātum"
   ]
  },
  {
@@ -4412,17 +4467,18 @@
   "search_key": "delere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēlēre, dēleō, dēlēvī",
+  "grammar_note": "dēlēre, dēleō, dēlēvī, dēlētum",
   "translation": "zerstören, vernichten",
   "lessons": [
    "2",
    "8"
   ],
-  "raw_line": "dēlēre, dēleō, dēlēvī zerstören, vernichten - 2, 8",
+  "raw_line": "dēlēre, dēleō, dēlēvī, dēlētum zerstören, vernichten - 2, 8",
   "verb_forms": [
    "dēlēre",
    "dēleō",
-   "dēlēvī"
+   "dēlēvī",
+   "dēlētum"
   ]
  },
  {
@@ -4451,15 +4507,17 @@
   "search_key": "demonstrare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēmōnstrāre, dēmōnstrō",
+  "grammar_note": "dēmōnstrāre, dēmōnstrō, dēmōnstrāvī, dēmōnstrātum",
   "translation": "beweisen, darlegen",
   "lessons": [
    "10"
   ],
-  "raw_line": "dēmōnstrāre, dēmōnstrō beweisen, darlegen - 10",
+  "raw_line": "dēmōnstrāre, dēmōnstrō, dēmōnstrāvī, dēmōnstrātum beweisen, darlegen - 10",
   "verb_forms": [
    "dēmōnstrāre",
-   "dēmōnstrō"
+   "dēmōnstrō",
+   "dēmōnstrāvī",
+   "dēmōnstrātum"
   ]
  },
  {
@@ -4526,17 +4584,18 @@
   "search_key": "descendere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēscendere, dēscendō, dēscendī",
+  "grammar_note": "dēscendere, dēscendō, dēscendī, dēscēnsum",
   "translation": "herabsteigen",
   "lessons": [
    "6",
    "9"
   ],
-  "raw_line": "dēscendere, dēscendō, dēscendī herabsteigen - 6, 9",
+  "raw_line": "dēscendere, dēscendō, dēscendī, dēscēnsum herabsteigen - 6, 9",
   "verb_forms": [
    "dēscendere",
    "dēscendō",
-   "dēscendī"
+   "dēscendī",
+   "dēscēnsum"
   ]
  },
  {
@@ -4545,16 +4604,17 @@
   "search_key": "deserere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēserere, dēserō, dēseruī",
+  "grammar_note": "dēserere, dēserō, dēseruī, dēsertum",
   "translation": "im Stich lassen, verlassen",
   "lessons": [
    "12"
   ],
-  "raw_line": "dēserere, dēserō, dēseruī im Stich lassen, verlassen - 12",
+  "raw_line": "dēserere, dēserō, dēseruī, dēsertum im Stich lassen, verlassen - 12",
   "verb_forms": [
    "dēserere",
    "dēserō",
-   "dēseruī"
+   "dēseruī",
+   "dēsertum"
   ]
  },
  {
@@ -4563,15 +4623,17 @@
   "search_key": "desiderare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēsīderāre, dēsīderō",
+  "grammar_note": "dēsīderāre, dēsīderō, dēsīderāvī, dēsīderātum",
   "translation": "sich sehnen nach, vermissen",
   "lessons": [
    "4"
   ],
-  "raw_line": "dēsīderāre, dēsīderō sich sehnen nach, vermissen - 4",
+  "raw_line": "dēsīderāre, dēsīderō, dēsīderāvī, dēsīderātum sich sehnen nach, vermissen - 4",
   "verb_forms": [
    "dēsīderāre",
-   "dēsīderō"
+   "dēsīderō",
+   "dēsīderāvī",
+   "dēsīderātum"
   ]
  },
  {
@@ -4599,15 +4661,17 @@
   "search_key": "desperare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēspērāre, dēspērō",
+  "grammar_note": "dēspērāre, dēspērō, dēspērāvī, dēspērātum",
   "translation": "die Hoffnung aufgeben, verzweifeln",
   "lessons": [
    "10"
   ],
-  "raw_line": "dēspērāre, dēspērō die Hoffnung aufgeben, verzweifeln - 10",
+  "raw_line": "dēspērāre, dēspērō, dēspērāvī, dēspērātum die Hoffnung aufgeben, verzweifeln - 10",
   "verb_forms": [
    "dēspērāre",
-   "dēspērō"
+   "dēspērō",
+   "dēspērāvī",
+   "dēspērātum"
   ]
  },
  {
@@ -5022,15 +5086,16 @@
   "search_key": "dolere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dolēre, doleō",
+  "grammar_note": "dolēre, doleō, doluī",
   "translation": "schmerzen, wehtun",
   "lessons": [
    "1"
   ],
-  "raw_line": "dolēre, doleō schmerzen, wehtun - 1",
+  "raw_line": "dolēre, doleō, doluī schmerzen, wehtun - 1",
   "verb_forms": [
    "dolēre",
-   "doleō"
+   "doleō",
+   "doluī"
   ]
  },
  {
@@ -5134,15 +5199,17 @@
   "search_key": "donare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dōnāre, dōnō",
+  "grammar_note": "dōnāre, dōnō, dōnāvī, dōnātum",
   "translation": "schenken",
   "lessons": [
    "10"
   ],
-  "raw_line": "dōnāre, dōnō schenken - 10",
+  "raw_line": "dōnāre, dōnō, dōnāvī, dōnātum schenken - 10",
   "verb_forms": [
    "dōnāre",
-   "dōnō"
+   "dōnō",
+   "dōnāvī",
+   "dōnātum"
   ]
  },
  {
@@ -5178,15 +5245,17 @@
   "search_key": "dubitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dubitāre, dubitō",
+  "grammar_note": "dubitāre, dubitō, dubitāvī, dubitātum",
   "translation": "zweifeln; zögern (m. Inf.)",
   "lessons": [
    "3"
   ],
-  "raw_line": "dubitāre, dubitō zweifeln; zögern (m. Inf.) - 3",
+  "raw_line": "dubitāre, dubitō, dubitāvī, dubitātum zweifeln; zögern (m. Inf.) - 3",
   "verb_forms": [
    "dubitāre",
-   "dubitō"
+   "dubitō",
+   "dubitāvī",
+   "dubitātum"
   ]
  },
  {
@@ -5368,15 +5437,17 @@
   "search_key": "educere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "ēdūcere, ēdūcō",
+  "grammar_note": "ēdūcere, ēdūcō, ēdūxī, ēductum",
   "translation": "herausführen",
   "lessons": [
    "6"
   ],
-  "raw_line": "ēdūcere, ēdūcō herausführen - 6",
+  "raw_line": "ēdūcere, ēdūcō, ēdūxī, ēductum herausführen - 6",
   "verb_forms": [
    "ēdūcere",
-   "ēdūcō"
+   "ēdūcō",
+   "ēdūxī",
+   "ēductum"
   ]
  },
  {
@@ -5423,16 +5494,17 @@
   "search_key": "effugere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "effugere, effugiō, effūgī (m. Akk.)",
+  "grammar_note": "effugere, effugiō, effūgī, effugitum (m. Akk.)",
   "translation": "entfliehen, entkommen",
   "lessons": [
    "19"
   ],
-  "raw_line": "effugere, effugiō, effūgī (m. Akk.) entfliehen, entkommen - 19",
+  "raw_line": "effugere, effugiō, effūgī, effugitum (m. Akk.) entfliehen, entkommen - 19",
   "verb_forms": [
    "effugere",
    "effugiō",
-   "effūgī"
+   "effūgī",
+   "effugitum"
   ]
  },
  {
@@ -5583,15 +5655,17 @@
   "search_key": "errare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "errāre, errō",
+  "grammar_note": "errāre, errō, errāvī, errātum",
   "translation": "umherirren, (sich) irren",
   "lessons": [
    "5"
   ],
-  "raw_line": "errāre, errō umherirren, (sich) irren - 05",
+  "raw_line": "errāre, errō, errāvī, errātum umherirren, (sich) irren - 05",
   "verb_forms": [
    "errāre",
-   "errō"
+   "errō",
+   "errāvī",
+   "errātum"
   ]
  },
  {
@@ -5762,15 +5836,17 @@
   "search_key": "excitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "excitāre, excitō",
+  "grammar_note": "excitāre, excitō, excitāvī, excitātum",
   "translation": "erregen, ermuntern, wecken",
   "lessons": [
    "15"
   ],
-  "raw_line": "excitāre, excitō erregen, ermuntern, wecken - 15",
+  "raw_line": "excitāre, excitō, excitāvī, excitātum erregen, ermuntern, wecken - 15",
   "verb_forms": [
    "excitāre",
-   "excitō"
+   "excitō",
+   "excitāvī",
+   "excitātum"
   ]
  },
  {
@@ -5793,15 +5869,17 @@
   "search_key": "exercere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "exercēre, exerceō",
+  "grammar_note": "exercēre, exerceō, exercuī, exercitum",
   "translation": "üben, trainieren; quälen",
   "lessons": [
    "7"
   ],
-  "raw_line": "exercēre, exerceō üben, trainieren; quälen - 7",
+  "raw_line": "exercēre, exerceō, exercuī, exercitum üben, trainieren; quälen - 7",
   "verb_forms": [
    "exercēre",
-   "exerceō"
+   "exerceō",
+   "exercuī",
+   "exercitum"
   ]
  },
  {
@@ -5876,15 +5954,17 @@
   "search_key": "existimare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "existimāre, existimō",
+  "grammar_note": "existimāre, existimō, existimāvī, existimātum",
   "translation": "meinen, einschätzen",
   "lessons": [
    "7"
   ],
-  "raw_line": "existimāre, existimō meinen, einschätzen - 7",
+  "raw_line": "existimāre, existimō, existimāvī, existimātum meinen, einschätzen - 7",
   "verb_forms": [
    "existimāre",
-   "existimō"
+   "existimō",
+   "existimāvī",
+   "existimātum"
   ]
  },
  {
@@ -5930,15 +6010,17 @@
   "search_key": "exspectare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "exspectāre, exspectō",
+  "grammar_note": "exspectāre, exspectō, exspectāvī, exspectātum",
   "translation": "warten (auf), erwarten",
   "lessons": [
    "4"
   ],
-  "raw_line": "exspectāre, exspectō warten (auf), erwarten - 4",
+  "raw_line": "exspectāre, exspectō, exspectāvī, exspectātum warten (auf), erwarten - 4",
   "verb_forms": [
    "exspectāre",
-   "exspectō"
+   "exspectō",
+   "exspectāvī",
+   "exspectātum"
   ]
  },
  {
@@ -6070,16 +6152,17 @@
   "search_key": "fallere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "fallere, fallō, fefellī",
+  "grammar_note": "fallere, fallō, fefellī, falsum",
   "translation": "täuschen, betrügen",
   "lessons": [
    "19"
   ],
-  "raw_line": "fallere, fallō, fefellī täuschen, betrügen - 19",
+  "raw_line": "fallere, fallō, fefellī, falsum täuschen, betrügen - 19",
   "verb_forms": [
    "fallere",
    "fallō",
-   "fefellī"
+   "fefellī",
+   "falsum"
   ]
  },
  {
@@ -6430,17 +6513,18 @@
   "search_key": "flere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "flēre, fleō, flēvī",
+  "grammar_note": "flēre, fleō, flēvī, flētum",
   "translation": "weinen, beweinen",
   "lessons": [
    "2",
    "8"
   ],
-  "raw_line": "flēre, fleō, flēvī weinen, beweinen - 2, 8",
+  "raw_line": "flēre, fleō, flēvī, flētum weinen, beweinen - 2, 8",
   "verb_forms": [
    "flēre",
    "fleō",
-   "flēvī"
+   "flēvī",
+   "flētum"
   ]
  },
  {
@@ -6634,16 +6718,17 @@
   "search_key": "fugere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "fugere, fugiō, fūgī (m. Akk.)",
+  "grammar_note": "fugere, fugiō, fūgī, fugitum (m. Akk.)",
   "translation": "fliehen (vor), meiden",
   "lessons": [
    "16"
   ],
-  "raw_line": "fugere, fugiō, fūgī (m. Akk.) fliehen (vor), meiden - 16",
+  "raw_line": "fugere, fugiō, fūgī, fugitum (m. Akk.) fliehen (vor), meiden - 16",
   "verb_forms": [
    "fugere",
    "fugiō",
-   "fūgī"
+   "fūgī",
+   "fugitum"
   ]
  },
  {
@@ -6652,16 +6737,17 @@
   "search_key": "fundere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "fundere, fundō, fūdī (aus)",
+  "grammar_note": "fundere, fundō, fūdī, fūsum (aus)",
   "translation": "gießen, zerstreuen",
   "lessons": [
    "16"
   ],
-  "raw_line": "fundere, fundō, fūdī (aus)gießen, zerstreuen - 16",
+  "raw_line": "fundere, fundō, fūdī, fūsum (aus)gießen, zerstreuen - 16",
   "verb_forms": [
    "fundere",
    "fundō",
-   "fūdī"
+   "fūdī",
+   "fūsum"
   ]
  },
  {
@@ -6710,15 +6796,16 @@
   "search_key": "gaudere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "gaudēre, gaudeō",
+  "grammar_note": "gaudēre, gaudeō, gāvīsus sum",
   "translation": "sich freuen",
   "lessons": [
    "2"
   ],
-  "raw_line": "gaudēre, gaudeō sich freuen - 2",
+  "raw_line": "gaudēre, gaudeō, gāvīsus sum sich freuen - 2",
   "verb_forms": [
    "gaudēre",
-   "gaudeō"
+   "gaudeō",
+   "gāvīsus sum"
   ]
  },
  {
@@ -6955,15 +7042,17 @@
   "search_key": "habere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "habēre, habeō",
+  "grammar_note": "habēre, habeō, habuī, habitum",
   "translation": "haben, halten",
   "lessons": [
    "2"
   ],
-  "raw_line": "habēre, habeō haben, halten - 2",
+  "raw_line": "habēre, habeō, habuī, habitum haben, halten - 2",
   "verb_forms": [
    "habēre",
-   "habeō"
+   "habeō",
+   "habuī",
+   "habitum"
   ]
  },
  {
@@ -6972,15 +7061,17 @@
   "search_key": "habitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "habitāre, habitō",
+  "grammar_note": "habitāre, habitō, habitāvī, habitātum",
   "translation": "wohnen, bewohnen",
   "lessons": [
    "4"
   ],
-  "raw_line": "habitāre, habitō wohnen, bewohnen - 04",
+  "raw_line": "habitāre, habitō, habitāvī, habitātum wohnen, bewohnen - 04",
   "verb_forms": [
    "habitāre",
-   "habitō"
+   "habitō",
+   "habitāvī",
+   "habitātum"
   ]
  },
  {
@@ -6989,16 +7080,17 @@
   "search_key": "haerere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "haerēre, haereō, haesī",
+  "grammar_note": "haerēre, haereō, haesī, haesum",
   "translation": "hängen, stecken bleiben",
   "lessons": [
    "20"
   ],
-  "raw_line": "haerēre, haereō, haesī hängen, stecken bleiben - 20",
+  "raw_line": "haerēre, haereō, haesī, haesum hängen, stecken bleiben - 20",
   "verb_forms": [
    "haerēre",
    "haereō",
-   "haesī"
+   "haesī",
+   "haesum"
   ]
  },
  {
@@ -7307,15 +7399,16 @@
   "search_key": "iacere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "iacēre, iaceō",
+  "grammar_note": "iacēre, iaceō, iacuī",
   "translation": "liegen",
   "lessons": [
    "8"
   ],
-  "raw_line": "iacēre, iaceō liegen - 8",
+  "raw_line": "iacēre, iaceō, iacuī liegen - 8",
   "verb_forms": [
    "iacēre",
-   "iaceō"
+   "iaceō",
+   "iacuī"
   ]
  },
  {
@@ -7324,15 +7417,17 @@
   "search_key": "iactare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "iactāre, iactō",
+  "grammar_note": "iactāre, iactō, iactāvī, iactātum",
   "translation": "schleudern, werfen; rühmen",
   "lessons": [
    "25"
   ],
-  "raw_line": "iactāre, iactō schleudern, werfen; rühmen - 25",
+  "raw_line": "iactāre, iactō, iactāvī, iactātum schleudern, werfen; rühmen - 25",
   "verb_forms": [
    "iactāre",
-   "iactō"
+   "iactō",
+   "iactāvī",
+   "iactātum"
   ]
  },
  {
@@ -7555,15 +7650,17 @@
   "search_key": "impedire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "impedīre, impediō",
+  "grammar_note": "impedīre, impediō, impedīvī, impedītum",
   "translation": "hindern, verhindern",
   "lessons": [
    "17"
   ],
-  "raw_line": "impedīre, impediō hindern, verhindern - 17",
+  "raw_line": "impedīre, impediō, impedīvī, impedītum hindern, verhindern - 17",
   "verb_forms": [
    "impedīre",
-   "impediō"
+   "impediō",
+   "impedīvī",
+   "impedītum"
   ]
  },
  {
@@ -7591,15 +7688,17 @@
   "search_key": "imperare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "imperāre, imperō",
+  "grammar_note": "imperāre, imperō, imperāvī, imperātum",
   "translation": "befehlen, herrschen (über)",
   "lessons": [
    "5"
   ],
-  "raw_line": "imperāre, imperō befehlen, herrschen (über) - 5",
+  "raw_line": "imperāre, imperō, imperāvī, imperātum befehlen, herrschen (über) - 5",
   "verb_forms": [
    "imperāre",
-   "imperō"
+   "imperō",
+   "imperāvī",
+   "imperātum"
   ]
  },
  {
@@ -7796,17 +7895,18 @@
   "search_key": "incipere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "incipere, incipiō, coepī (incēpī)",
-  "translation": ", inceptum anfangen, beginnen",
+  "grammar_note": "incipere, incipiō, coepī, inceptum",
+  "translation": "anfangen, beginnen",
   "lessons": [
    "15",
    "21"
   ],
-  "raw_line": "incipere, incipiō, coepī (incēpī), inceptum anfangen, beginnen - 15, 21",
+  "raw_line": "incipere, incipiō, coepī, inceptum anfangen, beginnen - 15, 21",
   "verb_forms": [
    "incipere",
    "incipiō",
-   "coepī"
+   "coepī",
+   "inceptum"
   ]
  },
  {
@@ -7842,15 +7942,17 @@
   "search_key": "indicare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "indicāre, indicō",
+  "grammar_note": "indicāre, indicō, indicāvī, indicātum",
   "translation": "anzeigen, melden",
   "lessons": [
    "4"
   ],
-  "raw_line": "indicāre, indicō anzeigen, melden - 4",
+  "raw_line": "indicāre, indicō, indicāvī, indicātum anzeigen, melden - 4",
   "verb_forms": [
    "indicāre",
-   "indicō"
+   "indicō",
+   "indicāvī",
+   "indicātum"
   ]
  },
  {
@@ -8180,15 +8282,17 @@
   "search_key": "interrogare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "interrogāre, interrogō",
+  "grammar_note": "interrogāre, interrogō, interrogāvī, interrogātum",
   "translation": "fragen",
   "lessons": [
    "18"
   ],
-  "raw_line": "interrogāre, interrogō fragen - 18",
+  "raw_line": "interrogāre, interrogō, interrogāvī, interrogātum fragen - 18",
   "verb_forms": [
    "interrogāre",
-   "interrogō"
+   "interrogō",
+   "interrogāvī",
+   "interrogātum"
   ]
  },
  {
@@ -8210,15 +8314,17 @@
   "search_key": "intrare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "intrāre, intrō",
+  "grammar_note": "intrāre, intrō, intrāvī, intrātum",
   "translation": "betreten, eintreten",
   "lessons": [
    "3"
   ],
-  "raw_line": "intrāre, intrō betreten, eintreten - 3",
+  "raw_line": "intrāre, intrō, intrāvī, intrātum betreten, eintreten - 3",
   "verb_forms": [
    "intrāre",
-   "intrō"
+   "intrō",
+   "intrāvī",
+   "intrātum"
   ]
  },
  {
@@ -8515,15 +8621,17 @@
   "search_key": "iudicare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "iūdicāre, iūdicō",
+  "grammar_note": "iūdicāre, iūdicō, iūdicāvī, iūdicātum",
   "translation": "urteilen, beurteilen",
   "lessons": [
    "25"
   ],
-  "raw_line": "iūdicāre, iūdicō urteilen, beurteilen - 25",
+  "raw_line": "iūdicāre, iūdicō, iūdicāvī, iūdicātum urteilen, beurteilen - 25",
   "verb_forms": [
    "iūdicāre",
-   "iūdicō"
+   "iūdicō",
+   "iūdicāvī",
+   "iūdicātum"
   ]
  },
  {
@@ -8591,15 +8699,17 @@
   "search_key": "iurare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "iūrāre, iūrō",
+  "grammar_note": "iūrāre, iūrō, iūrāvī, iūrātum",
   "translation": "schwören",
   "lessons": [
    "21"
   ],
-  "raw_line": "iūrāre, iūrō schwören - 21",
+  "raw_line": "iūrāre, iūrō, iūrāvī, iūrātum schwören - 21",
   "verb_forms": [
    "iūrāre",
-   "iūrō"
+   "iūrō",
+   "iūrāvī",
+   "iūrātum"
   ]
  },
  {
@@ -8635,16 +8745,17 @@
   "search_key": "iuuare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "iuvāre, iuvō, iūvī m. Akk.",
+  "grammar_note": "iuvāre, iuvō, iūvī, iūtum m. Akk.",
   "translation": "unterstützen, helfen; erfreuen",
   "lessons": [
    "20"
   ],
-  "raw_line": "iuvāre, iuvō, iūvī m. Akk. unterstützen, helfen; erfreuen - 20",
+  "raw_line": "iuvāre, iuvō, iūvī, iūtum m. Akk. unterstützen, helfen; erfreuen - 20",
   "verb_forms": [
    "iuvāre",
    "iuvō",
-   "iūvī"
+   "iūvī",
+   "iūtum"
   ]
  },
  {
@@ -8692,15 +8803,17 @@
   "search_key": "laborare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "laborāre, laborō",
+  "grammar_note": "laborāre, laborō, laborāvī, laborātum",
   "translation": "arbeiten, sich anstrengen",
   "lessons": [
    "3"
   ],
-  "raw_line": "laborāre, laborō arbeiten, sich anstrengen - 3",
+  "raw_line": "laborāre, laborō, laborāvī, laborātum arbeiten, sich anstrengen - 3",
   "verb_forms": [
    "laborāre",
-   "laborō"
+   "laborō",
+   "laborāvī",
+   "laborātum"
   ]
  },
  {
@@ -8723,16 +8836,17 @@
   "search_key": "laedere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "laedere, laedō, laesī",
+  "grammar_note": "laedere, laedō, laesī, laesum",
   "translation": "beschädigen, verletzen, beleidigen",
   "lessons": [
    "15"
   ],
-  "raw_line": "laedere, laedō, laesī beschädigen, verletzen, beleidigen - 15",
+  "raw_line": "laedere, laedō, laesī, laesum beschädigen, verletzen, beleidigen - 15",
   "verb_forms": [
    "laedere",
    "laedō",
-   "laesī"
+   "laesī",
+   "laesum"
   ]
  },
  {
@@ -8797,15 +8911,16 @@
   "search_key": "latere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "latēre, lateō",
+  "grammar_note": "latēre, lateō, latuī",
   "translation": "verborgen sein",
   "lessons": [
    "2"
   ],
-  "raw_line": "latēre, lateō verborgen sein - 2",
+  "raw_line": "latēre, lateō, latuī verborgen sein - 2",
   "verb_forms": [
    "latēre",
-   "lateō"
+   "lateō",
+   "latuī"
   ]
  },
  {
@@ -8871,15 +8986,17 @@
   "search_key": "laudare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "laudāre, laudō",
+  "grammar_note": "laudāre, laudō, laudāvī, laudātum",
   "translation": "loben",
   "lessons": [
    "5"
   ],
-  "raw_line": "laudāre, laudō loben - 5",
+  "raw_line": "laudāre, laudō, laudāvī, laudātum loben - 5",
   "verb_forms": [
    "laudāre",
-   "laudō"
+   "laudō",
+   "laudāvī",
+   "laudātum"
   ]
  },
  {
@@ -9029,15 +9146,17 @@
   "search_key": "liberare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "līberāre, līberō",
+  "grammar_note": "līberāre, līberō, līberāvī, līberātum",
   "translation": "befreien, freilassen",
   "lessons": [
    "7"
   ],
-  "raw_line": "līberāre, līberō befreien, freilassen - 7",
+  "raw_line": "līberāre, līberō, līberāvī, līberātum befreien, freilassen - 7",
   "verb_forms": [
    "līberāre",
-   "līberō"
+   "līberō",
+   "līberāvī",
+   "līberātum"
   ]
  },
  {
@@ -9141,15 +9260,17 @@
   "search_key": "locare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "locāre, locō",
+  "grammar_note": "locāre, locō, locāvī, locātum",
   "translation": "aufstellen, vermieten",
   "lessons": [
    "24"
   ],
-  "raw_line": "locāre, locō aufstellen, vermieten - 24",
+  "raw_line": "locāre, locō, locāvī, locātum aufstellen, vermieten - 24",
   "verb_forms": [
    "locāre",
-   "locō"
+   "locō",
+   "locāvī",
+   "locātum"
   ]
  },
  {
@@ -9380,17 +9501,18 @@
   "search_key": "manere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "manēre, maneō, mānsī",
+  "grammar_note": "manēre, maneō, mānsī, mānsum",
   "translation": "bleiben, (er)warten",
   "lessons": [
    "4",
    "9"
   ],
-  "raw_line": "manēre, maneō, mānsī bleiben, (er)warten - 4, 9",
+  "raw_line": "manēre, maneō, mānsī, mānsum bleiben, (er)warten - 4, 9",
   "verb_forms": [
    "manēre",
    "maneō",
-   "mānsī"
+   "mānsī",
+   "mānsum"
   ]
  },
  {
@@ -9603,15 +9725,17 @@
   "search_key": "memorare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "memorāre, memorō",
+  "grammar_note": "memorāre, memorō, memorāvī, memorātum",
   "translation": "erwähnen, sagen",
   "lessons": [
    "30"
   ],
-  "raw_line": "memorāre, memorō erwähnen, sagen - 30",
+  "raw_line": "memorāre, memorō, memorāvī, memorātum erwähnen, sagen - 30",
   "verb_forms": [
    "memorāre",
-   "memorō"
+   "memorō",
+   "memorāvī",
+   "memorātum"
   ]
  },
  {
@@ -10245,21 +10369,17 @@
  },
  {
   "id": "v0678",
-  "lemma": "multī",
+  "lemma": "multī, ae, a",
   "search_key": "multi",
-  "pos": "Verb",
+  "pos": "Adjektiv",
   "gender": null,
-  "grammar_note": "multī, ae, a",
+  "grammar_note": "",
   "translation": "viele",
   "lessons": [
    "5"
   ],
   "raw_line": "multī, ae, a viele - 5",
-  "verb_forms": [
-   "multī",
-   "ae",
-   "a"
-  ]
+  "adj_type": "i_ae_a_pl"
  },
  {
   "id": "v0679",
@@ -10294,15 +10414,17 @@
   "search_key": "munire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "mūnīre, mūniō",
+  "grammar_note": "mūnīre, mūniō, mūnīvī, mūnītum",
   "translation": "bauen, befestigen, schützen",
   "lessons": [
    "10"
   ],
-  "raw_line": "mūnīre, mūniō bauen, befestigen, schützen - 10",
+  "raw_line": "mūnīre, mūniō, mūnīvī, mūnītum bauen, befestigen, schützen - 10",
   "verb_forms": [
    "mūnīre",
-   "mūniō"
+   "mūniō",
+   "mūnīvī",
+   "mūnītum"
   ]
  },
  {
@@ -10351,15 +10473,17 @@
   "search_key": "mutare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "mūtāre, mūtō (ver)",
+  "grammar_note": "mūtāre, mūtō, mūtāvī, mūtātum (ver)",
   "translation": "ändern, verwandeln",
   "lessons": [
    "18"
   ],
-  "raw_line": "mūtāre, mūtō (ver)ändern, verwandeln - 18",
+  "raw_line": "mūtāre, mūtō, mūtāvī, mūtātum (ver)ändern, verwandeln - 18",
   "verb_forms": [
    "mūtāre",
-   "mūtō"
+   "mūtō",
+   "mūtāvī",
+   "mūtātum"
   ]
  },
  {
@@ -10381,15 +10505,17 @@
   "search_key": "narrare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "narrāre, narrō",
+  "grammar_note": "narrāre, narrō, narrāvī, narrātum",
   "translation": "erzählen",
   "lessons": [
    "5"
   ],
-  "raw_line": "narrāre, narrō erzählen - 5",
+  "raw_line": "narrāre, narrō, narrāvī, narrātum erzählen - 5",
   "verb_forms": [
    "narrāre",
-   "narrō"
+   "narrō",
+   "narrāvī",
+   "narrātum"
   ]
  },
  {
@@ -10523,15 +10649,17 @@
   "search_key": "necare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "necāre, necō",
+  "grammar_note": "necāre, necō, necāvī, necātum",
   "translation": "töten",
   "lessons": [
    "22"
   ],
-  "raw_line": "necāre, necō töten - 22",
+  "raw_line": "necāre, necō, necāvī, necātum töten - 22",
   "verb_forms": [
    "necāre",
-   "necō"
+   "necō",
+   "necāvī",
+   "necātum"
   ]
  },
  {
@@ -10582,15 +10710,17 @@
   "search_key": "negare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "negāre, negō",
+  "grammar_note": "negāre, negō, negāvī, negātum",
   "translation": "leugnen, verneinen, verweigern",
   "lessons": [
    "16"
   ],
-  "raw_line": "negāre, negō leugnen, verneinen, verweigern - 16",
+  "raw_line": "negāre, negō, negāvī, negātum leugnen, verneinen, verweigern - 16",
   "verb_forms": [
    "negāre",
-   "negō"
+   "negō",
+   "negāvī",
+   "negātum"
   ]
  },
  {
@@ -10688,15 +10818,17 @@
   "search_key": "nescire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "nescīre, nesciō",
+  "grammar_note": "nescīre, nesciō, nescīvī, nescītum",
   "translation": "nicht wissen, nicht kennen, nicht verstehen",
   "lessons": [
    "4"
   ],
-  "raw_line": "nescīre, nesciō nicht wissen, nicht kennen, nicht verstehen - 4",
+  "raw_line": "nescīre, nesciō, nescīvī, nescītum nicht wissen, nicht kennen, nicht verstehen - 4",
   "verb_forms": [
    "nescīre",
-   "nesciō"
+   "nesciō",
+   "nescīvī",
+   "nescītum"
   ]
  },
  {
@@ -10872,15 +11004,17 @@
   "search_key": "nominare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "nōmināre, nōminō",
+  "grammar_note": "nōmināre, nōminō, nōmināvī, nōminātum",
   "translation": "nennen",
   "lessons": [
    "19"
   ],
-  "raw_line": "nōmināre, nōminō nennen - 19",
+  "raw_line": "nōmināre, nōminō, nōmināvī, nōminātum nennen - 19",
   "verb_forms": [
    "nōmināre",
-   "nōminō"
+   "nōminō",
+   "nōmināvī",
+   "nōminātum"
   ]
  },
  {
@@ -10938,21 +11072,17 @@
  },
  {
   "id": "v0726",
-  "lemma": "nōnnullī",
+  "lemma": "nōnnullī, ae, a",
   "search_key": "nonnulli",
-  "pos": "Verb",
+  "pos": "Adjektiv",
   "gender": null,
-  "grammar_note": "nōnnullī, ae, a",
+  "grammar_note": "",
   "translation": "einige, manche",
   "lessons": [
    "14"
   ],
   "raw_line": "nōnnullī, ae, a einige, manche - 14",
-  "verb_forms": [
-   "nōnnullī",
-   "ae",
-   "a"
-  ]
+  "adj_type": "i_ae_a_pl"
  },
  {
   "id": "v0727",
@@ -11188,15 +11318,17 @@
   "search_key": "nuntiare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "nūntiāre, nūntiō",
+  "grammar_note": "nūntiāre, nūntiō, nūntiāvī, nūntiātum",
   "translation": "melden",
   "lessons": [
    "7"
   ],
-  "raw_line": "nūntiāre, nūntiō melden - 7",
+  "raw_line": "nūntiāre, nūntiō, nūntiāvī, nūntiātum melden - 7",
   "verb_forms": [
    "nūntiāre",
-   "nūntiō"
+   "nūntiō",
+   "nūntiāvī",
+   "nūntiātum"
   ]
  },
  {
@@ -11265,15 +11397,17 @@
   "search_key": "obsecrare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "obsecrāre, obsecrō",
+  "grammar_note": "obsecrāre, obsecrō, obsecrāvī, obsecrātum",
   "translation": "anflehen, bitten",
   "lessons": [
    "19"
   ],
-  "raw_line": "obsecrāre, obsecrō anflehen, bitten - 19",
+  "raw_line": "obsecrāre, obsecrō, obsecrāvī, obsecrātum anflehen, bitten - 19",
   "verb_forms": [
    "obsecrāre",
-   "obsecrō"
+   "obsecrō",
+   "obsecrāvī",
+   "obsecrātum"
   ]
  },
  {
@@ -11295,15 +11429,17 @@
   "search_key": "obtinere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "obtinēre, obtineō (in Besitz)",
+  "grammar_note": "obtinēre, obtineō, obtinuī, obtentum (in Besitz)",
   "translation": "haben, (besetzt) halten",
   "lessons": [
    "24"
   ],
-  "raw_line": "obtinēre, obtineō (in Besitz) haben, (besetzt) halten - 24",
+  "raw_line": "obtinēre, obtineō, obtinuī, obtentum (in Besitz) haben, (besetzt) halten - 24",
   "verb_forms": [
    "obtinēre",
-   "obtineō"
+   "obtineō",
+   "obtinuī",
+   "obtentum"
   ]
  },
  {
@@ -11312,16 +11448,17 @@
   "search_key": "occidere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "occidere, occidō, occidī (zu Boden)",
+  "grammar_note": "occidere, occidō, occidī, occāsum (zu Boden)",
   "translation": "fallen, umkommen, untergehen",
   "lessons": [
    "9"
   ],
-  "raw_line": "occidere, occidō, occidī (zu Boden) fallen, umkommen, untergehen - 9",
+  "raw_line": "occidere, occidō, occidī, occāsum (zu Boden) fallen, umkommen, untergehen - 9",
   "verb_forms": [
    "occidere",
    "occidō",
-   "occidī"
+   "occidī",
+   "occāsum"
   ]
  },
  {
@@ -11363,15 +11500,17 @@
   "search_key": "occupare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "occupāre, occupō",
+  "grammar_note": "occupāre, occupō, occupāvī, occupātum",
   "translation": "besetzen, einnehmen",
   "lessons": [
    "12"
   ],
-  "raw_line": "occupāre, occupō besetzen, einnehmen - 12",
+  "raw_line": "occupāre, occupō, occupāvī, occupātum besetzen, einnehmen - 12",
   "verb_forms": [
    "occupāre",
-   "occupō"
+   "occupō",
+   "occupāvī",
+   "occupātum"
   ]
  },
  {
@@ -11467,16 +11606,17 @@
   "search_key": "omittere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "ōmittere, ōmittō, ōmīsī",
+  "grammar_note": "ōmittere, ōmittō, ōmīsī, ōmissum",
   "translation": "aufgeben, beiseite lassen",
   "lessons": [
    "12"
   ],
-  "raw_line": "ōmittere, ōmittō, ōmīsī aufgeben, beiseite lassen - 12",
+  "raw_line": "ōmittere, ōmittō, ōmīsī, ōmissum aufgeben, beiseite lassen - 12",
   "verb_forms": [
    "ōmittere",
    "ōmittō",
-   "ōmīsī"
+   "ōmīsī",
+   "ōmissum"
   ]
  },
  {
@@ -11638,15 +11778,17 @@
   "search_key": "optare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "optāre, optō",
+  "grammar_note": "optāre, optō, optāvī, optātum",
   "translation": "wünschen",
   "lessons": [
    "28"
   ],
-  "raw_line": "optāre, optō wünschen - 28",
+  "raw_line": "optāre, optō, optāvī, optātum wünschen - 28",
   "verb_forms": [
    "optāre",
-   "optō"
+   "optō",
+   "optāvī",
+   "optātum"
   ]
  },
  {
@@ -11696,15 +11838,17 @@
   "search_key": "orare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "ōrāre, ōrō (an)",
+  "grammar_note": "ōrāre, ōrō, ōrāvī, ōrātum (an)",
   "translation": "beten, bitten",
   "lessons": [
    "21"
   ],
-  "raw_line": "ōrāre, ōrō (an)beten, bitten - 21",
+  "raw_line": "ōrāre, ōrō, ōrāvī, ōrātum (an)beten, bitten - 21",
   "verb_forms": [
    "ōrāre",
-   "ōrō"
+   "ōrō",
+   "ōrāvī",
+   "ōrātum"
   ]
  },
  {
@@ -11784,15 +11928,17 @@
   "search_key": "ornare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "ōrnāre, ōrnō",
+  "grammar_note": "ōrnāre, ōrnō, ōrnāvī, ōrnātum",
   "translation": "ausstatten, schmücken",
   "lessons": [
    "3"
   ],
-  "raw_line": "ōrnāre, ōrnō ausstatten, schmücken - 3",
+  "raw_line": "ōrnāre, ōrnō, ōrnāvī, ōrnātum ausstatten, schmücken - 3",
   "verb_forms": [
    "ōrnāre",
-   "ōrnō"
+   "ōrnō",
+   "ōrnāvī",
+   "ōrnātum"
   ]
  },
  {
@@ -11829,17 +11975,18 @@
   "search_key": "ostendere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "ostendere, ostendō, ostendī",
+  "grammar_note": "ostendere, ostendō, ostendī, ostentum",
   "translation": "zeigen, erklären",
   "lessons": [
    "6",
    "9"
   ],
-  "raw_line": "ostendere, ostendō, ostendī zeigen, erklären - 6, 9",
+  "raw_line": "ostendere, ostendō, ostendī, ostentum zeigen, erklären - 6, 9",
   "verb_forms": [
    "ostendere",
    "ostendō",
-   "ostendī"
+   "ostendī",
+   "ostentum"
   ]
  },
  {
@@ -11918,15 +12065,17 @@
   "search_key": "parare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "parāre, parō (vor)",
+  "grammar_note": "parāre, parō, parāvī, parātum (vor)",
   "translation": "bereiten, vorhaben (m. Inf.); erwerben",
   "lessons": [
    "3"
   ],
-  "raw_line": "parāre, parō (vor)bereiten, vorhaben (m. Inf.); erwerben - 3",
+  "raw_line": "parāre, parō, parāvī, parātum (vor)bereiten, vorhaben (m. Inf.); erwerben - 3",
   "verb_forms": [
    "parāre",
-   "parō"
+   "parō",
+   "parāvī",
+   "parātum"
   ]
  },
  {
@@ -11985,15 +12134,16 @@
   "search_key": "parere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "pārēre, pāreō",
+  "grammar_note": "pārēre, pāreō, pāruī",
   "translation": "gehorchen",
   "lessons": [
    "1"
   ],
-  "raw_line": "pārēre, pāreō gehorchen - 1",
+  "raw_line": "pārēre, pāreō, pāruī gehorchen - 1",
   "verb_forms": [
    "pārēre",
-   "pāreō"
+   "pāreō",
+   "pāruī"
   ]
  },
  {
@@ -12070,15 +12220,16 @@
   "search_key": "patere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "patēre, pateō",
+  "grammar_note": "patēre, pateō, patuī",
   "translation": "offenstehen",
   "lessons": [
    "3"
   ],
-  "raw_line": "patēre, pateō offenstehen - 3",
+  "raw_line": "patēre, pateō, patuī offenstehen - 3",
   "verb_forms": [
    "patēre",
-   "pateō"
+   "pateō",
+   "patuī"
   ]
  },
  {
@@ -12129,21 +12280,17 @@
  },
  {
   "id": "v0806",
-  "lemma": "paucī",
+  "lemma": "paucī, ae, a",
   "search_key": "pauci",
-  "pos": "Verb",
+  "pos": "Adjektiv",
   "gender": null,
-  "grammar_note": "paucī, ae, a",
+  "grammar_note": "",
   "translation": "wenige",
   "lessons": [
    "17"
   ],
   "raw_line": "paucī, ae, a wenige - 17",
-  "verb_forms": [
-   "paucī",
-   "ae",
-   "a"
-  ]
+  "adj_type": "i_ae_a_pl"
  },
  {
   "id": "v0807",
@@ -12206,15 +12353,17 @@
   "search_key": "peccare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "peccāre, peccō",
+  "grammar_note": "peccāre, peccō, peccāvī, peccātum",
   "translation": "sündigen, einen Fehler machen",
   "lessons": [
    "27"
   ],
-  "raw_line": "peccāre, peccō sündigen, einen Fehler machen - 27",
+  "raw_line": "peccāre, peccō, peccāvī, peccātum sündigen, einen Fehler machen - 27",
   "verb_forms": [
    "peccāre",
-   "peccō"
+   "peccō",
+   "peccāvī",
+   "peccātum"
   ]
  },
  {
@@ -12353,16 +12502,17 @@
   "search_key": "pergere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "pergere, pergō, perrēxī",
+  "grammar_note": "pergere, pergō, perrēxī, perrēctum",
   "translation": "aufbrechen; weitermachen",
   "lessons": [
    "22"
   ],
-  "raw_line": "pergere, pergō, perrēxī aufbrechen; weitermachen - 22",
+  "raw_line": "pergere, pergō, perrēxī, perrēctum aufbrechen; weitermachen - 22",
   "verb_forms": [
    "pergere",
    "pergō",
-   "perrēxī"
+   "perrēxī",
+   "perrēctum"
   ]
  },
  {
@@ -12434,16 +12584,17 @@
   "search_key": "persuadere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "persuādēre, persuādeō, persuāsī m. Dat.",
+  "grammar_note": "persuādēre, persuādeō, persuāsī, persuāsum m. Dat.",
   "translation": "überreden, überzeugen (m. AcI)",
   "lessons": [
    "12"
   ],
-  "raw_line": "persuādēre, persuādeō, persuāsī m. Dat. überreden, überzeugen (m. AcI) - 12",
+  "raw_line": "persuādēre, persuādeō, persuāsī, persuāsum m. Dat. überreden, überzeugen (m. AcI) - 12",
   "verb_forms": [
    "persuādēre",
    "persuādeō",
-   "persuāsī"
+   "persuāsī",
+   "persuāsum"
   ]
  },
  {
@@ -12472,15 +12623,16 @@
   "search_key": "pertinere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "pertinēre, pertineō",
+  "grammar_note": "pertinēre, pertineō, pertinuī",
   "translation": "ad m. Akk. betreffen, gehören (zu), sich erstrecken (bis)",
   "lessons": [
    "13"
   ],
-  "raw_line": "pertinēre, pertineō ad m. Akk. betreffen, gehören (zu), sich erstrecken (bis) - 13",
+  "raw_line": "pertinēre, pertineō, pertinuī ad m. Akk. betreffen, gehören (zu), sich erstrecken (bis) - 13",
   "verb_forms": [
    "pertinēre",
-   "pertineō"
+   "pertineō",
+   "pertinuī"
   ]
  },
  {
@@ -12489,15 +12641,17 @@
   "search_key": "perturbare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "perturbāre, perturbō",
+  "grammar_note": "perturbāre, perturbō, perturbāvī, perturbātum",
   "translation": "in Verwirrung bringen",
   "lessons": [
    "28"
   ],
-  "raw_line": "perturbāre, perturbō in Verwirrung bringen - 28",
+  "raw_line": "perturbāre, perturbō, perturbāvī, perturbātum in Verwirrung bringen - 28",
   "verb_forms": [
    "perturbāre",
-   "perturbō"
+   "perturbō",
+   "perturbāvī",
+   "perturbātum"
   ]
  },
  {
@@ -12601,15 +12755,17 @@
   "search_key": "placere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "placēre, placeō",
+  "grammar_note": "placēre, placeō, placuī, placitum",
   "translation": "gefallen",
   "lessons": [
    "2"
   ],
-  "raw_line": "placēre, placeō gefallen - 2",
+  "raw_line": "placēre, placeō, placuī, placitum gefallen - 2",
   "verb_forms": [
    "placēre",
-   "placeō"
+   "placeō",
+   "placuī",
+   "placitum"
   ]
  },
  {
@@ -12684,21 +12840,17 @@
  },
  {
   "id": "v0841",
-  "lemma": "plūrimī",
+  "lemma": "plūrimī, ae, a",
   "search_key": "plurimi",
-  "pos": "Verb",
+  "pos": "Adjektiv",
   "gender": null,
-  "grammar_note": "plūrimī, ae, a",
+  "grammar_note": "",
   "translation": "die meisten, sehr viele",
   "lessons": [
    "26"
   ],
   "raw_line": "plūrimī, ae, a die meisten, sehr viele - 26",
-  "verb_forms": [
-   "plūrimī",
-   "ae",
-   "a"
-  ]
+  "adj_type": "i_ae_a_pl"
  },
  {
   "id": "v0842",
@@ -12893,15 +13045,17 @@
   "search_key": "portare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "portāre, portō",
+  "grammar_note": "portāre, portō, portāvī, portātum",
   "translation": "bringen, tragen",
   "lessons": [
    "6"
   ],
-  "raw_line": "portāre, portō bringen, tragen - 6",
+  "raw_line": "portāre, portō, portāvī, portātum bringen, tragen - 6",
   "verb_forms": [
    "portāre",
-   "portō"
+   "portō",
+   "portāvī",
+   "portātum"
   ]
  },
  {
@@ -13057,15 +13211,17 @@
   "search_key": "postulare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "pōstulāre, pōstulō",
+  "grammar_note": "pōstulāre, pōstulō, pōstulāvī, pōstulātum",
   "translation": "fordern",
   "lessons": [
    "21"
   ],
-  "raw_line": "pōstulāre, pōstulō fordern - 21",
+  "raw_line": "pōstulāre, pōstulō, pōstulāvī, pōstulātum fordern - 21",
   "verb_forms": [
    "pōstulāre",
-   "pōstulō"
+   "pōstulō",
+   "pōstulāvī",
+   "pōstulātum"
   ]
  },
  {
@@ -13116,15 +13272,17 @@
   "search_key": "praebere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "praebēre, praebeō",
+  "grammar_note": "praebēre, praebeō, praebuī, praebitum",
   "translation": "geben, hinhalten",
   "lessons": [
    "2"
   ],
-  "raw_line": "praebēre, praebeō geben, hinhalten - 2",
+  "raw_line": "praebēre, praebeō, praebuī, praebitum geben, hinhalten - 2",
   "verb_forms": [
    "praebēre",
-   "praebeō"
+   "praebeō",
+   "praebuī",
+   "praebitum"
   ]
  },
  {
@@ -13261,17 +13419,18 @@
   "search_key": "praestare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "praestāre, praestō, praestitī m. Akk.",
+  "grammar_note": "praestāre, praestō, praestitī, praestitum m. Akk.",
   "translation": "gewähren, leisten, zeigen; m. Dat. übertreffen",
   "lessons": [
    "9",
    "24"
   ],
-  "raw_line": "praestāre, praestō, praestitī m. Akk. gewähren, leisten, zeigen; m. Dat. übertreffen - 9, 24",
+  "raw_line": "praestāre, praestō, praestitī, praestitum m. Akk. gewähren, leisten, zeigen; m. Dat. übertreffen - 9, 24",
   "verb_forms": [
    "praestāre",
    "praestō",
-   "praestitī"
+   "praestitī",
+   "praestitum"
   ]
  },
  {
@@ -13293,16 +13452,17 @@
   "search_key": "praeterire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "praeterīre, praetereō, praeteriī",
+  "grammar_note": "praeterīre, praetereō, praeteriī, praeteritum",
   "translation": "übergehen, vorbeigehen (an)",
   "lessons": [
    "14"
   ],
-  "raw_line": "praeterīre, praetereō, praeteriī übergehen, vorbeigehen (an) - 14",
+  "raw_line": "praeterīre, praetereō, praeteriī, praeteritum übergehen, vorbeigehen (an) - 14",
   "verb_forms": [
    "praeterīre",
    "praetereō",
-   "praeteriī"
+   "praeteriī",
+   "praeteritum"
   ]
  },
  {
@@ -13515,15 +13675,17 @@
   "search_key": "probare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "probāre, probō",
+  "grammar_note": "probāre, probō, probāvī, probātum",
   "translation": "prüfen, beweisen, für gut befinden",
   "lessons": [
    "4"
   ],
-  "raw_line": "probāre, probō prüfen, beweisen, für gut befinden - 4",
+  "raw_line": "probāre, probō, probāvī, probātum prüfen, beweisen, für gut befinden - 4",
   "verb_forms": [
    "probāre",
-   "probō"
+   "probō",
+   "probāvī",
+   "probātum"
   ]
  },
  {
@@ -13646,15 +13808,17 @@
   "search_key": "prohibere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "prohibēre, prohibeō (ā m. Abl.)",
+  "grammar_note": "prohibēre, prohibeō, prohibuī, prohibitum (ā m. Abl.)",
   "translation": "abhalten (von), hindern (an)",
   "lessons": [
    "9"
   ],
-  "raw_line": "prohibēre, prohibeō (ā m. Abl.) abhalten (von), hindern (an) - 9",
+  "raw_line": "prohibēre, prohibeō, prohibuī, prohibitum (ā m. Abl.) abhalten (von), hindern (an) - 9",
   "verb_forms": [
    "prohibēre",
-   "prohibeō"
+   "prohibeō",
+   "prohibuī",
+   "prohibitum"
   ]
  },
  {
@@ -13723,15 +13887,17 @@
   "search_key": "properare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "properāre, properō",
+  "grammar_note": "properāre, properō, properāvī, properātum",
   "translation": "eilen, sich beeilen",
   "lessons": [
    "3"
   ],
-  "raw_line": "properāre, properō eilen, sich beeilen - 3",
+  "raw_line": "properāre, properō, properāvī, properātum eilen, sich beeilen - 3",
   "verb_forms": [
    "properāre",
-   "properō"
+   "properō",
+   "properāvī",
+   "properātum"
   ]
  },
  {
@@ -13900,15 +14066,17 @@
   "search_key": "pugnare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "pugnāre, pugnō",
+  "grammar_note": "pugnāre, pugnō, pugnāvī, pugnātum",
   "translation": "kämpfen",
   "lessons": [
    "3"
   ],
-  "raw_line": "pugnāre, pugnō kämpfen - 3",
+  "raw_line": "pugnāre, pugnō, pugnāvī, pugnātum kämpfen - 3",
   "verb_forms": [
    "pugnāre",
-   "pugnō"
+   "pugnō",
+   "pugnāvī",
+   "pugnātum"
   ]
  },
  {
@@ -13931,16 +14099,18 @@
   "search_key": "putare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "putāre, putō",
+  "grammar_note": "putāre, putō, putāvī, putātum",
   "translation": "glauben, meinen; m. dopp. Akk. halten für",
   "lessons": [
    "10",
    "19"
   ],
-  "raw_line": "putāre, putō glauben, meinen; m. dopp. Akk. halten für - 10, 19",
+  "raw_line": "putāre, putō, putāvī, putātum glauben, meinen; m. dopp. Akk. halten für - 10, 19",
   "verb_forms": [
    "putāre",
-   "putō"
+   "putō",
+   "putāvī",
+   "putātum"
   ]
  },
  {
@@ -14508,15 +14678,17 @@
   "search_key": "recitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "recitāre, recitō",
+  "grammar_note": "recitāre, recitō, recitāvī, recitātum",
   "translation": "vortragen, vorlesen",
   "lessons": [
    "17"
   ],
-  "raw_line": "recitāre, recitō vortragen, vorlesen - 17",
+  "raw_line": "recitāre, recitō, recitāvī, recitātum vortragen, vorlesen - 17",
   "verb_forms": [
    "recitāre",
-   "recitō"
+   "recitō",
+   "recitāvī",
+   "recitātum"
   ]
  },
  {
@@ -14750,16 +14922,17 @@
   "search_key": "remanere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "remanēre, remaneō, remānsī (zurück)",
+  "grammar_note": "remanēre, remaneō, remānsī, remānsum (zurück)",
   "translation": "bleiben",
   "lessons": [
    "17"
   ],
-  "raw_line": "remanēre, remaneō, remānsī (zurück)bleiben - 17",
+  "raw_line": "remanēre, remaneō, remānsī, remānsum (zurück)bleiben - 17",
   "verb_forms": [
    "remanēre",
    "remaneō",
-   "remānsī"
+   "remānsī",
+   "remānsum"
   ]
  },
  {
@@ -14787,16 +14960,17 @@
   "search_key": "repellere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "repellere, repellō, reppulī",
+  "grammar_note": "repellere, repellō, reppulī, repulsum",
   "translation": "zurückstoßen, abweisen, vertreiben",
   "lessons": [
    "11"
   ],
-  "raw_line": "repellere, repellō, reppulī zurückstoßen, abweisen, vertreiben - 11",
+  "raw_line": "repellere, repellō, reppulī, repulsum zurückstoßen, abweisen, vertreiben - 11",
   "verb_forms": [
    "repellere",
    "repellō",
-   "reppulī"
+   "reppulī",
+   "repulsum"
   ]
  },
  {
@@ -14970,16 +15144,17 @@
   "search_key": "retinere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "retinēre, retineō, retinui",
+  "grammar_note": "retinēre, retineō, retinuī, retentum",
   "translation": "behalten, festhalten, zurückhalten",
   "lessons": [
    "18"
   ],
-  "raw_line": "retinēre, retineō, retinui behalten, festhalten, zurückhalten - 18",
+  "raw_line": "retinēre, retineō, retinuī, retentum behalten, festhalten, zurückhalten - 18",
   "verb_forms": [
    "retinēre",
    "retineō",
-   "retinui"
+   "retinuī",
+   "retentum"
   ]
  },
  {
@@ -15022,15 +15197,17 @@
   "search_key": "rogare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "rogāre, rogō",
+  "grammar_note": "rogāre, rogō, rogāvī, rogātum",
   "translation": "bitten, fragen",
   "lessons": [
    "3"
   ],
-  "raw_line": "rogāre, rogō bitten, fragen - 3",
+  "raw_line": "rogāre, rogō, rogāvī, rogātum bitten, fragen - 3",
   "verb_forms": [
    "rogāre",
-   "rogō"
+   "rogō",
+   "rogāvī",
+   "rogātum"
   ]
  },
  {
@@ -15084,16 +15261,17 @@
   "search_key": "ruere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "ruere, ruō, ruī",
+  "grammar_note": "ruere, ruō, ruī, rutum",
   "translation": "stürzen, eilen, stürmen",
   "lessons": [
    "23"
   ],
-  "raw_line": "ruere, ruō, ruī stürzen, eilen, stürmen - 23",
+  "raw_line": "ruere, ruō, ruī, rutum stürzen, eilen, stürmen - 23",
   "verb_forms": [
    "ruere",
    "ruō",
-   "ruī"
+   "ruī",
+   "rutum"
   ]
  },
  {
@@ -15257,15 +15435,17 @@
   "search_key": "salutare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "salūtāre, salūtō (be)",
+  "grammar_note": "salūtāre, salūtō, salūtāvī, salūtātum (be)",
   "translation": "grüßen",
   "lessons": [
    "4"
   ],
-  "raw_line": "salūtāre, salūtō (be)grüßen - 4",
+  "raw_line": "salūtāre, salūtō, salūtāvī, salūtātum (be)grüßen - 4",
   "verb_forms": [
    "salūtāre",
-   "salūtō"
+   "salūtō",
+   "salūtāvī",
+   "salūtātum"
   ]
  },
  {
@@ -15471,15 +15651,17 @@
   "search_key": "scire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "scīre, sciō",
+  "grammar_note": "scīre, sciō, scīvī, scītum",
   "translation": "wissen, kennen, verstehen",
   "lessons": [
    "4"
   ],
-  "raw_line": "scīre, sciō wissen, kennen, verstehen - 4",
+  "raw_line": "scīre, sciō, scīvī, scītum wissen, kennen, verstehen - 4",
   "verb_forms": [
    "scīre",
-   "sciō"
+   "sciō",
+   "scīvī",
+   "scītum"
   ]
  },
  {
@@ -15652,15 +15834,17 @@
   "search_key": "seruare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "servāre, servō",
+  "grammar_note": "servāre, servō, servāvī, servātum",
   "translation": "bewahren, retten; beobachten",
   "lessons": [
    "7"
   ],
-  "raw_line": "servāre, servō bewahren, retten; beobachten - 7",
+  "raw_line": "servāre, servō, servāvī, servātum bewahren, retten; beobachten - 7",
   "verb_forms": [
    "servāre",
-   "servō"
+   "servō",
+   "servāvī",
+   "servātum"
   ]
  },
  {
@@ -15669,15 +15853,17 @@
   "search_key": "seruire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "servīre, serviō",
+  "grammar_note": "servīre, serviō, servīvī, servītum",
   "translation": "dienen, Sklave sein",
   "lessons": [
    "17"
   ],
-  "raw_line": "servīre, serviō dienen, Sklave sein - 17",
+  "raw_line": "servīre, serviō, servīvī, servītum dienen, Sklave sein - 17",
   "verb_forms": [
    "servīre",
-   "serviō"
+   "serviō",
+   "servīvī",
+   "servītum"
   ]
  },
  {
@@ -15877,16 +16063,17 @@
   "search_key": "sinere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "sinere, sinō, sīvī (zu)",
+  "grammar_note": "sinere, sinō, sīvī, situm (zu)",
   "translation": "lassen, erlauben",
   "lessons": [
    "14"
   ],
-  "raw_line": "sinere, sinō, sīvī (zu)lassen, erlauben - 14",
+  "raw_line": "sinere, sinō, sīvī, situm (zu)lassen, erlauben - 14",
   "verb_forms": [
    "sinere",
    "sinō",
-   "sīvī"
+   "sīvī",
+   "situm"
   ]
  },
  {
@@ -15951,15 +16138,16 @@
   "search_key": "solere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "solēre, soleō",
+  "grammar_note": "solēre, soleō, solitus sum",
   "translation": "gewohnt sein, gewöhnlich etw. tun",
   "lessons": [
    "30"
   ],
-  "raw_line": "solēre, soleō gewohnt sein, gewöhnlich etw. tun - 30",
+  "raw_line": "solēre, soleō, solitus sum gewohnt sein, gewöhnlich etw. tun - 30",
   "verb_forms": [
    "solēre",
-   "soleō"
+   "soleō",
+   "solitus sum"
   ]
  },
  {
@@ -15968,15 +16156,17 @@
   "search_key": "sollicitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "sollicitāre, sollicitō",
+  "grammar_note": "sollicitāre, sollicitō, sollicitāvī, sollicitātum",
   "translation": "aufhetzen, beunruhigen, erregen",
   "lessons": [
    "15"
   ],
-  "raw_line": "sollicitāre, sollicitō aufhetzen, beunruhigen, erregen - 15",
+  "raw_line": "sollicitāre, sollicitō, sollicitāvī, sollicitātum aufhetzen, beunruhigen, erregen - 15",
   "verb_forms": [
    "sollicitāre",
-   "sollicitō"
+   "sollicitō",
+   "sollicitāvī",
+   "sollicitātum"
   ]
  },
  {
@@ -16025,16 +16215,16 @@
   "search_key": "soluere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "solvere, solvō, solvi, solūtum",
+  "grammar_note": "solvere, solvō, solvī, solūtum",
   "translation": "lösen, auflösen; bezahlen",
   "lessons": [
    "18"
   ],
-  "raw_line": "solvere, solvō, solvi, solūtum lösen, auflösen; bezahlen - 18",
+  "raw_line": "solvere, solvō, solvī, solūtum lösen, auflösen; bezahlen - 18",
   "verb_forms": [
    "solvere",
    "solvō",
-   "solvi",
+   "solvī",
    "solūtum"
   ]
  },
@@ -16126,15 +16316,17 @@
   "search_key": "spectare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "spectāre, spectō",
+  "grammar_note": "spectāre, spectō, spectāvī, spectātum",
   "translation": "betrachten, ansehen, hinsehen",
   "lessons": [
    "3"
   ],
-  "raw_line": "spectāre, spectō betrachten, ansehen, hinsehen - 3",
+  "raw_line": "spectāre, spectō, spectāvī, spectātum betrachten, ansehen, hinsehen - 3",
   "verb_forms": [
    "spectāre",
-   "spectō"
+   "spectō",
+   "spectāvī",
+   "spectātum"
   ]
  },
  {
@@ -16143,15 +16335,17 @@
   "search_key": "sperare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "spērāre, spērō",
+  "grammar_note": "spērāre, spērō, spērāvī, spērātum",
   "translation": "erwarten, hoffen",
   "lessons": [
    "10"
   ],
-  "raw_line": "spērāre, spērō erwarten, hoffen - 10",
+  "raw_line": "spērāre, spērō, spērāvī, spērātum erwarten, hoffen - 10",
   "verb_forms": [
    "spērāre",
-   "spērō"
+   "spērō",
+   "spērāvī",
+   "spērātum"
   ]
  },
  {
@@ -16201,17 +16395,18 @@
   "search_key": "stare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "stāre, stō, stetī",
+  "grammar_note": "stāre, stō, stetī, statum",
   "translation": "stehen",
   "lessons": [
    "6",
    "9"
   ],
-  "raw_line": "stāre, stō, stetī stehen - 6, 9",
+  "raw_line": "stāre, stō, stetī, statum stehen - 6, 9",
   "verb_forms": [
    "stāre",
    "stō",
-   "stetī"
+   "stetī",
+   "statum"
   ]
  },
  {
@@ -16266,15 +16461,16 @@
   "search_key": "studere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "studēre, studeō",
+  "grammar_note": "studēre, studeō, studuī",
   "translation": "sich bemühen, studieren",
   "lessons": [
    "2"
   ],
-  "raw_line": "studēre, studeō sich bemühen, studieren - 2",
+  "raw_line": "studēre, studeō, studuī sich bemühen, studieren - 2",
   "verb_forms": [
    "studēre",
-   "studeō"
+   "studeō",
+   "studuī"
   ]
  },
  {
@@ -16337,16 +16533,17 @@
   "search_key": "subire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "subīre, subeō, subiī",
+  "grammar_note": "subīre, subeō, subiī, subitum",
   "translation": "auf sich nehmen, herangehen",
   "lessons": [
    "21"
   ],
-  "raw_line": "subīre, subeō, subiī auf sich nehmen, herangehen - 21",
+  "raw_line": "subīre, subeō, subiī, subitum auf sich nehmen, herangehen - 21",
   "verb_forms": [
    "subīre",
    "subeō",
-   "subiī"
+   "subiī",
+   "subitum"
   ]
  },
  {
@@ -16440,15 +16637,17 @@
   "search_key": "superare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "superāre, superō",
+  "grammar_note": "superāre, superō, superāvī, superātum",
   "translation": "besiegen, überwinden, übertreffen",
   "lessons": [
    "3"
   ],
-  "raw_line": "superāre, superō besiegen, überwinden, übertreffen - 3",
+  "raw_line": "superāre, superō, superāvī, superātum besiegen, überwinden, übertreffen - 3",
   "verb_forms": [
    "superāre",
-   "superō"
+   "superō",
+   "superāvī",
+   "superātum"
   ]
  },
  {
@@ -16516,17 +16715,18 @@
   "search_key": "surgere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "surgere, surgō, surrēxī",
+  "grammar_note": "surgere, surgō, surrēxī, surrēctum",
   "translation": "aufrichten; sich erheben, aufstehen",
   "lessons": [
    "6",
    "10"
   ],
-  "raw_line": "surgere, surgō, surrēxī aufrichten; sich erheben, aufstehen - 6, 10",
+  "raw_line": "surgere, surgō, surrēxī, surrēctum aufrichten; sich erheben, aufstehen - 6, 10",
   "verb_forms": [
    "surgere",
    "surgō",
-   "surrēxī"
+   "surrēxī",
+   "surrēctum"
   ]
  },
  {
@@ -16585,16 +16785,17 @@
   "search_key": "sustinere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "sustinēre, sustineō, sustinuī",
+  "grammar_note": "sustinēre, sustineō, sustinuī, sustentum",
   "translation": "ertragen, standhalten",
   "lessons": [
    "22"
   ],
-  "raw_line": "sustinēre, sustineō, sustinuī ertragen, standhalten - 22",
+  "raw_line": "sustinēre, sustineō, sustinuī, sustentum ertragen, standhalten - 22",
   "verb_forms": [
    "sustinēre",
    "sustineō",
-   "sustinuī"
+   "sustinuī",
+   "sustentum"
   ]
  },
  {
@@ -16661,15 +16862,17 @@
   "search_key": "tacere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "tacēre, taceō",
+  "grammar_note": "tacēre, taceō, tacuī, tacitum",
   "translation": "schweigen, verschweigen",
   "lessons": [
    "1"
   ],
-  "raw_line": "tacēre, taceō schweigen, verschweigen - 1",
+  "raw_line": "tacēre, taceō, tacuī, tacitum schweigen, verschweigen - 1",
   "verb_forms": [
    "tacēre",
-   "taceō"
+   "taceō",
+   "tacuī",
+   "tacitum"
   ]
  },
  {
@@ -16966,15 +17169,17 @@
   "search_key": "temptare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "temptāre, temptō",
+  "grammar_note": "temptāre, temptō, temptāvī, temptātum",
   "translation": "angreifen; prüfen, versuchen",
   "lessons": [
    "8"
   ],
-  "raw_line": "temptāre, temptō angreifen; prüfen, versuchen - 8",
+  "raw_line": "temptāre, temptō, temptāvī, temptātum angreifen; prüfen, versuchen - 8",
   "verb_forms": [
    "temptāre",
-   "temptō"
+   "temptō",
+   "temptāvī",
+   "temptātum"
   ]
  },
  {
@@ -17113,15 +17318,16 @@
   "search_key": "timere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "timēre, timeō",
+  "grammar_note": "timēre, timeō, timuī",
   "translation": "fürchten, Angst haben",
   "lessons": [
    "1"
   ],
-  "raw_line": "timēre, timeō fürchten, Angst haben - 1",
+  "raw_line": "timēre, timeō, timuī fürchten, Angst haben - 1",
   "verb_forms": [
    "timēre",
-   "timeō"
+   "timeō",
+   "timuī"
   ]
  },
  {
@@ -17278,16 +17484,17 @@
   "search_key": "transire",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "trānsīre, trānseō, trānsiī",
+  "grammar_note": "trānsīre, trānseō, trānsiī, trānsitum",
   "translation": "durchqueren, hinübergehen, überschreiten",
   "lessons": [
    "21"
   ],
-  "raw_line": "trānsīre, trānseō, trānsiī durchqueren, hinübergehen, überschreiten - 21",
+  "raw_line": "trānsīre, trānseō, trānsiī, trānsitum durchqueren, hinübergehen, überschreiten - 21",
   "verb_forms": [
    "trānsīre",
    "trānseō",
-   "trānsiī"
+   "trānsiī",
+   "trānsitum"
   ]
  },
  {
@@ -17322,16 +17529,17 @@
   "search_key": "tribuere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "tribuere, tribuō, tribuī",
+  "grammar_note": "tribuere, tribuō, tribuī, tribūtum",
   "translation": "schenken, zuteilen",
   "lessons": [
    "16"
   ],
-  "raw_line": "tribuere, tribuō, tribuī schenken, zuteilen - 16",
+  "raw_line": "tribuere, tribuō, tribuī, tribūtum schenken, zuteilen - 16",
   "verb_forms": [
    "tribuere",
    "tribuō",
-   "tribuī"
+   "tribuī",
+   "tribūtum"
   ]
  },
  {
@@ -17406,19 +17614,20 @@
  },
  {
   "id": "v1155",
-  "lemma": "tuēri",
+  "lemma": "tuērī",
   "search_key": "tueri",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "tuēri, tueor",
+  "grammar_note": "tuērī, tueor, tuitus sum",
   "translation": "betrachten, schützen, (milit.) sichern",
   "lessons": [
    "30"
   ],
-  "raw_line": "tuēri, tueor betrachten, schützen, (milit.) sichern - 30",
+  "raw_line": "tuērī, tueor, tuitus sum betrachten, schützen, (milit.) sichern - 30",
   "verb_forms": [
-   "tuēri",
-   "tueor"
+   "tuērī",
+   "tueor",
+   "tuitus sum"
   ]
  },
  {
@@ -17468,15 +17677,17 @@
   "search_key": "turbare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "turbāre, turbō",
+  "grammar_note": "turbāre, turbō, turbāvī, turbātum",
   "translation": "durcheinanderbringen, stören",
   "lessons": [
    "15"
   ],
-  "raw_line": "turbāre, turbō durcheinanderbringen, stören - 15",
+  "raw_line": "turbāre, turbō, turbāvī, turbātum durcheinanderbringen, stören - 15",
   "verb_forms": [
    "turbāre",
-   "turbō"
+   "turbō",
+   "turbāvī",
+   "turbātum"
   ]
  },
  {
@@ -17538,19 +17749,20 @@
  },
  {
   "id": "v1164",
-  "lemma": "tuēri",
+  "lemma": "tuērī",
   "search_key": "tueri",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "tuēri, tueor",
+  "grammar_note": "tuērī, tueor, tuitus sum",
   "translation": "betrachten, schützen, (milit.) sichern",
   "lessons": [
    "30"
   ],
-  "raw_line": "tuēri, tueor betrachten, schützen, (milit.) sichern - 30",
+  "raw_line": "tuērī, tueor, tuitus sum betrachten, schützen, (milit.) sichern - 30",
   "verb_forms": [
-   "tuēri",
-   "tueor"
+   "tuērī",
+   "tueor",
+   "tuitus sum"
   ]
  },
  {
@@ -17915,15 +18127,16 @@
   "search_key": "ualere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "valēre, valeō",
+  "grammar_note": "valēre, valeō, valuī",
   "translation": "gesund sein, stark sein, Einfluss haben",
   "lessons": [
    "3"
   ],
-  "raw_line": "valēre, valeō gesund sein, stark sein, Einfluss haben - 3",
+  "raw_line": "valēre, valeō, valuī gesund sein, stark sein, Einfluss haben - 3",
   "verb_forms": [
    "valēre",
-   "valeō"
+   "valeō",
+   "valuī"
   ]
  },
  {
@@ -18431,15 +18644,17 @@
   "search_key": "uindicare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "vindicāre, vindicō",
+  "grammar_note": "vindicāre, vindicō, vindicāvī, vindicātum",
   "translation": "beanspruchen, bestrafen; in m. Akk. vorgehen gegen",
   "lessons": [
    "19"
   ],
-  "raw_line": "vindicāre, vindicō beanspruchen, bestrafen; in m. Akk. vorgehen gegen - 19",
+  "raw_line": "vindicāre, vindicō, vindicāvī, vindicātum beanspruchen, bestrafen; in m. Akk. vorgehen gegen - 19",
   "verb_forms": [
    "vindicāre",
-   "vindicō"
+   "vindicō",
+   "vindicāvī",
+   "vindicātum"
   ]
  },
  {
@@ -18476,15 +18691,17 @@
   "search_key": "uiolare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "violāre, violō",
+  "grammar_note": "violāre, violō, violāvī, violātum",
   "translation": "verwunden, verletzen, entehren",
   "lessons": [
    "10"
   ],
-  "raw_line": "violāre, violō verwunden, verletzen, entehren - 10",
+  "raw_line": "violāre, violō, violāvī, violātum verwunden, verletzen, entehren - 10",
   "verb_forms": [
    "violāre",
-   "violō"
+   "violō",
+   "violāvī",
+   "violātum"
   ]
  },
  {
@@ -18579,15 +18796,17 @@
   "search_key": "uitare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "vitāre, vitō",
+  "grammar_note": "vitāre, vitō, vitāvī, vitātum",
   "translation": "meiden, vermeiden",
   "lessons": [
    "18"
   ],
-  "raw_line": "vitāre, vitō meiden, vermeiden - 18",
+  "raw_line": "vitāre, vitō, vitāvī, vitātum meiden, vermeiden - 18",
   "verb_forms": [
    "vitāre",
-   "vitō"
+   "vitō",
+   "vitāvī",
+   "vitātum"
   ]
  },
  {
@@ -18610,16 +18829,17 @@
   "search_key": "uiuere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "vivere, vīvō, vīxī",
+  "grammar_note": "vivere, vīvō, vīxī, victum",
   "translation": "leben",
   "lessons": [
    "10"
   ],
-  "raw_line": "vivere, vīvō, vīxī leben - 10",
+  "raw_line": "vivere, vīvō, vīxī, victum leben - 10",
   "verb_forms": [
    "vivere",
    "vīvō",
-   "vīxī"
+   "vīxī",
+   "victum"
   ]
  },
  {
@@ -18681,15 +18901,17 @@
   "search_key": "uocare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "vocāre, vocō",
+  "grammar_note": "vocāre, vocō, vocāvī, vocātum",
   "translation": "nennen, benennen, rufen",
   "lessons": [
    "3"
   ],
-  "raw_line": "vocāre, vocō nennen, benennen, rufen - 3",
+  "raw_line": "vocāre, vocō, vocāvī, vocātum nennen, benennen, rufen - 3",
   "verb_forms": [
    "vocāre",
-   "vocō"
+   "vocō",
+   "vocāvī",
+   "vocātum"
   ]
  },
  {
@@ -18698,15 +18920,17 @@
   "search_key": "uolare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "volāre, volō",
+  "grammar_note": "volāre, volō, volāvī, volātum",
   "translation": "fliegen, eilen",
   "lessons": [
    "18"
   ],
-  "raw_line": "volāre, volō fliegen, eilen - 18",
+  "raw_line": "volāre, volō, volāvī, volātum fliegen, eilen - 18",
   "verb_forms": [
    "volāre",
-   "volō"
+   "volō",
+   "volāvī",
+   "volātum"
   ]
  },
  {
