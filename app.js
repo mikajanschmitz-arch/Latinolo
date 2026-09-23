@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var TITLES = { home: "Latinolo - Campus A", flashcards: "Karteikarten", search: "Suche", forms: "Formentrainer", streak: "Streak", settings: "Einstellungen" };
+  var TITLES = { home: "Latinolo", flashcards: "Karteikarten", search: "Suche", forms: "Formentrainer", streak: "Streak", settings: "Einstellungen" };
   var lastMainTab = "home";
 
   function applyTheme() {
@@ -18,6 +18,7 @@
     document.getElementById("view-" + name).classList.add("active");
     document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.toggle("active", b.dataset.view === name); });
     document.getElementById("page-title").textContent = TITLES[name];
+    document.getElementById("page-subtitle").classList.toggle("visible", name === "home");
     if (name !== "settings") lastMainTab = name;
     if (name === "home") renderHomeView();
     if (name === "streak") renderStreakView();
@@ -150,6 +151,7 @@
       '<p style="color:var(--text-muted);font-size:0.85rem;">Setzt deinen gesamten Lernfortschritt, Streak und alle Einstellungen auf diesem Gerät zurück.</p>' +
       '<button class="btn btn-danger btn-block" id="set-reset">Fortschritt zurücksetzen</button>' +
       "</div>" +
+      '<p style="color:var(--text-muted);font-size:0.78rem;text-align:center;padding:0 20px;">Latinolo ist ein unabhängiges Lernprojekt und steht in keiner Verbindung zum Verlag oder zu den Herausgebern von Campus A.</p>' +
       '<footer class="legal">Latinolo · lokal auf diesem Gerät gespeichert</footer>';
 
     root.querySelector("#set-dark").addEventListener("change", function (ev) {

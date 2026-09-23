@@ -74,10 +74,20 @@ h1, h2, h3 { font-weight: 700; margin: 0 0 0.5em; }
   justify-content: space-between;
 }
 
+.header-title-block { min-width: 0; }
+
 .app-header h1 {
   font-size: 1.25rem;
   margin: 0;
 }
+
+.page-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+  display: none;
+}
+.page-subtitle.visible { display: block; }
 
 .icon-btn {
   background: none;
