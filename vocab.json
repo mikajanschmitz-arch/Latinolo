@@ -51,12 +51,12 @@
  },
  {
   "id": "v0004",
-  "lemma": "ac",
+  "lemma": "ac / atque",
   "search_key": "ac",
   "pos": "Konjunktion",
   "gender": null,
   "grammar_note": "",
-  "translation": "/ atque und, und auch; im Vergleich: wie, als",
+  "translation": "und, und auch; im Vergleich: wie, als",
   "lessons": [
    "15",
    "30"
@@ -10619,12 +10619,12 @@
  },
  {
   "id": "v0695",
-  "lemma": "nec",
+  "lemma": "nec / neque",
   "search_key": "nec",
   "pos": "Konjunktion",
   "gender": null,
   "grammar_note": "",
-  "translation": "/ neque und nicht, auch nicht",
+  "translation": "und nicht, auch nicht",
   "lessons": [
    "26"
   ],
@@ -15242,18 +15242,16 @@
  },
  {
   "id": "v0997",
-  "lemma": "Rōmulus",
+  "lemma": "Rōmulus / Remus",
   "search_key": "romulus",
-  "pos": "Substantiv",
-  "gender": "m",
+  "pos": "Partikel",
+  "gender": null,
   "grammar_note": "",
-  "translation": "/ Remus Romulus und Remus (Zwillingsbrüder und sagenhafte Gründer Roms)",
+  "translation": "Romulus und Remus (Zwillingsbrüder und sagenhafte Gründer Roms)",
   "lessons": [
    "11"
   ],
-  "raw_line": "Rōmulus / Remus Romulus und Remus (Zwillingsbrüder und sagenhafte Gründer Roms) - 11",
-  "proper_noun": true,
-  "inferred_gender": true
+  "raw_line": "Rōmulus / Remus Romulus und Remus (Zwillingsbrüder und sagenhafte Gründer Roms) - 11"
  },
  {
   "id": "v0998",
@@ -15564,18 +15562,16 @@
  },
  {
   "id": "v1019",
-  "lemma": "Saulus",
+  "lemma": "Saulus / Paulus",
   "search_key": "saulus",
-  "pos": "Substantiv",
-  "gender": "m",
+  "pos": "Partikel",
+  "gender": null,
   "grammar_note": "",
-  "translation": "/ Paulus Saulus / Paulus (hebräischer / christlicher Name des Apostels und Missionars, gest. um 60 n. Chr.)",
+  "translation": "Saulus / Paulus (hebräischer / christlicher Name des Apostels und Missionars, gest. um 60 n. Chr.)",
   "lessons": [
    "22"
   ],
-  "raw_line": "Saulus / Paulus Saulus / Paulus (hebräischer / christlicher Name des Apostels und Missionars, gest. um 60 n. Chr.) - 22",
-  "proper_noun": true,
-  "inferred_gender": true
+  "raw_line": "Saulus / Paulus Saulus / Paulus (hebräischer / christlicher Name des Apostels und Missionars, gest. um 60 n. Chr.) - 22"
  },
  {
   "id": "v1020",

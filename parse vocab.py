@@ -375,6 +375,21 @@ def classify_and_split(body: str):
                 "pos": "Substantiv", "gender": gender, "proper_noun": True,
                 "inferred_gender": True}
 
+    # 11c) Alternativform mit "/" ohne weiteren Marker, z.B. "ac / atque und, ..."
+    m = re.match(r"^(\S+)\s*/\s*(\S+)\s+(.*)$", body)
+    if m and not re.search(r"[,.]", m.group(1) + m.group(2)):
+        lemma2 = f"{m.group(1)} / {m.group(2)}"
+        lemma_key2 = norm_lookup(m.group(1))
+        translation2 = m.group(3)
+        if lemma_key2 in NORM_CONJ_SET:
+            pos2 = "Konjunktion"
+        elif lemma_key2 in NORM_ADVERB_SET:
+            pos2 = "Adverb"
+        else:
+            pos2 = "Partikel"
+        return {"lemma_raw": lemma2, "grammar_note": "", "translation": translation2,
+                "pos": pos2, "gender": None}
+
     # 12) Einzelnes lateinisches Wort ohne Komma/Marker, gefolgt von der
     #     deutschen Uebersetzung: haeufigster Fall bei einfachen Nomen aus
     #     fruehen Lektionen ("avus Großvater"), Eigennamen ("Rōma Rom") und
