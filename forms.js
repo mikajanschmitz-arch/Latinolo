@@ -31,6 +31,11 @@ var Forms = (function () {
     { key: "futPass", tempus: "fut1", modus: "ind", gv: "pass" },
     { key: "presSubjPass", tempus: "praes", modus: "konj", gv: "pass" },
     { key: "impfSubjPass", tempus: "impf", modus: "konj", gv: "pass" },
+    { key: "perfPass", tempus: "perf", modus: "ind", gv: "pass" },
+    { key: "pluperfPass", tempus: "pqperf", modus: "ind", gv: "pass" },
+    { key: "futPerfPass", tempus: "fut2", modus: "ind", gv: "pass" },
+    { key: "perfSubjPass", tempus: "perf", modus: "konj", gv: "pass" },
+    { key: "pluperfSubjPass", tempus: "pqperf", modus: "konj", gv: "pass" },
   ];
 
   var DECLINABLE_POS = ["Substantiv", "Adjektiv", "Pronomen"];

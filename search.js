@@ -21,7 +21,7 @@ var Search = (function () {
     });
   }
 
-  function registerForm(index, rawForm, entry, description) {
+  function registerForm(index, rawForm, entry, description, skipLastWordIndex) {
     if (!rawForm) return;
     String(rawForm).split(" / ").forEach(function (variant) {
       var clean = variant.replace(/^\(|\)$/g, "").trim();
@@ -29,7 +29,7 @@ var Search = (function () {
       var key = Data.normalize(clean);
       if (!index[key]) index[key] = [];
       index[key].push({ entry: entry, description: description, surface: clean });
-      if (clean.indexOf(" ") !== -1) {
+      if (clean.indexOf(" ") !== -1 && !skipLastWordIndex) {
         var lastWord = clean.split(" ").pop();
         var lastKey = Data.normalize(lastWord);
         if (!index[lastKey]) index[lastKey] = [];
@@ -117,14 +117,21 @@ var Search = (function () {
       ["futPass", "Futur I Indikativ Passiv"],
       ["presSubjPass", "Präsens Konjunktiv Passiv"],
       ["impfSubjPass", "Imperfekt Konjunktiv Passiv"],
+      ["perfPass", "Perfekt Indikativ Passiv"],
+      ["pluperfPass", "Plusquamperfekt Indikativ Passiv"],
+      ["futPerfPass", "Futur II Indikativ Passiv"],
+      ["perfSubjPass", "Perfekt Konjunktiv Passiv"],
+      ["pluperfSubjPass", "Plusquamperfekt Konjunktiv Passiv"],
     ];
+    var PERIPHRASTIC_KEYS = { perfPass: 1, pluperfPass: 1, futPerfPass: 1, perfSubjPass: 1, pluperfSubjPass: 1 };
     finiteSets.forEach(function (pair) {
       var key = pair[0], label = pair[1];
       if (!v[key]) return;
       var isPassiveLabel = label.indexOf("Passiv") !== -1;
       var finalLabel = dep && !isPassiveLabel ? label.replace(" Aktiv", " (Deponens)") : label;
+      var skipLast = !!PERIPHRASTIC_KEYS[key];
       v[key].forEach(function (form, i) {
-        registerForm(index, form, entry, PERSON_LABELS[i] + ", " + finalLabel);
+        registerForm(index, form, entry, PERSON_LABELS[i] + ", " + finalLabel, skipLast);
       });
     });
 

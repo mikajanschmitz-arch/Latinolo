@@ -550,6 +550,27 @@
     });
   }
 
+  // Perfektpassiv-System ist periphrastisch (PPP + Form von "esse"), z.B.
+  // "amātus sum", "amātus eram", "amātus sim" ... Da das Partizip eigentlich
+  // mit dem Subjekt übereinstimmt, wird hier - wie in Konjugationstabellen
+  // ueblich - standardmaessig die maskuline Form verwendet.
+  function buildPeriphrasticPassive(pppStem) {
+    var sg = pppStem + "us", pl = pppStem + "ī";
+    function combine(esseForms) {
+      return [
+        sg + " " + esseForms[0], sg + " " + esseForms[1], sg + " " + esseForms[2],
+        pl + " " + esseForms[3], pl + " " + esseForms[4], pl + " " + esseForms[5],
+      ];
+    }
+    return {
+      perfPass: combine(IRREGULAR_BASE.esse.pres),
+      pluperfPass: combine(IRREGULAR_BASE.esse.impf),
+      futPerfPass: combine(IRREGULAR_BASE.esse.fut),
+      perfSubjPass: combine(IRREGULAR_BASE.esse.presSubj),
+      pluperfSubjPass: combine(IRREGULAR_BASE.esse.impfSubj),
+    };
+  }
+
   /**
    * Ermittelt fuer ein Verb aus vocab.json alle verfuegbaren Formen.
    */
@@ -611,6 +632,11 @@
       if (supine) {
         result.pppStem = supine.slice(0, -2);
         result.supine = supine;
+        if (base.presPass) {
+          // nur Verben mit echtem Passiv (ferre, dare) bekommen das
+          // periphrastische Perfektpassiv-System
+          Object.assign(result, buildPeriphrasticPassive(result.pppStem));
+        }
       }
       result.hasPerfectData = !!perfect;
       result.hasSupineData = !!supine;
@@ -786,6 +812,7 @@
         result.pppStem = supine.slice(0, -2);
         result.supine = supine;
         result.hasSupineData = true;
+        Object.assign(result, buildPeriphrasticPassive(result.pppStem));
       }
     }
     return result;
