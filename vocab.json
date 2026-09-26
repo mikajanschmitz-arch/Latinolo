@@ -2615,12 +2615,12 @@
  },
  {
   "id": "v0173",
-  "lemma": "Circus",
-  "search_key": "circus",
+  "lemma": "Circus Maximus",
+  "search_key": "circus maximus",
   "pos": "Substantiv",
   "gender": "m",
   "grammar_note": "",
-  "translation": "Maximus Circus Maximus (Rennbahn für Wagenrennen in Rom)",
+  "translation": "Rennbahn für Wagenrennen in Rom",
   "lessons": [
    "14"
   ],
@@ -16372,12 +16372,12 @@
  },
  {
   "id": "v1074",
-  "lemma": "Spurius",
-  "search_key": "spurius",
+  "lemma": "Spurius Tarpēius",
+  "search_key": "spurius tarpeius",
   "pos": "Substantiv",
   "gender": "m",
   "grammar_note": "",
-  "translation": "Tarpēius Spurius Tarpeius (röm. Befehlshaber)",
+  "translation": "röm. Befehlshaber",
   "lessons": [
    "12"
   ],
@@ -17014,12 +17014,12 @@
  },
  {
   "id": "v1116",
-  "lemma": "Tarquinius",
-  "search_key": "tarquinius",
+  "lemma": "Tarquinius Superbus",
+  "search_key": "tarquinius superbus",
   "pos": "Substantiv",
   "gender": "m",
   "grammar_note": "",
-  "translation": "Superbus Tarquinius Superbus (etruskischer König von Rom)",
+  "translation": "etruskischer König von Rom",
   "lessons": [
    "13"
   ],

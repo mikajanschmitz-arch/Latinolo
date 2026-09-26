@@ -139,6 +139,12 @@ MANUAL_POS_OVERRIDE = {
     # Pronominal-/Quantitaetsadjektive
     "complūrēs, complūra": "Adjektiv",
     "plērique, plēraeque, plēraque": "Adjektiv",
+    "cēterī, ae, a": "Adjektiv",
+    "cūnctī, ae, a": "Adjektiv",
+    "multī, ae, a": "Adjektiv",
+    "nōnnullī, ae, a": "Adjektiv",
+    "paucī, ae, a": "Adjektiv",
+    "plūrimī, ae, a": "Adjektiv",
     # feste adverbiale Ausdruecke (mehrere Woerter)
     "eō annō": "Ausdruck",
     "causā": "Ausdruck",
@@ -147,6 +153,9 @@ MANUAL_POS_OVERRIDE = {
     "nōn iam": "Adverb",
     "nē quidem": "Partikel",
 }
+
+PLURAL_ONLY_ADJ_KEYS = {"cēterī, ae, a", "cūnctī, ae, a", "multī, ae, a",
+                         "nōnnullī, ae, a", "paucī, ae, a", "plūrimī, ae, a"}
 
 # einzelne, haeufig auftretende bare Adverbien/Konjunktionen, die per Endungs-
 # heuristik faelschlich als Nomen erkannt werden koennten oder generisch
@@ -259,13 +268,16 @@ def classify_and_split(body: str):
     for key, pos in MANUAL_POS_OVERRIDE.items():
         if body.startswith(key):
             rest = body[len(key):].strip()
-            return {
+            entry = {
                 "lemma_raw": key,
                 "grammar_note": "",
                 "translation": rest,
                 "pos": pos,
                 "gender": None,
             }
+            if key in PLURAL_ONLY_ADJ_KEYS:
+                entry["adj_type"] = "i_ae_a_pl"
+            return entry
 
     # 2) Praeposition
     m = PRAEP_RE.search(body)
@@ -362,6 +374,39 @@ def classify_and_split(body: str):
         return {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
                 "pos": "Substantiv", "gender": gender, "proper_noun": True,
                 "inferred_gender": True}
+
+    # 11c) Alternativform mit "/" ohne weiteren Marker, z.B. "ac / atque und, ..."
+    m = re.match(r"^(\S+)\s*/\s*(\S+)\s+(.*)$", body)
+    if m and not re.search(r"[,.]", m.group(1) + m.group(2)):
+        lemma2 = f"{m.group(1)} / {m.group(2)}"
+        lemma_key2 = norm_lookup(m.group(1))
+        translation2 = m.group(3)
+        if lemma_key2 in NORM_CONJ_SET:
+            pos2 = "Konjunktion"
+        elif lemma_key2 in NORM_ADVERB_SET:
+            pos2 = "Adverb"
+        else:
+            pos2 = "Partikel"
+        return {"lemma_raw": lemma2, "grammar_note": "", "translation": translation2,
+                "pos": pos2, "gender": None}
+
+    # 11d) Zweiwoertiger Eigenname, dessen deutsche "Übersetzung" ihn nur
+    #      wiederholt, z.B. "Spurius Tarpēius Spurius Tarpeius (röm. ...)"
+    m = re.match(r"^([A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+)\s+([A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+)\s+(.*)$", body)
+    if m:
+        w1, w2, rest = m.group(1), m.group(2), m.group(3)
+        restNorm = norm_lookup(rest)
+        repeatNorm = norm_lookup(w1) + " " + norm_lookup(w2)
+        if restNorm.startswith(repeatNorm):
+            translation = rest[len(repeatNorm):].strip()
+            if not translation:
+                translation = w1 + " " + w2
+            elif translation.startswith("(") and translation.endswith(")"):
+                # Klammerinhalt ist hier die eigentliche (einzige) Beschreibung,
+                # nicht nur eine grammatische Randnotiz -> nicht auslagern.
+                translation = translation[1:-1].strip()
+            return {"lemma_raw": f"{w1} {w2}", "grammar_note": "", "translation": translation,
+                    "pos": "Substantiv", "gender": "m", "proper_noun": True, "inferred_gender": True}
 
     # 12) Einzelnes lateinisches Wort ohne Komma/Marker, gefolgt von der
     #     deutschen Uebersetzung: haeufigster Fall bei einfachen Nomen aus

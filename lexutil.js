@@ -38,8 +38,10 @@ var LexUtil = (function () {
       var nom = parts[0];
       var gen = parts[1] || null;
       var declension = null;
+      var isPluraleTantum = false;
       if (typeof Morph !== "undefined") {
         var info = Morph.analyzeNoun(entry);
+        isPluraleTantum = !!info.pluraleTantum;
         if (!info.irregular && !info.pluraleTantum) {
           declension = info.declension;
           if (!gen) gen = info.gen;
@@ -47,6 +49,7 @@ var LexUtil = (function () {
       }
       var base = gen ? abbreviateGen(nom, gen, declension) : nom;
       var g = entry.gender ? entry.gender + "." : "";
+      if (isPluraleTantum) g = (g ? g + " " : "") + "Pl.";
       var noteExtra = entry.irregular_note ? " (" + entry.irregular_note + ")" : "";
       return [base, g].filter(Boolean).join(" ") + noteExtra;
     }

@@ -133,7 +133,13 @@
       }
       if (decl) stem = replaceEnd(givenGen, SG_ENDINGS[decl].gen, "");
     } else {
-      // kein Genitiv angegeben -> aus Nominativendung ableiten (einfache Faelle)
+      // kein Genitiv angegeben -> aus Nominativendung ableiten (einfache Faelle).
+      // Bei mehrwoertigen Namen (z.B. "Tarquinius Superbus") waere das Raten
+      // einer Endung fuer die gesamte Wortgruppe falsch (nur ein Teil wuerde
+      // scheinbar dekliniert) - dort lieber gar keinen Genitiv annehmen.
+      if (nom.indexOf(" ") !== -1) {
+        return { gender: entry.gender, declension: null, nom: nom, gen: null, stem: nom, multiword: true };
+      }
       if (nom.endsWith("us")) { decl = 2; stem = nom.slice(0, -2); }
       else if (nom.endsWith("um")) { decl = 2; stem = nom.slice(0, -2); }
       else if (nom.endsWith("a")) { decl = 1; stem = nom.slice(0, -1); }
@@ -153,6 +159,12 @@
 
     if (info.irregular) {
       return { sg: info.sg, pl: info.pl, gender: info.gender, pluraleTantum: false, irregular: true };
+    }
+
+    if (info.multiword) {
+      // Mehrwoertiger Name ohne bekannten Genitiv (z.B. "Tarquinius Superbus")
+      // - nur der Nominativ ist sicher, alle anderen Faelle bleiben unbekannt.
+      return { sg: { nom: info.nom }, pl: null, gender: info.gender, pluraleTantum: false, multiword: true };
     }
 
     if (info.pluraleTantum) {
@@ -465,7 +477,7 @@
       impfSubj: ["vellem", "vellēs", "vellet", "vellēmus", "vellētis", "vellent"],
       imper: null,
       infPres: "velle",
-      partPres: "volēns",
+      partPres: "volēns, volentis",
     },
     "nōlle": {
       pres: ["nōlō", "nōn vīs", "nōn vult", "nōlumus", "nōn vultis", "nōlunt"],
@@ -475,7 +487,7 @@
       impfSubj: ["nōllem", "nōllēs", "nōllet", "nōllēmus", "nōllētis", "nōllent"],
       imper: ["nōlī", "nōlīte"],
       infPres: "nōlle",
-      partPres: "nōlēns",
+      partPres: "nōlēns, nōlentis",
     },
     ferre: {
       pres: ["ferō", "fers", "fert", "ferimus", "fertis", "ferunt"],
@@ -485,7 +497,7 @@
       impfSubj: ["ferrem", "ferrēs", "ferret", "ferrēmus", "ferrētis", "ferrent"],
       imper: ["fer", "ferte"],
       infPres: "ferre",
-      partPres: "ferēns",
+      partPres: "ferēns, ferentis",
       presPass: ["feror", "ferris", "fertur", "ferimur", "feriminī", "feruntur"],
       impfPass: ["ferēbar", "ferēbāris", "ferēbātur", "ferēbāmur", "ferēbāminī", "ferēbantur"],
       futPass: ["ferar", "ferēris", "ferētur", "ferēmur", "ferēminī", "ferentur"],
@@ -610,7 +622,9 @@
       result.impfSubj = applyPrefix(base.impfSubj, prefix);
       result.imper = base.imper ? base.imper.map(function (f) { return f ? prefix + f : f; }) : null;
       result.infPres = prefix + base.infPres;
-      result.partPres = base.partPres ? prefix + base.partPres : null;
+      result.partPres = base.partPres
+        ? base.partPres.split(",").map(function (s) { return prefix + s.trim(); }).join(", ")
+        : null;
       if (base.presPass) {
         result.presPass = applyPrefix(base.presPass, prefix);
         result.impfPass = applyPrefix(base.impfPass, prefix);
@@ -672,6 +686,9 @@
         result.impfSubj = IMPF_SUBJ_PASS_ENDINGS.map(function (e) { return stemDep + themeDep + e; });
         result.infPres = infinitive;
         result.imper = [stemDep + themeDep + "re", stemDep + themeDep + "minī"];
+        result.partPres = depConj === "4dep"
+          ? stemDep + "iēns, " + stemDep + "ientis"
+          : (depConj === "1dep" ? stemDep + "āns, " + stemDep + "antis" : stemDep + "ēns, " + stemDep + "entis");
       } else if (depConj === "3iodep") {
         result.pres = [stemDep + "ior", stemDep + "eris", stemDep + "itur", stemDep + "imur", stemDep + "iminī", stemDep + "iuntur"];
         result.impf = [stemDep + "iēbar", stemDep + "iēbāris", stemDep + "iēbātur", stemDep + "iēbāmur", stemDep + "iēbāminī", stemDep + "iēbantur"];
@@ -680,6 +697,7 @@
         result.impfSubj = IMPF_SUBJ_PASS_ENDINGS.map(function (e) { return stemDep + "e" + e; });
         result.imper = [stemDep + "ere", stemDep + "iminī"];
         result.infPres = infinitive;
+        result.partPres = stemDep + "iēns, " + stemDep + "ientis";
       } else {
         // 3dep
         result.pres = [stemDep + "or", stemDep + "eris", stemDep + "itur", stemDep + "imur", stemDep + "iminī", stemDep + "untur"];
@@ -689,6 +707,7 @@
         result.impfSubj = IMPF_SUBJ_PASS_ENDINGS.map(function (e) { return stemDep + "e" + e; });
         result.imper = [stemDep + "ere", stemDep + "iminī"];
         result.infPres = infinitive;
+        result.partPres = stemDep + "ēns, " + stemDep + "entis";
       }
 
       if (deponentPastPart) {

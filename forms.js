@@ -109,7 +109,7 @@ var Forms = (function () {
         '<div class="chip-grid" id="f-modus-grid">' + chipGroup("modus", MODUS_LABELS, state.known.modus) + "</div>" +
         '<div class="section-title">Bekanntes Genus Verbi</div>' +
         '<div class="chip-grid" id="f-gv-grid">' + chipGroup("gv", GV_LABELS, state.known.gv) + "</div>" +
-        '<div class="toggle-row"><span>Auch Infinitiv/Imperativ/Partizip (nur Modus 2)</span>' +
+        '<div class="toggle-row"><span>Auch Partizipien PPA/PPP (Modus 1+2) sowie Infinitiv/Imperativ (nur Modus 2)</span>' +
         '<label class="switch"><input type="checkbox" id="f-nonfinite"' + (state.includeNonFinite ? " checked" : "") + '><span class="slider"></span></label></div>'
         : "") +
 
@@ -249,17 +249,36 @@ var Forms = (function () {
     if (v.infPres) slots.push({ nonFinite: "infinitiv", label: "Infinitiv Präsens" + (v.isDeponent ? " (Deponens)" : " Aktiv"), value: v.infPres });
     if (v.infPresPass) slots.push({ nonFinite: "infinitiv", label: "Infinitiv Präsens Passiv", value: v.infPresPass });
     if (v.infPerf) slots.push({ nonFinite: "infinitiv", label: "Infinitiv Perfekt Aktiv", value: v.infPerf });
-    if (v.partPres) {
-      var pp = v.partPres.split(",")[0].trim();
-      slots.push({ nonFinite: "partizip", label: "Partizip Präsens Aktiv", value: pp });
+    if (v.supine) slots.push({ nonFinite: "supinum", label: "Supinum", value: v.supine });
+    return slots;
+  }
+
+  // PPP/PPA werden wie vollstaendig deklinierte Adjektive behandelt (Kasus,
+  // Numerus UND Genus bestimmbar) - nutzbar in Modus 1 (Auswahlfelder) und
+  // Modus 2 (Eintippen).
+  function buildParticipleSlots(entry, v) {
+    var slots = [];
+    function addDeclSlots(decl, partLabel) {
+      if (!decl) return;
+      ["m", "f", "n"].forEach(function (g) {
+        ["sg", "pl"].forEach(function (num) {
+          var t = decl[num] && decl[num][g];
+          if (!t) return;
+          Object.keys(KASUS_LABELS).forEach(function (k) {
+            if (!state.known.kasus.has(k)) return;
+            if (!t[k]) return;
+            slots.push({ dims: { kasus: k, numerus: num, genus: g, partLabel: partLabel }, value: t[k] });
+          });
+        });
+      });
     }
     if (v.pppStem) {
-      var lbl = v.isDeponent ? "Partizip Perfekt (Deponens)" : "Partizip Perfekt Passiv";
-      slots.push({ nonFinite: "partizip", label: lbl + ", Maskulinum", value: v.pppStem + "us" });
-      slots.push({ nonFinite: "partizip", label: lbl + ", Femininum", value: v.pppStem + "a" });
-      slots.push({ nonFinite: "partizip", label: lbl + ", Neutrum", value: v.pppStem + "um" });
+      var pppLabel = v.isDeponent ? "Partizip Perfekt (Deponens)" : "Partizip Perfekt Passiv (PPP)";
+      addDeclSlots(Morph.declineAdjective({ lemma: v.pppStem + "us, a, um", adj_type: "a_um" }), pppLabel);
     }
-    if (v.supine) slots.push({ nonFinite: "supinum", label: "Supinum", value: v.supine });
+    if (v.partPres) {
+      addDeclSlots(Morph.declineAdjective({ lemma: v.partPres, adj_type: "one_ending" }), "Partizip Präsens Aktiv (PPA)");
+    }
     return slots;
   }
 
@@ -272,7 +291,8 @@ var Forms = (function () {
     if (dims.modus) out.push(MODUS_LABELS[dims.modus]);
     if (dims.gv) out.push(GV_LABELS[dims.gv]);
     if (dims.genus) out.push(GENUS_LABELS[dims.genus]);
-    return out.join(", ");
+    var text = out.join(", ");
+    return dims.partLabel ? dims.partLabel + ": " + text : text;
   }
 
   function nextQuestion() {
@@ -285,8 +305,9 @@ var Forms = (function () {
       } else {
         var v = Morph.analyzeVerb(entry);
         slots = buildVerbSlots(entry, v);
-        if (state.mode === 2 && state.includeNonFinite) {
-          slots = slots.concat(buildNonFiniteSlots(entry, v));
+        if (state.includeNonFinite) {
+          slots = slots.concat(buildParticipleSlots(entry, v));
+          if (state.mode === 2) slots = slots.concat(buildNonFiniteSlots(entry, v));
         }
       }
       if (slots.length) break;
@@ -335,7 +356,7 @@ var Forms = (function () {
       '<div class="flash-progress"><span>✓ ' + state.stats.correct + " · ✗ " + state.stats.wrong + "</span></div>" +
       '<div class="card-panel" style="text-align:center;">' +
       '<div class="flash-latin">' + c.target.value + "</div>" +
-      '<div class="flash-pos" style="margin-top:4px;">' + c.entry.pos + "</div>" +
+      '<div class="flash-pos" style="margin-top:4px;">' + (dims.partLabel || c.entry.pos) + "</div>" +
       "</div>" +
       '<div class="card-panel">' + selects + "</div>" +
       '<button class="btn btn-primary btn-block" id="f-submit">Prüfen</button>' +

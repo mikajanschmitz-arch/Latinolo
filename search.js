@@ -56,8 +56,9 @@ var Search = (function () {
     }
   }
 
-  function indexAdjective(index, entry, decl) {
+  function indexAdjective(index, entry, decl, labelPrefix, skipLast) {
     if (!decl) return;
+    var prefix = labelPrefix ? labelPrefix + ": " : "";
     ["m", "f", "n"].forEach(function (gen) {
       ["sg", "pl"].forEach(function (num) {
         var table = decl[num] && decl[num][gen];
@@ -65,10 +66,25 @@ var Search = (function () {
         Object.keys(CASE_LABELS).forEach(function (c) {
           if (!table[c]) return;
           var numLabel = num === "sg" ? "Singular" : "Plural";
-          registerForm(index, table[c], entry, CASE_LABELS[c] + " " + numLabel + ", " + GENDER_LABELS[gen]);
+          registerForm(index, table[c], entry, prefix + CASE_LABELS[c] + " " + numLabel + ", " + GENDER_LABELS[gen], skipLast);
         });
       });
     });
+  }
+
+  // PPP (Partizip Perfekt Passiv / bei Deponentien: Partizip Perfekt mit
+  // aktiver Bedeutung) und PPA (Partizip Präsens Aktiv) werden wie normale
+  // Adjektive dekliniert und komplett indexiert (alle Kasus/Numeri/Genera).
+  function indexParticiples(index, entry, v) {
+    if (v.pppStem) {
+      var pppLabel = v.isDeponent ? "Partizip Perfekt (Deponens)" : "Partizip Perfekt Passiv (PPP)";
+      var pppDecl = Morph.declineAdjective({ lemma: v.pppStem + "us, a, um", adj_type: "a_um" });
+      indexAdjective(index, entry, pppDecl, pppLabel);
+    }
+    if (v.partPres) {
+      var ppaDecl = Morph.declineAdjective({ lemma: v.partPres, adj_type: "one_ending" });
+      indexAdjective(index, entry, ppaDecl, "Partizip Präsens Aktiv (PPA)");
+    }
   }
 
   function indexPronoun(index, entry, para) {
@@ -142,18 +158,8 @@ var Search = (function () {
     if (v.infPres) registerForm(index, v.infPres, entry, "Infinitiv Präsens" + (dep ? " (Deponens)" : " Aktiv"));
     if (v.infPresPass) registerForm(index, v.infPresPass, entry, "Infinitiv Präsens Passiv");
     if (v.infPerf) registerForm(index, v.infPerf, entry, "Infinitiv Perfekt Aktiv");
-    if (v.partPres) {
-      var pp = v.partPres.split(",").map(function (s) { return s.trim(); });
-      registerForm(index, pp[0], entry, "Partizip Präsens Aktiv (Nominativ)");
-      if (pp[1]) registerForm(index, pp[1], entry, "Partizip Präsens Aktiv (Genitiv-Stamm)");
-    }
-    if (v.pppStem) {
-      var label = dep ? "Partizip Perfekt (Deponens, aktive Bedeutung)" : "Partizip Perfekt Passiv (PPP)";
-      registerForm(index, v.pppStem + "us", entry, label + ", Maskulinum");
-      registerForm(index, v.pppStem + "a", entry, label + ", Femininum");
-      registerForm(index, v.pppStem + "um", entry, label + ", Neutrum");
-    }
     if (v.supine) registerForm(index, v.supine, entry, "Supinum");
+    indexParticiples(index, entry, v);
   }
 
   function buildMorphIndexAsync() {
