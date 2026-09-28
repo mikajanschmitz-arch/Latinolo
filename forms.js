@@ -50,6 +50,7 @@ var Forms = (function () {
       modus: new Set(Object.keys(MODUS_LABELS)),
       gv: new Set(Object.keys(GV_LABELS)),
     },
+    includeParticiples: false,
     includeNonFinite: false,
     mode: 1,
     pool: [],
@@ -109,7 +110,9 @@ var Forms = (function () {
         '<div class="chip-grid" id="f-modus-grid">' + chipGroup("modus", MODUS_LABELS, state.known.modus) + "</div>" +
         '<div class="section-title">Bekanntes Genus Verbi</div>' +
         '<div class="chip-grid" id="f-gv-grid">' + chipGroup("gv", GV_LABELS, state.known.gv) + "</div>" +
-        '<div class="toggle-row"><span>Auch Partizipien PPA/PPP (Modus 1+2) sowie Infinitiv/Imperativ (nur Modus 2)</span>' +
+        '<div class="toggle-row"><span>Auch Partizipien (PPA/PPP) mit Fall/Numerus/Geschlecht üben</span>' +
+        '<label class="switch"><input type="checkbox" id="f-participles"' + (state.includeParticiples ? " checked" : "") + '><span class="slider"></span></label></div>' +
+        '<div class="toggle-row"><span>Auch Infinitiv/Imperativ/Supinum (nur Modus 2)</span>' +
         '<label class="switch"><input type="checkbox" id="f-nonfinite"' + (state.includeNonFinite ? " checked" : "") + '><span class="slider"></span></label></div>'
         : "") +
 
@@ -156,6 +159,8 @@ var Forms = (function () {
     });
     var nf = el.querySelector("#f-nonfinite");
     if (nf) nf.addEventListener("change", function () { state.includeNonFinite = nf.checked; });
+    var pp = el.querySelector("#f-participles");
+    if (pp) pp.addEventListener("change", function () { state.includeParticiples = pp.checked; });
 
     el.querySelector("#f-start-1").addEventListener("click", function () { startQuiz(1); });
     el.querySelector("#f-start-2").addEventListener("click", function () { startQuiz(2); });
@@ -305,9 +310,11 @@ var Forms = (function () {
       } else {
         var v = Morph.analyzeVerb(entry);
         slots = buildVerbSlots(entry, v);
-        if (state.includeNonFinite) {
+        if (state.includeParticiples) {
           slots = slots.concat(buildParticipleSlots(entry, v));
-          if (state.mode === 2) slots = slots.concat(buildNonFiniteSlots(entry, v));
+        }
+        if (state.mode === 2 && state.includeNonFinite) {
+          slots = slots.concat(buildNonFiniteSlots(entry, v));
         }
       }
       if (slots.length) break;

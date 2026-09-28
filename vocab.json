@@ -986,12 +986,11 @@
   "pos": "Konjunktion",
   "gender": null,
   "grammar_note": "",
-  "translation": "oder (etwa)",
+  "translation": "(im dr. Fragesatz) oder (etwa)",
   "lessons": [
    "8"
   ],
-  "raw_line": "an (im dr. Fragesatz) oder (etwa) - 8",
-  "irregular_note": "im dr. Fragesatz"
+  "raw_line": "an (im dr. Fragesatz) oder (etwa) - 8"
  },
  {
   "id": "v0066",
@@ -1672,12 +1671,11 @@
   "pos": "Konjunktion",
   "gender": null,
   "grammar_note": "",
-  "translation": "aber, andererseits",
+  "translation": "(nachgestellt) aber, andererseits",
   "lessons": [
    "6"
   ],
-  "raw_line": "autem (nachgestellt) aber, andererseits - 6",
-  "irregular_note": "nachgestellt"
+  "raw_line": "autem (nachgestellt) aber, andererseits - 6"
  },
  {
   "id": "v0111",
@@ -1812,13 +1810,12 @@
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "",
-  "translation": "Tier",
+  "translation": "(wildes) Tier",
   "lessons": [
    "7"
   ],
   "raw_line": "bēstia (wildes) Tier - 7",
-  "inferred_gender": true,
-  "irregular_note": "wildes"
+  "inferred_gender": true
  },
  {
   "id": "v0121",
@@ -2281,12 +2278,11 @@
   "pos": "Ausdruck",
   "gender": null,
   "grammar_note": "",
-  "translation": "m. Gen. wegen",
+  "translation": "(nachgestellt) m. Gen. wegen",
   "lessons": [
    "27"
   ],
-  "raw_line": "causā (nachgestellt) m. Gen. wegen - 27",
-  "irregular_note": "nachgestellt"
+  "raw_line": "causā (nachgestellt) m. Gen. wegen - 27"
  },
  {
   "id": "v0152",
@@ -2620,7 +2616,7 @@
   "pos": "Substantiv",
   "gender": "m",
   "grammar_note": "",
-  "translation": "Rennbahn für Wagenrennen in Rom",
+  "translation": "Circus Maximus (Rennbahn für Wagenrennen in Rom)",
   "lessons": [
    "14"
   ],
@@ -2874,14 +2870,13 @@
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "",
-  "translation": "Köln",
+  "translation": "(Agrippinēnsis) Köln",
   "lessons": [
    "24"
   ],
   "raw_line": "Colōnia (Agrippinēnsis) Köln - 24",
   "proper_noun": true,
-  "inferred_gender": true,
-  "irregular_note": "Agrippinēnsis"
+  "inferred_gender": true
  },
  {
   "id": "v0189",
@@ -4044,12 +4039,12 @@
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "f",
-  "translation": "Verlangen (nach), Leidenschaft",
+  "translation": "(heftiges) Verlangen (nach), Leidenschaft",
   "lessons": [
    "29"
   ],
   "raw_line": "cupiditās, cupiditātis f (m. Gen.) (heftiges) Verlangen (nach), Leidenschaft - 29",
-  "irregular_note": "m. Gen.; heftiges"
+  "irregular_note": "m. Gen."
  },
  {
   "id": "v0261",
@@ -4058,13 +4053,13 @@
   "pos": "Adjektiv",
   "gender": null,
   "grammar_note": "",
-  "translation": "gierig (nach)",
+  "translation": "(be)gierig (nach)",
   "lessons": [
    "26"
   ],
   "raw_line": "cupidus, a, um (m. Gen.) (be)gierig (nach) - 26",
   "adj_type": "a_um",
-  "irregular_note": "m. Gen.; be"
+  "irregular_note": "m. Gen."
  },
  {
   "id": "v0262",
@@ -4709,12 +4704,11 @@
   "pos": "Interjektion",
   "gender": null,
   "grammar_note": "",
-  "translation": "Götter!",
+  "translation": "(oh) Götter!",
   "lessons": [
    "8"
   ],
-  "raw_line": "dī! Vok. (oh) Götter! - 08",
-  "irregular_note": "oh"
+  "raw_line": "dī! Vok. (oh) Götter! - 08"
  },
  {
   "id": "v0301",
@@ -5559,12 +5553,11 @@
   "pos": "Konjunktion",
   "gender": null,
   "grammar_note": "",
-  "translation": "nämlich",
+  "translation": "(nachgestellt) nämlich",
   "lessons": [
    "9"
   ],
-  "raw_line": "enim (nachgestellt) nämlich - 9",
-  "irregular_note": "nachgestellt"
+  "raw_line": "enim (nachgestellt) nämlich - 9"
  },
  {
   "id": "v0356",
@@ -5615,12 +5608,11 @@
   "pos": "Adverb",
   "gender": null,
   "grammar_note": "",
-  "translation": "allerdings, freilich",
+  "translation": "(ich) allerdings, freilich",
   "lessons": [
    "15"
   ],
-  "raw_line": "equidem (ich) allerdings, freilich - 15",
-  "irregular_note": "ich"
+  "raw_line": "equidem (ich) allerdings, freilich - 15"
  },
  {
   "id": "v0360",
@@ -6186,13 +6178,12 @@
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "",
-  "translation": "Ruf, Gerücht",
+  "translation": "(guter / schlechter) Ruf, Gerücht",
   "lessons": [
    "22"
   ],
   "raw_line": "fāma (guter / schlechter) Ruf, Gerücht - 22",
-  "inferred_gender": true,
-  "irregular_note": "guter / schlechter"
+  "inferred_gender": true
  },
  {
   "id": "v0396",
@@ -7505,14 +7496,13 @@
   "pos": "Substantiv",
   "gender": null,
   "grammar_note": "",
-  "translation": "Jesus (von Nazareth)",
+  "translation": "(Nāzarēnus) Jesus (von Nazareth)",
   "lessons": [
    "22"
   ],
   "raw_line": "Iēsūs (Nāzarēnus) Jesus (von Nazareth) - 22",
   "proper_noun": true,
-  "inferred_gender": true,
-  "irregular_note": "Nāzarēnus"
+  "inferred_gender": true
  },
  {
   "id": "v0486",
@@ -8396,12 +8386,11 @@
   "pos": "Pronomen",
   "gender": null,
   "grammar_note": "",
-  "translation": "selbst; persönlich; gerade; sogar (hervorhebend)",
+  "translation": "(er, sie, es) selbst; persönlich; gerade; sogar (hervorhebend)",
   "lessons": [
    "19"
   ],
-  "raw_line": "ipse, ipsa, ipsum (er, sie, es) selbst; persönlich; gerade; sogar (hervorhebend) - 19",
-  "irregular_note": "er, sie, es"
+  "raw_line": "ipse, ipsa, ipsum (er, sie, es) selbst; persönlich; gerade; sogar (hervorhebend) - 19"
  },
  {
   "id": "v0543",
@@ -9772,13 +9761,12 @@
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "",
-  "translation": "Tisch",
+  "translation": "(Ess-)Tisch",
   "lessons": [
    "3"
   ],
   "raw_line": "mēnsa (Ess-)Tisch - 3",
-  "inferred_gender": true,
-  "irregular_note": "Ess-"
+  "inferred_gender": true
  },
  {
   "id": "v0638",
@@ -10683,12 +10671,11 @@
   "pos": "Ausdruck",
   "gender": null,
   "grammar_note": "",
-  "translation": "notwendig",
+  "translation": "(es ist) notwendig",
   "lessons": [
    "22"
   ],
-  "raw_line": "necesse est (es ist) notwendig - 22",
-  "irregular_note": "es ist"
+  "raw_line": "necesse est (es ist) notwendig - 22"
  },
  {
   "id": "v0700",
@@ -10878,12 +10865,11 @@
   "pos": "Adverb",
   "gender": null,
   "grammar_note": "Adv.",
-  "translation": "zu, allzu sehr",
+  "translation": "(all)zu, allzu sehr",
   "lessons": [
    "21"
   ],
-  "raw_line": "nimis / nimium Adv. (all)zu, allzu sehr - 21",
-  "irregular_note": "all"
+  "raw_line": "nimis / nimium Adv. (all)zu, allzu sehr - 21"
  },
  {
   "id": "v0713",
@@ -11063,12 +11049,11 @@
   "pos": "Pronomen",
   "gender": null,
   "grammar_note": "?",
-  "translation": "nicht?",
+  "translation": "(etwa) nicht?",
   "lessons": [
    "6"
   ],
-  "raw_line": "nōnne? (etwa) nicht? - 6",
-  "irregular_note": "etwa"
+  "raw_line": "nōnne? (etwa) nicht? - 6"
  },
  {
   "id": "v0726",
@@ -11090,28 +11075,15 @@
   "search_key": "nos",
   "pos": "Pronomen",
   "gender": null,
-  "grammar_note": "Akk.",
-  "translation": "uns",
+  "grammar_note": "Nom./Akk.",
+  "translation": "wir (betont) / uns",
   "lessons": [
    "5"
   ],
-  "raw_line": "nōs Akk. uns - 5"
+  "raw_line": "nōs Nom./Akk. wir (betont) / uns - 5"
  },
  {
   "id": "v0728",
-  "lemma": "nōs",
-  "search_key": "nos",
-  "pos": "Pronomen",
-  "gender": null,
-  "grammar_note": "Nom.",
-  "translation": "wir (betont)",
-  "lessons": [
-   "5"
-  ],
-  "raw_line": "nōs Nom. wir (betont) - 5"
- },
- {
-  "id": "v0729",
   "lemma": "nōscere",
   "search_key": "noscere",
   "pos": "Verb",
@@ -11130,7 +11102,7 @@
   ]
  },
  {
-  "id": "v0730",
+  "id": "v0729",
   "lemma": "noster, nostra, nostrum",
   "search_key": "noster",
   "pos": "Adjektiv",
@@ -11144,7 +11116,7 @@
   "adj_type": "er_a_um"
  },
  {
-  "id": "v0731",
+  "id": "v0730",
   "lemma": "novem",
   "search_key": "nouem",
   "pos": "Zahlwort",
@@ -11157,7 +11129,7 @@
   "raw_line": "novem indekl. neun - 16"
  },
  {
-  "id": "v0732",
+  "id": "v0731",
   "lemma": "novus, a, um",
   "search_key": "nouus",
   "pos": "Adjektiv",
@@ -11171,7 +11143,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0733",
+  "id": "v0732",
   "lemma": "nox, noctis",
   "search_key": "nox",
   "pos": "Substantiv",
@@ -11185,7 +11157,7 @@
   "irregular_note": "Gen. Pl. -ium"
  },
  {
-  "id": "v0734",
+  "id": "v0733",
   "lemma": "nūbere",
   "search_key": "nubere",
   "pos": "Verb",
@@ -11204,7 +11176,7 @@
   ]
  },
  {
-  "id": "v0735",
+  "id": "v0734",
   "lemma": "nūllus, a, um",
   "search_key": "nullus",
   "pos": "Adjektiv",
@@ -11219,35 +11191,33 @@
   "irregular_note": "Gen. nūllīus, Dat. nūllī"
  },
  {
+  "id": "v0735",
+  "lemma": "num",
+  "search_key": "num",
+  "pos": "Pronomen",
+  "gender": null,
+  "grammar_note": "?",
+  "translation": "(im Hauptsatz) etwa?",
+  "lessons": [
+   "20"
+  ],
+  "raw_line": "num? (im Hauptsatz) etwa? - 20"
+ },
+ {
   "id": "v0736",
   "lemma": "num",
   "search_key": "num",
   "pos": "Pronomen",
   "gender": null,
   "grammar_note": "?",
-  "translation": "etwa?",
-  "lessons": [
-   "20"
-  ],
-  "raw_line": "num? (im Hauptsatz) etwa? - 20",
-  "irregular_note": "im Hauptsatz"
- },
- {
-  "id": "v0737",
-  "lemma": "num",
-  "search_key": "num",
-  "pos": "Pronomen",
-  "gender": null,
-  "grammar_note": "?",
-  "translation": "ob, ob nicht",
+  "translation": "(im Gliedsatz) ob, ob nicht",
   "lessons": [
    "25"
   ],
-  "raw_line": "num? (im Gliedsatz) ob, ob nicht - 25",
-  "irregular_note": "im Gliedsatz"
+  "raw_line": "num? (im Gliedsatz) ob, ob nicht - 25"
  },
  {
-  "id": "v0738",
+  "id": "v0737",
   "lemma": "nūmen, nūminis",
   "search_key": "numen",
   "pos": "Substantiv",
@@ -11260,7 +11230,7 @@
   "raw_line": "nūmen, nūminis n Gottheit, göttlicher Wille - 23"
  },
  {
-  "id": "v0739",
+  "id": "v0738",
   "lemma": "numerus",
   "search_key": "numerus",
   "pos": "Substantiv",
@@ -11274,7 +11244,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0740",
+  "id": "v0739",
   "lemma": "Numitor, Numitōris",
   "search_key": "numitor",
   "pos": "Substantiv",
@@ -11287,7 +11257,7 @@
   "raw_line": "Numitor, Numitōris m Numitor (König von Alba, Großvater von Romulus und Remus) - 11"
  },
  {
-  "id": "v0741",
+  "id": "v0740",
   "lemma": "numquam",
   "search_key": "numquam",
   "pos": "Adverb",
@@ -11300,7 +11270,7 @@
   "raw_line": "numquam Adv. niemals - 2"
  },
  {
-  "id": "v0742",
+  "id": "v0741",
   "lemma": "nunc",
   "search_key": "nunc",
   "pos": "Adverb",
@@ -11313,7 +11283,7 @@
   "raw_line": "nunc Adv. nun, jetzt - 1"
  },
  {
-  "id": "v0743",
+  "id": "v0742",
   "lemma": "nūntiāre",
   "search_key": "nuntiare",
   "pos": "Verb",
@@ -11332,7 +11302,7 @@
   ]
  },
  {
-  "id": "v0744",
+  "id": "v0743",
   "lemma": "nūntius",
   "search_key": "nuntius",
   "pos": "Substantiv",
@@ -11346,7 +11316,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0745",
+  "id": "v0744",
   "lemma": "nūper",
   "search_key": "nuper",
   "pos": "Adverb",
@@ -11359,7 +11329,7 @@
   "raw_line": "nūper Adv. neulich, vor kurzem - 9"
  },
  {
-  "id": "v0746",
+  "id": "v0745",
   "lemma": "nūptiae, nūptiārum",
   "search_key": "nuptiae",
   "pos": "Substantiv",
@@ -11372,7 +11342,7 @@
   "raw_line": "nūptiae, nūptiārum f Pl. Hochzeit - 26"
  },
  {
-  "id": "v0747",
+  "id": "v0746",
   "lemma": "obicere",
   "search_key": "obicere",
   "pos": "Verb",
@@ -11392,7 +11362,7 @@
   ]
  },
  {
-  "id": "v0748",
+  "id": "v0747",
   "lemma": "obsecrāre",
   "search_key": "obsecrare",
   "pos": "Verb",
@@ -11411,7 +11381,7 @@
   ]
  },
  {
-  "id": "v0749",
+  "id": "v0748",
   "lemma": "obses, obsidis",
   "search_key": "obses",
   "pos": "Substantiv",
@@ -11424,7 +11394,7 @@
   "raw_line": "obses, obsidis m/f Geisel - 21"
  },
  {
-  "id": "v0750",
+  "id": "v0749",
   "lemma": "obtinēre",
   "search_key": "obtinere",
   "pos": "Verb",
@@ -11443,7 +11413,7 @@
   ]
  },
  {
-  "id": "v0751",
+  "id": "v0750",
   "lemma": "occidere",
   "search_key": "occidere",
   "pos": "Verb",
@@ -11462,7 +11432,7 @@
   ]
  },
  {
-  "id": "v0752",
+  "id": "v0751",
   "lemma": "occīdere",
   "search_key": "occidere",
   "pos": "Verb",
@@ -11482,7 +11452,7 @@
   ]
  },
  {
-  "id": "v0753",
+  "id": "v0752",
   "lemma": "occultē",
   "search_key": "occulte",
   "pos": "Adverb",
@@ -11495,7 +11465,7 @@
   "raw_line": "occultē Adv. heimlich - 22"
  },
  {
-  "id": "v0754",
+  "id": "v0753",
   "lemma": "occupāre",
   "search_key": "occupare",
   "pos": "Verb",
@@ -11514,7 +11484,7 @@
   ]
  },
  {
-  "id": "v0755",
+  "id": "v0754",
   "lemma": "octō",
   "search_key": "octo",
   "pos": "Zahlwort",
@@ -11527,7 +11497,7 @@
   "raw_line": "octō indekl. acht - 16"
  },
  {
-  "id": "v0756",
+  "id": "v0755",
   "lemma": "oculus",
   "search_key": "oculus",
   "pos": "Substantiv",
@@ -11541,7 +11511,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0757",
+  "id": "v0756",
   "lemma": "odiō esse",
   "search_key": "odio esse",
   "pos": "Ausdruck",
@@ -11554,7 +11524,7 @@
   "raw_line": "odiō esse verhasst sein - 21"
  },
  {
-  "id": "v0758",
+  "id": "v0757",
   "lemma": "odium",
   "search_key": "odium",
   "pos": "Substantiv",
@@ -11568,7 +11538,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0759",
+  "id": "v0758",
   "lemma": "offerre",
   "search_key": "offerre",
   "pos": "Verb",
@@ -11587,7 +11557,7 @@
   ]
  },
  {
-  "id": "v0760",
+  "id": "v0759",
   "lemma": "officium",
   "search_key": "officium",
   "pos": "Substantiv",
@@ -11601,7 +11571,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0761",
+  "id": "v0760",
   "lemma": "ōmittere",
   "search_key": "omittere",
   "pos": "Verb",
@@ -11620,7 +11590,7 @@
   ]
  },
  {
-  "id": "v0762",
+  "id": "v0761",
   "lemma": "omnia, omnium",
   "search_key": "omnia",
   "pos": "Substantiv",
@@ -11633,7 +11603,7 @@
   "raw_line": "omnia, omnium n Pl. alles - 14"
  },
  {
-  "id": "v0763",
+  "id": "v0762",
   "lemma": "omnīnō",
   "search_key": "omnino",
   "pos": "Adverb",
@@ -11646,7 +11616,7 @@
   "raw_line": "omnīnō Adv. insgesamt, überhaupt, völlig - 23"
  },
  {
-  "id": "v0764",
+  "id": "v0763",
   "lemma": "omnis, e",
   "search_key": "omnis",
   "pos": "Adjektiv",
@@ -11660,7 +11630,7 @@
   "adj_type": "is_e"
  },
  {
-  "id": "v0765",
+  "id": "v0764",
   "lemma": "onus, oneris",
   "search_key": "onus",
   "pos": "Substantiv",
@@ -11673,7 +11643,7 @@
   "raw_line": "onus, oneris n Last - 30"
  },
  {
-  "id": "v0766",
+  "id": "v0765",
   "lemma": "opera",
   "search_key": "opera",
   "pos": "Substantiv",
@@ -11687,7 +11657,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0767",
+  "id": "v0766",
   "lemma": "opīniō, opīniōnis",
   "search_key": "opinio",
   "pos": "Substantiv",
@@ -11700,7 +11670,7 @@
   "raw_line": "opīniō, opīniōnis f Meinung, (guter) Ruf - 26"
  },
  {
-  "id": "v0768",
+  "id": "v0767",
   "lemma": "oportet",
   "search_key": "oportet",
   "pos": "Ausdruck",
@@ -11713,7 +11683,7 @@
   "raw_line": "oportet es gehört sich, es ist nötig - 10"
  },
  {
-  "id": "v0769",
+  "id": "v0768",
   "lemma": "oppidum",
   "search_key": "oppidum",
   "pos": "Substantiv",
@@ -11727,7 +11697,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0770",
+  "id": "v0769",
   "lemma": "opportunus, a, um",
   "search_key": "opportunus",
   "pos": "Adjektiv",
@@ -11741,7 +11711,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0771",
+  "id": "v0770",
   "lemma": "opprimere",
   "search_key": "opprimere",
   "pos": "Verb",
@@ -11760,7 +11730,7 @@
   ]
  },
  {
-  "id": "v0772",
+  "id": "v0771",
   "lemma": "ops, opis",
   "search_key": "ops",
   "pos": "Substantiv",
@@ -11773,7 +11743,7 @@
   "raw_line": "ops, opis f Hilfe, Kraft; Pl. Macht, Mittel, Reichtum - 26"
  },
  {
-  "id": "v0773",
+  "id": "v0772",
   "lemma": "optāre",
   "search_key": "optare",
   "pos": "Verb",
@@ -11792,7 +11762,7 @@
   ]
  },
  {
-  "id": "v0774",
+  "id": "v0773",
   "lemma": "optimus, a, um",
   "search_key": "optimus",
   "pos": "Adjektiv",
@@ -11806,7 +11776,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0775",
+  "id": "v0774",
   "lemma": "opus, operis",
   "search_key": "opus",
   "pos": "Substantiv",
@@ -11819,7 +11789,7 @@
   "raw_line": "opus, operis n Arbeit, Werk - 28"
  },
  {
-  "id": "v0776",
+  "id": "v0775",
   "lemma": "ōra",
   "search_key": "ora",
   "pos": "Substantiv",
@@ -11833,7 +11803,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0777",
+  "id": "v0776",
   "lemma": "ōrāre",
   "search_key": "orare",
   "pos": "Verb",
@@ -11852,7 +11822,7 @@
   ]
  },
  {
-  "id": "v0778",
+  "id": "v0777",
   "lemma": "ōrātiō, ōrātiōnis",
   "search_key": "oratio",
   "pos": "Substantiv",
@@ -11865,7 +11835,7 @@
   "raw_line": "ōrātiō, ōrātiōnis f Rede - 21"
  },
  {
-  "id": "v0779",
+  "id": "v0778",
   "lemma": "ōrbis, ōrbis",
   "search_key": "orbis",
   "pos": "Substantiv",
@@ -11878,7 +11848,7 @@
   "raw_line": "ōrbis, ōrbis m Kreis(lauf); Erdkreis, Welt - 24"
  },
  {
-  "id": "v0780",
+  "id": "v0779",
   "lemma": "ōrdō, ōrdinis",
   "search_key": "ordo",
   "pos": "Substantiv",
@@ -11891,7 +11861,7 @@
   "raw_line": "ōrdō, ōrdinis m Ordnung, Reihe, Stand - 12"
  },
  {
-  "id": "v0781",
+  "id": "v0780",
   "lemma": "orīrī",
   "search_key": "oriri",
   "pos": "Verb",
@@ -11909,7 +11879,7 @@
   ]
  },
  {
-  "id": "v0782",
+  "id": "v0781",
   "lemma": "ōrnāmentum",
   "search_key": "ornamentum",
   "pos": "Substantiv",
@@ -11923,7 +11893,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0783",
+  "id": "v0782",
   "lemma": "ōrnāre",
   "search_key": "ornare",
   "pos": "Verb",
@@ -11942,7 +11912,7 @@
   ]
  },
  {
-  "id": "v0784",
+  "id": "v0783",
   "lemma": "Orpheus, Orpheī",
   "search_key": "orpheus",
   "pos": "Substantiv",
@@ -11957,7 +11927,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0785",
+  "id": "v0784",
   "lemma": "ōs, ōris",
   "search_key": "os",
   "pos": "Substantiv",
@@ -11970,7 +11940,7 @@
   "raw_line": "ōs, ōris n Gesicht, Mund - 16"
  },
  {
-  "id": "v0786",
+  "id": "v0785",
   "lemma": "ostendere",
   "search_key": "ostendere",
   "pos": "Verb",
@@ -11990,7 +11960,7 @@
   ]
  },
  {
-  "id": "v0787",
+  "id": "v0786",
   "lemma": "ōtium",
   "search_key": "otium",
   "pos": "Substantiv",
@@ -12004,7 +11974,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0788",
+  "id": "v0787",
   "lemma": "paene",
   "search_key": "paene",
   "pos": "Adverb",
@@ -12017,7 +11987,7 @@
   "raw_line": "paene Adv. fast - 17"
  },
  {
-  "id": "v0789",
+  "id": "v0788",
   "lemma": "palam",
   "search_key": "palam",
   "pos": "Adverb",
@@ -12030,7 +12000,7 @@
   "raw_line": "palam Adv. bekannt, in aller Öffentlichkeit - 28"
  },
  {
-  "id": "v0790",
+  "id": "v0789",
   "lemma": "Palātium",
   "search_key": "palatium",
   "pos": "Substantiv",
@@ -12045,7 +12015,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0791",
+  "id": "v0790",
   "lemma": "pār, paris",
   "search_key": "par",
   "pos": "Adjektiv",
@@ -12060,7 +12030,7 @@
   "adj_stem_gen": "paris"
  },
  {
-  "id": "v0792",
+  "id": "v0791",
   "lemma": "parāre",
   "search_key": "parare",
   "pos": "Verb",
@@ -12079,7 +12049,7 @@
   ]
  },
  {
-  "id": "v0793",
+  "id": "v0792",
   "lemma": "parcere",
   "search_key": "parcere",
   "pos": "Verb",
@@ -12097,7 +12067,7 @@
   ]
  },
  {
-  "id": "v0794",
+  "id": "v0793",
   "lemma": "parēns, parentis",
   "search_key": "parens",
   "pos": "Substantiv",
@@ -12110,7 +12080,7 @@
   "raw_line": "parēns, parentis m/f Vater / Mutter - 19"
  },
  {
-  "id": "v0795",
+  "id": "v0794",
   "lemma": "parere",
   "search_key": "parere",
   "pos": "Verb",
@@ -12129,7 +12099,7 @@
   ]
  },
  {
-  "id": "v0796",
+  "id": "v0795",
   "lemma": "pārēre",
   "search_key": "parere",
   "pos": "Verb",
@@ -12147,7 +12117,7 @@
   ]
  },
  {
-  "id": "v0797",
+  "id": "v0796",
   "lemma": "pariter",
   "search_key": "pariter",
   "pos": "Adverb",
@@ -12160,7 +12130,7 @@
   "raw_line": "pariter Adv. ebenso, gleichzeitig - 25"
  },
  {
-  "id": "v0798",
+  "id": "v0797",
   "lemma": "pars, partis",
   "search_key": "pars",
   "pos": "Substantiv",
@@ -12174,21 +12144,20 @@
   "irregular_note": "Gen. Pl. -ium"
  },
  {
-  "id": "v0799",
+  "id": "v0798",
   "lemma": "parum",
   "search_key": "parum",
   "pos": "Adverb",
   "gender": null,
   "grammar_note": "Adv.",
-  "translation": "wenig",
+  "translation": "(zu) wenig",
   "lessons": [
    "25"
   ],
-  "raw_line": "parum Adv. (zu) wenig - 25",
-  "irregular_note": "zu"
+  "raw_line": "parum Adv. (zu) wenig - 25"
  },
  {
-  "id": "v0800",
+  "id": "v0799",
   "lemma": "parvus, a, um",
   "search_key": "paruus",
   "pos": "Adjektiv",
@@ -12202,7 +12171,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0801",
+  "id": "v0800",
   "lemma": "pater, patris",
   "search_key": "pater",
   "pos": "Substantiv",
@@ -12215,7 +12184,7 @@
   "raw_line": "pater, patris m Vater - 7"
  },
  {
-  "id": "v0802",
+  "id": "v0801",
   "lemma": "patēre",
   "search_key": "patere",
   "pos": "Verb",
@@ -12233,7 +12202,7 @@
   ]
  },
  {
-  "id": "v0803",
+  "id": "v0802",
   "lemma": "patī",
   "search_key": "pati",
   "pos": "Verb",
@@ -12251,7 +12220,7 @@
   ]
  },
  {
-  "id": "v0804",
+  "id": "v0803",
   "lemma": "patria",
   "search_key": "patria",
   "pos": "Substantiv",
@@ -12265,7 +12234,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0805",
+  "id": "v0804",
   "lemma": "patrius, a, um",
   "search_key": "patrius",
   "pos": "Adjektiv",
@@ -12279,7 +12248,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0806",
+  "id": "v0805",
   "lemma": "paucī, ae, a",
   "search_key": "pauci",
   "pos": "Adjektiv",
@@ -12293,7 +12262,7 @@
   "adj_type": "i_ae_a_pl"
  },
  {
-  "id": "v0807",
+  "id": "v0806",
   "lemma": "paulātim",
   "search_key": "paulatim",
   "pos": "Adverb",
@@ -12306,21 +12275,20 @@
   "raw_line": "paulātim Adv. allmählich - 10"
  },
  {
-  "id": "v0808",
+  "id": "v0807",
   "lemma": "paulō",
   "search_key": "paulo",
   "pos": "Adverb",
   "gender": null,
   "grammar_note": "",
-  "translation": "ein wenig",
+  "translation": "(um) ein wenig",
   "lessons": [
    "22"
   ],
-  "raw_line": "paulō (um) ein wenig - 22",
-  "irregular_note": "um"
+  "raw_line": "paulō (um) ein wenig - 22"
  },
  {
-  "id": "v0809",
+  "id": "v0808",
   "lemma": "pauper, pauperis",
   "search_key": "pauper",
   "pos": "Adjektiv",
@@ -12335,7 +12303,7 @@
   "adj_stem_gen": "pauperis"
  },
  {
-  "id": "v0810",
+  "id": "v0809",
   "lemma": "pāx, pācis",
   "search_key": "pax",
   "pos": "Substantiv",
@@ -12348,7 +12316,7 @@
   "raw_line": "pāx, pācis f Frieden - 10"
  },
  {
-  "id": "v0811",
+  "id": "v0810",
   "lemma": "peccāre",
   "search_key": "peccare",
   "pos": "Verb",
@@ -12367,7 +12335,7 @@
   ]
  },
  {
-  "id": "v0812",
+  "id": "v0811",
   "lemma": "pectus, pectoris",
   "search_key": "pectus",
   "pos": "Substantiv",
@@ -12380,7 +12348,7 @@
   "raw_line": "pectus, pectoris n Brust, Herz - 16"
  },
  {
-  "id": "v0813",
+  "id": "v0812",
   "lemma": "pecūnia",
   "search_key": "pecunia",
   "pos": "Substantiv",
@@ -12394,7 +12362,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0814",
+  "id": "v0813",
   "lemma": "pecus, pecoris",
   "search_key": "pecus",
   "pos": "Substantiv",
@@ -12407,7 +12375,7 @@
   "raw_line": "pecus, pecoris n Vieh, Tier - 29"
  },
  {
-  "id": "v0815",
+  "id": "v0814",
   "lemma": "pellere",
   "search_key": "pellere",
   "pos": "Verb",
@@ -12427,7 +12395,7 @@
   ]
  },
  {
-  "id": "v0816",
+  "id": "v0815",
   "lemma": "per",
   "search_key": "per",
   "pos": "Präposition",
@@ -12440,7 +12408,7 @@
   "raw_line": "per Präp. m. Akk. durch, hindurch - 6"
  },
  {
-  "id": "v0817",
+  "id": "v0816",
   "lemma": "perdere",
   "search_key": "perdere",
   "pos": "Verb",
@@ -12459,7 +12427,7 @@
   ]
  },
  {
-  "id": "v0818",
+  "id": "v0817",
   "lemma": "perferre",
   "search_key": "perferre",
   "pos": "Verb",
@@ -12478,7 +12446,7 @@
   ]
  },
  {
-  "id": "v0819",
+  "id": "v0818",
   "lemma": "perficere",
   "search_key": "perficere",
   "pos": "Verb",
@@ -12497,7 +12465,7 @@
   ]
  },
  {
-  "id": "v0820",
+  "id": "v0819",
   "lemma": "pergere",
   "search_key": "pergere",
   "pos": "Verb",
@@ -12516,7 +12484,7 @@
   ]
  },
  {
-  "id": "v0821",
+  "id": "v0820",
   "lemma": "perīculum",
   "search_key": "periculum",
   "pos": "Substantiv",
@@ -12530,7 +12498,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0822",
+  "id": "v0821",
   "lemma": "perīre",
   "search_key": "perire",
   "pos": "Verb",
@@ -12548,7 +12516,7 @@
   ]
  },
  {
-  "id": "v0823",
+  "id": "v0822",
   "lemma": "perniciēs, perniciēī",
   "search_key": "pernicies",
   "pos": "Substantiv",
@@ -12561,7 +12529,7 @@
   "raw_line": "perniciēs, perniciēī f Verderben, Vernichtung - 13"
  },
  {
-  "id": "v0824",
+  "id": "v0823",
   "lemma": "persequī",
   "search_key": "persequi",
   "pos": "Verb",
@@ -12579,7 +12547,7 @@
   ]
  },
  {
-  "id": "v0825",
+  "id": "v0824",
   "lemma": "persuādēre",
   "search_key": "persuadere",
   "pos": "Verb",
@@ -12598,7 +12566,7 @@
   ]
  },
  {
-  "id": "v0826",
+  "id": "v0825",
   "lemma": "perterrēre",
   "search_key": "perterrere",
   "pos": "Verb",
@@ -12618,7 +12586,7 @@
   ]
  },
  {
-  "id": "v0827",
+  "id": "v0826",
   "lemma": "pertinēre",
   "search_key": "pertinere",
   "pos": "Verb",
@@ -12636,7 +12604,7 @@
   ]
  },
  {
-  "id": "v0828",
+  "id": "v0827",
   "lemma": "perturbāre",
   "search_key": "perturbare",
   "pos": "Verb",
@@ -12655,7 +12623,7 @@
   ]
  },
  {
-  "id": "v0829",
+  "id": "v0828",
   "lemma": "pervenīre",
   "search_key": "peruenire",
   "pos": "Verb",
@@ -12674,7 +12642,7 @@
   ]
  },
  {
-  "id": "v0830",
+  "id": "v0829",
   "lemma": "pēs, pedis",
   "search_key": "pes",
   "pos": "Substantiv",
@@ -12687,7 +12655,7 @@
   "raw_line": "pēs, pedis m Fuß - 16"
  },
  {
-  "id": "v0831",
+  "id": "v0830",
   "lemma": "pessimus, a, um",
   "search_key": "pessimus",
   "pos": "Adjektiv",
@@ -12701,7 +12669,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0832",
+  "id": "v0831",
   "lemma": "petere",
   "search_key": "petere",
   "pos": "Verb",
@@ -12722,7 +12690,7 @@
   ]
  },
  {
-  "id": "v0833",
+  "id": "v0832",
   "lemma": "philosophus",
   "search_key": "philosophus",
   "pos": "Substantiv",
@@ -12736,7 +12704,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0834",
+  "id": "v0833",
   "lemma": "pius, a, um",
   "search_key": "pius",
   "pos": "Adjektiv",
@@ -12750,7 +12718,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0835",
+  "id": "v0834",
   "lemma": "placēre",
   "search_key": "placere",
   "pos": "Verb",
@@ -12769,7 +12737,7 @@
   ]
  },
  {
-  "id": "v0836",
+  "id": "v0835",
   "lemma": "placet",
   "search_key": "placet",
   "pos": "Ausdruck",
@@ -12782,7 +12750,7 @@
   "raw_line": "placet m. Dat. es gefällt jdm., jd. beschließt - 18"
  },
  {
-  "id": "v0837",
+  "id": "v0836",
   "lemma": "placidus, a, um",
   "search_key": "placidus",
   "pos": "Adjektiv",
@@ -12796,21 +12764,20 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0838",
+  "id": "v0837",
   "lemma": "plēbs, plēbis",
   "search_key": "plebs",
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "f",
-  "translation": "Volk",
+  "translation": "(nicht adeliges, einfaches) Volk",
   "lessons": [
    "20"
   ],
-  "raw_line": "plēbs, plēbis f (nicht adeliges, einfaches) Volk - 20",
-  "irregular_note": "nicht adeliges, einfaches"
+  "raw_line": "plēbs, plēbis f (nicht adeliges, einfaches) Volk - 20"
  },
  {
-  "id": "v0839",
+  "id": "v0838",
   "lemma": "plēnus, a, um",
   "search_key": "plenus",
   "pos": "Adjektiv",
@@ -12826,7 +12793,7 @@
   "irregular_note": "m. Gen."
  },
  {
-  "id": "v0840",
+  "id": "v0839",
   "lemma": "plērique, plēraeque, plēraque",
   "search_key": "plerique",
   "pos": "Adjektiv",
@@ -12839,7 +12806,7 @@
   "raw_line": "plērique, plēraeque, plēraque die meisten, sehr viele - 30"
  },
  {
-  "id": "v0841",
+  "id": "v0840",
   "lemma": "plūrimī, ae, a",
   "search_key": "plurimi",
   "pos": "Adjektiv",
@@ -12853,7 +12820,7 @@
   "adj_type": "i_ae_a_pl"
  },
  {
-  "id": "v0842",
+  "id": "v0841",
   "lemma": "plūrimum",
   "search_key": "plurimum",
   "pos": "Adverb",
@@ -12866,7 +12833,7 @@
   "raw_line": "plūrimum Adv. am meisten, sehr viel - 29"
  },
  {
-  "id": "v0843",
+  "id": "v0842",
   "lemma": "plūs, plūris",
   "search_key": "plus",
   "pos": "Adjektiv",
@@ -12881,7 +12848,7 @@
   "adj_stem_gen": "plūris"
  },
  {
-  "id": "v0844",
+  "id": "v0843",
   "lemma": "plūs",
   "search_key": "plus",
   "pos": "Adverb",
@@ -12894,7 +12861,7 @@
   "raw_line": "plūs Adv. mehr - 29"
  },
  {
-  "id": "v0845",
+  "id": "v0844",
   "lemma": "Plūtō, Plūtōnis",
   "search_key": "pluto",
   "pos": "Substantiv",
@@ -12907,7 +12874,7 @@
   "raw_line": "Plūtō, Plūtōnis m Pluto (Gott der Unterwelt) - 9"
  },
  {
-  "id": "v0846",
+  "id": "v0845",
   "lemma": "poena",
   "search_key": "poena",
   "pos": "Substantiv",
@@ -12921,7 +12888,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0847",
+  "id": "v0846",
   "lemma": "poēta, poētae",
   "search_key": "poeta",
   "pos": "Substantiv",
@@ -12934,7 +12901,7 @@
   "raw_line": "poēta, poētae m Dichter - 14"
  },
  {
-  "id": "v0848",
+  "id": "v0847",
   "lemma": "pollicērī",
   "search_key": "polliceri",
   "pos": "Verb",
@@ -12952,7 +12919,7 @@
   ]
  },
  {
-  "id": "v0849",
+  "id": "v0848",
   "lemma": "Pompēī, Pompēiōrum",
   "search_key": "pompei",
   "pos": "Substantiv",
@@ -12965,7 +12932,7 @@
   "raw_line": "Pompēī, Pompēiōrum m Pl. Pompeji (Stadt in Mittelitalien) - 8"
  },
  {
-  "id": "v0850",
+  "id": "v0849",
   "lemma": "Pompēiānus, a, um",
   "search_key": "pompeianus",
   "pos": "Adjektiv",
@@ -12979,7 +12946,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0851",
+  "id": "v0850",
   "lemma": "pōnere",
   "search_key": "ponere",
   "pos": "Verb",
@@ -12998,7 +12965,7 @@
   ]
  },
  {
-  "id": "v0852",
+  "id": "v0851",
   "lemma": "pōns, pontis",
   "search_key": "pons",
   "pos": "Substantiv",
@@ -13012,7 +12979,7 @@
   "irregular_note": "Gen. Pl. -ium"
  },
  {
-  "id": "v0853",
+  "id": "v0852",
   "lemma": "populus",
   "search_key": "populus",
   "pos": "Substantiv",
@@ -13026,7 +12993,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0854",
+  "id": "v0853",
   "lemma": "porta",
   "search_key": "porta",
   "pos": "Substantiv",
@@ -13040,7 +13007,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0855",
+  "id": "v0854",
   "lemma": "portāre",
   "search_key": "portare",
   "pos": "Verb",
@@ -13059,7 +13026,7 @@
   ]
  },
  {
-  "id": "v0856",
+  "id": "v0855",
   "lemma": "portus, portūs",
   "search_key": "portus",
   "pos": "Substantiv",
@@ -13072,7 +13039,7 @@
   "raw_line": "portus, portūs m Hafen - 13"
  },
  {
-  "id": "v0857",
+  "id": "v0856",
   "lemma": "pōscere",
   "search_key": "poscere",
   "pos": "Verb",
@@ -13090,7 +13057,7 @@
   ]
  },
  {
-  "id": "v0858",
+  "id": "v0857",
   "lemma": "posse",
   "search_key": "posse",
   "pos": "Verb",
@@ -13109,7 +13076,7 @@
   ]
  },
  {
-  "id": "v0859",
+  "id": "v0858",
   "lemma": "possidēre",
   "search_key": "possidere",
   "pos": "Verb",
@@ -13128,7 +13095,7 @@
   ]
  },
  {
-  "id": "v0860",
+  "id": "v0859",
   "lemma": "post",
   "search_key": "post",
   "pos": "Adverb",
@@ -13141,7 +13108,7 @@
   "raw_line": "post Adv. dann, später - 28"
  },
  {
-  "id": "v0861",
+  "id": "v0860",
   "lemma": "post",
   "search_key": "post",
   "pos": "Präposition",
@@ -13154,7 +13121,7 @@
   "raw_line": "post Präp. m. Akk. hinter, nach - 4"
  },
  {
-  "id": "v0862",
+  "id": "v0861",
   "lemma": "posteā",
   "search_key": "postea",
   "pos": "Adverb",
@@ -13167,7 +13134,7 @@
   "raw_line": "posteā Adv. nachher, später - 8"
  },
  {
-  "id": "v0863",
+  "id": "v0862",
   "lemma": "posterī, posterōrum",
   "search_key": "posteri",
   "pos": "Substantiv",
@@ -13180,7 +13147,7 @@
   "raw_line": "posterī, posterōrum m Pl. Nachkommen - 24"
  },
  {
-  "id": "v0864",
+  "id": "v0863",
   "lemma": "postquam",
   "search_key": "postquam",
   "pos": "Konjunktion",
@@ -13193,7 +13160,7 @@
   "raw_line": "postquam Subj. m. Ind. nachdem, als - 11"
  },
  {
-  "id": "v0865",
+  "id": "v0864",
   "lemma": "postrēmō",
   "search_key": "postremo",
   "pos": "Adverb",
@@ -13206,7 +13173,7 @@
   "raw_line": "postrēmō Adv. schließlich - 21"
  },
  {
-  "id": "v0866",
+  "id": "v0865",
   "lemma": "pōstulāre",
   "search_key": "postulare",
   "pos": "Verb",
@@ -13225,7 +13192,7 @@
   ]
  },
  {
-  "id": "v0867",
+  "id": "v0866",
   "lemma": "potēns, potentis",
   "search_key": "potens",
   "pos": "Adjektiv",
@@ -13240,21 +13207,20 @@
   "adj_stem_gen": "potentis"
  },
  {
-  "id": "v0868",
+  "id": "v0867",
   "lemma": "potestās, potestātis",
   "search_key": "potestas",
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "f",
-  "translation": "Gewalt, Macht",
+  "translation": "(Amts-)Gewalt, Macht",
   "lessons": [
    "9"
   ],
-  "raw_line": "potestās, potestātis f (Amts-)Gewalt, Macht - 9",
-  "irregular_note": "Amts-"
+  "raw_line": "potestās, potestātis f (Amts-)Gewalt, Macht - 9"
  },
  {
-  "id": "v0869",
+  "id": "v0868",
   "lemma": "potius",
   "search_key": "potius",
   "pos": "Adverb",
@@ -13267,7 +13233,7 @@
   "raw_line": "potius Adv. eher, lieber - 28"
  },
  {
-  "id": "v0870",
+  "id": "v0869",
   "lemma": "praebēre",
   "search_key": "praebere",
   "pos": "Verb",
@@ -13286,7 +13252,7 @@
   ]
  },
  {
-  "id": "v0871",
+  "id": "v0870",
   "lemma": "praecipere",
   "search_key": "praecipere",
   "pos": "Verb",
@@ -13305,7 +13271,7 @@
   ]
  },
  {
-  "id": "v0872",
+  "id": "v0871",
   "lemma": "praeclārus, a, um",
   "search_key": "praeclarus",
   "pos": "Adjektiv",
@@ -13319,7 +13285,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0873",
+  "id": "v0872",
   "lemma": "praeda",
   "search_key": "praeda",
   "pos": "Substantiv",
@@ -13333,7 +13299,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0874",
+  "id": "v0873",
   "lemma": "praeesse",
   "search_key": "praeesse",
   "pos": "Verb",
@@ -13351,7 +13317,7 @@
   ]
  },
  {
-  "id": "v0875",
+  "id": "v0874",
   "lemma": "praeferre",
   "search_key": "praeferre",
   "pos": "Verb",
@@ -13370,7 +13336,7 @@
   ]
  },
  {
-  "id": "v0876",
+  "id": "v0875",
   "lemma": "praemium",
   "search_key": "praemium",
   "pos": "Substantiv",
@@ -13384,7 +13350,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0877",
+  "id": "v0876",
   "lemma": "praesēns, praesentis",
   "search_key": "praesens",
   "pos": "Adjektiv",
@@ -13399,22 +13365,21 @@
   "adj_stem_gen": "praesentis"
  },
  {
-  "id": "v0878",
+  "id": "v0877",
   "lemma": "praesidium",
   "search_key": "praesidium",
   "pos": "Substantiv",
   "gender": "n",
   "grammar_note": "",
-  "translation": "Posten, Schutztruppe",
+  "translation": "(Wach-)Posten, Schutztruppe",
   "lessons": [
    "27"
   ],
   "raw_line": "praesidium (Wach-)Posten, Schutztruppe - 27",
-  "inferred_gender": true,
-  "irregular_note": "Wach-"
+  "inferred_gender": true
  },
  {
-  "id": "v0879",
+  "id": "v0878",
   "lemma": "praestāre",
   "search_key": "praestare",
   "pos": "Verb",
@@ -13434,7 +13399,7 @@
   ]
  },
  {
-  "id": "v0880",
+  "id": "v0879",
   "lemma": "praeterēā",
   "search_key": "praeterea",
   "pos": "Adverb",
@@ -13447,7 +13412,7 @@
   "raw_line": "praeterēā Adv. außerdem - 29"
  },
  {
-  "id": "v0881",
+  "id": "v0880",
   "lemma": "praeterīre",
   "search_key": "praeterire",
   "pos": "Verb",
@@ -13466,7 +13431,7 @@
   ]
  },
  {
-  "id": "v0882",
+  "id": "v0881",
   "lemma": "praetor, praetōris",
   "search_key": "praetor",
   "pos": "Substantiv",
@@ -13479,7 +13444,7 @@
   "raw_line": "praetor, praetōris m Prätor (für die Rechtsprechung zuständiger Beamter) - 25"
  },
  {
-  "id": "v0883",
+  "id": "v0882",
   "lemma": "precārī",
   "search_key": "precari",
   "pos": "Verb",
@@ -13497,7 +13462,7 @@
   ]
  },
  {
-  "id": "v0884",
+  "id": "v0883",
   "lemma": "prehendere",
   "search_key": "prehendere",
   "pos": "Verb",
@@ -13516,7 +13481,7 @@
   ]
  },
  {
-  "id": "v0885",
+  "id": "v0884",
   "lemma": "premere",
   "search_key": "premere",
   "pos": "Verb",
@@ -13535,7 +13500,7 @@
   ]
  },
  {
-  "id": "v0886",
+  "id": "v0885",
   "lemma": "pretium",
   "search_key": "pretium",
   "pos": "Substantiv",
@@ -13549,7 +13514,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0887",
+  "id": "v0886",
   "lemma": "prex, precis",
   "search_key": "prex",
   "pos": "Substantiv",
@@ -13562,7 +13527,7 @@
   "raw_line": "prex, precis f Bitte, Gebet - 16"
  },
  {
-  "id": "v0888",
+  "id": "v0887",
   "lemma": "prīmō",
   "search_key": "primo",
   "pos": "Adverb",
@@ -13575,7 +13540,7 @@
   "raw_line": "prīmō Adv. zuerst - 2"
  },
  {
-  "id": "v0889",
+  "id": "v0888",
   "lemma": "prīmum",
   "search_key": "primum",
   "pos": "Adverb",
@@ -13588,7 +13553,7 @@
   "raw_line": "prīmum Adv. erstens, zum ersten Mal - 8"
  },
  {
-  "id": "v0890",
+  "id": "v0889",
   "lemma": "prīmus, a, um",
   "search_key": "primus",
   "pos": "Adjektiv",
@@ -13602,7 +13567,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0891",
+  "id": "v0890",
   "lemma": "prīnceps, principis",
   "search_key": "princeps",
   "pos": "Substantiv",
@@ -13615,7 +13580,7 @@
   "raw_line": "prīnceps, principis m Der Erste, der führende Mann, Kaiser - 15"
  },
  {
-  "id": "v0892",
+  "id": "v0891",
   "lemma": "prior, prior",
   "search_key": "prior",
   "pos": "Adjektiv",
@@ -13630,7 +13595,7 @@
   "adj_stem_gen": "priōris"
  },
  {
-  "id": "v0893",
+  "id": "v0892",
   "lemma": "priusquam",
   "search_key": "priusquam",
   "pos": "Konjunktion",
@@ -13643,7 +13608,7 @@
   "raw_line": "priusquam Subj. bevor, eher als - 18"
  },
  {
-  "id": "v0894",
+  "id": "v0893",
   "lemma": "prīvātus, a, um",
   "search_key": "priuatus",
   "pos": "Adjektiv",
@@ -13657,7 +13622,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0895",
+  "id": "v0894",
   "lemma": "prō",
   "search_key": "pro",
   "pos": "Präposition",
@@ -13670,7 +13635,7 @@
   "raw_line": "prō Präp. m. Abl. vor; anstelle von, für - 18"
  },
  {
-  "id": "v0896",
+  "id": "v0895",
   "lemma": "probāre",
   "search_key": "probare",
   "pos": "Verb",
@@ -13689,7 +13654,7 @@
   ]
  },
  {
-  "id": "v0897",
+  "id": "v0896",
   "lemma": "prōcēdere",
   "search_key": "procedere",
   "pos": "Verb",
@@ -13708,7 +13673,7 @@
   ]
  },
  {
-  "id": "v0898",
+  "id": "v0897",
   "lemma": "procul",
   "search_key": "procul",
   "pos": "Adverb",
@@ -13721,7 +13686,7 @@
   "raw_line": "procul von fern, weit weg; ā m. Abl. fern von - 30"
  },
  {
-  "id": "v0899",
+  "id": "v0898",
   "lemma": "prōdere",
   "search_key": "prodere",
   "pos": "Verb",
@@ -13740,7 +13705,7 @@
   ]
  },
  {
-  "id": "v0900",
+  "id": "v0899",
   "lemma": "proelium",
   "search_key": "proelium",
   "pos": "Substantiv",
@@ -13754,7 +13719,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0901",
+  "id": "v0900",
   "lemma": "profectō",
   "search_key": "profecto",
   "pos": "Adverb",
@@ -13767,7 +13732,7 @@
   "raw_line": "profectō Adv. sicherlich, tatsächlich - 2"
  },
  {
-  "id": "v0902",
+  "id": "v0901",
   "lemma": "proficiscī",
   "search_key": "proficisci",
   "pos": "Verb",
@@ -13785,7 +13750,7 @@
   ]
  },
  {
-  "id": "v0903",
+  "id": "v0902",
   "lemma": "prōgredī",
   "search_key": "progredi",
   "pos": "Verb",
@@ -13803,7 +13768,7 @@
   ]
  },
  {
-  "id": "v0904",
+  "id": "v0903",
   "lemma": "prohibēre",
   "search_key": "prohibere",
   "pos": "Verb",
@@ -13822,7 +13787,7 @@
   ]
  },
  {
-  "id": "v0905",
+  "id": "v0904",
   "lemma": "proinde",
   "search_key": "proinde",
   "pos": "Adverb",
@@ -13835,7 +13800,7 @@
   "raw_line": "proinde Adv. also, daher - 24"
  },
  {
-  "id": "v0906",
+  "id": "v0905",
   "lemma": "Promētheus, Promētheī",
   "search_key": "prometheus",
   "pos": "Substantiv",
@@ -13850,7 +13815,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0907",
+  "id": "v0906",
   "lemma": "prōmittere",
   "search_key": "promittere",
   "pos": "Verb",
@@ -13869,7 +13834,7 @@
   ]
  },
  {
-  "id": "v0908",
+  "id": "v0907",
   "lemma": "prope",
   "search_key": "prope",
   "pos": "Adverb",
@@ -13882,7 +13847,7 @@
   "raw_line": "prope Adv. nahe, in der Nähe; beinahe - 25"
  },
  {
-  "id": "v0909",
+  "id": "v0908",
   "lemma": "properāre",
   "search_key": "properare",
   "pos": "Verb",
@@ -13901,7 +13866,7 @@
   ]
  },
  {
-  "id": "v0910",
+  "id": "v0909",
   "lemma": "prōpōnere",
   "search_key": "proponere",
   "pos": "Verb",
@@ -13920,7 +13885,7 @@
   ]
  },
  {
-  "id": "v0911",
+  "id": "v0910",
   "lemma": "propter",
   "search_key": "propter",
   "pos": "Präposition",
@@ -13933,7 +13898,7 @@
   "raw_line": "propter Präp. m. Akk. wegen - 7"
  },
  {
-  "id": "v0912",
+  "id": "v0911",
   "lemma": "prōtinus",
   "search_key": "protinus",
   "pos": "Adverb",
@@ -13946,7 +13911,7 @@
   "raw_line": "prōtinus Adv. sofort - 22"
  },
  {
-  "id": "v0913",
+  "id": "v0912",
   "lemma": "prōvidēre",
   "search_key": "prouidere",
   "pos": "Verb",
@@ -13965,7 +13930,7 @@
   ]
  },
  {
-  "id": "v0914",
+  "id": "v0913",
   "lemma": "prōvincia",
   "search_key": "prouincia",
   "pos": "Substantiv",
@@ -13979,7 +13944,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0915",
+  "id": "v0914",
   "lemma": "proximus, a, um",
   "search_key": "proximus",
   "pos": "Adjektiv",
@@ -13993,7 +13958,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0916",
+  "id": "v0915",
   "lemma": "pūblicus, a, um",
   "search_key": "publicus",
   "pos": "Adjektiv",
@@ -14007,7 +13972,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0917",
+  "id": "v0916",
   "lemma": "pudet, puduit",
   "search_key": "pudet",
   "pos": "Ausdruck",
@@ -14020,7 +13985,7 @@
   "raw_line": "pudet, puduit m. Akk. es beschämt (jdn.) - 27"
  },
  {
-  "id": "v0918",
+  "id": "v0917",
   "lemma": "puella",
   "search_key": "puella",
   "pos": "Substantiv",
@@ -14034,7 +13999,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0919",
+  "id": "v0918",
   "lemma": "puer, puerī",
   "search_key": "puer",
   "pos": "Substantiv",
@@ -14047,7 +14012,7 @@
   "raw_line": "puer, puerī m Junge - 5"
  },
  {
-  "id": "v0920",
+  "id": "v0919",
   "lemma": "pugna",
   "search_key": "pugna",
   "pos": "Substantiv",
@@ -14061,7 +14026,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0921",
+  "id": "v0920",
   "lemma": "pugnāre",
   "search_key": "pugnare",
   "pos": "Verb",
@@ -14080,7 +14045,7 @@
   ]
  },
  {
-  "id": "v0922",
+  "id": "v0921",
   "lemma": "pulcher, pulchra, pulchrum",
   "search_key": "pulcher",
   "pos": "Adjektiv",
@@ -14094,7 +14059,7 @@
   "adj_type": "er_a_um"
  },
  {
-  "id": "v0923",
+  "id": "v0922",
   "lemma": "putāre",
   "search_key": "putare",
   "pos": "Verb",
@@ -14114,7 +14079,7 @@
   ]
  },
  {
-  "id": "v0924",
+  "id": "v0923",
   "lemma": "quaerere",
   "search_key": "quaerere",
   "pos": "Verb",
@@ -14135,7 +14100,7 @@
   ]
  },
  {
-  "id": "v0925",
+  "id": "v0924",
   "lemma": "quālis, e",
   "search_key": "qualis",
   "pos": "Adjektiv",
@@ -14149,7 +14114,7 @@
   "adj_type": "is_e"
  },
  {
-  "id": "v0926",
+  "id": "v0925",
   "lemma": "quam",
   "search_key": "quam",
   "pos": "Adverb",
@@ -14163,7 +14128,7 @@
   "raw_line": "quam als, wie; m. Superl. möglichst - 5, 29"
  },
  {
-  "id": "v0927",
+  "id": "v0926",
   "lemma": "quamquam",
   "search_key": "quamquam",
   "pos": "Konjunktion",
@@ -14176,7 +14141,7 @@
   "raw_line": "quamquam Subj. obwohl - 7"
  },
  {
-  "id": "v0928",
+  "id": "v0927",
   "lemma": "quamvīs",
   "search_key": "quamuis",
   "pos": "Konjunktion",
@@ -14189,7 +14154,7 @@
   "raw_line": "quamvīs Subj. m. Konj. wenn auch, obwohl - 24"
  },
  {
-  "id": "v0929",
+  "id": "v0928",
   "lemma": "quandō",
   "search_key": "quando",
   "pos": "Adverb",
@@ -14202,7 +14167,7 @@
   "raw_line": "quandō wann - 12"
  },
  {
-  "id": "v0930",
+  "id": "v0929",
   "lemma": "quantus, a, um",
   "search_key": "quantus",
   "pos": "Adjektiv",
@@ -14216,7 +14181,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0931",
+  "id": "v0930",
   "lemma": "quārē",
   "search_key": "quare",
   "pos": "Adverb",
@@ -14229,7 +14194,7 @@
   "raw_line": "quārē weshalb? wodurch?; relativer Satzanschluss: deshalb - 24"
  },
  {
-  "id": "v0932",
+  "id": "v0931",
   "lemma": "quasi",
   "search_key": "quasi",
   "pos": "Adverb",
@@ -14242,7 +14207,7 @@
   "raw_line": "quasi Adv. gleichsam - 24"
  },
  {
-  "id": "v0933",
+  "id": "v0932",
   "lemma": "quattuor",
   "search_key": "quattuor",
   "pos": "Zahlwort",
@@ -14255,7 +14220,7 @@
   "raw_line": "quattuor indekl. vier - 16"
  },
  {
-  "id": "v0934",
+  "id": "v0933",
   "lemma": "quattuordecim",
   "search_key": "quattuordecim",
   "pos": "Zahlwort",
@@ -14268,7 +14233,7 @@
   "raw_line": "quattuordecim indekl. vierzehn - 16"
  },
  {
-  "id": "v0935",
+  "id": "v0934",
   "lemma": "quemadmodum",
   "search_key": "quemadmodum",
   "pos": "Adverb",
@@ -14281,7 +14246,7 @@
   "raw_line": "quemadmodum auf welche Weise, wie - 12"
  },
  {
-  "id": "v0936",
+  "id": "v0935",
   "lemma": "querī",
   "search_key": "queri",
   "pos": "Verb",
@@ -14299,7 +14264,7 @@
   ]
  },
  {
-  "id": "v0937",
+  "id": "v0936",
   "lemma": "quī",
   "search_key": "qui",
   "pos": "Adverb",
@@ -14312,7 +14277,7 @@
   "raw_line": "quī Adv. wie - 28"
  },
  {
-  "id": "v0938",
+  "id": "v0937",
   "lemma": "quī, quae, quod",
   "search_key": "qui",
   "pos": "Pronomen",
@@ -14325,7 +14290,7 @@
   "raw_line": "quī, quae, quod welcher, welche, welches; der, die, das - 11"
  },
  {
-  "id": "v0939",
+  "id": "v0938",
   "lemma": "quī, quae, quod",
   "search_key": "qui",
   "pos": "Pronomen",
@@ -14338,7 +14303,7 @@
   "raw_line": "quī, quae, quod adj. welcher, welche, welches - 24"
  },
  {
-  "id": "v0940",
+  "id": "v0939",
   "lemma": "quia",
   "search_key": "quia",
   "pos": "Konjunktion",
@@ -14351,7 +14316,7 @@
   "raw_line": "quia Subj. weil - 7"
  },
  {
-  "id": "v0941",
+  "id": "v0940",
   "lemma": "quid?",
   "search_key": "quid?",
   "pos": "Pronomen",
@@ -14364,7 +14329,7 @@
   "raw_line": "quid? was? - 1"
  },
  {
-  "id": "v0942",
+  "id": "v0941",
   "lemma": "quidam, quaedam, quiddam",
   "search_key": "quidam",
   "pos": "Pronomen",
@@ -14377,7 +14342,7 @@
   "raw_line": "quidam, quaedam, quiddam subst. ein gewisser, (irgend)einer; Pl. einige - 22"
  },
  {
-  "id": "v0943",
+  "id": "v0942",
   "lemma": "quidam, quaedam, quoddam",
   "search_key": "quidam",
   "pos": "Pronomen",
@@ -14390,7 +14355,7 @@
   "raw_line": "quidam, quaedam, quoddam adj. ein gewisser, (irgend)ein; Pl. einige - 22"
  },
  {
-  "id": "v0944",
+  "id": "v0943",
   "lemma": "quidem",
   "search_key": "quidem",
   "pos": "Adverb",
@@ -14403,7 +14368,7 @@
   "raw_line": "quidem Adv. freilich, gewiss, wenigstens, zwar - 10"
  },
  {
-  "id": "v0945",
+  "id": "v0944",
   "lemma": "quiēscere",
   "search_key": "quiescere",
   "pos": "Verb",
@@ -14422,7 +14387,7 @@
   ]
  },
  {
-  "id": "v0946",
+  "id": "v0945",
   "lemma": "quīn? (im Hauptsatz) warum nicht?;",
   "search_key": "quin? (im hauptsatz) warum nicht?;",
   "pos": "Konjunktion",
@@ -14436,7 +14401,7 @@
   "raw_line": "quīn? (im Hauptsatz) warum nicht?; Subj. m. Konj. dass ... - 6, 24"
  },
  {
-  "id": "v0947",
+  "id": "v0946",
   "lemma": "quīndecim",
   "search_key": "quindecim",
   "pos": "Zahlwort",
@@ -14449,7 +14414,7 @@
   "raw_line": "quīndecim indekl. fünfzehn - 16"
  },
  {
-  "id": "v0948",
+  "id": "v0947",
   "lemma": "quīnque",
   "search_key": "quinque",
   "pos": "Zahlwort",
@@ -14462,7 +14427,7 @@
   "raw_line": "quīnque indekl. fünf - 16"
  },
  {
-  "id": "v0949",
+  "id": "v0948",
   "lemma": "quis?",
   "search_key": "quis?",
   "pos": "Pronomen",
@@ -14475,7 +14440,7 @@
   "raw_line": "quis? wer? - 1"
  },
  {
-  "id": "v0950",
+  "id": "v0949",
   "lemma": "quisnam",
   "search_key": "quisnam",
   "pos": "Pronomen",
@@ -14488,7 +14453,7 @@
   "raw_line": "quisnam wer denn? - 27"
  },
  {
-  "id": "v0951",
+  "id": "v0950",
   "lemma": "quisque, quidque",
   "search_key": "quisque",
   "pos": "Pronomen",
@@ -14501,7 +14466,7 @@
   "raw_line": "quisque, quidque subst. jeder - 30"
  },
  {
-  "id": "v0952",
+  "id": "v0951",
   "lemma": "quō",
   "search_key": "quo",
   "pos": "Adverb",
@@ -14514,7 +14479,7 @@
   "raw_line": "quō? wohin? - 2"
  },
  {
-  "id": "v0953",
+  "id": "v0952",
   "lemma": "quod",
   "search_key": "quod",
   "pos": "Konjunktion",
@@ -14527,7 +14492,7 @@
   "raw_line": "quod Subj. weil; dass - 7"
  },
  {
-  "id": "v0954",
+  "id": "v0953",
   "lemma": "quondam",
   "search_key": "quondam",
   "pos": "Adverb",
@@ -14540,7 +14505,7 @@
   "raw_line": "quondam Adv. einmal, einst; manchmal - 26"
  },
  {
-  "id": "v0955",
+  "id": "v0954",
   "lemma": "quoniam",
   "search_key": "quoniam",
   "pos": "Konjunktion",
@@ -14553,21 +14518,20 @@
   "raw_line": "quoniam Subj. m. Ind. da ja, da nun - 25"
  },
  {
-  "id": "v0956",
+  "id": "v0955",
   "lemma": "quoque",
   "search_key": "quoque",
   "pos": "Adverb",
   "gender": null,
   "grammar_note": "",
-  "translation": "auch",
+  "translation": "(nachgestellt) auch",
   "lessons": [
    "15"
   ],
-  "raw_line": "quoque (nachgestellt) auch - 15",
-  "irregular_note": "nachgestellt"
+  "raw_line": "quoque (nachgestellt) auch - 15"
  },
  {
-  "id": "v0957",
+  "id": "v0956",
   "lemma": "quot",
   "search_key": "quot",
   "pos": "Adverb",
@@ -14580,7 +14544,7 @@
   "raw_line": "quot? wie viele, so viele - 20"
  },
  {
-  "id": "v0958",
+  "id": "v0957",
   "lemma": "quotiēns",
   "search_key": "quotiens",
   "pos": "Adverb",
@@ -14593,7 +14557,7 @@
   "raw_line": "quotiēns wie oft, sooft - 28"
  },
  {
-  "id": "v0959",
+  "id": "v0958",
   "lemma": "rapere",
   "search_key": "rapere",
   "pos": "Verb",
@@ -14613,7 +14577,7 @@
   ]
  },
  {
-  "id": "v0960",
+  "id": "v0959",
   "lemma": "rārō",
   "search_key": "raro",
   "pos": "Adverb",
@@ -14626,7 +14590,7 @@
   "raw_line": "rārō Adv. selten - 29"
  },
  {
-  "id": "v0961",
+  "id": "v0960",
   "lemma": "ratiō, ratiōnis",
   "search_key": "ratio",
   "pos": "Substantiv",
@@ -14639,7 +14603,7 @@
   "raw_line": "ratiō, ratiōnis f Grund, Vernunft, Überlegung; Art und Weise; Berechnung - 30"
  },
  {
-  "id": "v0962",
+  "id": "v0961",
   "lemma": "recēns, recentis",
   "search_key": "recens",
   "pos": "Adjektiv",
@@ -14654,7 +14618,7 @@
   "adj_stem_gen": "recentis"
  },
  {
-  "id": "v0963",
+  "id": "v0962",
   "lemma": "recipere",
   "search_key": "recipere",
   "pos": "Verb",
@@ -14673,7 +14637,7 @@
   ]
  },
  {
-  "id": "v0964",
+  "id": "v0963",
   "lemma": "recitāre",
   "search_key": "recitare",
   "pos": "Verb",
@@ -14692,7 +14656,7 @@
   ]
  },
  {
-  "id": "v0965",
+  "id": "v0964",
   "lemma": "rēctē",
   "search_key": "recte",
   "pos": "Adverb",
@@ -14705,7 +14669,7 @@
   "raw_line": "rēctē Adv. richtig, zu Recht - 2"
  },
  {
-  "id": "v0966",
+  "id": "v0965",
   "lemma": "rēctus, a, um",
   "search_key": "rectus",
   "pos": "Adjektiv",
@@ -14719,7 +14683,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0967",
+  "id": "v0966",
   "lemma": "reddere",
   "search_key": "reddere",
   "pos": "Verb",
@@ -14738,7 +14702,7 @@
   ]
  },
  {
-  "id": "v0968",
+  "id": "v0967",
   "lemma": "redīre",
   "search_key": "redire",
   "pos": "Verb",
@@ -14757,7 +14721,7 @@
   ]
  },
  {
-  "id": "v0969",
+  "id": "v0968",
   "lemma": "redūcere",
   "search_key": "reducere",
   "pos": "Verb",
@@ -14776,7 +14740,7 @@
   ]
  },
  {
-  "id": "v0970",
+  "id": "v0969",
   "lemma": "referre",
   "search_key": "referre",
   "pos": "Verb",
@@ -14795,7 +14759,7 @@
   ]
  },
  {
-  "id": "v0971",
+  "id": "v0970",
   "lemma": "regere",
   "search_key": "regere",
   "pos": "Verb",
@@ -14814,7 +14778,7 @@
   ]
  },
  {
-  "id": "v0972",
+  "id": "v0971",
   "lemma": "regiō, regiōnis",
   "search_key": "regio",
   "pos": "Substantiv",
@@ -14827,7 +14791,7 @@
   "raw_line": "regiō, regiōnis f Gebiet, Gegend, Richtung - 8"
  },
  {
-  "id": "v0973",
+  "id": "v0972",
   "lemma": "rēgius, a, um",
   "search_key": "regius",
   "pos": "Adjektiv",
@@ -14841,22 +14805,21 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0974",
+  "id": "v0973",
   "lemma": "rēgnum",
   "search_key": "regnum",
   "pos": "Substantiv",
   "gender": "n",
   "grammar_note": "",
-  "translation": "Herrschaft, Reich",
+  "translation": "(Königs-)Herrschaft, Reich",
   "lessons": [
    "26"
   ],
   "raw_line": "rēgnum (Königs-)Herrschaft, Reich - 26",
-  "inferred_gender": true,
-  "irregular_note": "Königs-"
+  "inferred_gender": true
  },
  {
-  "id": "v0975",
+  "id": "v0974",
   "lemma": "religiō, religiōnis",
   "search_key": "religio",
   "pos": "Substantiv",
@@ -14869,7 +14832,7 @@
   "raw_line": "religiō, religiōnis f Glaube, Aberglaube, (Gottes-)Verehrung, Frömmigkeit, Gewissenhaftigkeit - 22"
  },
  {
-  "id": "v0976",
+  "id": "v0975",
   "lemma": "relinquere",
   "search_key": "relinquere",
   "pos": "Verb",
@@ -14890,7 +14853,7 @@
   ]
  },
  {
-  "id": "v0977",
+  "id": "v0976",
   "lemma": "reliquiae, reliquiārum",
   "search_key": "reliquiae",
   "pos": "Substantiv",
@@ -14903,7 +14866,7 @@
   "raw_line": "reliquiae, reliquiārum f Pl. Überbleibsel, Überrest, Ruine - 8"
  },
  {
-  "id": "v0978",
+  "id": "v0977",
   "lemma": "reliquus, a, um",
   "search_key": "reliquus",
   "pos": "Adjektiv",
@@ -14917,7 +14880,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0979",
+  "id": "v0978",
   "lemma": "remanēre",
   "search_key": "remanere",
   "pos": "Verb",
@@ -14936,7 +14899,7 @@
   ]
  },
  {
-  "id": "v0980",
+  "id": "v0979",
   "lemma": "remittere",
   "search_key": "remittere",
   "pos": "Verb",
@@ -14955,7 +14918,7 @@
   ]
  },
  {
-  "id": "v0981",
+  "id": "v0980",
   "lemma": "repellere",
   "search_key": "repellere",
   "pos": "Verb",
@@ -14974,7 +14937,7 @@
   ]
  },
  {
-  "id": "v0982",
+  "id": "v0981",
   "lemma": "repetere",
   "search_key": "repetere",
   "pos": "Verb",
@@ -14993,7 +14956,7 @@
   ]
  },
  {
-  "id": "v0983",
+  "id": "v0982",
   "lemma": "reprehendere",
   "search_key": "reprehendere",
   "pos": "Verb",
@@ -15013,7 +14976,7 @@
   ]
  },
  {
-  "id": "v0984",
+  "id": "v0983",
   "lemma": "rērī",
   "search_key": "reri",
   "pos": "Verb",
@@ -15031,7 +14994,7 @@
   ]
  },
  {
-  "id": "v0985",
+  "id": "v0984",
   "lemma": "rēs, reī",
   "search_key": "res",
   "pos": "Substantiv",
@@ -15044,7 +15007,7 @@
   "raw_line": "rēs, reī f Angelegenheit, Ding, Sache - 13"
  },
  {
-  "id": "v0986",
+  "id": "v0985",
   "lemma": "resistere",
   "search_key": "resistere",
   "pos": "Verb",
@@ -15062,7 +15025,7 @@
   ]
  },
  {
-  "id": "v0987",
+  "id": "v0986",
   "lemma": "respicere",
   "search_key": "respicere",
   "pos": "Verb",
@@ -15081,7 +15044,7 @@
   ]
  },
  {
-  "id": "v0988",
+  "id": "v0987",
   "lemma": "respondēre",
   "search_key": "respondere",
   "pos": "Verb",
@@ -15102,7 +15065,7 @@
   ]
  },
  {
-  "id": "v0989",
+  "id": "v0988",
   "lemma": "restāre",
   "search_key": "restare",
   "pos": "Verb",
@@ -15120,7 +15083,7 @@
   ]
  },
  {
-  "id": "v0990",
+  "id": "v0989",
   "lemma": "restituere",
   "search_key": "restituere",
   "pos": "Verb",
@@ -15139,7 +15102,7 @@
   ]
  },
  {
-  "id": "v0991",
+  "id": "v0990",
   "lemma": "retinēre",
   "search_key": "retinere",
   "pos": "Verb",
@@ -15158,7 +15121,7 @@
   ]
  },
  {
-  "id": "v0992",
+  "id": "v0991",
   "lemma": "rēx, rēgis",
   "search_key": "rex",
   "pos": "Substantiv",
@@ -15171,7 +15134,7 @@
   "raw_line": "rēx, rēgis m König - 9"
  },
  {
-  "id": "v0993",
+  "id": "v0992",
   "lemma": "rīdēre",
   "search_key": "ridere",
   "pos": "Verb",
@@ -15192,7 +15155,7 @@
   ]
  },
  {
-  "id": "v0994",
+  "id": "v0993",
   "lemma": "rogāre",
   "search_key": "rogare",
   "pos": "Verb",
@@ -15211,7 +15174,7 @@
   ]
  },
  {
-  "id": "v0995",
+  "id": "v0994",
   "lemma": "Rōma",
   "search_key": "roma",
   "pos": "Substantiv",
@@ -15226,7 +15189,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v0996",
+  "id": "v0995",
   "lemma": "Rōmānus, a, um",
   "search_key": "romanus",
   "pos": "Adjektiv",
@@ -15241,7 +15204,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v0997",
+  "id": "v0996",
   "lemma": "Rōmulus / Remus",
   "search_key": "romulus",
   "pos": "Partikel",
@@ -15254,7 +15217,7 @@
   "raw_line": "Rōmulus / Remus Romulus und Remus (Zwillingsbrüder und sagenhafte Gründer Roms) - 11"
  },
  {
-  "id": "v0998",
+  "id": "v0997",
   "lemma": "ruere",
   "search_key": "ruere",
   "pos": "Verb",
@@ -15273,7 +15236,7 @@
   ]
  },
  {
-  "id": "v0999",
+  "id": "v0998",
   "lemma": "rumpere",
   "search_key": "rumpere",
   "pos": "Verb",
@@ -15292,7 +15255,7 @@
   ]
  },
  {
-  "id": "v1000",
+  "id": "v0999",
   "lemma": "rūrī",
   "search_key": "ruri",
   "pos": "Adverb",
@@ -15305,7 +15268,7 @@
   "raw_line": "rūrī Adv. auf dem Land - 24"
  },
  {
-  "id": "v1001",
+  "id": "v1000",
   "lemma": "rūs, rūris",
   "search_key": "rus",
   "pos": "Substantiv",
@@ -15318,7 +15281,7 @@
   "raw_line": "rūs, rūris n Feld, Land (im Gegensatz zur Stadt), Landgut - 24"
  },
  {
-  "id": "v1002",
+  "id": "v1001",
   "lemma": "Sabīnus, a, um",
   "search_key": "sabinus",
   "pos": "Adjektiv",
@@ -15332,22 +15295,22 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1003",
+  "id": "v1002",
   "lemma": "sacer, sacra, sacrum",
   "search_key": "sacer",
   "pos": "Adjektiv",
   "gender": null,
   "grammar_note": "",
-  "translation": "heilig, geweiht",
+  "translation": "(jdm.) heilig, geweiht",
   "lessons": [
    "20"
   ],
   "raw_line": "sacer, sacra, sacrum (m. Gen.) (jdm.) heilig, geweiht - 20",
   "adj_type": "er_a_um",
-  "irregular_note": "m. Gen.; jdm."
+  "irregular_note": "m. Gen."
  },
  {
-  "id": "v1004",
+  "id": "v1003",
   "lemma": "sacerdōs, sacerdōtis",
   "search_key": "sacerdos",
   "pos": "Substantiv",
@@ -15360,7 +15323,7 @@
   "raw_line": "sacerdōs, sacerdōtis m/f Priester(in) - 16"
  },
  {
-  "id": "v1005",
+  "id": "v1004",
   "lemma": "sacrum",
   "search_key": "sacrum",
   "pos": "Substantiv",
@@ -15374,7 +15337,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1006",
+  "id": "v1005",
   "lemma": "sacculum",
   "search_key": "sacculum",
   "pos": "Substantiv",
@@ -15388,7 +15351,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1007",
+  "id": "v1006",
   "lemma": "saepe",
   "search_key": "saepe",
   "pos": "Adverb",
@@ -15401,7 +15364,7 @@
   "raw_line": "saepe Adv. oft - 2"
  },
  {
-  "id": "v1008",
+  "id": "v1007",
   "lemma": "saevus, a, um",
   "search_key": "saeuus",
   "pos": "Adjektiv",
@@ -15415,7 +15378,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1009",
+  "id": "v1008",
   "lemma": "salūs, salūtis",
   "search_key": "salus",
   "pos": "Substantiv",
@@ -15428,7 +15391,7 @@
   "raw_line": "salūs, salūtis f Gesundheit, Rettung, Gruß, Glück - 8"
  },
  {
-  "id": "v1010",
+  "id": "v1009",
   "lemma": "salūtāre",
   "search_key": "salutare",
   "pos": "Verb",
@@ -15447,7 +15410,7 @@
   ]
  },
  {
-  "id": "v1011",
+  "id": "v1010",
   "lemma": "salvē! salvēte!",
   "search_key": "salue! saluete!",
   "pos": "Interjektion",
@@ -15460,7 +15423,7 @@
   "raw_line": "salvē! salvēte! sei gegrüßt! seid gegrüßt! - 3"
  },
  {
-  "id": "v1012",
+  "id": "v1011",
   "lemma": "sānctus, a, um",
   "search_key": "sanctus",
   "pos": "Adjektiv",
@@ -15474,7 +15437,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1013",
+  "id": "v1012",
   "lemma": "sanguis, sanguinis",
   "search_key": "sanguis",
   "pos": "Substantiv",
@@ -15487,7 +15450,7 @@
   "raw_line": "sanguis, sanguinis m Blut - 16"
  },
  {
-  "id": "v1014",
+  "id": "v1013",
   "lemma": "sapere",
   "search_key": "sapere",
   "pos": "Verb",
@@ -15505,7 +15468,7 @@
   ]
  },
  {
-  "id": "v1015",
+  "id": "v1014",
   "lemma": "sapiēns, sapientis",
   "search_key": "sapiens",
   "pos": "Adjektiv",
@@ -15520,7 +15483,7 @@
   "adj_stem_gen": "sapientis"
  },
  {
-  "id": "v1016",
+  "id": "v1015",
   "lemma": "Sapphō, Sapphūs",
   "search_key": "sappho",
   "pos": "Substantiv",
@@ -15533,7 +15496,7 @@
   "raw_line": "Sapphō, Sapphūs f Sappho (griech. Dichterin, um 600 v. Chr.) - 26"
  },
  {
-  "id": "v1017",
+  "id": "v1016",
   "lemma": "satis",
   "search_key": "satis",
   "pos": "Adverb",
@@ -15546,7 +15509,7 @@
   "raw_line": "satis Adv. genug - 28"
  },
  {
-  "id": "v1018",
+  "id": "v1017",
   "lemma": "Sāturnus",
   "search_key": "saturnus",
   "pos": "Substantiv",
@@ -15561,7 +15524,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1019",
+  "id": "v1018",
   "lemma": "Saulus / Paulus",
   "search_key": "saulus",
   "pos": "Partikel",
@@ -15574,7 +15537,7 @@
   "raw_line": "Saulus / Paulus Saulus / Paulus (hebräischer / christlicher Name des Apostels und Missionars, gest. um 60 n. Chr.) - 22"
  },
  {
-  "id": "v1020",
+  "id": "v1019",
   "lemma": "saxum",
   "search_key": "saxum",
   "pos": "Substantiv",
@@ -15588,7 +15551,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1021",
+  "id": "v1020",
   "lemma": "scelerātus, a, um",
   "search_key": "sceleratus",
   "pos": "Adjektiv",
@@ -15603,7 +15566,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1022",
+  "id": "v1021",
   "lemma": "scelus, sceleris",
   "search_key": "scelus",
   "pos": "Substantiv",
@@ -15616,7 +15579,7 @@
   "raw_line": "scelus, sceleris n Verbrechen; Schurke - 16"
  },
  {
-  "id": "v1023",
+  "id": "v1022",
   "lemma": "scīlicet",
   "search_key": "scilicet",
   "pos": "Adverb",
@@ -15629,7 +15592,7 @@
   "raw_line": "scīlicet Adv. freilich, natürlich - 30"
  },
  {
-  "id": "v1024",
+  "id": "v1023",
   "lemma": "Scīpiō, Scīpiōnis",
   "search_key": "scipio",
   "pos": "Substantiv",
@@ -15642,7 +15605,7 @@
   "raw_line": "Scīpiō, Scīpiōnis m Scipio (röm. Politiker und Feldherr) - 28"
  },
  {
-  "id": "v1025",
+  "id": "v1024",
   "lemma": "scīre",
   "search_key": "scire",
   "pos": "Verb",
@@ -15661,7 +15624,7 @@
   ]
  },
  {
-  "id": "v1026",
+  "id": "v1025",
   "lemma": "scrībere",
   "search_key": "scribere",
   "pos": "Verb",
@@ -15682,7 +15645,7 @@
   ]
  },
  {
-  "id": "v1027",
+  "id": "v1026",
   "lemma": "sē",
   "search_key": "se",
   "pos": "Pronomen",
@@ -15695,7 +15658,7 @@
   "raw_line": "sē Akk. / Abl. sich - 7"
  },
  {
-  "id": "v1028",
+  "id": "v1027",
   "lemma": "senex, senis",
   "search_key": "senex",
   "pos": "Substantiv",
@@ -15708,7 +15671,7 @@
   "raw_line": "senex, senis m Greis, alter Mann - 12"
  },
  {
-  "id": "v1029",
+  "id": "v1028",
   "lemma": "sēnsus, sēnsūs",
   "search_key": "sensus",
   "pos": "Substantiv",
@@ -15721,7 +15684,7 @@
   "raw_line": "sēnsus, sēnsūs m Gefühl, Sinn, Verstand - 30"
  },
  {
-  "id": "v1030",
+  "id": "v1029",
   "lemma": "sententia",
   "search_key": "sententia",
   "pos": "Substantiv",
@@ -15735,7 +15698,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1031",
+  "id": "v1030",
   "lemma": "sentīre",
   "search_key": "sentire",
   "pos": "Verb",
@@ -15754,7 +15717,7 @@
   ]
  },
  {
-  "id": "v1032",
+  "id": "v1031",
   "lemma": "septem",
   "search_key": "septem",
   "pos": "Zahlwort",
@@ -15767,7 +15730,7 @@
   "raw_line": "septem indekl. sieben - 16"
  },
  {
-  "id": "v1033",
+  "id": "v1032",
   "lemma": "septendecim",
   "search_key": "septendecim",
   "pos": "Zahlwort",
@@ -15780,7 +15743,7 @@
   "raw_line": "septendecim indekl. siebzehn - 16"
  },
  {
-  "id": "v1034",
+  "id": "v1033",
   "lemma": "sequī",
   "search_key": "sequi",
   "pos": "Verb",
@@ -15798,7 +15761,7 @@
   ]
  },
  {
-  "id": "v1035",
+  "id": "v1034",
   "lemma": "sermō, sermōnis",
   "search_key": "sermo",
   "pos": "Substantiv",
@@ -15811,7 +15774,7 @@
   "raw_line": "sermō, sermōnis m Gespräch, Sprache, Gerede - 27"
  },
  {
-  "id": "v1036",
+  "id": "v1035",
   "lemma": "serva",
   "search_key": "serua",
   "pos": "Substantiv",
@@ -15825,7 +15788,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1037",
+  "id": "v1036",
   "lemma": "servāre",
   "search_key": "seruare",
   "pos": "Verb",
@@ -15844,7 +15807,7 @@
   ]
  },
  {
-  "id": "v1038",
+  "id": "v1037",
   "lemma": "servīre",
   "search_key": "seruire",
   "pos": "Verb",
@@ -15863,7 +15826,7 @@
   ]
  },
  {
-  "id": "v1039",
+  "id": "v1038",
   "lemma": "servitūs, servitūtis",
   "search_key": "seruitus",
   "pos": "Substantiv",
@@ -15876,7 +15839,7 @@
   "raw_line": "servitūs, servitūtis f Sklaverei - 7"
  },
  {
-  "id": "v1040",
+  "id": "v1039",
   "lemma": "servus",
   "search_key": "seruus",
   "pos": "Substantiv",
@@ -15890,7 +15853,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1041",
+  "id": "v1040",
   "lemma": "sex",
   "search_key": "sex",
   "pos": "Zahlwort",
@@ -15903,7 +15866,7 @@
   "raw_line": "sex indekl. sechs - 11"
  },
  {
-  "id": "v1042",
+  "id": "v1041",
   "lemma": "sextus, a, um",
   "search_key": "sextus",
   "pos": "Adjektiv",
@@ -15917,7 +15880,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1043",
+  "id": "v1042",
   "lemma": "sibi",
   "search_key": "sibi",
   "pos": "Pronomen",
@@ -15930,7 +15893,7 @@
   "raw_line": "sibi Dat. sich - 10"
  },
  {
-  "id": "v1044",
+  "id": "v1043",
   "lemma": "sīc",
   "search_key": "sic",
   "pos": "Adverb",
@@ -15943,7 +15906,7 @@
   "raw_line": "sīc Adv. so - 3"
  },
  {
-  "id": "v1045",
+  "id": "v1044",
   "lemma": "Sicilia",
   "search_key": "sicilia",
   "pos": "Substantiv",
@@ -15958,7 +15921,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1046",
+  "id": "v1045",
   "lemma": "sīdus, sīderis",
   "search_key": "sidus",
   "pos": "Substantiv",
@@ -15971,7 +15934,7 @@
   "raw_line": "sīdus, sīderis n Stern, Sternbild - 26"
  },
  {
-  "id": "v1047",
+  "id": "v1046",
   "lemma": "signum",
   "search_key": "signum",
   "pos": "Substantiv",
@@ -15985,7 +15948,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1048",
+  "id": "v1047",
   "lemma": "silentium",
   "search_key": "silentium",
   "pos": "Substantiv",
@@ -15999,7 +15962,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1049",
+  "id": "v1048",
   "lemma": "silva",
   "search_key": "silua",
   "pos": "Substantiv",
@@ -16013,7 +15976,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1050",
+  "id": "v1049",
   "lemma": "similis, e",
   "search_key": "similis",
   "pos": "Adjektiv",
@@ -16028,7 +15991,7 @@
   "irregular_note": "m. Gen. / Dat."
  },
  {
-  "id": "v1051",
+  "id": "v1050",
   "lemma": "simul",
   "search_key": "simul",
   "pos": "Adverb",
@@ -16041,7 +16004,7 @@
   "raw_line": "simul Adv. gleichzeitig, zugleich - 19"
  },
  {
-  "id": "v1052",
+  "id": "v1051",
   "lemma": "sine",
   "search_key": "sine",
   "pos": "Präposition",
@@ -16054,7 +16017,7 @@
   "raw_line": "sine Präp. m. Abl. ohne - 4"
  },
  {
-  "id": "v1053",
+  "id": "v1052",
   "lemma": "sinere",
   "search_key": "sinere",
   "pos": "Verb",
@@ -16073,7 +16036,7 @@
   ]
  },
  {
-  "id": "v1054",
+  "id": "v1053",
   "lemma": "Sisyphus",
   "search_key": "sisyphus",
   "pos": "Substantiv",
@@ -16088,7 +16051,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1055",
+  "id": "v1054",
   "lemma": "socius",
   "search_key": "socius",
   "pos": "Substantiv",
@@ -16102,7 +16065,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1056",
+  "id": "v1055",
   "lemma": "sōl, sōlis",
   "search_key": "sol",
   "pos": "Substantiv",
@@ -16115,7 +16078,7 @@
   "raw_line": "sōl, sōlis m Sonne - 8"
  },
  {
-  "id": "v1057",
+  "id": "v1056",
   "lemma": "sōlācium",
   "search_key": "solacium",
   "pos": "Substantiv",
@@ -16129,7 +16092,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1058",
+  "id": "v1057",
   "lemma": "solēre",
   "search_key": "solere",
   "pos": "Verb",
@@ -16147,7 +16110,7 @@
   ]
  },
  {
-  "id": "v1059",
+  "id": "v1058",
   "lemma": "sollicitāre",
   "search_key": "sollicitare",
   "pos": "Verb",
@@ -16166,7 +16129,7 @@
   ]
  },
  {
-  "id": "v1060",
+  "id": "v1059",
   "lemma": "Solō, Solōnis",
   "search_key": "solo",
   "pos": "Substantiv",
@@ -16179,7 +16142,7 @@
   "raw_line": "Solō, Solōnis m Solon (athenischer Gesetzgeber im 6. Jh. v. Chr.) - 26"
  },
  {
-  "id": "v1061",
+  "id": "v1060",
   "lemma": "sōlum",
   "search_key": "solum",
   "pos": "Adverb",
@@ -16192,7 +16155,7 @@
   "raw_line": "sōlum Adv. nur - 7"
  },
  {
-  "id": "v1062",
+  "id": "v1061",
   "lemma": "sōlus, a, um",
   "search_key": "solus",
   "pos": "Adjektiv",
@@ -16206,7 +16169,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1063",
+  "id": "v1062",
   "lemma": "solvere",
   "search_key": "soluere",
   "pos": "Verb",
@@ -16225,7 +16188,7 @@
   ]
  },
  {
-  "id": "v1064",
+  "id": "v1063",
   "lemma": "somnus",
   "search_key": "somnus",
   "pos": "Substantiv",
@@ -16239,7 +16202,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1065",
+  "id": "v1064",
   "lemma": "sonus",
   "search_key": "sonus",
   "pos": "Substantiv",
@@ -16253,7 +16216,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1066",
+  "id": "v1065",
   "lemma": "soror, sorōris",
   "search_key": "soror",
   "pos": "Substantiv",
@@ -16266,7 +16229,7 @@
   "raw_line": "soror, sorōris f Schwester - 7"
  },
  {
-  "id": "v1067",
+  "id": "v1066",
   "lemma": "sors, sortis",
   "search_key": "sors",
   "pos": "Substantiv",
@@ -16280,7 +16243,7 @@
   "irregular_note": "Gen. Pl. -ium"
  },
  {
-  "id": "v1068",
+  "id": "v1067",
   "lemma": "spatium",
   "search_key": "spatium",
   "pos": "Substantiv",
@@ -16294,7 +16257,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1069",
+  "id": "v1068",
   "lemma": "speciēs, speciēī",
   "search_key": "species",
   "pos": "Substantiv",
@@ -16307,7 +16270,7 @@
   "raw_line": "speciēs, speciēī f Anblick, Aussehen, Schein - 17"
  },
  {
-  "id": "v1070",
+  "id": "v1069",
   "lemma": "spectāre",
   "search_key": "spectare",
   "pos": "Verb",
@@ -16326,7 +16289,7 @@
   ]
  },
  {
-  "id": "v1071",
+  "id": "v1070",
   "lemma": "spērāre",
   "search_key": "sperare",
   "pos": "Verb",
@@ -16345,7 +16308,7 @@
   ]
  },
  {
-  "id": "v1072",
+  "id": "v1071",
   "lemma": "spēs, speī",
   "search_key": "spes",
   "pos": "Substantiv",
@@ -16358,7 +16321,7 @@
   "raw_line": "spēs, speī f Erwartung, Hoffnung - 13"
  },
  {
-  "id": "v1073",
+  "id": "v1072",
   "lemma": "sponte meā (tuā, suā)",
   "search_key": "sponte mea (tua",
   "pos": "Adverb",
@@ -16371,13 +16334,13 @@
   "raw_line": "sponte meā (tuā, suā) freiwillig, von selbst - 24"
  },
  {
-  "id": "v1074",
+  "id": "v1073",
   "lemma": "Spurius Tarpēius",
   "search_key": "spurius tarpeius",
   "pos": "Substantiv",
   "gender": "m",
   "grammar_note": "",
-  "translation": "röm. Befehlshaber",
+  "translation": "Spurius Tarpeius (röm. Befehlshaber)",
   "lessons": [
    "12"
   ],
@@ -16386,7 +16349,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1075",
+  "id": "v1074",
   "lemma": "stāre",
   "search_key": "stare",
   "pos": "Verb",
@@ -16406,7 +16369,7 @@
   ]
  },
  {
-  "id": "v1076",
+  "id": "v1075",
   "lemma": "statim",
   "search_key": "statim",
   "pos": "Adverb",
@@ -16419,7 +16382,7 @@
   "raw_line": "statim Adv. sofort - 2"
  },
  {
-  "id": "v1077",
+  "id": "v1076",
   "lemma": "statua",
   "search_key": "statua",
   "pos": "Substantiv",
@@ -16433,7 +16396,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1078",
+  "id": "v1077",
   "lemma": "statuere",
   "search_key": "statuere",
   "pos": "Verb",
@@ -16452,7 +16415,7 @@
   ]
  },
  {
-  "id": "v1079",
+  "id": "v1078",
   "lemma": "studēre",
   "search_key": "studere",
   "pos": "Verb",
@@ -16470,7 +16433,7 @@
   ]
  },
  {
-  "id": "v1080",
+  "id": "v1079",
   "lemma": "studium",
   "search_key": "studium",
   "pos": "Substantiv",
@@ -16484,7 +16447,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1081",
+  "id": "v1080",
   "lemma": "stultus, a, um",
   "search_key": "stultus",
   "pos": "Adjektiv",
@@ -16498,7 +16461,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1082",
+  "id": "v1081",
   "lemma": "sub",
   "search_key": "sub",
   "pos": "Präposition",
@@ -16511,7 +16474,7 @@
   "raw_line": "sub Präp. m. Abl. unter (wo?) - 8"
  },
  {
-  "id": "v1083",
+  "id": "v1082",
   "lemma": "sub",
   "search_key": "sub",
   "pos": "Präposition",
@@ -16524,7 +16487,7 @@
   "raw_line": "sub Präp. m. Akk. unter (wohin?) - 8"
  },
  {
-  "id": "v1084",
+  "id": "v1083",
   "lemma": "subīre",
   "search_key": "subire",
   "pos": "Verb",
@@ -16543,7 +16506,7 @@
   ]
  },
  {
-  "id": "v1085",
+  "id": "v1084",
   "lemma": "subitō",
   "search_key": "subito",
   "pos": "Adverb",
@@ -16556,7 +16519,7 @@
   "raw_line": "subitō Adv. plötzlich - 2"
  },
  {
-  "id": "v1086",
+  "id": "v1085",
   "lemma": "suī, suōrum",
   "search_key": "sui",
   "pos": "Substantiv",
@@ -16569,7 +16532,7 @@
   "raw_line": "suī, suōrum m Pl. die Seinen, die Ihren, seine (ihre) Leute - 21"
  },
  {
-  "id": "v1087",
+  "id": "v1086",
   "lemma": "sūmere",
   "search_key": "sumere",
   "pos": "Verb",
@@ -16588,7 +16551,7 @@
   ]
  },
  {
-  "id": "v1088",
+  "id": "v1087",
   "lemma": "summus, a, um",
   "search_key": "summus",
   "pos": "Adjektiv",
@@ -16602,7 +16565,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1089",
+  "id": "v1088",
   "lemma": "sūmptus, sūmptūs",
   "search_key": "sumptus",
   "pos": "Substantiv",
@@ -16615,7 +16578,7 @@
   "raw_line": "sūmptus, sūmptūs m Aufwand, Kosten - 14"
  },
  {
-  "id": "v1090",
+  "id": "v1089",
   "lemma": "sunt",
   "search_key": "sunt",
   "pos": "Verb",
@@ -16628,7 +16591,7 @@
   "raw_line": "sunt sie sind - 1"
  },
  {
-  "id": "v1091",
+  "id": "v1090",
   "lemma": "superāre",
   "search_key": "superare",
   "pos": "Verb",
@@ -16647,7 +16610,7 @@
   ]
  },
  {
-  "id": "v1092",
+  "id": "v1091",
   "lemma": "superbus, a, um",
   "search_key": "superbus",
   "pos": "Adjektiv",
@@ -16661,7 +16624,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1093",
+  "id": "v1092",
   "lemma": "superesse",
   "search_key": "superesse",
   "pos": "Verb",
@@ -16679,7 +16642,7 @@
   ]
  },
  {
-  "id": "v1094",
+  "id": "v1093",
   "lemma": "superī, superōrum",
   "search_key": "superi",
   "pos": "Substantiv",
@@ -16692,7 +16655,7 @@
   "raw_line": "superī, superōrum m Pl. die Götter - 19"
  },
  {
-  "id": "v1095",
+  "id": "v1094",
   "lemma": "supplicium",
   "search_key": "supplicium",
   "pos": "Substantiv",
@@ -16706,7 +16669,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1096",
+  "id": "v1095",
   "lemma": "surgere",
   "search_key": "surgere",
   "pos": "Verb",
@@ -16726,7 +16689,7 @@
   ]
  },
  {
-  "id": "v1097",
+  "id": "v1096",
   "lemma": "suscipere",
   "search_key": "suscipere",
   "pos": "Verb",
@@ -16745,7 +16708,7 @@
   ]
  },
  {
-  "id": "v1098",
+  "id": "v1097",
   "lemma": "suspīcārī",
   "search_key": "suspicari",
   "pos": "Verb",
@@ -16763,7 +16726,7 @@
   ]
  },
  {
-  "id": "v1099",
+  "id": "v1098",
   "lemma": "suspīciō, suspīciōnis",
   "search_key": "suspicio",
   "pos": "Substantiv",
@@ -16776,7 +16739,7 @@
   "raw_line": "suspīciō, suspīciōnis f Verdacht, Vermutung - 16"
  },
  {
-  "id": "v1100",
+  "id": "v1099",
   "lemma": "sustinēre",
   "search_key": "sustinere",
   "pos": "Verb",
@@ -16795,7 +16758,7 @@
   ]
  },
  {
-  "id": "v1101",
+  "id": "v1100",
   "lemma": "suus, a, um",
   "search_key": "suus",
   "pos": "Adjektiv",
@@ -16809,7 +16772,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1102",
+  "id": "v1101",
   "lemma": "Syria",
   "search_key": "syria",
   "pos": "Substantiv",
@@ -16824,7 +16787,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1103",
+  "id": "v1102",
   "lemma": "taberna",
   "search_key": "taberna",
   "pos": "Substantiv",
@@ -16838,22 +16801,21 @@
   "inferred_gender": true
  },
  {
-  "id": "v1104",
+  "id": "v1103",
   "lemma": "tabula",
   "search_key": "tabula",
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "",
-  "translation": "Tafel, Gemälde",
+  "translation": "(Schreib-)Tafel, Gemälde",
   "lessons": [
    "2"
   ],
   "raw_line": "tabula (Schreib-)Tafel, Gemälde - 2",
-  "inferred_gender": true,
-  "irregular_note": "Schreib-"
+  "inferred_gender": true
  },
  {
-  "id": "v1105",
+  "id": "v1104",
   "lemma": "tacēre",
   "search_key": "tacere",
   "pos": "Verb",
@@ -16872,7 +16834,7 @@
   ]
  },
  {
-  "id": "v1106",
+  "id": "v1105",
   "lemma": "tālis, e",
   "search_key": "talis",
   "pos": "Adjektiv",
@@ -16886,7 +16848,7 @@
   "adj_type": "is_e"
  },
  {
-  "id": "v1107",
+  "id": "v1106",
   "lemma": "tam",
   "search_key": "tam",
   "pos": "Adverb",
@@ -16899,7 +16861,7 @@
   "raw_line": "tam so - 5"
  },
  {
-  "id": "v1108",
+  "id": "v1107",
   "lemma": "tam ... quam",
   "search_key": "tam ... quam",
   "pos": "Adverb",
@@ -16912,7 +16874,7 @@
   "raw_line": "tam ... quam so ... wie - 5"
  },
  {
-  "id": "v1109",
+  "id": "v1108",
   "lemma": "tamen",
   "search_key": "tamen",
   "pos": "Adverb",
@@ -16925,7 +16887,7 @@
   "raw_line": "tamen dennoch, jedoch - 9"
  },
  {
-  "id": "v1110",
+  "id": "v1109",
   "lemma": "tamquam",
   "search_key": "tamquam",
   "pos": "Adverb",
@@ -16938,7 +16900,7 @@
   "raw_line": "tamquam Adv. wie; Subj. wie wenn, als ob - 11"
  },
  {
-  "id": "v1111",
+  "id": "v1110",
   "lemma": "tandem",
   "search_key": "tandem",
   "pos": "Adverb",
@@ -16951,7 +16913,7 @@
   "raw_line": "tandem Adv. endlich - 3"
  },
  {
-  "id": "v1112",
+  "id": "v1111",
   "lemma": "tangere",
   "search_key": "tangere",
   "pos": "Verb",
@@ -16970,7 +16932,7 @@
   ]
  },
  {
-  "id": "v1113",
+  "id": "v1112",
   "lemma": "Tantalus",
   "search_key": "tantalus",
   "pos": "Substantiv",
@@ -16985,21 +16947,20 @@
   "inferred_gender": true
  },
  {
-  "id": "v1114",
+  "id": "v1113",
   "lemma": "tantum",
   "search_key": "tantum",
   "pos": "Adverb",
   "gender": null,
   "grammar_note": "Adv.",
-  "translation": "nur",
+  "translation": "(nachgestellt) nur",
   "lessons": [
    "2"
   ],
-  "raw_line": "tantum Adv. (nachgestellt) nur - 2",
-  "irregular_note": "nachgestellt"
+  "raw_line": "tantum Adv. (nachgestellt) nur - 2"
  },
  {
-  "id": "v1115",
+  "id": "v1114",
   "lemma": "tantus, a, um",
   "search_key": "tantus",
   "pos": "Adjektiv",
@@ -17013,13 +16974,13 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1116",
+  "id": "v1115",
   "lemma": "Tarquinius Superbus",
   "search_key": "tarquinius superbus",
   "pos": "Substantiv",
   "gender": "m",
   "grammar_note": "",
-  "translation": "etruskischer König von Rom",
+  "translation": "Tarquinius Superbus (etruskischer König von Rom)",
   "lessons": [
    "13"
   ],
@@ -17028,7 +16989,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1117",
+  "id": "v1116",
   "lemma": "Tartarus",
   "search_key": "tartarus",
   "pos": "Substantiv",
@@ -17043,7 +17004,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1118",
+  "id": "v1117",
   "lemma": "Tatius",
   "search_key": "tatius",
   "pos": "Substantiv",
@@ -17058,7 +17019,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1119",
+  "id": "v1118",
   "lemma": "taurus",
   "search_key": "taurus",
   "pos": "Substantiv",
@@ -17072,7 +17033,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1120",
+  "id": "v1119",
   "lemma": "tē",
   "search_key": "te",
   "pos": "Pronomen",
@@ -17085,7 +17046,7 @@
   "raw_line": "tē Akk. dich - 5"
  },
  {
-  "id": "v1121",
+  "id": "v1120",
   "lemma": "tēcum",
   "search_key": "tecum",
   "pos": "Pronomen",
@@ -17098,7 +17059,7 @@
   "raw_line": "tēcum mit dir - 5"
  },
  {
-  "id": "v1122",
+  "id": "v1121",
   "lemma": "tēctum",
   "search_key": "tectum",
   "pos": "Substantiv",
@@ -17112,7 +17073,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1123",
+  "id": "v1122",
   "lemma": "tegere",
   "search_key": "tegere",
   "pos": "Verb",
@@ -17132,21 +17093,20 @@
   ]
  },
  {
-  "id": "v1124",
+  "id": "v1123",
   "lemma": "tellūs",
   "search_key": "tellus",
   "pos": "Partikel",
   "gender": null,
   "grammar_note": "",
-  "translation": "Waffe, Geschoss",
+  "translation": "(Angriffs-)Waffe, Geschoss",
   "lessons": [
    "15"
   ],
-  "raw_line": "tellūs (Angriffs-)Waffe, Geschoss - 15",
-  "irregular_note": "Angriffs-"
+  "raw_line": "tellūs (Angriffs-)Waffe, Geschoss - 15"
  },
  {
-  "id": "v1125",
+  "id": "v1124",
   "lemma": "templum",
   "search_key": "templum",
   "pos": "Substantiv",
@@ -17160,7 +17120,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1126",
+  "id": "v1125",
   "lemma": "temptāre",
   "search_key": "temptare",
   "pos": "Verb",
@@ -17179,21 +17139,20 @@
   ]
  },
  {
-  "id": "v1127",
+  "id": "v1126",
   "lemma": "tempus, temporis",
   "search_key": "tempus",
   "pos": "Substantiv",
   "gender": "n",
   "grammar_note": "n",
-  "translation": "Zeit, Umstände",
+  "translation": "(günstige) Zeit, Umstände",
   "lessons": [
    "16"
   ],
-  "raw_line": "tempus, temporis n (günstige) Zeit, Umstände - 16",
-  "irregular_note": "günstige"
+  "raw_line": "tempus, temporis n (günstige) Zeit, Umstände - 16"
  },
  {
-  "id": "v1128",
+  "id": "v1127",
   "lemma": "tergum",
   "search_key": "tergum",
   "pos": "Substantiv",
@@ -17207,7 +17166,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1129",
+  "id": "v1128",
   "lemma": "terra",
   "search_key": "terra",
   "pos": "Substantiv",
@@ -17221,7 +17180,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1130",
+  "id": "v1129",
   "lemma": "terrēre",
   "search_key": "terrere",
   "pos": "Verb",
@@ -17241,7 +17200,7 @@
   ]
  },
  {
-  "id": "v1131",
+  "id": "v1130",
   "lemma": "Thalēs, Thalis",
   "search_key": "thales",
   "pos": "Substantiv",
@@ -17254,7 +17213,7 @@
   "raw_line": "Thalēs, Thalis m Thales (griech. Philosoph aus Milet, um 600 v. Chr.) - 26"
  },
  {
-  "id": "v1132",
+  "id": "v1131",
   "lemma": "thermae, thermārum",
   "search_key": "thermae",
   "pos": "Substantiv",
@@ -17267,7 +17226,7 @@
   "raw_line": "thermae, thermārum f Pl. warme Bäder, Thermen - 14"
  },
  {
-  "id": "v1133",
+  "id": "v1132",
   "lemma": "Tiberis, Tiberis",
   "search_key": "tiberis",
   "pos": "Substantiv",
@@ -17281,7 +17240,7 @@
   "irregular_note": "Akk. -im, Abl. -ī"
  },
  {
-  "id": "v1134",
+  "id": "v1133",
   "lemma": "tibi",
   "search_key": "tibi",
   "pos": "Pronomen",
@@ -17294,7 +17253,7 @@
   "raw_line": "tibi Dat. dir - 5"
  },
  {
-  "id": "v1135",
+  "id": "v1134",
   "lemma": "Tibullus",
   "search_key": "tibullus",
   "pos": "Substantiv",
@@ -17309,7 +17268,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1136",
+  "id": "v1135",
   "lemma": "timēre",
   "search_key": "timere",
   "pos": "Verb",
@@ -17327,7 +17286,7 @@
   ]
  },
  {
-  "id": "v1137",
+  "id": "v1136",
   "lemma": "timor, timōris",
   "search_key": "timor",
   "pos": "Substantiv",
@@ -17340,7 +17299,7 @@
   "raw_line": "timor, timōris m Angst, Furcht - 8"
  },
  {
-  "id": "v1138",
+  "id": "v1137",
   "lemma": "Titus",
   "search_key": "titus",
   "pos": "Substantiv",
@@ -17355,7 +17314,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1139",
+  "id": "v1138",
   "lemma": "tollere",
   "search_key": "tollere",
   "pos": "Verb",
@@ -17374,7 +17333,7 @@
   ]
  },
  {
-  "id": "v1140",
+  "id": "v1139",
   "lemma": "torquēre",
   "search_key": "torquere",
   "pos": "Verb",
@@ -17395,7 +17354,7 @@
   ]
  },
  {
-  "id": "v1141",
+  "id": "v1140",
   "lemma": "tot",
   "search_key": "tot",
   "pos": "Zahlwort",
@@ -17408,7 +17367,7 @@
   "raw_line": "tot indekl. so viele - 20"
  },
  {
-  "id": "v1142",
+  "id": "v1141",
   "lemma": "tōtus, a, um",
   "search_key": "totus",
   "pos": "Adjektiv",
@@ -17423,7 +17382,7 @@
   "irregular_note": "Gen. tōtīus, Dat. tōtī"
  },
  {
-  "id": "v1143",
+  "id": "v1142",
   "lemma": "trādere",
   "search_key": "tradere",
   "pos": "Verb",
@@ -17442,7 +17401,7 @@
   ]
  },
  {
-  "id": "v1144",
+  "id": "v1143",
   "lemma": "trahere",
   "search_key": "trahere",
   "pos": "Verb",
@@ -17462,7 +17421,7 @@
   ]
  },
  {
-  "id": "v1145",
+  "id": "v1144",
   "lemma": "trāns",
   "search_key": "trans",
   "pos": "Präposition",
@@ -17475,7 +17434,7 @@
   "raw_line": "trāns Präp. m. Akk. über (... hinaus), jenseits - 21"
  },
  {
-  "id": "v1146",
+  "id": "v1145",
   "lemma": "trānsīre",
   "search_key": "transire",
   "pos": "Verb",
@@ -17494,7 +17453,7 @@
   ]
  },
  {
-  "id": "v1147",
+  "id": "v1146",
   "lemma": "trēdecim",
   "search_key": "tredecim",
   "pos": "Zahlwort",
@@ -17507,7 +17466,7 @@
   "raw_line": "trēdecim indekl. dreizehn - 16"
  },
  {
-  "id": "v1148",
+  "id": "v1147",
   "lemma": "trēs, trēs, tria",
   "search_key": "tres",
   "pos": "Zahlwort",
@@ -17520,7 +17479,7 @@
   "raw_line": "trēs, trēs, tria drei - 16"
  },
  {
-  "id": "v1149",
+  "id": "v1148",
   "lemma": "tribuere",
   "search_key": "tribuere",
   "pos": "Verb",
@@ -17539,7 +17498,7 @@
   ]
  },
  {
-  "id": "v1150",
+  "id": "v1149",
   "lemma": "tribūnus",
   "search_key": "tribunus",
   "pos": "Substantiv",
@@ -17553,7 +17512,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1151",
+  "id": "v1150",
   "lemma": "trīstis, e",
   "search_key": "tristis",
   "pos": "Adjektiv",
@@ -17567,7 +17526,7 @@
   "adj_type": "is_e"
  },
  {
-  "id": "v1152",
+  "id": "v1151",
   "lemma": "Trōia",
   "search_key": "troia",
   "pos": "Substantiv",
@@ -17582,7 +17541,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1153",
+  "id": "v1152",
   "lemma": "Trōiānus, a, um",
   "search_key": "troianus",
   "pos": "Adjektiv",
@@ -17596,7 +17555,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1154",
+  "id": "v1153",
   "lemma": "tū",
   "search_key": "tu",
   "pos": "Pronomen",
@@ -17609,7 +17568,7 @@
   "raw_line": "tū Nom. du (betont) - 5"
  },
  {
-  "id": "v1155",
+  "id": "v1154",
   "lemma": "tuērī",
   "search_key": "tueri",
   "pos": "Verb",
@@ -17627,7 +17586,7 @@
   ]
  },
  {
-  "id": "v1156",
+  "id": "v1155",
   "lemma": "tum",
   "search_key": "tum",
   "pos": "Adverb",
@@ -17640,7 +17599,7 @@
   "raw_line": "tum Adv. da, dann, darauf, damals - 2"
  },
  {
-  "id": "v1157",
+  "id": "v1156",
   "lemma": "tunc",
   "search_key": "tunc",
   "pos": "Adverb",
@@ -17653,22 +17612,21 @@
   "raw_line": "tunc Adv. damals, dann - 28"
  },
  {
-  "id": "v1158",
+  "id": "v1157",
   "lemma": "turba",
   "search_key": "turba",
   "pos": "Substantiv",
   "gender": "f",
   "grammar_note": "",
-  "translation": "Menge",
+  "translation": "(Menschen-)Menge",
   "lessons": [
    "3"
   ],
   "raw_line": "turba (Menschen-)Menge - 3",
-  "inferred_gender": true,
-  "irregular_note": "Menschen-"
+  "inferred_gender": true
  },
  {
-  "id": "v1159",
+  "id": "v1158",
   "lemma": "turbāre",
   "search_key": "turbare",
   "pos": "Verb",
@@ -17687,7 +17645,7 @@
   ]
  },
  {
-  "id": "v1160",
+  "id": "v1159",
   "lemma": "Turnus",
   "search_key": "turnus",
   "pos": "Substantiv",
@@ -17702,7 +17660,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1161",
+  "id": "v1160",
   "lemma": "turpis, e",
   "search_key": "turpis",
   "pos": "Adjektiv",
@@ -17716,7 +17674,7 @@
   "adj_type": "is_e"
  },
  {
-  "id": "v1162",
+  "id": "v1161",
   "lemma": "Trōia",
   "search_key": "troia",
   "pos": "Substantiv",
@@ -17731,7 +17689,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1163",
+  "id": "v1162",
   "lemma": "tū",
   "search_key": "tu",
   "pos": "Pronomen",
@@ -17744,7 +17702,7 @@
   "raw_line": "tū Nom. du (betont) - 5"
  },
  {
-  "id": "v1164",
+  "id": "v1163",
   "lemma": "tuērī",
   "search_key": "tueri",
   "pos": "Verb",
@@ -17762,7 +17720,7 @@
   ]
  },
  {
-  "id": "v1165",
+  "id": "v1164",
   "lemma": "turris, turris",
   "search_key": "turris",
   "pos": "Substantiv",
@@ -17776,7 +17734,7 @@
   "irregular_note": "Akk. Sg. -im, Abl. Sg. -ī, Gen. Pl. -ium"
  },
  {
-  "id": "v1166",
+  "id": "v1165",
   "lemma": "tūtus, a, um",
   "search_key": "tutus",
   "pos": "Adjektiv",
@@ -17790,7 +17748,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1167",
+  "id": "v1166",
   "lemma": "tuus, a, um",
   "search_key": "tuus",
   "pos": "Adjektiv",
@@ -17804,7 +17762,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1168",
+  "id": "v1167",
   "lemma": "ubi",
   "search_key": "ubi",
   "pos": "Adverb",
@@ -17817,7 +17775,7 @@
   "raw_line": "ubi? wo? - 4"
  },
  {
-  "id": "v1169",
+  "id": "v1168",
   "lemma": "ubi (prīmum)",
   "search_key": "ubi (primum)",
   "pos": "Konjunktion",
@@ -17830,7 +17788,7 @@
   "raw_line": "ubi (prīmum) Subj. m. Ind. sobald - 22"
  },
  {
-  "id": "v1170",
+  "id": "v1169",
   "lemma": "ultrō",
   "search_key": "ultro",
   "pos": "Adverb",
@@ -17843,7 +17801,7 @@
   "raw_line": "ultrō Adv. freiwillig, noch dazu - 30"
  },
  {
-  "id": "v1171",
+  "id": "v1170",
   "lemma": "umbra",
   "search_key": "umbra",
   "pos": "Substantiv",
@@ -17857,7 +17815,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1172",
+  "id": "v1171",
   "lemma": "umerus",
   "search_key": "umerus",
   "pos": "Substantiv",
@@ -17871,7 +17829,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1173",
+  "id": "v1172",
   "lemma": "umquam",
   "search_key": "umquam",
   "pos": "Adverb",
@@ -17884,7 +17842,7 @@
   "raw_line": "umquam Adv. jemals - 14"
  },
  {
-  "id": "v1174",
+  "id": "v1173",
   "lemma": "unda",
   "search_key": "unda",
   "pos": "Substantiv",
@@ -17898,7 +17856,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1175",
+  "id": "v1174",
   "lemma": "unde",
   "search_key": "unde",
   "pos": "Adverb",
@@ -17911,7 +17869,7 @@
   "raw_line": "unde? woher? - 3"
  },
  {
-  "id": "v1176",
+  "id": "v1175",
   "lemma": "ūndecim",
   "search_key": "undecim",
   "pos": "Zahlwort",
@@ -17924,7 +17882,7 @@
   "raw_line": "ūndecim indekl. elf - 16"
  },
  {
-  "id": "v1177",
+  "id": "v1176",
   "lemma": "ūndēvigintī",
   "search_key": "undeuiginti",
   "pos": "Zahlwort",
@@ -17937,7 +17895,7 @@
   "raw_line": "ūndēvigintī indekl. neunzehn - 16"
  },
  {
-  "id": "v1178",
+  "id": "v1177",
   "lemma": "undique",
   "search_key": "undique",
   "pos": "Adverb",
@@ -17950,7 +17908,7 @@
   "raw_line": "undique Adv. von allen Seiten, von überallher - 17"
  },
  {
-  "id": "v1179",
+  "id": "v1178",
   "lemma": "ūnus, a, um",
   "search_key": "unus",
   "pos": "Adjektiv",
@@ -17964,7 +17922,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1180",
+  "id": "v1179",
   "lemma": "urbs, urbis",
   "search_key": "urbs",
   "pos": "Substantiv",
@@ -17978,7 +17936,7 @@
   "irregular_note": "Gen. Pl. -ium"
  },
  {
-  "id": "v1181",
+  "id": "v1180",
   "lemma": "ūsque",
   "search_key": "usque",
   "pos": "Adverb",
@@ -17992,7 +17950,7 @@
   "raw_line": "ūsque Adv. ohne Unterbrechung; ad m. Akk. bis (zu) - 21, 24"
  },
  {
-  "id": "v1182",
+  "id": "v1181",
   "lemma": "ūsus, ūsūs",
   "search_key": "usus",
   "pos": "Substantiv",
@@ -18005,7 +17963,7 @@
   "raw_line": "ūsus, ūsūs m Nutzen, Benutzung - 20"
  },
  {
-  "id": "v1183",
+  "id": "v1182",
   "lemma": "ut",
   "search_key": "ut",
   "pos": "Adverb",
@@ -18018,7 +17976,7 @@
   "raw_line": "ut wie - 5"
  },
  {
-  "id": "v1184",
+  "id": "v1183",
   "lemma": "ut",
   "search_key": "ut",
   "pos": "Konjunktion",
@@ -18032,7 +17990,7 @@
   "raw_line": "ut Subj. m. Konj. dass, sodass, damit, um zu - 21, 22"
  },
  {
-  "id": "v1185",
+  "id": "v1184",
   "lemma": "ūtī",
   "search_key": "uti",
   "pos": "Verb",
@@ -18050,7 +18008,7 @@
   ]
  },
  {
-  "id": "v1186",
+  "id": "v1185",
   "lemma": "ūtilis, e",
   "search_key": "utilis",
   "pos": "Adjektiv",
@@ -18064,7 +18022,7 @@
   "adj_type": "is_e"
  },
  {
-  "id": "v1187",
+  "id": "v1186",
   "lemma": "utinam",
   "search_key": "utinam",
   "pos": "Adverb",
@@ -18077,35 +18035,33 @@
   "raw_line": "utinam m. Konj. hoffentlich - 28"
  },
  {
+  "id": "v1187",
+  "lemma": "ūtrum ... an",
+  "search_key": "utrum ... an",
+  "pos": "Konjunktion",
+  "gender": null,
+  "grammar_note": "",
+  "translation": "(Wahlfrage im Hauptsatz) ... oder",
+  "lessons": [
+   "24"
+  ],
+  "raw_line": "ūtrum ... an (Wahlfrage im Hauptsatz) ... oder - 24"
+ },
+ {
   "id": "v1188",
   "lemma": "ūtrum ... an",
   "search_key": "utrum ... an",
   "pos": "Konjunktion",
   "gender": null,
   "grammar_note": "",
-  "translation": "... oder",
-  "lessons": [
-   "24"
-  ],
-  "raw_line": "ūtrum ... an (Wahlfrage im Hauptsatz) ... oder - 24",
-  "irregular_note": "Wahlfrage im Hauptsatz"
- },
- {
-  "id": "v1189",
-  "lemma": "ūtrum ... an",
-  "search_key": "utrum ... an",
-  "pos": "Konjunktion",
-  "gender": null,
-  "grammar_note": "",
-  "translation": "ob ... oder",
+  "translation": "(im Gliedsatz) ob ... oder",
   "lessons": [
    "25"
   ],
-  "raw_line": "ūtrum ... an (im Gliedsatz) ob ... oder - 25",
-  "irregular_note": "im Gliedsatz"
+  "raw_line": "ūtrum ... an (im Gliedsatz) ob ... oder - 25"
  },
  {
-  "id": "v1190",
+  "id": "v1189",
   "lemma": "uxor, uxōris",
   "search_key": "uxor",
   "pos": "Substantiv",
@@ -18118,7 +18074,7 @@
   "raw_line": "uxor, uxōris f Ehefrau - 7"
  },
  {
-  "id": "v1191",
+  "id": "v1190",
   "lemma": "valēre",
   "search_key": "ualere",
   "pos": "Verb",
@@ -18136,7 +18092,7 @@
   ]
  },
  {
-  "id": "v1192",
+  "id": "v1191",
   "lemma": "varius, a, um",
   "search_key": "uarius",
   "pos": "Adjektiv",
@@ -18150,7 +18106,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1193",
+  "id": "v1192",
   "lemma": "vehemēns, vehementis",
   "search_key": "uehemens",
   "pos": "Adjektiv",
@@ -18165,7 +18121,7 @@
   "adj_stem_gen": "vehementis"
  },
  {
-  "id": "v1194",
+  "id": "v1193",
   "lemma": "vel",
   "search_key": "uel",
   "pos": "Konjunktion",
@@ -18178,7 +18134,7 @@
   "raw_line": "vel oder - 7"
  },
  {
-  "id": "v1195",
+  "id": "v1194",
   "lemma": "velle",
   "search_key": "uelle",
   "pos": "Verb",
@@ -18197,7 +18153,7 @@
   ]
  },
  {
-  "id": "v1196",
+  "id": "v1195",
   "lemma": "velut",
   "search_key": "uelut",
   "pos": "Adverb",
@@ -18210,7 +18166,7 @@
   "raw_line": "velut wie, wie zum Beispiel - 30"
  },
  {
-  "id": "v1197",
+  "id": "v1196",
   "lemma": "vendere",
   "search_key": "uendere",
   "pos": "Verb",
@@ -18230,7 +18186,7 @@
   ]
  },
  {
-  "id": "v1198",
+  "id": "v1197",
   "lemma": "venia",
   "search_key": "uenia",
   "pos": "Substantiv",
@@ -18244,7 +18200,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1199",
+  "id": "v1198",
   "lemma": "venīre",
   "search_key": "uenire",
   "pos": "Verb",
@@ -18265,7 +18221,7 @@
   ]
  },
  {
-  "id": "v1200",
+  "id": "v1199",
   "lemma": "ventus",
   "search_key": "uentus",
   "pos": "Substantiv",
@@ -18279,7 +18235,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1201",
+  "id": "v1200",
   "lemma": "vēr, vēris",
   "search_key": "uer",
   "pos": "Substantiv",
@@ -18292,7 +18248,7 @@
   "raw_line": "vēr, vēris n Frühling - 23"
  },
  {
-  "id": "v1202",
+  "id": "v1201",
   "lemma": "verbum",
   "search_key": "uerbum",
   "pos": "Substantiv",
@@ -18306,7 +18262,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1203",
+  "id": "v1202",
   "lemma": "verērī",
   "search_key": "uereri",
   "pos": "Verb",
@@ -18324,7 +18280,7 @@
   ]
  },
  {
-  "id": "v1204",
+  "id": "v1203",
   "lemma": "vērō",
   "search_key": "uero",
   "pos": "Adverb",
@@ -18337,7 +18293,7 @@
   "raw_line": "vērō Adv. aber; in der Tat, wirklich - 30"
  },
  {
-  "id": "v1205",
+  "id": "v1204",
   "lemma": "versārī",
   "search_key": "uersari",
   "pos": "Verb",
@@ -18355,7 +18311,7 @@
   ]
  },
  {
-  "id": "v1206",
+  "id": "v1205",
   "lemma": "vertere",
   "search_key": "uertere",
   "pos": "Verb",
@@ -18375,7 +18331,7 @@
   ]
  },
  {
-  "id": "v1207",
+  "id": "v1206",
   "lemma": "vērus, a, um",
   "search_key": "uerus",
   "pos": "Adjektiv",
@@ -18389,7 +18345,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1208",
+  "id": "v1207",
   "lemma": "vester, vestra, vestrum",
   "search_key": "uester",
   "pos": "Adjektiv",
@@ -18403,7 +18359,7 @@
   "adj_type": "er_a_um"
  },
  {
-  "id": "v1209",
+  "id": "v1208",
   "lemma": "vestīgium",
   "search_key": "uestigium",
   "pos": "Substantiv",
@@ -18417,7 +18373,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1210",
+  "id": "v1209",
   "lemma": "vestis, vestis",
   "search_key": "uestis",
   "pos": "Substantiv",
@@ -18431,7 +18387,7 @@
   "irregular_note": "Gen. Pl. -ium"
  },
  {
-  "id": "v1211",
+  "id": "v1210",
   "lemma": "Vesuvius",
   "search_key": "uesuuius",
   "pos": "Substantiv",
@@ -18446,7 +18402,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1212",
+  "id": "v1211",
   "lemma": "vetāre",
   "search_key": "uetare",
   "pos": "Verb",
@@ -18465,7 +18421,7 @@
   ]
  },
  {
-  "id": "v1213",
+  "id": "v1212",
   "lemma": "vetus, veteris",
   "search_key": "uetus",
   "pos": "Adjektiv",
@@ -18480,7 +18436,7 @@
   "adj_stem_gen": "veteris"
  },
  {
-  "id": "v1214",
+  "id": "v1213",
   "lemma": "via",
   "search_key": "uia",
   "pos": "Substantiv",
@@ -18494,7 +18450,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1215",
+  "id": "v1214",
   "lemma": "victor, victōris",
   "search_key": "uictor",
   "pos": "Substantiv",
@@ -18507,7 +18463,7 @@
   "raw_line": "victor, victōris m Sieger - 7"
  },
  {
-  "id": "v1216",
+  "id": "v1215",
   "lemma": "victōria",
   "search_key": "uictoria",
   "pos": "Substantiv",
@@ -18521,7 +18477,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1217",
+  "id": "v1216",
   "lemma": "vīcus",
   "search_key": "uicus",
   "pos": "Substantiv",
@@ -18535,7 +18491,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1218",
+  "id": "v1217",
   "lemma": "vidēre",
   "search_key": "uidere",
   "pos": "Verb",
@@ -18556,7 +18512,7 @@
   ]
  },
  {
-  "id": "v1219",
+  "id": "v1218",
   "lemma": "vidērī",
   "search_key": "uideri",
   "pos": "Verb",
@@ -18574,7 +18530,7 @@
   ]
  },
  {
-  "id": "v1220",
+  "id": "v1219",
   "lemma": "vigintī",
   "search_key": "uiginti",
   "pos": "Zahlwort",
@@ -18587,7 +18543,7 @@
   "raw_line": "vigintī indekl. zwanzig - 16"
  },
  {
-  "id": "v1221",
+  "id": "v1220",
   "lemma": "villa",
   "search_key": "uilla",
   "pos": "Substantiv",
@@ -18601,7 +18557,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1222",
+  "id": "v1221",
   "lemma": "vincere",
   "search_key": "uincere",
   "pos": "Verb",
@@ -18621,7 +18577,7 @@
   ]
  },
  {
-  "id": "v1223",
+  "id": "v1222",
   "lemma": "vinculum",
   "search_key": "uinculum",
   "pos": "Substantiv",
@@ -18635,7 +18591,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1224",
+  "id": "v1223",
   "lemma": "vindicāre",
   "search_key": "uindicare",
   "pos": "Verb",
@@ -18654,7 +18610,7 @@
   ]
  },
  {
-  "id": "v1225",
+  "id": "v1224",
   "lemma": "vīnea",
   "search_key": "uinea",
   "pos": "Substantiv",
@@ -18668,7 +18624,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1226",
+  "id": "v1225",
   "lemma": "vīnum",
   "search_key": "uinum",
   "pos": "Substantiv",
@@ -18682,7 +18638,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1227",
+  "id": "v1226",
   "lemma": "violāre",
   "search_key": "uiolare",
   "pos": "Verb",
@@ -18701,7 +18657,7 @@
   ]
  },
  {
-  "id": "v1228",
+  "id": "v1227",
   "lemma": "vir, virī",
   "search_key": "uir",
   "pos": "Substantiv",
@@ -18714,7 +18670,7 @@
   "raw_line": "vir, virī m Mann - 5"
  },
  {
-  "id": "v1229",
+  "id": "v1228",
   "lemma": "virgō, virginis",
   "search_key": "uirgo",
   "pos": "Substantiv",
@@ -18727,7 +18683,7 @@
   "raw_line": "virgō, virginis f Mädchen, Jungfrau - 18"
  },
  {
-  "id": "v1230",
+  "id": "v1229",
   "lemma": "virtūs, virtūtis",
   "search_key": "uirtus",
   "pos": "Substantiv",
@@ -18740,7 +18696,7 @@
   "raw_line": "virtūs, virtūtis f Tapferkeit, Tüchtigkeit, Leistung - 7"
  },
  {
-  "id": "v1231",
+  "id": "v1230",
   "lemma": "vīs",
   "search_key": "uis",
   "pos": "Substantiv",
@@ -18754,7 +18710,7 @@
   "irregular_note": "Akk. vim, Abl. vī"
  },
  {
-  "id": "v1232",
+  "id": "v1231",
   "lemma": "vīsere",
   "search_key": "uisere",
   "pos": "Verb",
@@ -18773,7 +18729,7 @@
   ]
  },
  {
-  "id": "v1233",
+  "id": "v1232",
   "lemma": "vīta",
   "search_key": "uita",
   "pos": "Substantiv",
@@ -18787,7 +18743,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1234",
+  "id": "v1233",
   "lemma": "vitāre",
   "search_key": "uitare",
   "pos": "Verb",
@@ -18806,7 +18762,7 @@
   ]
  },
  {
-  "id": "v1235",
+  "id": "v1234",
   "lemma": "vitium",
   "search_key": "uitium",
   "pos": "Substantiv",
@@ -18820,7 +18776,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1236",
+  "id": "v1235",
   "lemma": "vivere",
   "search_key": "uiuere",
   "pos": "Verb",
@@ -18839,7 +18795,7 @@
   ]
  },
  {
-  "id": "v1237",
+  "id": "v1236",
   "lemma": "vīvus, a, um",
   "search_key": "uiuus",
   "pos": "Adjektiv",
@@ -18853,7 +18809,7 @@
   "adj_type": "a_um"
  },
  {
-  "id": "v1238",
+  "id": "v1237",
   "lemma": "vīx",
   "search_key": "uix",
   "pos": "Adverb",
@@ -18866,7 +18822,7 @@
   "raw_line": "vīx Adv. kaum, (nur) mit Mühe - 9"
  },
  {
-  "id": "v1239",
+  "id": "v1238",
   "lemma": "vōbīs",
   "search_key": "uobis",
   "pos": "Pronomen",
@@ -18879,7 +18835,7 @@
   "raw_line": "vōbīs Dat. euch - 5"
  },
  {
-  "id": "v1240",
+  "id": "v1239",
   "lemma": "vōbīscum",
   "search_key": "uobiscum",
   "pos": "Pronomen",
@@ -18892,7 +18848,7 @@
   "raw_line": "vōbīscum mit euch - 5"
  },
  {
-  "id": "v1241",
+  "id": "v1240",
   "lemma": "vocāre",
   "search_key": "uocare",
   "pos": "Verb",
@@ -18911,7 +18867,7 @@
   ]
  },
  {
-  "id": "v1242",
+  "id": "v1241",
   "lemma": "volāre",
   "search_key": "uolare",
   "pos": "Verb",
@@ -18930,7 +18886,7 @@
   ]
  },
  {
-  "id": "v1243",
+  "id": "v1242",
   "lemma": "voluntās, voluntātis",
   "search_key": "uoluntas",
   "pos": "Substantiv",
@@ -18943,7 +18899,7 @@
   "raw_line": "voluntās, voluntātis f Wille, Absicht - 8"
  },
  {
-  "id": "v1244",
+  "id": "v1243",
   "lemma": "voluptās, voluptātis",
   "search_key": "uoluptas",
   "pos": "Substantiv",
@@ -18956,7 +18912,7 @@
   "raw_line": "voluptās, voluptātis f Lust, Vergnügen - 28"
  },
  {
-  "id": "v1245",
+  "id": "v1244",
   "lemma": "volvere",
   "search_key": "uoluere",
   "pos": "Verb",
@@ -18975,33 +18931,20 @@
   ]
  },
  {
+  "id": "v1245",
+  "lemma": "vōs",
+  "search_key": "uos",
+  "pos": "Pronomen",
+  "gender": null,
+  "grammar_note": "Nom./Akk.",
+  "translation": "ihr (betont) / euch",
+  "lessons": [
+   "5"
+  ],
+  "raw_line": "vōs Nom./Akk. ihr (betont) / euch - 5"
+ },
+ {
   "id": "v1246",
-  "lemma": "vōs",
-  "search_key": "uos",
-  "pos": "Pronomen",
-  "gender": null,
-  "grammar_note": "Akk.",
-  "translation": "euch",
-  "lessons": [
-   "5"
-  ],
-  "raw_line": "vōs Akk. euch - 5"
- },
- {
-  "id": "v1247",
-  "lemma": "vōs",
-  "search_key": "uos",
-  "pos": "Pronomen",
-  "gender": null,
-  "grammar_note": "Nom.",
-  "translation": "ihr (betont)",
-  "lessons": [
-   "5"
-  ],
-  "raw_line": "vōs Nom. ihr (betont) - 5"
- },
- {
-  "id": "v1248",
   "lemma": "vōx, vōcis",
   "search_key": "uox",
   "pos": "Substantiv",
@@ -19014,7 +18957,7 @@
   "raw_line": "vōx, vōcis f Stimme, Äußerung, Laut - 8"
  },
  {
-  "id": "v1249",
+  "id": "v1247",
   "lemma": "Vulcānus",
   "search_key": "uulcanus",
   "pos": "Substantiv",
@@ -19029,7 +18972,7 @@
   "inferred_gender": true
  },
  {
-  "id": "v1250",
+  "id": "v1248",
   "lemma": "vulgus, vulgī",
   "search_key": "uulgus",
   "pos": "Substantiv",
@@ -19042,7 +18985,7 @@
   "raw_line": "vulgus, vulgī n die Leute (aus dem Volk), die große Masse, Pöbel - 29"
  },
  {
-  "id": "v1251",
+  "id": "v1249",
   "lemma": "vulnus, vulneris",
   "search_key": "uulnus",
   "pos": "Substantiv",
@@ -19055,7 +18998,7 @@
   "raw_line": "vulnus, vulneris n Wunde, Verlust (milit.) - 16"
  },
  {
-  "id": "v1252",
+  "id": "v1250",
   "lemma": "vultus, vultūs",
   "search_key": "uultus",
   "pos": "Substantiv",

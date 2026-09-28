@@ -398,13 +398,12 @@ def classify_and_split(body: str):
         restNorm = norm_lookup(rest)
         repeatNorm = norm_lookup(w1) + " " + norm_lookup(w2)
         if restNorm.startswith(repeatNorm):
-            translation = rest[len(repeatNorm):].strip()
-            if not translation:
-                translation = w1 + " " + w2
-            elif translation.startswith("(") and translation.endswith(")"):
-                # Klammerinhalt ist hier die eigentliche (einzige) Beschreibung,
-                # nicht nur eine grammatische Randnotiz -> nicht auslagern.
-                translation = translation[1:-1].strip()
+            # Die deutsche Seite wiederholt den Namen (ohne Makra) und haengt
+            # oft noch eine Rollenbeschreibung an, z.B. "Spurius Tarpeius
+            # (röm. Befehlshaber)". Genau wie bei einwoertigen Eigennamen
+            # (z.B. "Coriolānus Coriolan (röm. Patrizier)") bleibt das die
+            # komplette Übersetzung - nur unnoetige Leerzeichen entfernen.
+            translation = rest.strip()
             return {"lemma_raw": f"{w1} {w2}", "grammar_note": "", "translation": translation,
                     "pos": "Substantiv", "gender": "m", "proper_noun": True, "inferred_gender": True}
 
@@ -702,9 +701,17 @@ def main():
         # Fuehrende Klammer-Zusatzangaben (z.B. "(Gen. Pl. -ium)", "(Abl. Sg. -ō, ...)")
         # aus der Uebersetzung herausloesen und der Grammatiknotiz zuschlagen.
         irregular_notes = []
+        GRAMMAR_NOTE_RE = re.compile(
+            r"(Gen\.|Dat\.|Akk\.|Abl\.|Nom\.|Vok\.|Sg\.|Pl\.|m\.\s*Abl|m\.\s*Akk|m\.\s*Dat|m\.\s*Gen|milit\.)"
+        )
         while True:
             m = re.match(r"^\(([^)]*)\)\s*", translation)
             if not m:
+                break
+            # Nur echte grammatische Zusatzangaben herausloesen (z.B. "(Gen.
+            # Pl. -ium)"); rein inhaltliche Praezisierungen wie "(wildes)"
+            # vor "Tier" gehoeren zur Übersetzung und bleiben stehen.
+            if not GRAMMAR_NOTE_RE.search(m.group(1)):
                 break
             irregular_notes.append(m.group(1).strip())
             translation = translation[m.end():].strip()
