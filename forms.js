@@ -115,7 +115,7 @@ var Forms = (function () {
         '<label class="switch"><input type="checkbox" id="f-ppp"' + (state.includePPP ? " checked" : "") + '><span class="slider"></span></label></div>' +
         '<div class="toggle-row"><span>Auch PPA (Partizip Präsens Aktiv) üben</span>' +
         '<label class="switch"><input type="checkbox" id="f-ppa"' + (state.includePPA ? " checked" : "") + '><span class="slider"></span></label></div>' +
-        '<div class="toggle-row"><span>Auch Infinitiv/Imperativ/Supinum (nur Modus 2)</span>' +
+        '<div class="toggle-row"><span>Auch Infinitiv/Imperativ (nur Modus 2)</span>' +
         '<label class="switch"><input type="checkbox" id="f-nonfinite"' + (state.includeNonFinite ? " checked" : "") + '><span class="slider"></span></label></div>'
         : "") +
 
@@ -259,7 +259,6 @@ var Forms = (function () {
     if (v.infPres) slots.push({ nonFinite: "infinitiv", label: "Infinitiv Präsens" + (v.isDeponent ? " (Deponens)" : " Aktiv"), value: v.infPres });
     if (v.infPresPass) slots.push({ nonFinite: "infinitiv", label: "Infinitiv Präsens Passiv", value: v.infPresPass });
     if (v.infPerf) slots.push({ nonFinite: "infinitiv", label: "Infinitiv Perfekt Aktiv", value: v.infPerf });
-    if (v.supine) slots.push({ nonFinite: "supinum", label: "Supinum", value: v.supine });
     return slots;
   }
 

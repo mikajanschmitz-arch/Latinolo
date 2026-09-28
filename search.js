@@ -158,7 +158,6 @@ var Search = (function () {
     if (v.infPres) registerForm(index, v.infPres, entry, "Infinitiv Präsens" + (dep ? " (Deponens)" : " Aktiv"));
     if (v.infPresPass) registerForm(index, v.infPresPass, entry, "Infinitiv Präsens Passiv");
     if (v.infPerf) registerForm(index, v.infPerf, entry, "Infinitiv Perfekt Aktiv");
-    if (v.supine) registerForm(index, v.supine, entry, "Supinum");
     indexParticiples(index, entry, v);
   }
 
