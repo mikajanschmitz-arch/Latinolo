@@ -10,9 +10,8 @@ var LexUtil = (function () {
   }
 
   function abbreviateGen(nom, gen, declension) {
-    // 3. Deklination (Stammveränderung wie ōrdō/ōrdinis, rēx/rēgis, corpus/
-    // corporis): immer die volle Form zeigen, keine Kürzung mit "-...".
-    if (declension === 3) {
+    // 3./4. Deklination: immer die volle Form zeigen, keine Kürzung mit "-...".
+    if (declension === 3 || declension === 4) {
       return nom + ", " + gen;
     }
     // 1. Deklination (nom endet auf "a", Genitiv ist nom+"e"): konventionell

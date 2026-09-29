@@ -573,7 +573,7 @@ def build_verb_result(forms, tail):
     # deutschen Uebersetzung abtrennen und als grammar_note anhaengen
     note_bits = []
     while True:
-        m = re.match(r"^(\([^)]*\)|m\.\s*(Akk|Dat|Abl|Gen)\.)\s*", tail)
+        m = re.match(r"^(\([^)]*\)|m\.\s*(Akk|Dat|Abl|Gen)\.)(?=\s|$)\s*", tail)
         if not m:
             break
         note_bits.append(m.group(1).strip())

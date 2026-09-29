@@ -2737,8 +2737,8 @@
   "search_key": "cogere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cōgere, cōgō, coēgī, coāctum (ver)",
-  "translation": "sammeln; zwingen",
+  "grammar_note": "cōgere, cōgō, coēgī, coāctum",
+  "translation": "(ver)sammeln; zwingen",
   "lessons": [
    "23"
   ],
@@ -3197,8 +3197,8 @@
   "search_key": "confiteri",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "cōnfitērī, cōnfiteor, cōnfessus sum (ein)",
-  "translation": "gestehen",
+  "grammar_note": "cōnfitērī, cōnfiteor, cōnfessus sum",
+  "translation": "(ein)gestehen",
   "lessons": [
    "30"
   ],
@@ -4482,8 +4482,8 @@
   "search_key": "deligere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "dēligere, dēligō, dēlēgī, dēlēctum (aus)",
-  "translation": "wählen",
+  "grammar_note": "dēligere, dēligō, dēlēgī, dēlēctum",
+  "translation": "(aus)wählen",
   "lessons": [
    "11",
    "19"
@@ -5893,8 +5893,8 @@
   "search_key": "exigere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "exigere, exigō, exēgī, exāctum (ein)",
-  "translation": "fordern, vollenden",
+  "grammar_note": "exigere, exigō, exēgī, exāctum",
+  "translation": "(ein)fordern, vollenden",
   "lessons": [
    "25"
   ],
@@ -6728,8 +6728,8 @@
   "search_key": "fundere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "fundere, fundō, fūdī, fūsum (aus)",
-  "translation": "gießen, zerstreuen",
+  "grammar_note": "fundere, fundō, fūdī, fūsum",
+  "translation": "(aus)gießen, zerstreuen",
   "lessons": [
    "16"
   ],
@@ -8188,8 +8188,8 @@
   "search_key": "intellegere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "intellegere, intellegō, intellēxī, intellēctum (be)",
-  "translation": "merken, verstehen",
+  "grammar_note": "intellegere, intellegō, intellēxī, intellēctum",
+  "translation": "(be)merken, verstehen",
   "lessons": [
    "24"
   ],
@@ -10017,8 +10017,8 @@
   "search_key": "mittere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "mittere, mittō, mīsī, missum (los)",
-  "translation": "lassen, schicken, werfen",
+  "grammar_note": "mittere, mittō, mīsī, missum",
+  "translation": "(los)lassen, schicken, werfen",
   "lessons": [
    "6",
    "9",
@@ -10078,8 +10078,8 @@
   "search_key": "moliri",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "mōlīrī, mōlior, mōlītus sum (an)",
-  "translation": "treiben; planen, unternehmen",
+  "grammar_note": "mōlīrī, mōlior, mōlītus sum",
+  "translation": "(an)treiben; planen, unternehmen",
   "lessons": [
    "30"
   ],
@@ -10461,8 +10461,8 @@
   "search_key": "mutare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "mūtāre, mūtō, mūtāvī, mūtātum (ver)",
-  "translation": "ändern, verwandeln",
+  "grammar_note": "mūtāre, mūtō, mūtāvī, mūtātum",
+  "translation": "(ver)ändern, verwandeln",
   "lessons": [
    "18"
   ],
@@ -11808,8 +11808,8 @@
   "search_key": "orare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "ōrāre, ōrō, ōrāvī, ōrātum (an)",
-  "translation": "beten, bitten",
+  "grammar_note": "ōrāre, ōrō, ōrāvī, ōrātum",
+  "translation": "(an)beten, bitten",
   "lessons": [
    "21"
   ],
@@ -12035,8 +12035,8 @@
   "search_key": "parare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "parāre, parō, parāvī, parātum (vor)",
-  "translation": "bereiten, vorhaben (m. Inf.); erwerben",
+  "grammar_note": "parāre, parō, parāvī, parātum",
+  "translation": "(vor)bereiten, vorhaben (m. Inf.); erwerben",
   "lessons": [
    "3"
   ],
@@ -12207,8 +12207,8 @@
   "search_key": "pati",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "patī, patior, passus sum (er)",
-  "translation": "leiden, ertragen, zulassen",
+  "grammar_note": "patī, patior, passus sum",
+  "translation": "(er)leiden, ertragen, zulassen",
   "lessons": [
    "30"
   ],
@@ -12432,8 +12432,8 @@
   "search_key": "perferre",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "perferre, perferō, pertulī, perlātum (über)",
-  "translation": "bringen, ertragen",
+  "grammar_note": "perferre, perferō, pertulī, perlātum",
+  "translation": "(über)bringen, ertragen",
   "lessons": [
    "25"
   ],
@@ -12951,8 +12951,8 @@
   "search_key": "ponere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "pōnere, pōnō, posuī, positum (auf)",
-  "translation": "stellen, (hin)legen, setzen",
+  "grammar_note": "pōnere, pōnō, posuī, positum",
+  "translation": "(auf)stellen, (hin)legen, setzen",
   "lessons": [
    "20"
   ],
@@ -13257,8 +13257,8 @@
   "search_key": "praecipere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "praecipere, praecipiō, praecēpī, praeceptum (be)",
-  "translation": "lehren, vorschreiben",
+  "grammar_note": "praecipere, praecipiō, praecēpī, praeceptum",
+  "translation": "(be)lehren, vorschreiben",
   "lessons": [
    "30"
   ],
@@ -13486,8 +13486,8 @@
   "search_key": "premere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "premere, premō, pressī, pressum (unter)",
-  "translation": "drücken, bedrängen",
+  "grammar_note": "premere, premō, pressī, pressum",
+  "translation": "(unter)drücken, bedrängen",
   "lessons": [
    "19"
   ],
@@ -13659,8 +13659,8 @@
   "search_key": "procedere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "prōcēdere, prōcēdō, prōcessī, prōcessum (vorwärts)",
-  "translation": "gehen, vorrücken",
+  "grammar_note": "prōcēdere, prōcēdō, prōcessī, prōcessum",
+  "translation": "(vorwärts)gehen, vorrücken",
   "lessons": [
    "21"
   ],
@@ -13737,8 +13737,8 @@
   "search_key": "proficisci",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "proficiscī, proficīscor, profectus sum (ab)",
-  "translation": "reisen, aufbrechen",
+  "grammar_note": "proficiscī, proficīscor, profectus sum",
+  "translation": "(ab)reisen, aufbrechen",
   "lessons": [
    "30"
   ],
@@ -14373,8 +14373,8 @@
   "search_key": "quiescere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "quiēscere, quiēscō, quiēvī, quiētum (aus)",
-  "translation": "ruhen, schlafen",
+  "grammar_note": "quiēscere, quiēscō, quiēvī, quiētum",
+  "translation": "(aus)ruhen, schlafen",
   "lessons": [
    "24"
   ],
@@ -14745,8 +14745,8 @@
   "search_key": "referre",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "referre, referō, rettulī, relātum (zurück)",
-  "translation": "bringen, berichten",
+  "grammar_note": "referre, referō, rettulī, relātum",
+  "translation": "(zurück)bringen, berichten",
   "lessons": [
    "25"
   ],
@@ -14885,8 +14885,8 @@
   "search_key": "remanere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "remanēre, remaneō, remānsī, remānsum (zurück)",
-  "translation": "bleiben",
+  "grammar_note": "remanēre, remaneō, remānsī, remānsum",
+  "translation": "(zurück)bleiben",
   "lessons": [
    "17"
   ],
@@ -14942,8 +14942,8 @@
   "search_key": "repetere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "repetere, repetō, repetīvī, repetītum (zurück)",
-  "translation": "verlangen, wiederholen",
+  "grammar_note": "repetere, repetō, repetīvī, repetītum",
+  "translation": "(zurück)verlangen, wiederholen",
   "lessons": [
    "19"
   ],
@@ -15396,8 +15396,8 @@
   "search_key": "salutare",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "salūtāre, salūtō, salūtāvī, salūtātum (be)",
-  "translation": "grüßen",
+  "grammar_note": "salūtāre, salūtō, salūtāvī, salūtātum",
+  "translation": "(be)grüßen",
   "lessons": [
    "4"
   ],
@@ -16022,8 +16022,8 @@
   "search_key": "sinere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "sinere, sinō, sīvī, situm (zu)",
-  "translation": "lassen, erlauben",
+  "grammar_note": "sinere, sinō, sīvī, situm",
+  "translation": "(zu)lassen, erlauben",
   "lessons": [
    "14"
   ],
@@ -18562,8 +18562,8 @@
   "search_key": "uincere",
   "pos": "Verb",
   "gender": null,
-  "grammar_note": "vincere, vincō, vīcī, victum (be)",
-  "translation": "siegen, übertreffen",
+  "grammar_note": "vincere, vincō, vīcī, victum",
+  "translation": "(be)siegen, übertreffen",
   "lessons": [
    "9",
    "17"
