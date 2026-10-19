@@ -165,6 +165,7 @@ var Search = (function () {
     return new Promise(function (resolve) {
       var index = {};
       Data.vocab.forEach(function (entry) {
+        if (entry.category === "redewendung") return; // Redewendungen nur fuer Karteikarten
         // Grundform selbst immer indexieren
         registerForm(index, LexUtil.firstForm(entry), entry, "Grundform (" + entry.pos + ")");
         try {
@@ -231,6 +232,7 @@ var Search = (function () {
     var substringMatches = [];
     if (qNorm.length >= 2) {
       Data.vocab.forEach(function (entry) {
+        if (entry.category === "redewendung") return;
         if (byEntry.has(entry.id)) return;
         var normLemma = Data.normalize(LexUtil.firstForm(entry));
         if (normLemma.indexOf(qNorm) === 0) substringMatches.push(entry);

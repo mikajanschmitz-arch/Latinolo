@@ -6,6 +6,7 @@ var LexUtil = (function () {
   "use strict";
 
   function firstForm(entry) {
+    if (entry.category === "redewendung") return entry.lemma;
     return entry.lemma.split(",")[0].trim();
   }
 

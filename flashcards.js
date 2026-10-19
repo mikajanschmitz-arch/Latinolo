@@ -111,6 +111,8 @@ var Flashcards = (function () {
       '<button class="btn" id="fc-select-none">Keine</button>' +
       "</div>" +
       '<div class="lesson-grid" id="fc-lesson-grid">' + chips + "</div>" +
+      '<div class="toggle-row" style="margin-top:12px;"><span>Redewendungen mitlernen</span>' +
+      '<label class="switch"><input type="checkbox" id="fc-idioms"' + (Store.getFlashIdioms() ? " checked" : "") + '><span class="slider"></span></label></div>' +
       "</div>" +
       '<button class="btn btn-primary btn-block" id="fc-start" style="font-size:1.05rem;padding:15px;">Karteikarten starten</button>';
 
@@ -141,6 +143,8 @@ var Flashcards = (function () {
       Store.setLessonSelection([]);
       refreshChips();
     });
+    var idiomsToggle = el.querySelector("#fc-idioms");
+    idiomsToggle.addEventListener("change", function () { Store.setFlashIdioms(idiomsToggle.checked); });
     el.querySelector("#fc-start").addEventListener("click", startSession);
   }
 
@@ -150,6 +154,9 @@ var Flashcards = (function () {
       return;
     }
     var entries = Data.entriesForMainLessons(Array.from(state.selected));
+    if (!Store.getFlashIdioms()) {
+      entries = entries.filter(function (e) { return e.category !== "redewendung"; });
+    }
     if (!entries.length) { alert("Keine Vokabeln in dieser Auswahl gefunden."); return; }
     state.queue = buildQueue(entries);
     state.idx = 0;
@@ -172,14 +179,14 @@ var Flashcards = (function () {
     var frontHtml =
       '<div class="flash-top-row"></div>' +
       '<div class="flash-center">' +
-      '<div class="flash-latin">' + LexUtil.firstForm(entry) + "</div>" +
+      '<div class="flash-latin"' + (entry.category === "redewendung" ? ' style="font-size:' + (entry.lemma.length > 28 ? "1.35rem" : "1.7rem") + ';"' : "") + ">" + LexUtil.firstForm(entry) + "</div>" +
       '<div class="flash-hint">Tippen zum Umdrehen</div>' +
       "</div>";
 
     var backHtml =
       '<div class="flash-top-row"><span class="flash-lesson-badge">Lektion ' + LexUtil.lessonLabel(entry) + "</span></div>" +
       '<div style="text-align:center;margin-top:6px;">' +
-      '<div class="flash-latin-small">' + LexUtil.shortForm(entry) + "</div>" +
+      (entry.category === "redewendung" ? "" : '<div class="flash-latin-small">' + LexUtil.shortForm(entry) + "</div>") +
       '<div class="flash-pos">' + LexUtil.posLabel(entry) + "</div>" +
       "</div>" +
       '<div class="flash-center"><div class="flash-translation">' + entry.translation + "</div></div>" +
