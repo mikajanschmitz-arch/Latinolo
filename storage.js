@@ -11,6 +11,7 @@ var Store = (function () {
     streak: "ll_streak_v1",
     lessonSelection: "ll_lesson_selection_v1",
     formsSelection: "ll_forms_selection_v1",
+    flashIdioms: "ll_flash_idioms_v1",
   };
 
   function read(key, fallback) {
@@ -74,6 +75,8 @@ var Store = (function () {
   // ---------------- Lektionsauswahl merken ----------------
   function getLessonSelection() { return read(KEYS.lessonSelection, []); }
   function setLessonSelection(arr) { write(KEYS.lessonSelection, arr); }
+  function getFlashIdioms() { return !!read(KEYS.flashIdioms, false); }
+  function setFlashIdioms(v) { write(KEYS.flashIdioms, !!v); }
   function getFormsSelection() { return read(KEYS.formsSelection, null); }
   function setFormsSelection(obj) { write(KEYS.formsSelection, obj); }
 
@@ -82,6 +85,7 @@ var Store = (function () {
     getProgress: getProgress, setProgress: setProgress, recordAnswer: recordAnswer,
     getStreak: getStreak, setStreak: setStreak,
     getLessonSelection: getLessonSelection, setLessonSelection: setLessonSelection,
+    getFlashIdioms: getFlashIdioms, setFlashIdioms: setFlashIdioms,
     getFormsSelection: getFormsSelection, setFormsSelection: setFormsSelection,
   };
 })();

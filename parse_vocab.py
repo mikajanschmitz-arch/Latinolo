@@ -2,81 +2,64 @@
 # -*- coding: utf-8 -*-
 """
 parse_vocab.py
-==============
-Wandelt die Rohtext-Wortschatzliste (tools/vocab_raw.txt) in eine strukturierte
-JSON-Datei (data/vocab.json) fuer die Lernwebsite um.
+===============
+Wandelt tools/vocab_raw.txt in ../vocab.json um.
 
-Aufruf:
+Format der Rohdatei (zwei Abschnitte, "Vokabeln" und "Redewendungen"):
+    LATEINISCH - DEUTSCH - LEKTION(EN)
+
+Aufruf (im Ordner tools/):
     python3 parse_vocab.py
-
-Eingabe:  tools/vocab_raw.txt   (eine Vokabel pro Zeile, Format wie im Schulbuch-Anhang)
-Ausgabe:  data/vocab.json
-
-Wenn du spaeter Unterlektionen (z.B. "1.1" statt "1") ergaenzen willst, aendere die
-Lektionsangaben direkt in vocab_raw.txt (Format bleibt: "... - 1.1" bzw. "... - 1.1, 3.2")
-und fuehre dieses Skript erneut aus.
 """
 
 import json
 import re
-import sys
-import unicodedata
 from pathlib import Path
 
 HERE = Path(__file__).parent
 RAW_PATH = HERE / "vocab_raw.txt"
+OLD_VOCAB_PATH = HERE / "vocab_PREVIOUS_backup.json"  # optional (nur zum Ergaenzen)
 OUT_PATH = HERE.parent / "vocab.json"
 REPORT_PATH = HERE / "parse_report.txt"
 
-# ----------------------------------------------------------------------------
-# Hilfsfunktionen
-# ----------------------------------------------------------------------------
-
-VOWELS_LONG = "āēīōūȳĀĒĪŌŪ"
 MACRON_MAP = {
     "ā": "a", "ē": "e", "ī": "i", "ō": "o", "ū": "u", "ȳ": "y",
     "Ā": "A", "Ē": "E", "Ī": "I", "Ō": "O", "Ū": "U",
 }
 
 
-def strip_macrons(s: str) -> str:
+def strip_macrons(s):
     return "".join(MACRON_MAP.get(c, c) for c in s)
 
 
-def strip_accents_for_search(s: str) -> str:
-    """Normalisierte Form ohne Makra/Sonderzeichen fuer die Suche (v/u und i/j
-    werden vereinheitlicht, wie in klassischen Lateinwoerterbuechern ueblich)."""
+def norm_lookup(s):
+    return strip_macrons(s).lower()
+
+
+def strip_accents_for_search(s):
     s = strip_macrons(s)
     s = s.replace("j", "i").replace("J", "I")
     s = s.replace("v", "u").replace("V", "U")
     return s.lower()
 
 
-def norm_lookup(s: str) -> str:
-    """Nur Makra entfernen + kleinschreiben, OHNE v/u- bzw. i/j-Angleichung.
-    Wird fuer den Abgleich mit den festen Wortlisten (Adverbien, Konjunktionen
-    etc.) verwendet, deren Eintraege in normaler Schreibung vorliegen."""
-    return strip_macrons(s).lower()
+def parse_lessons(raw):
+    parts = [p.strip() for p in raw.split(",") if p.strip()]
+    out = []
+    for p in parts:
+        if "." in p:
+            main, sub = p.split(".", 1)
+            out.append(f"{int(main)}.{sub}")
+        else:
+            out.append(str(int(p)))
+    return out
 
 
-# Bekannte, geschlossene Wortklassen (Funktionswoerter), die nicht generisch
-# erkennbar sind. Wird nur als Fallback verwendet, wenn keine andere Regel greift.
-KNOWN_CONJUNCTIONS = {
-    "ac", "atque", "aut", "at", "sed", "vel", "et", "nam", "enim", "autem",
-    "itaque", "ergo", "igitur", "quia", "quod", "quoniam", "nec", "neque",
-    "-que", "que", "modo", "haud",
-}
+# ---------------------------------------------------------------------------
+# Manuelle Einordnung (Mehrwort-Ausdruecke, Pronomen, Zahlwoerter, ...)
+# ---------------------------------------------------------------------------
 
-KNOWN_ADVERBS_NOMARK = {
-    "hic", "ibi", "ubi", "unde", "quo", "quando", "tum", "tunc", "nunc",
-    "iam", "etiam", "saepe", "mox", "tandem", "sic", "ita", "tam", "quam",
-    "cur", "nihil", "non", "haud", "vix", "satis", "paene",
-}
-
-# Woerter, die eindeutig Praepositionen / Adverbien / Konjunktionen / Interjektionen
-# sind, deren Zeile aber nicht das ueblich Muster "Wort Adv./Praep./Subj." zeigt.
 MANUAL_POS_OVERRIDE = {
-    # lemma (wie im Rohtext) -> pos
     "alius ... alius": "Pronomen",
     "aut ... aut": "Konjunktion",
     "et ... et": "Konjunktion",
@@ -86,18 +69,23 @@ MANUAL_POS_OVERRIDE = {
     "nec ... nec": "Konjunktion",
     "neque ... neque": "Konjunktion",
     "tam ... quam": "Adverb",
-    "ūtrum ... an": "Konjunktion",
+    "tālis ... quālis": "Adverb",
+    "tantum ... quantum": "Adverb",
+    "tantus ... quantus": "Adverb",
+    "utrum ... an": "Konjunktion",
+    "-ne ... an": "Konjunktion",
     "eius modī / eiusmodī": "Adverb",
     "sponte meā (tuā, suā)": "Adverb",
-    "deō grātiās": "Interjektion",
-    "necesse est": "Ausdruck",
+    "necesse (est)": "Ausdruck",
     "odiō esse": "Ausdruck",
-    "cōnstat": "Ausdruck",
+    "cōnstāre, cōnstat, cōnstitit": "Verb",
     "licet": "Ausdruck",
     "oportet": "Ausdruck",
-    "placet": "Ausdruck",
-    "pudet, puduit": "Ausdruck",
-    # Demonstrativ-, Relativ-, Interrogativ- und Indefinitpronomen
+    "pudet, puduit m. Akk.": "Ausdruck",
+    "ventum est": "Ausdruck",
+    "no(vī)sse": "Verb",
+    "nōn dubitō, quīn": "Ausdruck",
+    "aes aliēnum": "Ausdruck",
     "hic, haec, hoc": "Pronomen",
     "ille, illa, illud": "Pronomen",
     "iste, ista, istud": "Pronomen",
@@ -105,671 +93,490 @@ MANUAL_POS_OVERRIDE = {
     "īdem, eadem, idem": "Pronomen",
     "ipse, ipsa, ipsum": "Pronomen",
     "quī, quae, quod": "Pronomen",
-    "quis, quid": "Pronomen",
+    "quī, quae, quod adj.": "Pronomen",
     "quis?": "Pronomen",
     "quid?": "Pronomen",
     "aliquis, aliquid": "Pronomen",
     "aliquī, aliqua, aliquod": "Pronomen",
-    "quīdam, quaedam, quiddam": "Pronomen",
-    "quidam, quaedam, quiddam": "Pronomen",
-    "quidam, quaedam, quoddam": "Pronomen",
-    "quisque, quidque": "Pronomen",
+    "quīdam, quaedam, quiddam subst.": "Pronomen",
+    "quīdam, quaedam, quoddam adj.": "Pronomen",
+    "quisque, quidque subst.": "Pronomen",
     "alius, alia, aliud": "Pronomen",
     "quisnam": "Pronomen",
-    # Ausrufe / feste Imperativformen (mehrere Formen mit "!")
-    "dī!": "Interjektion",
-    "dīc!": "Interjektion",
+    "dī! / Vok.!": "Interjektion",
+    "fac!": "Interjektion",
     "dūc!": "Interjektion",
     "salvē! salvēte!": "Interjektion",
-    # Pronomen-"cum"-Verschmelzungen (sehen wegen "-um" wie Neutra aus)
-    "mēcum": "Pronomen",
-    "tēcum": "Pronomen",
-    "vōbīscum": "Pronomen",
-    "quemadmodum": "Adverb",
-    # Defektives Verb
     "āiō": "Verb",
     "inquam": "Verb",
     "meminisse": "Verb",
-    "sunt": "Verb",
-    # Zahlwoerter (deklinierbar)
-    "ambō, ambae, ambō": "Zahlwort",
-    "duo, duae, duo": "Zahlwort",
-    "trēs, trēs, tria": "Zahlwort",
-    "mīlia, mīlium": "Zahlwort",
-    # Pronominal-/Quantitaetsadjektive
-    "complūrēs, complūra": "Adjektiv",
-    "plērique, plēraeque, plēraque": "Adjektiv",
+    "placet": "Ausdruck",
+    "mēcum": "Pronomen", "tēcum": "Pronomen", "sēcum": "Pronomen", "vōbīscum": "Pronomen",
+    "quemadmodum": "Adverb",
     "cēterī, ae, a": "Adjektiv",
     "cūnctī, ae, a": "Adjektiv",
     "multī, ae, a": "Adjektiv",
-    "nōnnullī, ae, a": "Adjektiv",
+    "nōnnūllī, ae, a": "Adjektiv",
     "paucī, ae, a": "Adjektiv",
     "plūrimī, ae, a": "Adjektiv",
-    # feste adverbiale Ausdruecke (mehrere Woerter)
-    "eō annō": "Ausdruck",
-    "causā": "Ausdruck",
-    "domī": "Adverb",
-    "domum": "Adverb",
-    "nōn iam": "Adverb",
-    "nē quidem": "Partikel",
+    "complūrēs, complūra": "Adjektiv",
+    "plērīque, plēraeque, plēraque": "Adjektiv",
+    "sunt": "Verb",
+    "est": "Verb",
+    "ego": "Pronomen", "tū": "Pronomen", "nōs": "Pronomen", "vōs": "Pronomen",
+    "mē": "Pronomen", "tē": "Pronomen", "sē": "Pronomen",
+    "mihi": "Pronomen", "tibi": "Pronomen", "sibi": "Pronomen",
+    "nōbīs": "Pronomen", "vōbīs": "Pronomen",
+    "duo, duae, duo": "Zahlwort",
+    "trēs, trēs, tria": "Zahlwort",
+    "ambō, ambae, ambō": "Zahlwort",
+    "mīlia, mīlium Pl.": "Zahlwort",
+    "causā (nachgestellt) m. Gen.": "Adverb",
+    "sē recipere": "Ausdruck",
+}
+
+# Lemma/Notiz bereinigen fuer manuell eingeordnete Eintraege
+LEMMA_REWRITE = {
+    "dī! / Vok.!": ("dī!", "Vok."),
+    "causā (nachgestellt) m. Gen.": ("causā", "(nachgestellt) m. Gen."),
 }
 
 PLURAL_ONLY_ADJ_KEYS = {"cēterī, ae, a", "cūnctī, ae, a", "multī, ae, a",
-                         "nōnnullī, ae, a", "paucī, ae, a", "plūrimī, ae, a"}
+                         "nōnnūllī, ae, a", "paucī, ae, a", "plūrimī, ae, a"}
 
-# einzelne, haeufig auftretende bare Adverbien/Konjunktionen, die per Endungs-
-# heuristik faelschlich als Nomen erkannt werden koennten oder generisch
-# in "Partikel" landen wuerden
-BARE_ADVERB_EXTRA = {
-    "nōn", "tamen", "magis", "ut", "velut", "equidem", "etsī", "quandō",
-    "quārē", "quoque", "quotiēns", "paulō", "utinam", "procul",
-}
-BARE_CONJ_EXTRA = {"vel"}
-
-# Woerter mit "!" deren komplette Zeile manuell aufgeteilt wird
-# (lemma_override -> (lemma, translation))
-MANUAL_BANG_SPLIT = {
-    "dī! Vok. (oh) Götter!": ("dī", "(oh) Götter!"),
-    "dīc! sag! sprich!": ("dīc", "sag! sprich!"),
-    "dūc! führe!": ("dūc", "führe!"),
-    "salvē! salvēte! sei gegrüßt! seid gegrüßt!": ("salvē! salvēte!", "sei gegrüßt! seid gegrüßt!"),
-}
-
-# Nomen-Endungen -> (Geschlecht, Deklination) fuer Woerter OHNE angegebenen Genitiv/Genus
-BARE_NOUN_ENDINGS = [
-    ("us", "m", 2), ("um", "n", 2), ("er", "m", 2), ("a", "f", 1),
-]
-
-# Bekannte Adverbien/Konjunktionen/Praepositionen ohne Marker im Text (closed class)
 BARE_ADVERB_SET = {
-    "hīc", "ibi", "ubi", "unde", "quō", "quandō", "tum", "tunc", "nunc", "iam",
-    "etiam", "saepe", "mox", "tandem", "sīc", "ita", "tam", "quam", "cūr",
-    "nihil", "nōn", "haud", "vīx", "satis", "paene", "domī", "domum", "rūrī",
-    "nocte", "herī", "hodiē", "crās", "semper", "numquam", "umquam", "quondam",
+    "hic", "ibi", "ubi", "unde", "quo", "quando", "tum", "tunc", "nunc", "iam",
+    "etiam", "saepe", "mox", "tandem", "sic", "ita", "tam", "quam", "cur",
+    "nihil", "non", "haud", "vix", "satis", "paene", "domi", "domum", "ruri",
+    "nocte", "heri", "hodie", "cras", "semper", "numquam", "umquam", "quondam",
+    "adeo", "adhuc", "antea", "statim", "diu", "ergo", "deinde", "demum",
+    "denique", "libenter", "illic", "illuc", "istic",
+    "intus", "circiter", "paulatim", "paulo", "profecto",
+    "quidem", "equidem", "fere", "forte", "minime", "maxime",
+    "omnino", "palam", "pariter", "potius", "proinde", "protinus",
+    "scilicet", "simul", "subito", "tantum",
+    "ultro", "undique", "usque", "velut", "vero", "raro",
+    "bene", "multum", "parum", "magis",
+    "crebro", "occulte", "primum", "primo", "postea", "postremo", "nondum",
+    "imprimis", "praeterea", "quasi", "quoque", "aliter", "nimis", "nimium",
+    "certe", "quotiens", "eo", "huc", "procul",
+    "nonne", "num", "facile",
 }
 BARE_CONJ_SET = {
     "ac", "atque", "aut", "at", "vel", "et", "nam", "enim", "autem", "itaque",
-    "ergō", "igitur", "quia", "quod", "quoniam", "nec", "neque", "sed", "an",
-    "vērō", "namque", "que",
+    "ergo", "igitur", "quia", "quod", "quoniam", "nec", "neque", "sed", "an",
+    "namque", "que", "quin", "sive", "seu",
 }
-BARE_PARTICLE_SET = {
-    "nōnne", "num", "utrum", "-ne", "quīn", "equidem", "quidem", "quoque",
-}
+BARE_PARTICLE_SET = {"-ne", "quin", "quidem", "quoque"}
+BARE_PREP_SET = {"ad", "ante", "apud", "contra", "a", "ab", "e", "ex", "circum",
+                 "inter", "intra", "extra", "per", "prae", "pro", "sine",
+                 "sub", "super", "trans", "cum", "de", "in", "propter", "adversus"}
+EXTRA_CONJ = {"etsi", "nisi", "postquam", "si", "tamquam", "ne", "ut", "dum", "cum",
+              "quamquam", "quamvis", "antequam", "priusquam", "ubi", "tamen"}
+EXTRA_ADV = {"quare", "immo", "inde", "interea", "item", "nuper", "prope", "qua", "recte",
+             "plus", "tot", "utinam", "paulo post", "eo anno", "post", "brevi (tempore)",
+             "brevi"}
 
-NORM_CONJ_SET = {norm_lookup(x) for x in (BARE_CONJ_SET | BARE_CONJ_EXTRA)}
-NORM_ADVERB_SET = {norm_lookup(x) for x in (BARE_ADVERB_SET | BARE_ADVERB_EXTRA)}
+NORM_CONJ_SET = {norm_lookup(x) for x in BARE_CONJ_SET}
+NORM_ADVERB_SET = {norm_lookup(x) for x in BARE_ADVERB_SET}
 NORM_PARTICLE_SET = {norm_lookup(x) for x in BARE_PARTICLE_SET}
+NORM_PREP_SET = {norm_lookup(x) for x in BARE_PREP_SET}
+NORM_CONJ_SET |= {norm_lookup(x) for x in EXTRA_CONJ}
+NORM_ADVERB_SET |= {norm_lookup(x) for x in EXTRA_ADV}
+NORM_ADVERB_SET -= NORM_PREP_SET
 
+BARE_NOUN_ENDINGS = [("us", "m", 2), ("um", "n", 2), ("a", "f", 1)]
 
-ROMAN_OK = re.compile(r"^[IVXLCDM]+$")
-
-
-def parse_lessons(raw: str):
-    """'6' / '15, 30' / '08' -> [6] / [15, 30] / [8]
-    Unterstuetzt auch bereits vergebene Unterlektionen wie '1.1' oder '1.1, 3.2'."""
-    parts = [p.strip() for p in raw.split(",") if p.strip()]
-    lessons = []
-    for p in parts:
-        # Unterlektion wie "1.1" bleibt String, reine Zahl wird zu int-aehnlichem String ohne fuehrende Nullen
-        if "." in p:
-            main, sub = p.split(".", 1)
-            main = str(int(main))
-            lessons.append(f"{main}.{sub}")
-        else:
-            lessons.append(str(int(p)))
-    return lessons
-
-
-LESSON_RE = re.compile(r"^(.*)\s-\s([0-9](?:[0-9.,\s]*[0-9])?)\s*$")
-
-
-def split_off_lessons(line: str):
-    m = LESSON_RE.match(line)
-    if not m:
-        return line, []
-    body, lessons_raw = m.group(1).strip(), m.group(2).strip()
-    return body, parse_lessons(lessons_raw)
-
-
-# ----------------------------------------------------------------------------
-# Klassifikation & Aufspaltung in (headword_info, translation)
-# ----------------------------------------------------------------------------
-
-GENDER_TOKENS = ("m/f", "m", "f", "n")
-
-# Regex-Bausteine
-PRAEP_RE = re.compile(r"\bPräp\.\s+m\.\s+(Akk|Abl)\.")
-ADV_RE = re.compile(r"\bAdv\.")
+PRAEP_RE = re.compile(r"\bPr[āa]p\.\s+m\.\s+(Akk|Abl)\.")
 SUBJ_RE = re.compile(r"\bSubj\.(\s+m\.\s+(Ind|Konj)\.)?")
-NOUN_GENDER_RE = re.compile(r"(?<![A-Za-zÄÖÜäöüāēīōūĀĒĪŌŪ])(m/f|m|f|n)(\s+Pl\.)?(?=\s)")
+
+NUMERAL_WORDS = {
+    "duo", "trēs", "quattuor", "quīnque", "sex", "septem", "octō", "novem",
+    "decem", "undecim", "duodecim", "trēdecim", "quattuordecim",
+    "quīndecim", "sēdecim", "septendecim", "duodēvigintī", "ūndēvigintī",
+    "vīgintī", "centum", "mīlle",
+}
+NORM_NUMERALS = {norm_lookup(x) for x in NUMERAL_WORDS}
 
 
-def find_first(regex, text):
-    m = regex.search(text)
-    return m
+def classify_latin(latin):
+    extra = {}
 
+    if latin in MANUAL_POS_OVERRIDE:
+        pos = MANUAL_POS_OVERRIDE[latin]
+        if latin in PLURAL_ONLY_ADJ_KEYS:
+            extra["adj_type"] = "i_ae_a_pl"
+        if latin in LEMMA_REWRITE:
+            lem, note = LEMMA_REWRITE[latin]
+            return pos, None, note, lem, extra
+        return pos, None, "", latin, extra
 
-def classify_and_split(body: str):
-    """
-    Gibt zurueck: dict mit
-        lemma_raw:   kompletter lateinischer Kopf inkl. Formen, wie im Buch (String)
-        grammar_note: zusaetzliche grammatische Angabe (z.B. 'Präp. m. Akk.', 'Adv.', ...) oder ''
-        translation: deutsche Uebersetzung
-        pos: grobe Wortart
-        gender: 'm' | 'f' | 'n' | 'm/f' | None
-    """
-    # 0) exakte manuelle Aufteilung fuer Ausruf-Zeilen mit mehreren "!"
-    if body in MANUAL_BANG_SPLIT:
-        lemma, translation = MANUAL_BANG_SPLIT[body]
-        return {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
-                "pos": "Interjektion", "gender": None}
+    # Zusatz "m. Konj./Ind./Inf." am Ende (z.B. "utinam m. Konj.") als Notiz abtrennen
+    m_tail = re.match(r"^(\S+)\s+(m\.\s*(?:Konj|Ind|Inf)\.)$", latin)
+    if m_tail:
+        lem = m_tail.group(1)
+        pos = "Konjunktion" if norm_lookup(lem) in NORM_CONJ_SET else "Adverb"
+        return pos, None, m_tail.group(2), lem, extra
 
-    # 1) manuelle Overrides (Mehrwort-Ausdruecke)
-    for key, pos in MANUAL_POS_OVERRIDE.items():
-        if body.startswith(key):
-            rest = body[len(key):].strip()
-            entry = {
-                "lemma_raw": key,
-                "grammar_note": "",
-                "translation": rest,
-                "pos": pos,
-                "gender": None,
-            }
-            if key in PLURAL_ONLY_ADJ_KEYS:
-                entry["adj_type"] = "i_ae_a_pl"
-            return entry
-
-    # 2) Praeposition
-    m = PRAEP_RE.search(body)
+    m = PRAEP_RE.search(latin)
     if m:
-        lemma = body[: m.start()].strip().rstrip(",")
-        note = m.group(0)
-        translation = body[m.end():].strip()
-        return {"lemma_raw": lemma, "grammar_note": note, "translation": translation,
-                "pos": "Präposition", "gender": None}
+        return "Präposition", None, m.group(0), latin[: m.start()].strip(), extra
 
-    # 3) Adverb (Adv.)
-    m = ADV_RE.search(body)
+    m = SUBJ_RE.search(latin)
     if m:
-        lemma = body[: m.start()].strip().rstrip(",")
-        translation = body[m.end():].strip()
-        return {"lemma_raw": lemma, "grammar_note": "Adv.", "translation": translation,
-                "pos": "Adverb", "gender": None}
+        return "Konjunktion", None, m.group(0), latin[: m.start()].strip(), extra
 
-    # 4) Subjunktion / unterordnende Konjunktion (Subj.)
-    m = SUBJ_RE.search(body)
-    if m:
-        lemma = body[: m.start()].strip().rstrip(",")
-        note = m.group(0)
-        translation = body[m.end():].strip()
-        return {"lemma_raw": lemma, "grammar_note": note, "translation": translation,
-                "pos": "Konjunktion", "gender": None}
+    # Klammer-Zusaetze fuer die Klassifikation abtrennen und als Notiz anhaengen
+    paren_notes = re.findall(r"\([^)]*\)", latin)
+    if paren_notes and " " in latin:
+        stripped = re.sub(r"\s*\([^)]*\)", "", latin).strip()
+        stripped = re.sub(r"\s+", " ", stripped)
+        if stripped and stripped != latin:
+            pos, gender, note, lemma_clean, ex = classify_latin(stripped)
+            extra_note = " ".join(paren_notes)
+            note = (note + " " + extra_note).strip() if note else extra_note
+            return pos, gender, note, lemma_clean, ex
 
-    # 5) Einzel-Kasusform von Personalpronomen o.ae.:  "ego Nom. ich (betont)"
-    m = re.match(r"^(\S+)\s+((?:Nom|Gen|Dat|Akk|Abl|Vok)\.(?:\s*/\s*(?:Nom|Gen|Dat|Akk|Abl|Vok)\.)*)\s+(.*)$", body)
-    if m:
-        lemma, note, translation = m.group(1), m.group(2), m.group(3)
-        return {"lemma_raw": lemma, "grammar_note": note, "translation": translation,
-                "pos": "Pronomen", "gender": None}
+    if latin.endswith("?") and " " not in latin[:-1]:
+        lemma = latin[:-1]
+        key = norm_lookup(lemma)
+        if key in NORM_ADVERB_SET:
+            pos = "Adverb"
+        elif key in NORM_CONJ_SET:
+            pos = "Konjunktion"
+        else:
+            pos = "Pronomen"
+        return pos, None, "?", lemma, extra
 
-    # 6) Ausruf-/Imperativ-Einzelformen mit "!"
-    if re.match(r"^\S+!", body):
-        toks = body.split()
-        head_toks = []
-        i = 0
-        while i < len(toks) and toks[i].endswith("!"):
-            head_toks.append(toks[i])
-            i += 1
-        lemma = " ".join(head_toks)
-        translation = " ".join(toks[i:])
-        return {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
-                "pos": "Interjektion", "gender": None}
+    noun = try_noun(latin)
+    if noun:
+        return noun
 
-    # 7) Fragewoerter/Sonderfaelle mit "?" direkt nach dem Lemma, z.B. "cuī? wem?"
-    m = re.match(r"^(\S+\?)\s+(.*)$", body)
-    if m and not re.search(r",", m.group(1)):
-        lemma = m.group(1)[:-1]
-        translation = m.group(2)
-        pos = "Adverb" if lemma.lower() in ("cūr", "ubi", "unde", "quō", "quandō", "quot",
-                                             "quārē", "quotiēns") else "Pronomen"
-        return {"lemma_raw": lemma, "grammar_note": "?", "translation": translation,
-                "pos": pos, "gender": None}
+    verb = try_verb(latin)
+    if verb:
+        return verb
 
-    # 8) Nomen: Suche Genus-Token (m, f, n, m/f) ausserhalb von Klammern
-    #    Wir suchen im Bereich VOR dem ersten Grossbuchstaben-losen deutschen Wortblock.
-    #    Strategie: alles bis zum ersten Komma-Block einsammeln, dann nach Genus-Token schauen.
-    noun_info = try_parse_noun(body)
-    if noun_info:
-        return noun_info
+    adj = try_adjective(latin)
+    if adj:
+        return adj
 
-    # 9) Verb: Prinzipalformen (2-4 kommagetrennte lateinische Formen am Zeilenanfang)
-    verb_info = try_parse_verb(body)
-    if verb_info:
-        return verb_info
+    if " / " in latin:
+        first_alt = latin.split(" / ")[0].strip()
+        k = norm_lookup(first_alt)
+        if k in NORM_PREP_SET:
+            return "Präposition", None, "", latin, extra
+        if k in NORM_CONJ_SET:
+            return "Konjunktion", None, "", latin, extra
+        if k in NORM_ADVERB_SET:
+            return "Adverb", None, "", latin, extra
+        if re.fullmatch(r"[A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+", first_alt):
+            e = dict(extra)
+            e["proper_noun"] = True
+            return "Substantiv", "m", "", latin, e
 
-    # 10) Adjektiv: Muster "wort, a, um" / "wort, e" / "wort, wortis" / "wort, wort (Gen. ...)"
-    adj_info = try_parse_adjective(body)
-    if adj_info:
-        return adj_info
+    key0 = norm_lookup(latin)
+    if key0 in NORM_PREP_SET:
+        return "Präposition", None, "", latin, extra
+    if key0 in NORM_NUMERALS:
+        return "Zahlwort", None, "", latin, extra
+    if key0 in NORM_CONJ_SET:
+        return "Konjunktion", None, "", latin, extra
+    if key0 in NORM_ADVERB_SET:
+        return "Adverb", None, "", latin, extra
+    if key0 in NORM_PARTICLE_SET:
+        return "Partikel", None, "", latin, extra
 
-    # 11) Zahlwoerter "indekl."
-    if "indekl." in body:
-        idx = body.index("indekl.")
-        lemma = body[:idx].strip().rstrip(",")
-        translation = body[idx + len("indekl."):].strip()
-        return {"lemma_raw": lemma, "grammar_note": "indekl.", "translation": translation,
-                "pos": "Zahlwort", "gender": None}
-
-    # 11b) Eigenname mit Genitiv, aber ohne Genus-Buchstaben:
-    #      "Orpheus, Orpheī Orpheus (berühmter ... Sänger)"
-    m = re.match(r"^([A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+),\s+([A-Za-zāēīōūĀĒĪŌŪ]+)\s+(.*)$", body)
-    if m and "(" not in m.group(1) and not looks_like_verb_infinitive(m.group(1)):
-        lemma = f"{m.group(1)}, {m.group(2)}"
-        translation = m.group(3).strip()
-        gender = "m"
+    if re.fullmatch(r"[A-Za-zĀĒĪŌŪāēīōū]+", latin):
+        is_proper = latin[0].isupper()
+        gender = None
         for suf, gnd, dc in BARE_NOUN_ENDINGS:
-            if m.group(1).endswith(suf):
+            if latin.endswith(suf):
                 gender = gnd
                 break
-        return {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
-                "pos": "Substantiv", "gender": gender, "proper_noun": True,
-                "inferred_gender": True}
-
-    # 11c) Alternativform mit "/" ohne weiteren Marker, z.B. "ac / atque und, ..."
-    m = re.match(r"^(\S+)\s*/\s*(\S+)\s+(.*)$", body)
-    if m and not re.search(r"[,.]", m.group(1) + m.group(2)):
-        lemma2 = f"{m.group(1)} / {m.group(2)}"
-        lemma_key2 = norm_lookup(m.group(1))
-        translation2 = m.group(3)
-        if lemma_key2 in NORM_CONJ_SET:
-            pos2 = "Konjunktion"
-        elif lemma_key2 in NORM_ADVERB_SET:
-            pos2 = "Adverb"
-        else:
-            pos2 = "Partikel"
-        return {"lemma_raw": lemma2, "grammar_note": "", "translation": translation2,
-                "pos": pos2, "gender": None}
-
-    # 11d) Zweiwoertiger Eigenname, dessen deutsche "Übersetzung" ihn nur
-    #      wiederholt, z.B. "Spurius Tarpēius Spurius Tarpeius (röm. ...)"
-    m = re.match(r"^([A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+)\s+([A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+)\s+(.*)$", body)
-    if m:
-        w1, w2, rest = m.group(1), m.group(2), m.group(3)
-        restNorm = norm_lookup(rest)
-        repeatNorm = norm_lookup(w1) + " " + norm_lookup(w2)
-        if restNorm.startswith(repeatNorm):
-            # Die deutsche Seite wiederholt den Namen (ohne Makra) und haengt
-            # oft noch eine Rollenbeschreibung an, z.B. "Spurius Tarpeius
-            # (röm. Befehlshaber)". Genau wie bei einwoertigen Eigennamen
-            # (z.B. "Coriolānus Coriolan (röm. Patrizier)") bleibt das die
-            # komplette Übersetzung - nur unnoetige Leerzeichen entfernen.
-            translation = rest.strip()
-            return {"lemma_raw": f"{w1} {w2}", "grammar_note": "", "translation": translation,
-                    "pos": "Substantiv", "gender": "m", "proper_noun": True, "inferred_gender": True}
-
-    # 12) Einzelnes lateinisches Wort ohne Komma/Marker, gefolgt von der
-    #     deutschen Uebersetzung: haeufigster Fall bei einfachen Nomen aus
-    #     fruehen Lektionen ("avus Großvater"), Eigennamen ("Rōma Rom") und
-    #     geschlossenen Partikeln/Adverbien/Konjunktionen ohne Extra-Marker.
-    toks = body.split(" ", 1)
-    lemma = toks[0]
-    translation = toks[1] if len(toks) > 1 else ""
-    lemma_key = norm_lookup(lemma.rstrip("?"))
-
-    if lemma_key in NORM_CONJ_SET:
-        pos = "Konjunktion"
-    elif lemma_key in NORM_ADVERB_SET:
-        pos = "Adverb"
-    elif lemma_key in NORM_PARTICLE_SET:
-        pos = "Partikel"
-    elif re.match(r"^[A-Za-zĀĒĪŌŪāēīōū]+$", lemma) and translation:
-        # Nomen-Heuristik ueber die Endung
-        is_proper = lemma[0].isupper()
-        gender, decl = None, None
-        for suf, gnd, dc in BARE_NOUN_ENDINGS:
-            if lemma.endswith(suf):
-                gender, decl = gnd, dc
-                break
-        if gender or is_proper:
-            note = f"({gender} vermutet)" if gender and not is_proper else ""
-            entry = {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
-                     "pos": "Substantiv", "gender": gender, "inferred_gender": True}
+        if is_proper or gender:
+            e = dict(extra)
             if is_proper:
-                entry["proper_noun"] = True
-            return entry
-        pos = "Partikel"
-    else:
-        pos = "Partikel"
+                e["proper_noun"] = True
+            if gender:
+                e["inferred_gender"] = True
+            return "Substantiv", gender, "", latin, e
 
-    return {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
-            "pos": pos, "gender": None}
+    if re.fullmatch(r"[A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+ [A-ZĀĒĪŌŪ][a-zA-ZāēīōūĀĒĪŌŪ]+", latin):
+        e = dict(extra)
+        e["proper_noun"] = True
+        e["inferred_gender"] = True
+        return "Substantiv", "m", "", latin, e
 
-
-def try_parse_noun(body: str):
-    """Erkennt Substantive: Suche isoliertes Genus-Token (m/f/n) VOR dem
-    deutschen Uebersetzungstext, das nicht Teil eines laengeren Wortes ist."""
-    # Kandidatenbereich: von Anfang bis max. 3. Komma bzw. bis 60 Zeichen
-    head_search_limit = min(len(body), 80)
-    search_region = body[:head_search_limit]
-
-    for m in NOUN_GENDER_RE.finditer(search_region):
-        gender_tok = m.group(1)
-        # Pluralmarker mit einschliessen
-        end = m.end()
-        # Es darf davor kein "Adv."/"Präp." etc. stehen (schon oben behandelt) - reicht als Heuristik
-        before = body[: m.start()].rstrip()
-        after = body[end:].strip()
-        if not before:
-            continue
-        # 'before' muss wie ein lateinisches Formen-Feld aussehen (Buchstaben, Kommas, Punkte, Klammern, /)
-        if not re.match(r"^[A-Za-zÄÖÜäöüāēīōūĀĒĪŌŪ0-9,.()/ \-]+$", before):
-            continue
-        # Grossgeschriebene deutsche Woerter mitten im "before" deuten auf Uebersetzungstext hin
-        # (z.B. bei Verben mit "m. Akk." o.ae. wurde das schon vorher abgefangen)
-        lemma_part = before.rstrip(",").strip()
-        if len(lemma_part) == 0:
-            continue
-        # Heuristik: das Wort direkt vor dem Genus-Token darf keine deutsche Praeposition/Verbangabe sein
-        last_word = re.split(r"[ ,]", lemma_part)[-1]
-        if last_word in ("m.", "in", "ad", "ā", "ab", "ē", "ex", "dē", "cum"):
-            continue
-        gender = gender_tok
-        note = gender_tok + (" Pl." if m.group(2) else "")
-        return {"lemma_raw": lemma_part, "grammar_note": note, "translation": after,
-                "pos": "Substantiv", "gender": gender}
-    return None
+    return "Partikel", None, "", latin, extra
 
 
-VERB_ENDINGS_ACTIVE = ("āre", "ēre", "īre")
-VERB_ENDINGS_DEP = ("ārī", "ērī", "īrī")
+NOUN_GENDER_RE = re.compile(r"(?<![A-Za-zÄÖÜäöüāēīōūĀĒĪŌŪ])(m/f|m|f|n)(\s+Pl\.)?$")
 
 
-IRREGULAR_INFINITIVES_EXACT = {"posse", "velle", "nōlle", "fierī", "dare"}
+def try_noun(latin):
+    m = NOUN_GENDER_RE.search(latin)
+    if not m:
+        return None
+    before = latin[: m.start()].strip().rstrip(",").strip()
+    if not before:
+        return None
+    gender = m.group(1)
+    note = gender + (" Pl." if m.group(2) else "")
+    return "Substantiv", gender, note, before, {}
 
 
-def looks_like_verb_infinitive(word: str) -> bool:
-    w = word
-    if w in IRREGULAR_INFINITIVES_EXACT:
+def looks_like_verb_infinitive(word):
+    if word.endswith("esse"):
         return True
-    if w.endswith("esse"):  # esse + Komposita (abesse, adesse, deesse, inesse, interesse, praeesse, prodesse, superesse)
+    if word.endswith("ferre"):
         return True
-    if w.endswith("ferre"):  # ferre + Komposita (afferre, auferre, conferre, differre, efferre, inferre, offerre, perferre, praeferre, referre)
+    if word.endswith("dare"):
         return True
-    # deponente Infinitive auf -ārī/-ērī/-īrī (das Makron auf dem Schluss-i wird
-    # in der Quelle nicht immer konsequent gesetzt, daher tolerant pruefen)
-    if w.endswith(("ārī", "āri", "ērī", "ēri", "īrī", "īri")):
+    if word.endswith(("ārī", "āri", "ērī", "ēri", "īrī", "īri")):
         return True
-    if w.endswith(VERB_ENDINGS_ACTIVE):
+    if word.endswith(("āre", "ēre", "īre")):
         return True
-    if w.endswith("ere") and not w.endswith(("ēre",)):
+    if word.endswith("ere") and not word.endswith("ēre"):
         return True
-    if w.endswith("ī") and not w.endswith(("aī",)):
-        # kurze Deponens-Infinitive wie loquī, sequī, patī, morī, nāscī ...
+    if word.endswith("ī") and not word.endswith("aī"):
         return True
     return False
 
 
-def try_parse_verb(body: str):
-    # Erstes "Wort" (bis zum ersten Komma) muss wie ein Infinitiv aussehen
-    first_comma = body.find(",")
-    if first_comma == -1:
-        first_token = body.split(" ", 1)[0]
-        candidate = first_token
-    else:
-        candidate = body[:first_comma].strip()
-    # Nur ein einzelnes lateinisches Wort erlaubt (keine Leerzeichen) fuer den Infinitiv-Test
-    if " " in candidate:
+def try_verb(latin):
+    if "," not in latin:
         return None
-    if not looks_like_verb_infinitive(candidate):
+    parts = [p.strip() for p in latin.split(",")]
+    first = parts[0]
+    if not looks_like_verb_infinitive(first) and first not in ("posse", "velle", "nōlle", "fierī", "dare"):
         return None
-    if first_comma == -1:
-        return None  # Verben haben hier immer mind. 2 Prinzipalformen
-
-    # Sammle die kommagetrennten lateinischen Formen (Prinzipalteile), bis ein
-    # Element nicht mehr wie ein lateinisches Formenwort aussieht (dann beginnt
-    # entweder eine Klammer-Angabe oder die deutsche Uebersetzung).
-    remainder = body
     forms = []
-    pos_cursor = 0
-    parts = split_top_level_commas(body)
     latin_word_re = re.compile(r"^[A-Za-zĀĒĪŌŪāēīōū]+$")
+    note_bits = []
     i = 0
-    consumed_chars = 0
-    for i, raw_part in enumerate(parts):
-        part = raw_part.strip()
-        # "sum" als deponens-Marker ("... sum") gehoert noch zu den Formen
-        if i == 0:
-            forms.append(part)
+    while i < len(parts):
+        p = parts[i]
+        toks = p.split()
+        if len(toks) == 1 and latin_word_re.match(toks[0]):
+            forms.append(toks[0])
+            i += 1
             continue
-        tokens = part.split()
-        if len(tokens) == 1 and latin_word_re.match(tokens[0]):
-            forms.append(tokens[0])
+        if len(toks) == 2 and latin_word_re.match(toks[0]) and toks[1] == "sum":
+            forms.append(toks[0] + " sum")
+            i += 1
             continue
-        if len(tokens) == 2 and latin_word_re.match(tokens[0]) and tokens[1] == "sum":
-            forms.append(tokens[0] + " sum")
-            continue
-        # sonst: dieser Teil enthaelt schon Zusatzinfo/Übersetzung -> stoppen,
-        # aber evtl. beginnt er mit einem letzten Formen-Wort gefolgt von Zusatz
-        m = re.match(r"^([A-Za-zĀĒĪŌŪāēīōū]+)(\s+sum)?\s+(.*)$", part)
-        if m and len(forms) >= 1:
-            form = m.group(1) + (m.group(2) or "")
-            forms.append(form.strip())
-            rest_after = m.group(3)
-            # Rekonstruiere den Rest der Zeile ab hier
-            tail_parts = parts[i + 1:]
-            tail = ", ".join([rest_after] + tail_parts) if tail_parts else rest_after
-            return build_verb_result(forms, tail)
-        break
-
+        m = re.match(r"^([A-Za-zĀĒĪŌŪāēīōū]+)(\s+sum)?\s*(.*)$", p)
+        if m and m.group(1) and (len(forms) >= 1):
+            forms.append(m.group(1) + (m.group(2) or ""))
+            rest = m.group(3).strip()
+            if rest:
+                note_bits.append(rest)
+            note_bits.extend(parts[i + 1:])
+            break
+        else:
+            note_bits.extend(parts[i:])
+            break
     if len(forms) < 2:
         return None
-    # Falls alle Teile konsumiert wurden (unwahrscheinlich) -> kein Body mehr fuer Übersetzung
-    return None
-
-
-def build_verb_result(forms, tail):
-    tail = tail.strip()
-    # Zusatzangaben wie "(m. Abl.)", "m. Dat.", "(ad m. Akk.)" vor der eigentlichen
-    # deutschen Uebersetzung abtrennen und als grammar_note anhaengen
-    note_bits = []
-    while True:
-        m = re.match(r"^(\([^)]*\)|m\.\s*(Akk|Dat|Abl|Gen)\.)(?=\s|$)\s*", tail)
-        if not m:
-            break
-        note_bits.append(m.group(1).strip())
-        tail = tail[m.end():].strip()
-    grammar_note = ", ".join(forms)
+    note = ", ".join(forms)
     if note_bits:
-        grammar_note += "  " + " ".join(note_bits)
-    return {
-        "lemma_raw": forms[0],
-        "grammar_note": grammar_note,
-        "translation": tail,
-        "pos": "Verb",
-        "gender": None,
-        "verb_forms": forms,
-    }
+        note += "  " + " ".join(b.strip() for b in note_bits if b.strip())
+    return "Verb", None, note.strip(), forms[0], {"verb_forms": forms}
 
 
-def split_top_level_commas(s: str):
-    """Teilt an Kommas aber nicht innerhalb von Klammern."""
-    parts = []
-    depth = 0
-    cur = []
-    for ch in s:
-        if ch == "(":
-            depth += 1
-        elif ch == ")":
-            depth = max(0, depth - 1)
-        if ch == "," and depth == 0:
-            parts.append("".join(cur))
-            cur = []
-        else:
-            cur.append(ch)
-    parts.append("".join(cur))
-    return parts
-
-
-ADJ_THREE_END_RE = re.compile(r"^([A-Za-zĀĒĪŌŪāēīōū]+),\s*a,\s*um\b")
-ADJ_TWO_END_E_RE = re.compile(r"^([A-Za-zĀĒĪŌŪāēīōū]+),\s*e\b")
-ADJ_ER_A_UM_RE = re.compile(r"^([A-Za-zĀĒĪŌŪāēīōū()]+),\s*([A-Za-zĀĒĪŌŪāēīōū()]+),\s*([A-Za-zĀĒĪŌŪāēīōū()]+um)\b")
-ADJ_COMPARATIVE_RE = re.compile(r"^([A-Za-zĀĒĪŌŪāēīōū]+),\s*([A-Za-zĀĒĪŌŪāēīōū]+)\s*\(Gen\.\s*([A-Za-zĀĒĪŌŪāēīōū]+)\)")
-ADJ_ONE_END_GEN_RE = re.compile(r"^([A-Za-zĀĒĪŌŪāēīōū]+),\s*([A-Za-zĀĒĪŌŪāēīōū]+is)\b")
-
-
-def try_parse_adjective(body: str):
-    # a) Komparativ mit explizitem Genitiv: "melior, melius (Gen. meliōris) besser"
-    m = ADJ_COMPARATIVE_RE.match(body)
+def try_adjective(latin):
+    parts = [p.strip() for p in latin.split(",")]
+    if len(parts) == 3 and parts[1] == "a" and parts[2] == "um":
+        return "Adjektiv", None, "", latin, {"adj_type": "a_um"}
+    if len(parts) == 2 and parts[1] == "e":
+        return "Adjektiv", None, "", latin, {"adj_type": "is_e"}
+    if len(parts) == 3 and parts[2].endswith("um") and not parts[1].endswith("um") and parts[0].endswith("er"):
+        return "Adjektiv", None, "", latin, {"adj_type": "er_a_um"}
+    if len(parts) == 3 and parts[0].endswith("er") and parts[1].endswith("ris") and parts[2].endswith("re"):
+        return "Adjektiv", None, "", latin, {"adj_type": "er_ris_re"}
+    m = re.match(r"^([A-Za-zĀĒĪŌŪāēīōū]+),\s*([A-Za-zĀĒĪŌŪāēīōū]+)\s*\(Gen\.\s*([A-Za-zĀĒĪŌŪāēīōū]+)\)$", latin)
     if m:
         lemma = f"{m.group(1)}, {m.group(2)}"
-        note = f"(Gen. {m.group(3)})"
-        translation = body[m.end():].strip()
-        return {"lemma_raw": lemma, "grammar_note": note, "translation": translation,
-                "pos": "Adjektiv", "gender": None, "adj_type": "comparative",
-                "adj_stem_gen": m.group(3)}
-
-    # b) Drei-Endungen 1./2. Deklination: "bonus, a, um gut"
-    m = ADJ_THREE_END_RE.match(body)
-    if m:
-        end = m.end()
-        translation = body[end:].strip()
-        return {"lemma_raw": m.group(0), "grammar_note": "", "translation": translation,
-                "pos": "Adjektiv", "gender": None, "adj_type": "a_um"}
-
-    # c) er, a/era, um Muster (z.B. "niger, nigra, nigrum" / "liber, libera, liberum" / "pulcher, pulchra, pulchrum")
-    m = ADJ_ER_A_UM_RE.match(body)
-    if m and m.group(3).endswith("um") and not m.group(2).endswith("um"):
-        lemma = f"{m.group(1)}, {m.group(2)}, {m.group(3)}"
-        translation = body[m.end():].strip()
-        return {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
-                "pos": "Adjektiv", "gender": None, "adj_type": "er_a_um"}
-
-    # d) drei Formen er/eris/ere (z.B. "ācer, ācris, ācre") -> 3. Deklination, 3 Endungen
-    m = re.match(r"^([A-Za-zĀĒĪŌŪāēīōū]+er),\s*([A-Za-zĀĒĪŌŪāēīōū]+ris),\s*([A-Za-zĀĒĪŌŪāēīōū]+re)\b", body)
-    if m:
-        lemma = f"{m.group(1)}, {m.group(2)}, {m.group(3)}"
-        translation = body[m.end():].strip()
-        return {"lemma_raw": lemma, "grammar_note": "", "translation": translation,
-                "pos": "Adjektiv", "gender": None, "adj_type": "er_ris_re"}
-
-    # e) zwei Endungen 3. Dekl.: "brevis, e kurz"
-    m = ADJ_TWO_END_E_RE.match(body)
-    if m:
-        translation = body[m.end():].strip()
-        return {"lemma_raw": m.group(0), "grammar_note": "", "translation": translation,
-                "pos": "Adjektiv", "gender": None, "adj_type": "is_e"}
-
-    # f) eine Endung 3. Dekl. mit Genitiv: "ingēns, ingentis gewaltig"
-    m = ADJ_ONE_END_GEN_RE.match(body)
-    if m:
-        translation = body[m.end():].strip()
-        # Ausschluss: falls es sich eigentlich um ein Nomen handelt, wurde es
-        # bereits vorher (try_parse_noun) abgefangen.
-        return {"lemma_raw": m.group(0), "grammar_note": "", "translation": translation,
-                "pos": "Adjektiv", "gender": None, "adj_type": "one_ending",
-                "adj_stem_gen": m.group(2)}
-
+        return "Adjektiv", None, f"(Gen. {m.group(3)})", lemma, {"adj_type": "comparative", "adj_stem_gen": m.group(3)}
+    if len(parts) == 2 and parts[0].endswith("ior") and parts[1].endswith("ius"):
+        gen = parts[0][:-2] + "ōris"
+        return "Adjektiv", None, f"(Gen. {gen})", latin, {"adj_type": "comparative", "adj_stem_gen": gen}
+    if len(parts) == 2 and parts[0] == "minor" and parts[1] == "minus":
+        return "Adjektiv", None, "(Gen. minōris)", latin, {"adj_type": "comparative", "adj_stem_gen": "minōris"}
+    if len(parts) == 2 and re.match(r"^[A-Za-zĀĒĪŌŪāēīōū]+is$", parts[1]):
+        return "Adjektiv", None, "", latin, {"adj_type": "one_ending", "adj_stem_gen": parts[1]}
     return None
 
 
-# ----------------------------------------------------------------------------
-# Hauptverarbeitung
-# ----------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# Ergaenzungen aus dem frueheren Datenstand (optional)
+# ---------------------------------------------------------------------------
 
-def make_id(counter, lemma):
-    base = re.sub(r"[^a-z0-9]+", "-", strip_accents_for_search(lemma)).strip("-")
-    return f"{base}-{counter}"
+def load_old():
+    verb_forms, irregular = {}, {}
+    if not OLD_VOCAB_PATH.exists():
+        return verb_forms, irregular
+    try:
+        old = json.loads(OLD_VOCAB_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return verb_forms, irregular
+    for e in old:
+        if e.get("pos") == "Verb" and e.get("verb_forms"):
+            inf = e["verb_forms"][0]
+            if inf not in verb_forms or len(e["verb_forms"]) > len(verb_forms[inf]):
+                verb_forms[inf] = e["verb_forms"]
+        if e.get("pos") == "Substantiv" and e.get("irregular_note"):
+            irregular[e["lemma"].split(",")[0].strip()] = e["irregular_note"]
+    return verb_forms, irregular
 
+
+def merge_verb_forms(new_forms, old_by_inf):
+    old = old_by_inf.get(new_forms[0])
+    if not old or len(old) <= len(new_forms):
+        return new_forms
+    if old[:len(new_forms)] == new_forms:
+        return old
+    return new_forms
+
+
+def split_irregular(note):
+    """Trennt unregelmaessige Formangaben wie (Gen. Pl. -ium) von der Notiz."""
+    irr = []
+
+    def repl(m):
+        inner = m.group(1).strip()
+        if re.search(r"(Gen|Dat|Akk|Abl|Nom)\.", inner):
+            irr.append(inner)
+            return ""
+        return m.group(0)
+
+    new = re.sub(r"\s*\(([^)]*)\)", repl, note)
+    return re.sub(r"\s+", " ", new).strip(), "; ".join(irr)
+
+
+MERGE_PRONOUNS = {
+    "nōs": ("wir / uns", "Nom./Akk."),
+    "vōs": ("ihr / euch", "Nom./Akk."),
+}
+
+
+def merge_pronoun_forms(entries):
+    """nōs (wir/uns) und vōs (ihr/euch) werden je zu einer Karteikarte."""
+    out, seen = [], set()
+    for e in entries:
+        if e.get("category") == "vokabel" and e["lemma"] in MERGE_PRONOUNS:
+            if e["lemma"] in seen:
+                continue
+            seen.add(e["lemma"])
+            trans, note = MERGE_PRONOUNS[e["lemma"]]
+            e = dict(e)
+            e["translation"] = trans
+            e["grammar_note"] = note
+        out.append(e)
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Hauptprogramm
+# ---------------------------------------------------------------------------
 
 def main():
-    raw_lines = RAW_PATH.read_text(encoding="utf-8").splitlines()
-    entries = []
-    problems = []
-    seen_ids = {}
+    old_verb_forms, old_irregular = load_old()
+    merged_count = 0
+    irr_count = 0
 
-    for lineno, line in enumerate(raw_lines, start=1):
-        line = line.strip()
-        if not line:
+    lines = RAW_PATH.read_text(encoding="utf-8").split("\n")
+    section = None
+    entries, problems = [], []
+
+    for lineno, line in enumerate(lines, start=1):
+        s = line.strip()
+        if not s:
             continue
-        body, lessons = split_off_lessons(line)
-        if not lessons:
-            problems.append(f"Zeile {lineno}: keine Lektion erkannt -> {line!r}")
+        if s == "Vokabeln":
+            section = "vokabel"
             continue
-        info = classify_and_split(body)
-        translation = info["translation"].strip().rstrip(".").strip()
+        if s == "Redewendungen":
+            section = "redewendung"
+            continue
+        parts = line.split(" - ")
+        if len(parts) != 3:
+            problems.append(f"Zeile {lineno}: unerwartetes Format ({len(parts)} Teile): {line!r}")
+            continue
+        latin_raw, german_raw, lesson_raw = [p.strip() for p in parts]
+        try:
+            lessons = parse_lessons(lesson_raw)
+        except ValueError:
+            problems.append(f"Zeile {lineno}: Lektion nicht lesbar: {line!r}")
+            continue
 
-        # Fuehrende Klammer-Zusatzangaben (z.B. "(Gen. Pl. -ium)", "(Abl. Sg. -ō, ...)")
-        # aus der Uebersetzung herausloesen und der Grammatiknotiz zuschlagen.
-        irregular_notes = []
-        GRAMMAR_NOTE_RE = re.compile(
-            r"(Gen\.|Dat\.|Akk\.|Abl\.|Nom\.|Vok\.|Sg\.|Pl\.|m\.\s*Abl|m\.\s*Akk|m\.\s*Dat|m\.\s*Gen|milit\.)"
-        )
-        while True:
-            m = re.match(r"^\(([^)]*)\)\s*", translation)
-            if not m:
-                break
-            # Nur echte grammatische Zusatzangaben herausloesen (z.B. "(Gen.
-            # Pl. -ium)"); rein inhaltliche Praezisierungen wie "(wildes)"
-            # vor "Tier" gehoeren zur Übersetzung und bleiben stehen.
-            if not GRAMMAR_NOTE_RE.search(m.group(1)):
-                break
-            irregular_notes.append(m.group(1).strip())
-            translation = translation[m.end():].strip()
+        translation = re.sub(r"\s+", " ", german_raw).strip().rstrip(".").strip()
 
-        translation = re.sub(r"\s+", " ", translation)
-        translation = re.sub(r"\s+,", ",", translation)
-        if not translation:
-            problems.append(f"Zeile {lineno}: keine Übersetzung erkannt -> {line!r}")
+        if section == "redewendung":
+            entries.append({
+                "id": f"r{lineno:04d}",
+                "lemma": latin_raw,
+                "search_key": strip_accents_for_search(latin_raw.split(" ")[0]),
+                "pos": "Redewendung",
+                "category": "redewendung",
+                "gender": None,
+                "grammar_note": "",
+                "translation": translation,
+                "lessons": lessons,
+                "raw_line": line,
+            })
+            continue
 
-        lemma_raw = info["lemma_raw"].strip()
-        counter = seen_ids.get(lemma_raw, 0) + 1
-        seen_ids[lemma_raw] = counter
-        entry_id = make_id(counter, lemma_raw) if counter == 1 else make_id(counter, lemma_raw)
+        pos, gender, note, lemma_clean, extra = classify_latin(latin_raw)
+
+        if "verb_forms" in extra:
+            merged = merge_verb_forms(extra["verb_forms"], old_verb_forms)
+            if merged != extra["verb_forms"]:
+                merged_count += 1
+                extra["verb_forms"] = merged
+                note = ", ".join(merged)
+
+        irregular_note = None
+        if pos == "Substantiv":
+            note, irregular_note = split_irregular(note)
+            if not irregular_note:
+                irregular_note = old_irregular.get(lemma_clean.split(",")[0].strip())
+                if irregular_note:
+                    irr_count += 1
 
         entry = {
             "id": f"v{lineno:04d}",
-            "lemma": lemma_raw,
-            "search_key": strip_accents_for_search(lemma_raw.split(",")[0].split("/")[0].strip()),
-            "pos": info["pos"],
-            "gender": info.get("gender"),
-            "grammar_note": re.sub(r"\s+", " ", info.get("grammar_note", "")).strip(),
+            "lemma": lemma_clean,
+            "search_key": strip_accents_for_search(lemma_clean.split(",")[0].split("/")[0].strip()),
+            "pos": pos,
+            "category": "vokabel",
+            "gender": gender,
+            "grammar_note": re.sub(r"\s+", " ", note).strip(),
             "translation": translation,
             "lessons": lessons,
             "raw_line": line,
         }
-        if "adj_type" in info:
-            entry["adj_type"] = info["adj_type"]
-        if "adj_stem_gen" in info:
-            entry["adj_stem_gen"] = info["adj_stem_gen"]
-        if "verb_forms" in info:
-            entry["verb_forms"] = info["verb_forms"]
-        if info.get("proper_noun"):
-            entry["proper_noun"] = True
-        if info.get("inferred_gender"):
-            entry["inferred_gender"] = True
-        if irregular_notes:
-            entry["irregular_note"] = "; ".join(irregular_notes)
-
+        if irregular_note:
+            entry["irregular_note"] = irregular_note
+        entry.update(extra)
         entries.append(entry)
 
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    entries = merge_pronoun_forms(entries)
     OUT_PATH.write_text(json.dumps(entries, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    # Statistikbericht
     from collections import Counter
-    pos_counter = Counter(e["pos"] for e in entries)
-    lines_out = [f"Eintraege gesamt: {len(entries)}", ""]
-    lines_out.append("Wortarten-Verteilung:")
-    for pos, cnt in pos_counter.most_common():
-        lines_out.append(f"  {pos:15s} {cnt}")
-    lines_out.append("")
-    lines_out.append(f"Probleme ({len(problems)}):")
-    lines_out.extend(problems)
-    REPORT_PATH.write_text("\n".join(lines_out), encoding="utf-8")
-
+    pos_counter = Counter(e["pos"] for e in entries if e["category"] == "vokabel")
+    red_count = sum(1 for e in entries if e["category"] == "redewendung")
+    report = [f"Eintraege gesamt: {len(entries)}", f"  davon Redewendungen: {red_count}",
+              f"  Verben mit ergaenzten Stammformen: {merged_count}",
+              f"  Substantive mit ergaenzten Sonderformen: {irr_count}", "",
+              "Wortarten-Verteilung (Vokabeln):"]
+    for p, cnt in pos_counter.most_common():
+        report.append(f"  {p:15s} {cnt}")
+    report += ["", f"Probleme ({len(problems)}):"] + problems
+    REPORT_PATH.write_text("\n".join(report), encoding="utf-8")
     print(f"{len(entries)} Eintraege geschrieben nach {OUT_PATH}")
-    print(f"Bericht: {REPORT_PATH}")
-    print(f"Probleme: {len(problems)}")
+    print(f"Probleme: {len(problems)} | Verb-Ergaenzungen: {merged_count} | Sonderform-Ergaenzungen: {irr_count}")
 
 
 if __name__ == "__main__":
