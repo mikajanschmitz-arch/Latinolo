@@ -186,7 +186,7 @@ var Flashcards = (function () {
     var backHtml =
       '<div class="flash-top-row"><span class="flash-lesson-badge">Lektion ' + LexUtil.lessonLabel(entry) + "</span></div>" +
       '<div style="text-align:center;margin-top:6px;">' +
-      (entry.category === "redewendung" ? "" : '<div class="flash-latin-small">' + LexUtil.shortForm(entry) + "</div>") +
+      '<div class="flash-latin-small"' + (entry.category === "redewendung" && entry.lemma.length > 28 ? ' style="font-size:1.15rem;"' : "") + ">" + LexUtil.shortForm(entry) + "</div>" +
       '<div class="flash-pos">' + LexUtil.posLabel(entry) + "</div>" +
       "</div>" +
       '<div class="flash-center"><div class="flash-translation">' + entry.translation + "</div></div>" +

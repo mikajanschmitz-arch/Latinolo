@@ -15,6 +15,11 @@ var LexUtil = (function () {
     if (declension === 3 || declension === 4) {
       return nom + ", " + gen;
     }
+    // Alles, was nicht auf -us/-um/-a endet (puer, ager, vir, diēs, ...), wird
+    // vollstaendig angezeigt, z.B. "puer, puerī" statt "puer, -ī".
+    if (!/(us|um|a)$/.test(nom)) {
+      return nom + ", " + gen;
+    }
     // 1. Deklination (nom endet auf "a", Genitiv ist nom+"e"): konventionell
     // wird "-ae" gezeigt (das auslautende "a" ersetzt), nicht nur "-e".
     if (declension === 1 && nom.endsWith("a") && gen === nom + "e") {

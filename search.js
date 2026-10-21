@@ -248,7 +248,9 @@ var Search = (function () {
       return LexUtil.firstForm(a.entry).localeCompare(LexUtil.firstForm(b.entry));
     });
 
-    if (!groups.length && !substringMatches.length) {
+    var idiomMatches = searchIdioms(qNorm);
+
+    if (!groups.length && !substringMatches.length && !idiomMatches.length) {
       resultsEl.innerHTML = '<p class="empty-state">Keine Treffer für „' + escapeHtml(query) + '“.</p>';
       return;
     }
@@ -263,8 +265,50 @@ var Search = (function () {
         html += renderResultCard(entry, []);
       });
     }
+    if (idiomMatches.length) {
+      html += '<div class="section-title">Redewendungen</div>';
+      idiomMatches.slice(0, 25).forEach(function (m) {
+        html += renderResultCard(m.entry, []);
+      });
+    }
     resultsEl.innerHTML = html;
     attachResultHandlers(resultsEl);
+  }
+
+  // Redewendungen: Suche ueber die einzelnen Woerter der Phrase (ohne Makra,
+  // Gross-/Kleinschreibung und Satzzeichen). Mehrwort-Suchen finden die
+  // zusammenhaengende Wortfolge.
+  function idiomTokens(entry) {
+    if (!entry._tok) {
+      entry._tok = Data.normalize(entry.lemma).split(/[^a-z0-9]+/).filter(Boolean);
+      entry._normPhrase = entry._tok.join(" ");
+    }
+    return entry._tok;
+  }
+
+  function searchIdioms(qNorm) {
+    var q = qNorm.replace(/[^a-z0-9]+/g, " ").trim();
+    if (!q) return [];
+    var multi = q.indexOf(" ") !== -1;
+    var res = [];
+    Data.vocab.forEach(function (e) {
+      if (e.category !== "redewendung") return;
+      var tok = idiomTokens(e);
+      var score = 0;
+      if (multi) {
+        if ((" " + e._normPhrase + " ").indexOf(" " + q + " ") !== -1) score = 3;
+        else if (e._normPhrase.indexOf(q) !== -1) score = 2;
+      } else if (tok.indexOf(q) !== -1) {
+        score = 3;
+      } else if (q.length >= 3 && tok.some(function (t) { return t.indexOf(q) === 0; })) {
+        score = 1;
+      }
+      if (score) res.push({ entry: e, score: score });
+    });
+    res.sort(function (a, b) {
+      return b.score - a.score || a.entry.lemma.localeCompare(b.entry.lemma);
+    });
+    return res;
   }
 
   function renderResultCard(entry, forms) {
