@@ -59,6 +59,18 @@ var Forms = (function () {
     stats: { correct: 0, wrong: 0 },
   };
 
+  var CUSTOM_KEY = "ll_forms_words_v1";
+  function loadCustom() {
+    try {
+      var a = JSON.parse(localStorage.getItem(CUSTOM_KEY) || "[]");
+      return new Set(Array.isArray(a) ? a : []);
+    } catch (e) { return new Set(); }
+  }
+  function saveCustom() {
+    try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(Array.from(state.customIds))); } catch (e) {}
+  }
+  state.customIds = loadCustom();
+
   function init(rootEl) {
     el = rootEl;
     Data.ready.then(renderSetup);
@@ -83,12 +95,22 @@ var Forms = (function () {
       return '<div class="chip' + (state.pos.has(p) ? " selected" : "") + '" data-pos="' + p + '">' + p + "</div>";
     }).join("");
 
-    var showNominal = DECLINABLE_POS.some(function (p) { return state.pos.has(p); });
-    var showVerb = state.pos.has("Verb");
+    var customList = Array.from(state.customIds).map(function (id) { return Data.byId(id); }).filter(Boolean).filter(canDecline);
+    var hasCustom = customList.length > 0;
+    var posForFilters = hasCustom ? new Set(customList.map(function (e) { return e.pos; })) : state.pos;
+    var showNominal = DECLINABLE_POS.some(function (p) { return posForFilters.has(p); });
+    var showVerb = posForFilters.has("Verb");
+    var preview = customList.slice(0, 6).map(function (e) { return LexUtil.firstForm(e); }).join(", ") + (customList.length > 6 ? " …" : "");
 
     el.innerHTML =
       '<div class="card-panel">' +
       "<h2>Formentrainer</h2>" +
+      '<button class="btn btn-block" id="f-custom-open">📋 Einzelne Wörter auswählen' + (hasCustom ? " (" + customList.length + " gewählt)" : "") + "</button>" +
+      (hasCustom
+        ? '<div class="section-title">Eigene Wortauswahl</div><p style="margin:0 0 8px;">' + preview + "</p>" +
+          '<button class="btn btn-block" id="f-custom-clear">Auswahl aufheben (stattdessen Lektionen)</button>'
+        : "") +
+      '<div id="f-standard-select"' + (hasCustom ? ' style="display:none;"' : "") + ">" +
       '<div class="section-title">Lektionen</div>' +
       '<div class="btn-row" style="margin-bottom:8px;">' +
       '<button class="btn" id="f-select-all-lessons">Alle</button>' +
@@ -98,6 +120,7 @@ var Forms = (function () {
 
       '<div class="section-title">Wortart</div>' +
       '<div class="chip-grid" id="f-pos-grid">' + posChips + "</div>" +
+      "</div>" +
 
       (showNominal ?
         '<div class="section-title">Bekannte Fälle (Substantiv/Adjektiv/Pronomen)</div>' +
@@ -167,6 +190,9 @@ var Forms = (function () {
     var ppaEl = el.querySelector("#f-ppa");
     if (ppaEl) ppaEl.addEventListener("change", function () { state.includePPA = ppaEl.checked; });
 
+    el.querySelector("#f-custom-open").addEventListener("click", renderPicker);
+    var clearBtn = el.querySelector("#f-custom-clear");
+    if (clearBtn) clearBtn.addEventListener("click", function () { state.customIds.clear(); saveCustom(); renderSetup(); });
     el.querySelector("#f-start-1").addEventListener("click", function () { startQuiz(1); });
     el.querySelector("#f-start-2").addEventListener("click", function () { startQuiz(2); });
   }
@@ -174,13 +200,19 @@ var Forms = (function () {
   // ================= Pool & Fragen-Generierung =================
 
   function startQuiz(mode) {
-    if (!state.lessons.size) { alert("Bitte wähle mindestens eine Lektion aus."); return; }
-    if (!state.pos.size) { alert("Bitte wähle mindestens eine Wortart aus."); return; }
-    var entries = Data.entriesForMainLessons(Array.from(state.lessons));
-    entries = Data.byPos(entries, state.pos);
-    // nur Woerter, die die Engine ueberhaupt beugen kann
-    entries = entries.filter(canDecline);
-    if (!entries.length) { alert("Keine passenden Wörter gefunden."); return; }
+    var entries;
+    if (state.customIds.size) {
+      entries = Array.from(state.customIds).map(function (id) { return Data.byId(id); }).filter(Boolean).filter(canDecline);
+      if (!entries.length) { alert("Keine passenden Wörter in deiner Auswahl."); return; }
+    } else {
+      if (!state.lessons.size) { alert("Bitte wähle mindestens eine Lektion aus."); return; }
+      if (!state.pos.size) { alert("Bitte wähle mindestens eine Wortart aus."); return; }
+      entries = Data.entriesForMainLessons(Array.from(state.lessons));
+      entries = Data.byPos(entries, state.pos);
+      // nur Woerter, die die Engine ueberhaupt beugen kann
+      entries = entries.filter(canDecline);
+      if (!entries.length) { alert("Keine passenden Wörter gefunden."); return; }
+    }
     state.pool = entries;
     state.mode = mode;
     state.stats = { correct: 0, wrong: 0 };
@@ -439,6 +471,86 @@ var Forms = (function () {
     showFeedback(correct, c.target.value, null);
   }
 
+
+  // ================= Eigene Wortauswahl =================
+
+  function renderPicker() {
+    state.phase = "picker";
+    var all = Data.vocab.filter(function (e) {
+      return e.category !== "redewendung" && DECLINABLE_POS.concat(["Verb"]).indexOf(e.pos) !== -1 && canDecline(e);
+    });
+    all.sort(function (a, b) {
+      return Data.normalize(LexUtil.firstForm(a)).localeCompare(Data.normalize(LexUtil.firstForm(b)));
+    });
+    var LIMIT = 300;
+
+    el.innerHTML =
+      '<div class="card-panel">' +
+      "<h2>Wörter auswählen</h2>" +
+      '<div class="field-row"><input type="text" id="pk-search" placeholder="Suchen (lateinisch oder deutsch) …" autocomplete="off" autocapitalize="off" spellcheck="false"></div>' +
+      '<div class="btn-row" style="margin-bottom:8px;">' +
+      '<button class="btn" id="pk-all">Alle angezeigten</button>' +
+      '<button class="btn" id="pk-none">Auswahl leeren</button>' +
+      "</div>" +
+      '<p id="pk-count" style="color:var(--text-muted);font-size:0.85rem;margin:4px 0 8px;"></p>' +
+      '<div id="pk-list"></div>' +
+      "</div>" +
+      '<button class="btn btn-primary btn-block" id="pk-done">Fertig</button>';
+
+    var listEl = el.querySelector("#pk-list");
+    var countEl = el.querySelector("#pk-count");
+    var searchEl = el.querySelector("#pk-search");
+    var shown = [];
+
+    function updateCount() {
+      countEl.textContent = state.customIds.size + " Wort/Wörter gewählt" +
+        (shown.length >= LIMIT ? " · nur die ersten " + LIMIT + " Treffer angezeigt – bitte Suche nutzen" : "");
+    }
+
+    function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+    function renderList() {
+      var q = Data.normalize(searchEl.value.trim());
+      var qDe = searchEl.value.trim().toLowerCase();
+      var matches = all.filter(function (e) {
+        if (!q) return true;
+        return Data.normalize(e.lemma).indexOf(q) !== -1 || e.translation.toLowerCase().indexOf(qDe) !== -1;
+      });
+      shown = matches.slice(0, LIMIT);
+      listEl.innerHTML = shown.map(function (e) {
+        var checked = state.customIds.has(e.id);
+        return '<label style="display:flex;gap:10px;align-items:flex-start;padding:9px 2px;border-bottom:1px solid var(--border);cursor:pointer;">' +
+          '<input type="checkbox" data-id="' + e.id + '"' + (checked ? " checked" : "") + ' style="margin-top:4px;width:18px;height:18px;flex-shrink:0;">' +
+          '<span style="min-width:0;"><span style="font-family:var(--font-latin);font-size:1.05rem;">' + esc(LexUtil.shortForm(e)) + "</span>" +
+          ' <span style="color:var(--text-muted);font-size:0.78rem;">(' + esc(e.pos) + ", Lektion " + esc(LexUtil.lessonLabel(e)) + ")</span><br>" +
+          '<span style="font-size:0.9rem;">' + esc(e.translation) + "</span></span></label>";
+      }).join("") || '<p class="empty-state">Keine Treffer.</p>';
+      updateCount();
+    }
+
+    listEl.addEventListener("change", function (ev) {
+      var cb = ev.target.closest("input[type=checkbox]");
+      if (!cb) return;
+      if (cb.checked) state.customIds.add(cb.dataset.id); else state.customIds.delete(cb.dataset.id);
+      saveCustom();
+      updateCount();
+    });
+    var timer = null;
+    searchEl.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(renderList, 150); });
+    el.querySelector("#pk-all").addEventListener("click", function () {
+      shown.forEach(function (e) { state.customIds.add(e.id); });
+      saveCustom();
+      renderList();
+    });
+    el.querySelector("#pk-none").addEventListener("click", function () {
+      state.customIds.clear();
+      saveCustom();
+      renderList();
+    });
+    el.querySelector("#pk-done").addEventListener("click", renderSetup);
+    renderList();
+  }
+
   // ================= Feedback & weiter =================
 
   function showFeedback(correct, correctAnswer, extraInfo) {
@@ -448,6 +560,11 @@ var Forms = (function () {
       ? '<p class="quiz-feedback-correct">✓ Richtig!</p>'
       : '<p class="quiz-feedback-wrong">✗ Nicht ganz. Richtig wäre: <strong>' + correctAnswer + "</strong></p>";
     if (!correct && extraInfo) html += '<p style="color:var(--text-muted);font-size:0.85rem;">(' + extraInfo + ")</p>";
+    var curEntry = state.current && state.current.entry;
+    if (curEntry) {
+      html += '<p style="margin:6px 0;"><span style="color:var(--text-muted);font-size:0.85rem;">Übersetzung:</span> <strong>' +
+        String(curEntry.translation).replace(/&/g, "&amp;").replace(/</g, "&lt;") + "</strong></p>";
+    }
     html += '<button class="btn btn-primary btn-block" id="f-next" style="margin-top:8px;">Weiter</button>';
     fb.innerHTML = html;
     el.querySelectorAll("#f-submit, #f-submit2").forEach(function (b) { b.disabled = true; });
