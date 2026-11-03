@@ -113,6 +113,7 @@ var Flashcards = (function () {
       '<div class="lesson-grid" id="fc-lesson-grid">' + chips + "</div>" +
       '<div class="toggle-row" style="margin-top:12px;"><span>Redewendungen mitlernen</span>' +
       '<label class="switch"><input type="checkbox" id="fc-idioms"' + (Store.getFlashIdioms() ? " checked" : "") + '><span class="slider"></span></label></div>' +
+      '<button class="btn btn-block" id="fc-disable-open" style="margin-top:12px;">🚫 Wörter deaktivieren' + (countInactive() ? " (" + countInactive() + ")" : "") + "</button>" +
       "</div>" +
       '<button class="btn btn-primary btn-block" id="fc-start" style="font-size:1.05rem;padding:15px;">Karteikarten starten</button>';
 
@@ -143,6 +144,7 @@ var Flashcards = (function () {
       Store.setLessonSelection([]);
       refreshChips();
     });
+    el.querySelector("#fc-disable-open").addEventListener("click", renderDisableManager);
     var idiomsToggle = el.querySelector("#fc-idioms");
     idiomsToggle.addEventListener("change", function () { Store.setFlashIdioms(idiomsToggle.checked); });
     el.querySelector("#fc-start").addEventListener("click", startSession);
@@ -157,7 +159,12 @@ var Flashcards = (function () {
     if (!Store.getFlashIdioms()) {
       entries = entries.filter(function (e) { return e.category !== "redewendung"; });
     }
-    if (!entries.length) { alert("Keine Vokabeln in dieser Auswahl gefunden."); return; }
+    var before = entries.length;
+    entries = entries.filter(isActiveEntry);
+    if (!entries.length) {
+      alert(before ? "Alle Wörter dieser Auswahl sind deaktiviert." : "Keine Vokabeln in dieser Auswahl gefunden.");
+      return;
+    }
     state.queue = buildQueue(entries);
     state.idx = 0;
     state.flipped = false;
@@ -165,6 +172,162 @@ var Flashcards = (function () {
     state.wrongIds = new Set();
     state.phase = "session";
     renderCard();
+  }
+
+
+  // ---------------- Woerter deaktivieren ----------------
+
+  var DIS_IDS_KEY = "ll_fc_disabled_ids_v1";
+  var DIS_GROUPS_KEY = "ll_fc_disabled_groups_v1";
+
+  function loadSet(key) {
+    try {
+      var a = JSON.parse(localStorage.getItem(key) || "[]");
+      return new Set(Array.isArray(a) ? a : []);
+    } catch (e) { return new Set(); }
+  }
+  function saveSet(key, set) {
+    try { localStorage.setItem(key, JSON.stringify(Array.from(set))); } catch (e) {}
+  }
+  var disabledIds = loadSet(DIS_IDS_KEY);
+  var disabledGroups = loadSet(DIS_GROUPS_KEY);
+
+  function isCapitalized(e) {
+    var c = e.lemma.charAt(0);
+    return c !== c.toLowerCase() && c === c.toUpperCase();
+  }
+  function posGroup(id, label, pos) {
+    return { id: id, label: label, test: function (e) { return e.category !== "redewendung" && e.pos === pos; } };
+  }
+  var GROUPS = [
+    { id: "names", label: "Eigennamen (Personen, Götter, Orte, Völker)",
+      test: function (e) { return e.category !== "redewendung" && e.pos === "Substantiv" && isCapitalized(e); } },
+    { id: "nameadj", label: "Namens-/Herkunftsadjektive (z. B. Gallus, Graecus)",
+      test: function (e) { return e.category !== "redewendung" && e.pos === "Adjektiv" && isCapitalized(e); } },
+    { id: "nouns", label: "Substantive (ohne Eigennamen)",
+      test: function (e) { return e.category !== "redewendung" && e.pos === "Substantiv" && !isCapitalized(e); } },
+    { id: "verbs", label: "Verben", test: function (e) { return e.category !== "redewendung" && e.pos === "Verb"; } },
+    { id: "adjs", label: "Adjektive (ohne Namensadjektive)",
+      test: function (e) { return e.category !== "redewendung" && e.pos === "Adjektiv" && !isCapitalized(e); } },
+    posGroup("advs", "Adverbien", "Adverb"),
+    posGroup("preps", "Präpositionen", "Präposition"),
+    posGroup("conjs", "Konjunktionen", "Konjunktion"),
+    posGroup("prons", "Pronomen", "Pronomen"),
+    posGroup("nums", "Zahlwörter", "Zahlwort"),
+    posGroup("interjs", "Ausrufe / Interjektionen", "Interjektion"),
+    posGroup("exprs", "Feste Ausdrücke", "Ausdruck"),
+    posGroup("parts", "Partikeln", "Partikel"),
+  ];
+
+  function isActiveEntry(e) {
+    if (disabledIds.has(e.id)) return false;
+    for (var i = 0; i < GROUPS.length; i++) {
+      if (disabledGroups.has(GROUPS[i].id) && GROUPS[i].test(e)) return false;
+    }
+    return true;
+  }
+
+  function countInactive() {
+    if (!disabledIds.size && !disabledGroups.size) return 0;
+    return Data.vocab.filter(function (e) { return !isActiveEntry(e); }).length;
+  }
+
+  function renderDisableManager() {
+    state.phase = "disable";
+    var all = Data.vocab.slice().sort(function (a, b) {
+      return Data.normalize(LexUtil.firstForm(a)).localeCompare(Data.normalize(LexUtil.firstForm(b)));
+    });
+    var LIMIT = 300;
+    function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+    var groupRows = GROUPS.map(function (g) {
+      var n = Data.vocab.filter(g.test).length;
+      if (!n) return "";
+      return '<div class="toggle-row"><span>' + esc(g.label) + ' <span style="color:var(--text-muted);font-size:0.8rem;">(' + n + ')</span></span>' +
+        '<label class="switch"><input type="checkbox" data-group="' + g.id + '"' + (disabledGroups.has(g.id) ? " checked" : "") + '><span class="slider"></span></label></div>';
+    }).join("");
+
+    el.innerHTML =
+      '<div style="position:sticky;top:0;z-index:5;background:var(--bg);padding:6px 0 8px;">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;">' +
+      '<h2 style="margin:0;">Wörter deaktivieren</h2>' +
+      '<button class="btn btn-primary" id="dm-done">Fertig</button>' +
+      "</div>" +
+      "</div>" +
+      '<div class="card-panel">' +
+      '<div class="section-title">Ganze Gruppen</div>' +
+      '<p style="color:var(--text-muted);font-size:0.85rem;margin:0 0 6px;">Eingeschaltet = diese Gruppe wird bei den Karteikarten nicht abgefragt.</p>' +
+      groupRows +
+      "</div>" +
+      '<div class="card-panel">' +
+      '<div class="section-title">Einzelne Wörter</div>' +
+      '<input type="text" id="dm-search" placeholder="Suchen (lateinisch) …" autocomplete="off" autocapitalize="off" spellcheck="false">' +
+      '<div class="btn-row" style="margin:8px 0;">' +
+      '<button class="btn" id="dm-off">Alle angezeigten deaktivieren</button>' +
+      '<button class="btn" id="dm-on">Alle angezeigten aktivieren</button>' +
+      "</div>" +
+      '<p id="dm-count" style="color:var(--text-muted);font-size:0.85rem;margin:4px 0 8px;"></p>' +
+      '<div id="dm-list"></div>' +
+      "</div>" +
+      '<button class="btn btn-danger btn-block" id="dm-reset">Alles wieder aktivieren</button>';
+
+    var listEl = el.querySelector("#dm-list");
+    var countEl = el.querySelector("#dm-count");
+    var searchEl = el.querySelector("#dm-search");
+    var shown = [];
+
+    function updateCount() {
+      countEl.textContent = countInactive() + " Wörter insgesamt deaktiviert" +
+        (shown.length >= LIMIT ? " · nur die ersten " + LIMIT + " Treffer angezeigt – bitte Suche nutzen" : "");
+    }
+
+    function renderList() {
+      var q = Data.normalize(searchEl.value.trim());
+      var matches = all.filter(function (e) { return !q || Data.normalize(e.lemma).indexOf(q) !== -1; });
+      shown = matches.slice(0, LIMIT);
+      listEl.innerHTML = shown.map(function (e) {
+        var off = disabledIds.has(e.id);
+        var viaGroup = !off && !isActiveEntry(e);
+        return '<label style="display:flex;gap:10px;align-items:flex-start;padding:9px 2px;border-bottom:1px solid var(--border);cursor:pointer;' + (off || viaGroup ? "opacity:0.55;" : "") + '">' +
+          '<input type="checkbox" data-id="' + e.id + '"' + (off ? " checked" : "") + ' style="margin-top:4px;width:18px;height:18px;flex-shrink:0;">' +
+          '<span style="min-width:0;"><span style="font-family:var(--font-latin);font-size:1.05rem;">' + esc(LexUtil.shortForm(e)) + "</span>" +
+          ' <span style="color:var(--text-muted);font-size:0.78rem;">(' + esc(e.pos) + ", Lektion " + esc(LexUtil.lessonLabel(e)) + (viaGroup ? ", über Gruppe deaktiviert" : "") + ")</span><br>" +
+          '<span style="font-size:0.9rem;">' + esc(e.translation) + "</span></span></label>";
+      }).join("") || '<p class="empty-state">Keine Treffer.</p>';
+      updateCount();
+    }
+
+    el.querySelectorAll("input[data-group]").forEach(function (cb) {
+      cb.addEventListener("change", function () {
+        if (cb.checked) disabledGroups.add(cb.dataset.group); else disabledGroups.delete(cb.dataset.group);
+        saveSet(DIS_GROUPS_KEY, disabledGroups);
+        renderList();
+      });
+    });
+    listEl.addEventListener("change", function (ev) {
+      var cb = ev.target.closest("input[type=checkbox]");
+      if (!cb) return;
+      if (cb.checked) disabledIds.add(cb.dataset.id); else disabledIds.delete(cb.dataset.id);
+      saveSet(DIS_IDS_KEY, disabledIds);
+      renderList();
+    });
+    var timer = null;
+    searchEl.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(renderList, 150); });
+    el.querySelector("#dm-off").addEventListener("click", function () {
+      shown.forEach(function (e) { disabledIds.add(e.id); });
+      saveSet(DIS_IDS_KEY, disabledIds); renderList();
+    });
+    el.querySelector("#dm-on").addEventListener("click", function () {
+      shown.forEach(function (e) { disabledIds.delete(e.id); });
+      saveSet(DIS_IDS_KEY, disabledIds); renderList();
+    });
+    el.querySelector("#dm-reset").addEventListener("click", function () {
+      disabledIds.clear(); disabledGroups.clear();
+      saveSet(DIS_IDS_KEY, disabledIds); saveSet(DIS_GROUPS_KEY, disabledGroups);
+      renderDisableManager();
+    });
+    el.querySelector("#dm-done").addEventListener("click", renderSetup);
+    renderList();
   }
 
   // ---------------- Session-Ansicht ----------------

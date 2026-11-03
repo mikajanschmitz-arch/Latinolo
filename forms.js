@@ -485,17 +485,21 @@ var Forms = (function () {
     var LIMIT = 300;
 
     el.innerHTML =
+      '<div style="position:sticky;top:0;z-index:5;background:var(--bg);padding:6px 0 8px;">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px;">' +
+      '<h2 style="margin:0;">Wörter auswählen</h2>' +
+      '<button class="btn btn-primary" id="pk-done">Fertig</button>' +
+      "</div>" +
+      '<input type="text" id="pk-search" placeholder="Suchen (lateinisch) …" autocomplete="off" autocapitalize="off" spellcheck="false">' +
+      "</div>" +
       '<div class="card-panel">' +
-      "<h2>Wörter auswählen</h2>" +
-      '<div class="field-row"><input type="text" id="pk-search" placeholder="Suchen (lateinisch oder deutsch) …" autocomplete="off" autocapitalize="off" spellcheck="false"></div>' +
       '<div class="btn-row" style="margin-bottom:8px;">' +
       '<button class="btn" id="pk-all">Alle angezeigten</button>' +
       '<button class="btn" id="pk-none">Auswahl leeren</button>' +
       "</div>" +
       '<p id="pk-count" style="color:var(--text-muted);font-size:0.85rem;margin:4px 0 8px;"></p>' +
       '<div id="pk-list"></div>' +
-      "</div>" +
-      '<button class="btn btn-primary btn-block" id="pk-done">Fertig</button>';
+      "</div>";
 
     var listEl = el.querySelector("#pk-list");
     var countEl = el.querySelector("#pk-count");
@@ -511,10 +515,9 @@ var Forms = (function () {
 
     function renderList() {
       var q = Data.normalize(searchEl.value.trim());
-      var qDe = searchEl.value.trim().toLowerCase();
       var matches = all.filter(function (e) {
         if (!q) return true;
-        return Data.normalize(e.lemma).indexOf(q) !== -1 || e.translation.toLowerCase().indexOf(qDe) !== -1;
+        return Data.normalize(e.lemma).indexOf(q) !== -1;
       });
       shown = matches.slice(0, LIMIT);
       listEl.innerHTML = shown.map(function (e) {
