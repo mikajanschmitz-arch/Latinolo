@@ -69,6 +69,7 @@
     var days = Streak.last7Days(s);
     var today = Streak.todayCount(s);
     var goalMet = Streak.goalMetToday(s);
+    var isRestToday = (s.restDays || []).indexOf(new Date().getDay()) !== -1;
     var editable = Streak.canEditSettings(s);
 
     var dayDots = days.map(function (d) {
@@ -95,8 +96,11 @@
 
       '<div class="card-panel">' +
       '<div class="section-title">Heute</div>' +
-      "<p>" + today + " / " + s.dailyGoal + " Karteikarten richtig beantwortet" + (goalMet ? " — Ziel erreicht! 🎉" : "") + "</p>" +
-      '<div class="progress-bar-track"><div class="progress-bar-fill" style="width:' + Math.min(100, Math.round((today / s.dailyGoal) * 100)) + '%;"></div></div>' +
+      (isRestToday
+        ? "<p><strong>⏸ Heute ist ein Pausentag.</strong> Du musst heute nichts lernen, dein Streak bleibt erhalten." +
+          (today > 0 ? '</p><p style="color:var(--text-muted);font-size:0.9rem;">Du hast heute freiwillig ' + today + (today === 1 ? " Karteikarte" : " Karteikarten") + " richtig beantwortet – das zählt nicht zum Tagesziel.</p>" : "</p>")
+        : "<p>" + today + " / " + s.dailyGoal + " Karteikarten richtig beantwortet" + (goalMet ? " — Tagesziel erreicht! 🎉" : "") + "</p>" +
+          '<div class="progress-bar-track"><div class="progress-bar-fill" style="width:' + Math.min(100, Math.round((today / s.dailyGoal) * 100)) + '%;"></div></div>') +
       "</div>" +
 
       '<div class="card-panel">' +
