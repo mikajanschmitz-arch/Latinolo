@@ -574,5 +574,10 @@ var Forms = (function () {
     fb.querySelector("#f-next").addEventListener("click", nextQuestion);
   }
 
-  return { init: init };
+  function reloadState() {
+    state.customIds = loadCustom();
+    if (state.phase === "setup" && el && Data.vocab && Data.vocab.length) renderSetup();
+  }
+
+  return { init: init, reloadState: reloadState };
 })();

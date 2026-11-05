@@ -411,5 +411,11 @@ var Flashcards = (function () {
     el.querySelector("#fc-back").addEventListener("click", renderSetup);
   }
 
-  return { init: init };
+  function reloadState() {
+    disabledIds = loadSet(DIS_IDS_KEY);
+    disabledGroups = loadSet(DIS_GROUPS_KEY);
+    if (state.phase === "setup" && el && Data.vocab && Data.vocab.length) renderSetup();
+  }
+
+  return { init: init, reloadState: reloadState };
 })();

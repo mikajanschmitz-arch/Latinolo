@@ -131,6 +131,7 @@
         cur.dailyGoal = goalVal;
         cur.restDays = rest;
         cur.setupDone = true;
+        cur.settingsUpdated = Date.now();
         Store.setStreak(cur);
         renderStreakView();
       });
@@ -139,10 +140,15 @@
 
   // ---------------- Einstellungen ----------------
 
+  var settingsSignedIn = false;
+
   function renderSettingsView() {
     var root = document.getElementById("view-settings");
     var s = Store.getSettings();
+    var signedIn = !!Sync.getState().user;
+    settingsSignedIn = signedIn;
     root.innerHTML =
+      '<div class="card-panel" id="account-panel"></div>' +
       '<div class="card-panel">' +
       '<div class="toggle-row"><span>Dark Mode</span><label class="switch"><input type="checkbox" id="set-dark" ' + (s.darkMode ? "checked" : "") + '><span class="slider"></span></label></div>' +
       "</div>" +
@@ -152,11 +158,13 @@
       "</div>" +
       '<div class="card-panel">' +
       '<div class="section-title">Daten</div>' +
-      '<p style="color:var(--text-muted);font-size:0.85rem;">Setzt deinen gesamten Lernfortschritt, Streak und alle Einstellungen auf diesem Gerät zurück.</p>' +
+      '<p style="color:var(--text-muted);font-size:0.85rem;">Setzt deinen gesamten Lernfortschritt, Streak und alle Einstellungen auf diesem Gerät zurück' + (signedIn ? " – und löscht auch den Online-Stand deines Kontos, also auf allen Geräten." : ".") + "</p>" +
       '<button class="btn btn-danger btn-block" id="set-reset">Fortschritt zurücksetzen</button>' +
       "</div>" +
       '<p style="color:var(--text-muted);font-size:0.78rem;text-align:center;padding:0 20px;">Latinolo ist ein unabhängiges Lernprojekt und steht in keiner Verbindung zum Verlag oder zu den Herausgebern von Campus A.</p>' +
-      '<footer class="legal">Latinolo · lokal auf diesem Gerät gespeichert</footer>';
+      '<footer class="legal">' + (signedIn ? "Latinolo · mit deinem Google-Konto synchronisiert" : "Latinolo · lokal auf diesem Gerät gespeichert") + "</footer>";
+
+    renderAccountPanel();
 
     root.querySelector("#set-dark").addEventListener("change", function (ev) {
       var cur = Store.getSettings();
@@ -171,17 +179,105 @@
       document.documentElement.style.fontSize = (cur.fontScale * 100) + "%";
     });
     root.querySelector("#set-reset").addEventListener("click", function () {
-      if (confirm("Wirklich den gesamten Fortschritt löschen? Das kann nicht rückgängig gemacht werden.")) {
-        localStorage.clear();
-        location.reload();
+      var online = !!Sync.getState().user;
+      var msg = online
+        ? "Wirklich den gesamten Fortschritt löschen? Das gilt auch für den Online-Stand deines Kontos (alle Geräte) und kann nicht rückgängig gemacht werden."
+        : "Wirklich den gesamten Fortschritt löschen? Das kann nicht rückgängig gemacht werden.";
+      if (confirm(msg)) {
+        var finish = function () { localStorage.clear(); location.reload(); };
+        if (online) {
+          Sync.resetEverywhere().then(finish, function () {
+            alert("Der Online-Stand konnte nicht gelöscht werden. Bitte prüfe die Internetverbindung und versuche es noch einmal.");
+          });
+        } else {
+          finish();
+        }
       }
     });
+  }
+
+
+  // ---------------- Konto (Google-Anmeldung) ----------------
+
+  function pad2(n) { return (n < 10 ? "0" : "") + n; }
+
+  function renderAccountPanel() {
+    var box = document.getElementById("account-panel");
+    if (!box) return;
+    var st = Sync.getState();
+    var esc = function (x) { return String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
+    var html = '<div class="section-title">Konto &amp; Synchronisation</div>';
+
+    if (st.user) {
+      var statusText = {
+        idle: "",
+        syncing: "Synchronisiere …",
+        ok: st.lastSync ? "✓ Synchronisiert um " + pad2(st.lastSync.getHours()) + ":" + pad2(st.lastSync.getMinutes()) + " Uhr" : "✓ Synchronisiert",
+        offline: "Offline – wird synchronisiert, sobald du wieder online bist.",
+        error: "",
+      }[st.status] || "";
+      html +=
+        '<p style="margin:0 0 4px;">Angemeldet als <strong>' + esc(st.user.name || st.user.email) + "</strong></p>" +
+        (st.user.name && st.user.email ? '<p style="margin:0 0 8px;color:var(--text-muted);font-size:0.85rem;">' + esc(st.user.email) + "</p>" : "") +
+        '<p style="margin:0 0 8px;font-size:0.9rem;">' + statusText + "</p>" +
+        (st.errorText ? '<p style="margin:0 0 8px;color:var(--danger, #c0392b);font-size:0.9rem;">' + esc(st.errorText) + "</p>" : "") +
+        '<div class="btn-row"><button class="btn" id="acc-sync">Jetzt synchronisieren</button>' +
+        '<button class="btn" id="acc-signout">Abmelden</button></div>' +
+        '<p style="margin:10px 0 0;color:var(--text-muted);font-size:0.8rem;">Synchronisiert werden Fortschritt, Streak, Wortauswahl und deaktivierte Wörter. Dark Mode und Schriftgröße bleiben pro Gerät.</p>';
+    } else if (st.sdk === "ready") {
+      html +=
+        '<p style="margin:0 0 10px;font-size:0.9rem;">Melde dich mit Google an, um auf mehreren Geräten mit demselben Lernstand zu lernen.</p>' +
+        (st.errorText ? '<p style="margin:0 0 8px;color:var(--danger, #c0392b);font-size:0.9rem;">' + esc(st.errorText) + "</p>" : "") +
+        '<button class="btn btn-primary btn-block" id="acc-signin">Mit Google anmelden</button>';
+    } else if (st.sdk === "failed") {
+      html += '<p style="margin:0;font-size:0.9rem;color:var(--text-muted);">Die Anmeldung ist gerade nicht verfügbar (keine Internetverbindung?). Die App funktioniert weiterhin lokal.</p>';
+    } else {
+      html += '<p style="margin:0;font-size:0.9rem;color:var(--text-muted);">Anmeldung wird vorbereitet …</p>';
+    }
+    box.innerHTML = html;
+
+    var bIn = box.querySelector("#acc-signin");
+    if (bIn) bIn.addEventListener("click", function () {
+      Sync.signIn().catch(function (err) {
+        accountError = Sync.describeError(err);
+        var st2 = Sync.getState();
+        st2.errorText = accountError;
+        renderAccountPanel();
+      });
+    });
+    var bOut = box.querySelector("#acc-signout");
+    if (bOut) bOut.addEventListener("click", function () {
+      if (confirm("Abmelden? Dein Lernstand bleibt auf diesem Gerät erhalten.")) Sync.signOut();
+    });
+    var bSync = box.querySelector("#acc-sync");
+    if (bSync) bSync.addEventListener("click", function () { Sync.syncNow(); });
+  }
+  var accountError = "";
+
+  function refreshActiveView() {
+    var active = document.querySelector(".view.active");
+    if (!active) return;
+    var name = active.id.replace("view-", "");
+    if (name === "home") renderHomeView();
+    if (name === "streak") renderStreakView();
   }
 
   // ---------------- Start ----------------
 
   document.addEventListener("DOMContentLoaded", function () {
     applyTheme();
+    Sync.onChange(function (st, reason) {
+      if (reason === "applied") {
+        Flashcards.reloadState();
+        Forms.reloadState();
+        refreshActiveView();
+      }
+      var active = document.querySelector(".view.active");
+      if (active && active.id === "view-settings") {
+        if (!!st.user !== settingsSignedIn) renderSettingsView();
+        else renderAccountPanel();
+      }
+    });
     var s0 = Store.getSettings();
     if (s0.fontScale) document.documentElement.style.fontSize = (s0.fontScale * 100) + "%";
 
