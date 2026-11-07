@@ -137,7 +137,7 @@
       // Bei mehrwoertigen Namen (z.B. "Tarquinius Superbus") waere das Raten
       // einer Endung fuer die gesamte Wortgruppe falsch (nur ein Teil wuerde
       // scheinbar dekliniert) - dort lieber gar keinen Genitiv annehmen.
-      if (nom.indexOf(" ") !== -1) {
+      if (nom.indexOf(" ") !== -1 || entry.name_only) {
         return { gender: entry.gender, declension: null, nom: nom, gen: null, stem: nom, multiword: true };
       }
       if (nom.endsWith("us")) { decl = 2; stem = nom.slice(0, -2); }
