@@ -6,12 +6,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "von, von ... her",
   "lessons": [
    "6"
   ],
-  "raw_line": "ā / ab - von, von ... her - 6"
+  "raw_line": "ā / ab - von, von ... her - 6",
+  "prep_case": "Abl."
  },
  {
   "id": "v0003",
@@ -212,12 +213,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "zu, bei, nach, an",
   "lessons": [
    "4"
   ],
-  "raw_line": "ad - zu, bei, nach, an - 4"
+  "raw_line": "ad - zu, bei, nach, an - 4",
+  "prep_case": "Akk."
  },
  {
   "id": "v0015",
@@ -397,12 +399,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "gegen",
   "lessons": [
    "22"
   ],
-  "raw_line": "adversus - gegen - 22"
+  "raw_line": "adversus - gegen - 22",
+  "prep_case": "Akk."
  },
  {
   "id": "v0026",
@@ -1147,18 +1150,19 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "vor",
   "lessons": [
    "4"
   ],
-  "raw_line": "ante - vor - 4"
+  "raw_line": "ante - vor - 4",
+  "prep_case": "Akk."
  },
  {
   "id": "v0073",
   "lemma": "ante",
   "search_key": "ante",
-  "pos": "Präposition",
+  "pos": "Adverb",
   "category": "vokabel",
   "gender": null,
   "grammar_note": "",
@@ -1309,12 +1313,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "bei",
   "lessons": [
    "7"
   ],
-  "raw_line": "apud - bei - 7"
+  "raw_line": "apud - bei - 7",
+  "prep_case": "Akk."
  },
  {
   "id": "v0083",
@@ -2758,12 +2763,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "rings um, um ... herum",
   "lessons": [
    "10"
   ],
-  "raw_line": "circum - rings um, um ... herum - 10"
+  "raw_line": "circum - rings um, um ... herum - 10",
+  "prep_case": "Akk."
  },
  {
   "id": "v0173",
@@ -3835,12 +3841,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "gegen",
   "lessons": [
    "15"
   ],
-  "raw_line": "contrā - gegen - 15"
+  "raw_line": "contrā - gegen - 15",
+  "prep_case": "Akk."
  },
  {
   "id": "v0233",
@@ -4245,12 +4252,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "mit, zusammen mit",
   "lessons": [
    "4"
   ],
-  "raw_line": "cum - mit, zusammen mit - 4"
+  "raw_line": "cum - mit, zusammen mit - 4",
+  "prep_case": "Abl."
  },
  {
   "id": "v0258",
@@ -4537,12 +4545,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "von, von ... her, von ... weg, von ... herab; über",
   "lessons": [
    "5"
   ],
-  "raw_line": "dē - von, von ... her, von ... weg, von ... herab; über - 5"
+  "raw_line": "dē - von, von ... her, von ... weg, von ... herab; über - 5",
+  "prep_case": "Abl."
  },
  {
   "id": "v0276",
@@ -5682,12 +5691,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "aus, von ... her",
   "lessons": [
    "4"
   ],
-  "raw_line": "ē / ex - aus, von ... her - 4"
+  "raw_line": "ē / ex - aus, von ... her - 4",
+  "prep_case": "Abl."
  },
  {
   "id": "v0343",
@@ -6336,12 +6346,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "außerhalb (von)",
   "lessons": [
    "26"
   ],
-  "raw_line": "extrā - außerhalb (von) - 26"
+  "raw_line": "extrā - außerhalb (von) - 26",
+  "prep_case": "Akk."
  },
  {
   "id": "v0381",
@@ -8240,12 +8251,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "in, an, auf, bei (wo?)",
   "lessons": [
    "4"
   ],
-  "raw_line": "in - in, an, auf, bei (wo?) - 4"
+  "raw_line": "in - in, an, auf, bei (wo?) - 4",
+  "prep_case": "Abl."
  },
  {
   "id": "v0502",
@@ -8254,13 +8266,14 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "in (... hinein), nach (wohin?); gegen",
   "lessons": [
    "4",
    "19"
   ],
-  "raw_line": "in - in (... hinein), nach (wohin?); gegen - 4, 19"
+  "raw_line": "in - in (... hinein), nach (wohin?); gegen - 4, 19",
+  "prep_case": "Akk."
  },
  {
   "id": "v0503",
@@ -8690,12 +8703,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "unter, während, zwischen",
   "lessons": [
    "23"
   ],
-  "raw_line": "inter - unter, während, zwischen - 23"
+  "raw_line": "inter - unter, während, zwischen - 23",
+  "prep_case": "Akk."
  },
  {
   "id": "v0529",
@@ -8779,12 +8793,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "innerhalb (von)",
   "lessons": [
    "20"
   ],
-  "raw_line": "intrā - innerhalb (von) - 20"
+  "raw_line": "intrā - innerhalb (von) - 20",
+  "prep_case": "Akk."
  },
  {
   "id": "v0534",
@@ -13020,12 +13035,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "durch, hindurch",
   "lessons": [
    "6"
   ],
-  "raw_line": "per - durch, hindurch - 6"
+  "raw_line": "per - durch, hindurch - 6",
+  "prep_case": "Akk."
  },
  {
   "id": "v0802",
@@ -13779,12 +13795,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "hinter, nach",
   "lessons": [
    "4"
   ],
-  "raw_line": "post - hinter, nach - 4"
+  "raw_line": "post - hinter, nach - 4",
+  "prep_case": "Akk."
  },
  {
   "id": "v0847",
@@ -14312,12 +14329,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "vor; anstelle von, für",
   "lessons": [
    "18"
   ],
-  "raw_line": "prō - vor; anstelle von, für - 18"
+  "raw_line": "prō - vor; anstelle von, für - 18",
+  "prep_case": "Abl."
  },
  {
   "id": "v0880",
@@ -14590,12 +14608,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "wegen",
   "lessons": [
    "7"
   ],
-  "raw_line": "propter - wegen - 7"
+  "raw_line": "propter - wegen - 7",
+  "prep_case": "Akk."
  },
  {
   "id": "v0896",
@@ -17010,12 +17029,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "ohne",
   "lessons": [
    "4"
   ],
-  "raw_line": "sine - ohne - 4"
+  "raw_line": "sine - ohne - 4",
+  "prep_case": "Abl."
  },
  {
   "id": "v1048",
@@ -17513,12 +17533,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Abl.",
   "translation": "unter (wo?)",
   "lessons": [
    "8"
   ],
-  "raw_line": "sub - unter (wo?) - 8"
+  "raw_line": "sub - unter (wo?) - 8",
+  "prep_case": "Abl."
  },
  {
   "id": "v1079",
@@ -17527,12 +17548,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "unter (wohin?)",
   "lessons": [
    "8"
   ],
-  "raw_line": "sub - unter (wohin?) - 8"
+  "raw_line": "sub - unter (wohin?) - 8",
+  "prep_case": "Akk."
  },
  {
   "id": "v1080",
@@ -18573,12 +18595,13 @@
   "pos": "Präposition",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "Präp. m. Akk.",
   "translation": "über (... hinaus), jenseits",
   "lessons": [
    "21"
   ],
-  "raw_line": "trāns - über (... hinaus), jenseits - 21"
+  "raw_line": "trāns - über (... hinaus), jenseits - 21",
+  "prep_case": "Akk."
  },
  {
   "id": "v1144",
@@ -23007,7 +23030,7 @@
  },
  {
   "id": "r1448",
-  "lemma": "Tālis ... quālis",
+  "lemma": "tālis ... quālis",
   "search_key": "talis",
   "pos": "Redewendung",
   "category": "redewendung",
@@ -23017,7 +23040,7 @@
   "lessons": [
    "20"
   ],
-  "raw_line": "Tālis ... quālis - so beschaffen ... wie (beschaffen) - 20"
+  "raw_line": "tālis ... quālis - so beschaffen ... wie (beschaffen) - 20"
  },
  {
   "id": "r1449",
