@@ -287,6 +287,9 @@
         '<div class="empty-state">Die Vokabeldatei (vocab.json) konnte nicht geladen werden.<br>Falls du die Seite lokal per Doppelklick geöffnet hast, starte stattdessen einen kleinen lokalen Server (z. B. <code>python3 -m http.server</code>) oder nutze GitHub Pages.</div>';
     });
 
+    // nach der Uebernahme alter IDs (data.js) den gespeicherten Zustand neu einlesen
+    Data.ready.then(function () { Flashcards.reloadState(); Forms.reloadState(); });
+
     Flashcards.init(document.getElementById("view-flashcards"));
     Search.init(document.getElementById("view-search"));
     Forms.init(document.getElementById("view-forms"));

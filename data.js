@@ -24,9 +24,48 @@ var Data = (function () {
       .then(function (json) {
         vocab = json;
         vocab.forEach(function (e) { byId[e.id] = e; });
+        try { migrateLegacyIds(); } catch (err) { console.warn("ID-Uebernahme fehlgeschlagen:", err); }
         readyResolve();
         return vocab;
       });
+  }
+
+  // Nach einer neuen Vokabelliste haben die Eintraege neue IDs. Der Lernfortschritt, deaktivierte
+  // Woerter und die Wortauswahl wurden unter den alten IDs gespeichert; sie werden hier auf die
+  // neuen IDs umgeschrieben (Zuordnung: legacy_ids in vocab.json).
+  function migrateLegacyIds() {
+    var map = {};
+    vocab.forEach(function (e) { (e.legacy_ids || []).forEach(function (old) { map[old] = e.id; }); });
+    if (!Object.keys(map).length) return;
+
+    function readJson(key, fallback) {
+      try { var v = JSON.parse(localStorage.getItem(key)); return v == null ? fallback : v; } catch (e) { return fallback; }
+    }
+    function write(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+
+    var progress = readJson("ll_progress_v1", null);
+    if (progress && typeof progress === "object") {
+      var changed = false;
+      Object.keys(progress).forEach(function (oldId) {
+        if (byId[oldId] || !map[oldId]) return;      // schon neu oder unbekannt
+        var newId = map[oldId];
+        var cur = progress[newId], old = progress[oldId];
+        if (!cur || String(old.lastSeen || "") > String(cur.lastSeen || "")) progress[newId] = old;
+        delete progress[oldId];
+        changed = true;
+      });
+      if (changed) write("ll_progress_v1", progress);
+    }
+    ["ll_fc_disabled_ids_v1", "ll_forms_words_v1"].forEach(function (key) {
+      var arr = readJson(key, null);
+      if (!Array.isArray(arr)) return;
+      var out = [], changed = false;
+      arr.forEach(function (id) {
+        if (!byId[id] && map[id]) { id = map[id]; changed = true; }
+        if (byId[id] && out.indexOf(id) === -1) out.push(id); else if (!byId[id]) changed = true;
+      });
+      if (changed) write(key, out);
+    });
   }
 
   function lessonMain(lessonStr) {
