@@ -18002,13 +18002,13 @@
   ]
  },
  {
-  "id": "v_75d569b2",
-  "lemma": "quī, quae, quod adj.",
+  "id": "v_892242bf",
+  "lemma": "quī, quae, quod",
   "search_key": "qui",
   "pos": "Pronomen",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "adj.",
   "translation": "welcher, welche, welches",
   "lessons": [
    "24"
@@ -18050,13 +18050,13 @@
   ]
  },
  {
-  "id": "v_aa39f923",
-  "lemma": "quīdam, quaedam, quiddam subst.",
+  "id": "v_0dbcd27c",
+  "lemma": "quīdam, quaedam, quiddam",
   "search_key": "quidam",
   "pos": "Pronomen",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "subst.",
   "translation": "ein gewisser, (irgend)einer; Pl. einige",
   "lessons": [
    "22"
@@ -18067,13 +18067,13 @@
   ]
  },
  {
-  "id": "v_96ee4c91",
-  "lemma": "quīdam, quaedam, quoddam adj.",
+  "id": "v_20eb0b9a",
+  "lemma": "quīdam, quaedam, quoddam",
   "search_key": "quidam",
   "pos": "Pronomen",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "adj.",
   "translation": "ein gewisser, (irgend)ein; Pl. einige",
   "lessons": [
    "22"
@@ -18207,13 +18207,13 @@
   ]
  },
  {
-  "id": "v_2ada4648",
-  "lemma": "quisque, quidque subst.",
+  "id": "v_d96fced4",
+  "lemma": "quisque, quidque",
   "search_key": "quisque",
   "pos": "Pronomen",
   "category": "vokabel",
   "gender": null,
-  "grammar_note": "",
+  "grammar_note": "subst.",
   "translation": "jeder",
   "lessons": [
    "30"
@@ -24290,6 +24290,23 @@
   "raw_line": "vultus, vultūs m - Gesicht, Gesichtsausdruck; Pl. Gesichtszüge - 13",
   "legacy_ids": [
    "v1244"
+  ]
+ },
+ {
+  "id": "v_ae4c7d2c",
+  "lemma": "fac!",
+  "search_key": "fac!",
+  "pos": "Interjektion",
+  "category": "vokabel",
+  "gender": null,
+  "grammar_note": "",
+  "translation": "tut! mach! handle!",
+  "lessons": [
+   "8"
+  ],
+  "raw_line": "fac! - tut! mach! handle! - 8",
+  "legacy_ids": [
+   "v1252"
   ]
  },
  {

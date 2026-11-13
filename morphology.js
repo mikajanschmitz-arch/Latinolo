@@ -212,7 +212,25 @@
   // 2) ADJEKTIV
   // ==================================================================
 
+  // Pronominalen Adjektive (ūnus, nūllus, ūllus, tōtus, sōlus, alter, uter, neuter):
+  // Genitiv Sg. auf -īus, Dativ Sg. auf -ī in allen drei Geschlechtern.
+  var PRONOMINAL_ADJ = ["unus", "nullus", "ullus", "totus", "solus", "alter", "uter", "neuter"];
+
   function declineAdjective(entry) {
+    var out = declineAdjectiveBase(entry);
+    var first = String(entry.lemma).split(",")[0].trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    if ((entry.adj_type === "a_um" || entry.adj_type === "er_a_um") && PRONOMINAL_ADJ.indexOf(first) !== -1 &&
+        out && out.sg && out.sg.m && out.sg.m.gen && /ī$/.test(out.sg.m.gen)) {
+      var stem = out.sg.m.gen.slice(0, -1);
+      ["m", "f", "n"].forEach(function (g) {
+        out.sg[g].gen = stem + "īus";
+        out.sg[g].dat = stem + "ī";
+      });
+    }
+    return out;
+  }
+
+  function declineAdjectiveBase(entry) {
     var parts = splitLemmaParts(entry.lemma);
     var type = entry.adj_type;
     var out = { sg: { m: {}, f: {}, n: {} }, pl: { m: {}, f: {}, n: {} } };
@@ -310,6 +328,18 @@
   // 3) PRONOMEN (geschlossene, feste Paradigmen)
   // ==================================================================
 
+  // quidam: Nominativ/Akkusativ Neutrum Singular je nach Verwendung quiddam (substantivisch) / quoddam (adjektivisch)
+  function QUIDAM_TABLE(neutrum) {
+    return {
+      sg: { m: { nom: "quīdam", gen: "cuiusdam", dat: "cuidam", akk: "quendam", abl: "quōdam" },
+            f: { nom: "quaedam", gen: "cuiusdam", dat: "cuidam", akk: "quandam", abl: "quādam" },
+            n: { nom: neutrum, gen: "cuiusdam", dat: "cuidam", akk: neutrum, abl: "quōdam" } },
+      pl: { m: { nom: "quīdam", gen: "quōrundam", dat: "quibusdam", akk: "quōsdam", abl: "quibusdam" },
+            f: { nom: "quaedam", gen: "quārundam", dat: "quibusdam", akk: "quāsdam", abl: "quibusdam" },
+            n: { nom: "quaedam", gen: "quōrundam", dat: "quibusdam", akk: "quaedam", abl: "quibusdam" } },
+    };
+  }
+
   var PRONOUN_PARADIGMS = {
     "ego": { sg: { nom: "ego", gen: "meī", dat: "mihi", akk: "mē", abl: "mē" },
              pl: { nom: "nōs", gen: "nostrī / nostrum", dat: "nōbīs", akk: "nōs", abl: "nōbīs" } },
@@ -372,6 +402,52 @@
       pl: { m: { nom: "quī", gen: "quōrum", dat: "quibus", akk: "quōs", abl: "quibus" },
             f: { nom: "quae", gen: "quārum", dat: "quibus", akk: "quās", abl: "quibus" },
             n: { nom: "quae", gen: "quōrum", dat: "quibus", akk: "quae", abl: "quibus" } },
+    },
+    "quīdam, quaedam, quiddam": QUIDAM_TABLE("quiddam"),
+    "quīdam, quaedam, quoddam": QUIDAM_TABLE("quoddam"),
+    "aliquī, aliqua, aliquod": {
+      sg: { m: { nom: "aliquī", gen: "alicuius", dat: "alicui", akk: "aliquem", abl: "aliquō" },
+            f: { nom: "aliqua", gen: "alicuius", dat: "alicui", akk: "aliquam", abl: "aliquā" },
+            n: { nom: "aliquod", gen: "alicuius", dat: "alicui", akk: "aliquod", abl: "aliquō" } },
+      pl: { m: { nom: "aliquī", gen: "aliquōrum", dat: "aliquibus", akk: "aliquōs", abl: "aliquibus" },
+            f: { nom: "aliquae", gen: "aliquārum", dat: "aliquibus", akk: "aliquās", abl: "aliquibus" },
+            n: { nom: "aliqua", gen: "aliquōrum", dat: "aliquibus", akk: "aliqua", abl: "aliquibus" } },
+    },
+    "aliquis, aliquid": {
+      sg: { m: { nom: "aliquis", gen: "alicuius", dat: "alicui", akk: "aliquem", abl: "aliquō" },
+            f: { nom: "aliquis", gen: "alicuius", dat: "alicui", akk: "aliquam", abl: "aliquā" },
+            n: { nom: "aliquid", gen: "alicuius", dat: "alicui", akk: "aliquid", abl: "aliquō" } },
+      pl: { m: { nom: "aliquī", gen: "aliquōrum", dat: "aliquibus", akk: "aliquōs", abl: "aliquibus" },
+            f: { nom: "aliquae", gen: "aliquārum", dat: "aliquibus", akk: "aliquās", abl: "aliquibus" },
+            n: { nom: "aliqua", gen: "aliquōrum", dat: "aliquibus", akk: "aliqua", abl: "aliquibus" } },
+    },
+    "quisque, quidque": {
+      sg: { m: { nom: "quisque", gen: "cuiusque", dat: "cuique", akk: "quemque", abl: "quōque" },
+            f: { nom: "quaeque", gen: "cuiusque", dat: "cuique", akk: "quamque", abl: "quāque" },
+            n: { nom: "quidque", gen: "cuiusque", dat: "cuique", akk: "quidque", abl: "quōque" } },
+      pl: { m: { nom: "quīque", gen: "quōrumque", dat: "quibusque", akk: "quōsque", abl: "quibusque" },
+            f: { nom: "quaeque", gen: "quārumque", dat: "quibusque", akk: "quāsque", abl: "quibusque" },
+            n: { nom: "quaeque", gen: "quōrumque", dat: "quibusque", akk: "quaeque", abl: "quibusque" } },
+    },
+    "alius, alia, aliud": {
+      sg: { m: { nom: "alius", gen: "alīus", dat: "aliī", akk: "alium", abl: "aliō" },
+            f: { nom: "alia", gen: "alīus", dat: "aliī", akk: "aliam", abl: "aliā" },
+            n: { nom: "aliud", gen: "alīus", dat: "aliī", akk: "aliud", abl: "aliō" } },
+      pl: { m: { nom: "aliī", gen: "aliōrum", dat: "aliīs", akk: "aliōs", abl: "aliīs" },
+            f: { nom: "aliae", gen: "aliārum", dat: "aliīs", akk: "aliās", abl: "aliīs" },
+            n: { nom: "alia", gen: "aliōrum", dat: "aliīs", akk: "alia", abl: "aliīs" } },
+    },
+    "quis?": {
+      sg: { nom: "quis", gen: "cuius", dat: "cui", akk: "quem", abl: "quō" },
+      pl: { nom: "quī / quae", gen: "quōrum / quārum", dat: "quibus", akk: "quōs / quās / quae", abl: "quibus" },
+    },
+    "quid?": {
+      sg: { nom: "quid", gen: "cuius", dat: "cui", akk: "quid", abl: "quō" },
+      pl: { nom: "quae", gen: "quōrum", dat: "quibus", akk: "quae", abl: "quibus" },
+    },
+    "quisnam": {
+      sg: { nom: "quisnam / quidnam", gen: "cuiusnam", dat: "cuinam", akk: "quemnam / quidnam", abl: "quōnam / quānam" },
+      pl: { nom: "quīnam / quaenam", gen: "quōrumnam / quārumnam", dat: "quibusnam", akk: "quōsnam / quāsnam / quaenam", abl: "quibusnam" },
     },
     "quis, quid": {
       sg: { nom: "quis / quid", gen: "cuius", dat: "cui", akk: "quem / quid", abl: "quō" },
