@@ -19,7 +19,7 @@ var Data = (function () {
   }
 
   function load(path) {
-    return fetch(path || "vocab.json")
+    return fetch((path || "vocab.json") + "?v=20261115")
       .then(function (r) { return r.json(); })
       .then(function (json) {
         vocab = json;

@@ -77,7 +77,10 @@ var LexUtil = (function () {
   }
 
   function posLabel(entry) {
-    return entry.pos + (entry.proper_noun ? ", Eigenname" : "");
+    var extra = "";
+    if (entry.pos === "Pronomen" && entry.grammar_note === "adj.") extra = ", adjektivisch";
+    else if (entry.pos === "Pronomen" && entry.grammar_note === "subst.") extra = ", substantivisch";
+    return entry.pos + extra + (entry.proper_noun ? ", Eigenname" : "");
   }
 
   return { firstForm: firstForm, shortForm: shortForm, lessonLabel: lessonLabel, posLabel: posLabel, abbreviateGen: abbreviateGen };

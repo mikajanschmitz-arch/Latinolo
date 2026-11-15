@@ -456,7 +456,7 @@
   };
 
   function declinePronoun(entry) {
-    var key = entry.lemma;
+    var key = String(entry.lemma).replace(/\s+(adj|subst)\.$/, "");
     if (PRONOUN_PARADIGMS[key]) return { table: PRONOUN_PARADIGMS[key], gendered: !!PRONOUN_PARADIGMS[key].sg.m };
     return null;
   }
