@@ -140,6 +140,9 @@
 
   // ---------------- Einstellungen ----------------
 
+  // Bei jeder Aenderung anpassen (und die Versionsnummer ?v=... in index.html und data.js).
+  var APP_VERSION = "18.11.2026";
+
   var settingsSignedIn = false;
 
   function renderSettingsView() {
@@ -147,6 +150,9 @@
     var s = Store.getSettings();
     var signedIn = !!Sync.getState().user;
     settingsSignedIn = signedIn;
+    var nVoc = 0, nRed = 0;
+    (Data.vocab || []).forEach(function (e) { if (e.category === "redewendung") nRed++; else nVoc++; });
+    var versionInfo = nVoc ? " · " + nVoc + " Vokabeln, " + nRed + " Redewendungen" : "";
     root.innerHTML =
       '<div class="card-panel" id="account-panel"></div>' +
       '<div class="card-panel">' +
@@ -162,7 +168,8 @@
       '<button class="btn btn-danger btn-block" id="set-reset">Fortschritt zurücksetzen</button>' +
       "</div>" +
       '<p style="color:var(--text-muted);font-size:0.78rem;text-align:center;padding:0 20px;">Latinolo ist ein unabhängiges Lernprojekt und steht in keiner Verbindung zum Verlag oder zu den Herausgebern von Campus A.</p>' +
-      '<footer class="legal">' + (signedIn ? "Latinolo · mit deinem Google-Konto synchronisiert" : "Latinolo · lokal auf diesem Gerät gespeichert") + "</footer>";
+      '<footer class="legal">' + (signedIn ? "Latinolo · mit deinem Google-Konto synchronisiert" : "Latinolo · lokal auf diesem Gerät gespeichert") +
+      "<br>Stand: " + APP_VERSION + versionInfo + "</footer>";
 
     renderAccountPanel();
 

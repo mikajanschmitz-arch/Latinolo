@@ -359,12 +359,14 @@ var Flashcards = (function () {
       "</div>";
 
     el.innerHTML =
-      '<div class="flash-progress"><span>' + (state.idx + 1) + " / " + total + '</span><button class="btn" id="fc-cancel" style="padding:6px 14px;font-size:0.8rem;">Abbrechen</button></div>' +
+      '<div class="flash-progress"><span>' + (state.idx + 1) + " / " + total + '</span><button class="btn" id="fc-cancel" style="padding:6px 14px;font-size:0.8rem;">Beenden</button></div>' +
       '<div class="flash-wrap"><div class="flashcard" id="fc-card">' + (state.flipped ? backHtml : frontHtml) + "</div></div>";
 
     el.querySelector("#fc-cancel").addEventListener("click", function (ev) {
       ev.stopPropagation();
-      renderSetup();
+      // Schon Karten beantwortet? Dann Ergebnis der bisherigen Runde zeigen.
+      if (state.stats.correct + state.stats.wrong > 0) renderSummary(true);
+      else renderSetup();
     });
 
     var card = el.querySelector("#fc-card");
@@ -394,14 +396,16 @@ var Flashcards = (function () {
     renderCard();
   }
 
-  function renderSummary() {
+  function renderSummary(early) {
     state.phase = "summary";
     var total = state.stats.correct + state.stats.wrong;
     var pct = total ? Math.round((state.stats.correct / total) * 100) : 0;
+    var queueLen = state.queue ? state.queue.length : total;
     el.innerHTML =
       '<div class="card-panel" style="text-align:center;">' +
-      "<h2>Runde beendet 🎉</h2>" +
+      (early === true ? "<h2>Runde beendet</h2>" : "<h2>Runde beendet 🎉</h2>") +
       '<p style="font-size:1.1rem;">' + state.stats.correct + " richtig, " + state.stats.wrong + " falsch (" + pct + " %)</p>" +
+      (early === true ? '<p style="color:var(--text-muted);font-size:0.9rem;margin:0;">' + total + " von " + queueLen + " Karten bearbeitet</p>" : "") +
       "</div>" +
       '<div class="btn-row" style="margin-bottom:10px;">' +
       '<button class="btn btn-primary btn-block" id="fc-again">Neue Runde</button>' +
