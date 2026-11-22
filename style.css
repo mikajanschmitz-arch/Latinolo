@@ -76,6 +76,19 @@ h1, h2, h3 { font-weight: 700; margin: 0 0 0.5em; }
 
 .header-title-block { min-width: 0; }
 
+.header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.page-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.page-icon:empty { display: none; }
+
 .app-header h1 {
   font-size: 1.25rem;
   margin: 0;
