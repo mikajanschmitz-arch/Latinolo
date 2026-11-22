@@ -6,6 +6,7 @@
   "use strict";
 
   var TITLES = { home: "Latinolo", flashcards: "Karteikarten", search: "Suche", forms: "Formentrainer", streak: "Streak", settings: "Einstellungen" };
+  var PAGE_ICONS = { home: "", flashcards: "🗂️", search: "🔍", forms: "✏️", streak: "🔥", settings: "⚙️" };
   var lastMainTab = "home";
 
   function applyTheme() {
@@ -18,6 +19,7 @@
     document.getElementById("view-" + name).classList.add("active");
     document.querySelectorAll(".tab-btn").forEach(function (b) { b.classList.toggle("active", b.dataset.view === name); });
     document.getElementById("page-title").textContent = TITLES[name];
+    document.getElementById("page-icon").textContent = PAGE_ICONS[name];
     document.getElementById("page-subtitle").classList.toggle("visible", name === "home");
     if (name !== "settings") lastMainTab = name;
     if (name === "home") renderHomeView();
@@ -141,7 +143,7 @@
   // ---------------- Einstellungen ----------------
 
   // Bei jeder Aenderung anpassen (und die Versionsnummer ?v=... in index.html und data.js).
-  var APP_VERSION = "18.11.2026";
+  var APP_VERSION = "22.11.2026";
 
   var settingsSignedIn = false;
 
